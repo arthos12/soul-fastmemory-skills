@@ -22,19 +22,17 @@ The system does not yet fully automate:
 
 ## Next step
 
-Turn new-session restore into a fixed execution flow.
+Implement the storage lifecycle as a stable execution rule.
 
 Goal:
-- load recent content first
-- identify important content inside recent content
-- find the most important and recently important content
-- reconstruct the work through logic, current step, and goal
-- use structured memory first
-- fall back to the recent full-session buffer when needed
-- produce a stable restored state
+- keep recent sessions fully preserved as hot data
+- move sessions older than about 3 days into extracted structured storage
+- detect when extracted storage becomes too large
+- perform second-pass extraction on colder / lower-priority content
+- keep the system compact without losing core logic
 
 Success condition:
-New-session recovery follows the same flow repeatedly and restores the main work with less drift.
+Storage stays layered and compact while preserving the important logic and recovery value.
 
 Suggested output shape:
 
@@ -54,13 +52,13 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Refine retention and deletion automation for old full-session buffers.
+Automate transfer, downgrade, and cleanup decisions.
 
 Goal:
-- keep recent full-session buffers available as short-term fallback
-- detect when core logic has already been extracted
-- detect when a full session has gone unused long enough
-- remove old full-session buffers safely without harming recovery quality
+- decide when a recent session should leave the hot layer
+- decide when extracted storage is too large
+- decide which colder content should be downgraded into second-pass summaries
+- decide when the old raw session can be safely removed after transfer
 
 Suggested output shape:
 

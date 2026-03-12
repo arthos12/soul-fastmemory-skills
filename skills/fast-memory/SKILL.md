@@ -233,8 +233,14 @@ If time is short, prefer quick save over doing nothing.
 
 If the session appears likely to reset soon, prioritize writing the smallest high-value snapshot first.
 
-Retain the most recent 1 or 3 full sessions as a short-term raw buffer when possible.
+Retain the most recent sessions as a short-term raw buffer when possible.
 Use structured memory for speed first, and fall back to full-session history only when important details were not sufficiently preserved.
+
+Use this lifecycle:
+1. recent sessions stay fully preserved as hot data
+2. after roughly 3 days, move the high-value content into extracted structured storage
+3. if extracted storage becomes too large, demote colder / lower-priority content into a second-pass compressed layer
+
 Do not keep old full-session buffers forever: remove them only after the core logic has been extracted and the session has gone unused long enough.
 
 ## Read depth policy
