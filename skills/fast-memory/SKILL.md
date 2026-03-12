@@ -198,6 +198,12 @@ Rule:
 
 ## Quick-save rule
 
+**Default: auto-save without being asked.** Do not wait for an explicit “结束 session / 保存一下” command.
+
+- If a meaningful work chunk finishes, a decision is made, a plan is confirmed, or the conversation is clearly pausing → immediately do a quick-save.
+- If the user is likely to hit `/new` or the platform may reset context (e.g., model/tool switch, long pause, unstable provider) → quick-save *first*.
+- Because you cannot rely on getting a final message *before* a `/new`, treat “stage completed” as the trigger, not “session ended”.
+
 When time is short or a reset is likely, save quickly into `SESSION_HANDOFF.md`.
 
 Minimum quick-save content:
@@ -207,7 +213,15 @@ Minimum quick-save content:
 - blocker or constraint
 - relevant files
 
-If the recent session contains especially important near-term context, also refresh `LAST_SESSION.md`.
+If any of these are true, also refresh `LAST_SESSION.md` in the same save pass:
+- the current main line is already clear
+- the user is likely to continue this work soon
+- the recent near-term context has high recovery value
+- the user is ending the round, asking to save, or a reset is likely
+
+Rule:
+
+> `LAST_SESSION.md` is the default fast-recovery layer for the recent main line, not an optional extra.
 
 ## Full-handoff rule
 
@@ -216,6 +230,8 @@ When closing a work round more cleanly, update:
 - `SESSION_HANDOFF.md`
 - daily note if needed
 - `MEMORY.md` if durable logic should be promoted
+
+If `LAST_SESSION.md` is missing after a meaningful work round, treat the save loop as incomplete and refresh it before considering the handoff finished.
 
 ## Anti-pollution rules
 

@@ -141,7 +141,12 @@ Save only:
 - blocker or constraint
 - relevant files
 
-When the latest session contains especially important near-term state, also refresh `LAST_SESSION.md` so that the newest context gets highest retrieval priority.
+In the same save pass, also refresh `LAST_SESSION.md` whenever the recent main line is clear, likely to continue soon, or has high recovery value.
+
+Rule:
+- `SESSION_HANDOFF.md` = minimum safe handoff
+- `LAST_SESSION.md` = default fast-recovery snapshot for the recent main line
+- if a meaningful round ends and `LAST_SESSION.md` is still missing, the save loop is incomplete
 
 ### Full handoff
 Use when ending a working round cleanly.
