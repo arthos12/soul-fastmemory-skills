@@ -13,6 +13,20 @@
 - Suggested read depth: Deep
 ```
 
+## Work understanding template
+
+```md
+## 事情理解
+- 事情名称:
+- 事情逻辑:
+- 简要描述:
+- 当前步骤:
+- 目标:
+- 关键信息:
+- 全面信息:
+- 准确信息 / 待核对点:
+```
+
 ## Last session template
 
 ```md

@@ -91,11 +91,23 @@ Use dedicated checkpoint files for complex multi-session work.
 
 ### Standard restore
 Load in this order:
-1. `LAST_SESSION.md`
-2. `SESSION_HANDOFF.md`
-3. `MEMORY.md`
+1. the most recent and most important work (`LAST_SESSION.md`)
+2. current handoff and next-action state (`SESSION_HANDOFF.md`)
+3. stable long-term rules (`MEMORY.md`)
 4. recent daily notes
 5. relevant checkpoints
+
+### Restore understanding target
+Before reconstructing the session, understand:
+- what the user is doing
+- the logic of the work
+- the current step
+- the overall goal
+
+Then use logic to expand into:
+- key information
+- fuller related information
+- accurate details
 
 ### Restore output
 Only rebuild:

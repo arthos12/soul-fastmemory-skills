@@ -117,18 +117,31 @@ Keep this design rule in mind:
 
 Always use targeted retrieval.
 
-1. Search first
-2. Rank by timeliness and criticality
-3. Get only the needed snippets first
-4. Reconstruct from the smallest useful context
-5. Expand into deeper reads only when the information is important enough
-6. Avoid broad scans and full-file loading unless necessary
+1. Load the most recent and most important work first
+2. Understand what the user is doing before expanding detail
+3. Search first
+4. Rank by timeliness and criticality
+5. Get only the needed snippets first
+6. Reconstruct from the smallest useful context
+7. Expand into deeper reads only when the information is important enough
+8. Avoid broad scans and full-file loading unless necessary
+
+When restoring context, first understand:
+- what the user is doing
+- the logic of the work
+- the current step
+- the overall goal
+
+Then expand by logic to capture:
+- key information
+- fuller related information
+- accurate details
 
 Default restore order:
 
-1. `LAST_SESSION.md`
-2. `SESSION_HANDOFF.md`
-3. `MEMORY.md`
+1. The most recent and most important work (`LAST_SESSION.md`)
+2. Current handoff and next-action state (`SESSION_HANDOFF.md`)
+3. Stable long-term rules (`MEMORY.md`)
 4. Recent daily notes
 5. Relevant project checkpoints
 

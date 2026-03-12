@@ -22,17 +22,16 @@ The system does not yet fully automate:
 
 ## Next step
 
-Build a lightweight save planner.
+Build a fixed content classification and storage-decision template.
 
 Goal:
 Given a piece of session content, decide:
-- class
-- priority
-- timeliness
-- criticality
-- lane
-- completeness level
-- save target
+- what kind of content it is
+- how important it is
+- when it will likely be needed again
+- where it should be stored
+- how completely it should be stored
+- why
 
 Suggested output shape:
 
@@ -52,14 +51,16 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Build a restore planner.
+Build a fixed session-restore template.
 
 Goal:
 At session start, decide:
 - which layer to read first
-- which snippets to read shallowly
-- which snippets to read deeply
-- what final restored summary should contain
+- what the current work is
+- what the logic, current step, and goal are
+- which snippets need shallow reading
+- which snippets need deep reading
+- what the final restored summary should contain
 
 Suggested output shape:
 
