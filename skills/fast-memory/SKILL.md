@@ -237,9 +237,12 @@ Retain the most recent sessions as a short-term raw buffer when possible.
 Use structured memory for speed first, and fall back to full-session history only when important details were not sufficiently preserved.
 
 Use this lifecycle:
-1. recent sessions stay fully preserved as hot data
-2. after roughly 3 days, move the high-value content into extracted structured storage
-3. if extracted storage becomes too large, demote colder / lower-priority content into a second-pass compressed layer
+1. keep the most recent 3 full sessions by default (or 1 in constrained mode)
+2. recent sessions stay fully preserved as hot data
+3. after roughly 3 days, move the high-value content into extracted structured storage
+4. if extracted storage becomes too large, demote colder / lower-priority content into a second-pass compressed layer
+
+Treat content as cold / downgrade-ready when it is rarely used, outside the current main line, lower in importance, and not recently queried.
 
 Do not keep old full-session buffers forever: remove them only after the core logic has been extracted and the session has gone unused long enough.
 

@@ -22,17 +22,17 @@ The system does not yet fully automate:
 
 ## Next step
 
-Implement the storage lifecycle as a stable execution rule.
+Apply the execution parameters consistently in real usage.
 
 Goal:
-- keep recent sessions fully preserved as hot data
-- move sessions older than about 3 days into extracted structured storage
-- detect when extracted storage becomes too large
-- perform second-pass extraction on colder / lower-priority content
-- keep the system compact without losing core logic
+- use the 3-session hot buffer by default
+- move sessions older than 3 days into extracted storage
+- detect oversized extracted storage
+- downgrade colder content consistently
+- keep the system compact without losing the main logic
 
 Success condition:
-Storage stays layered and compact while preserving the important logic and recovery value.
+The same storage decisions repeat consistently across similar cases.
 
 Suggested output shape:
 
@@ -52,13 +52,13 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Automate transfer, downgrade, and cleanup decisions.
+Automate transfer, downgrade, and cleanup decisions more precisely.
 
 Goal:
-- decide when a recent session should leave the hot layer
-- decide when extracted storage is too large
-- decide which colder content should be downgraded into second-pass summaries
-- decide when the old raw session can be safely removed after transfer
+- detect hot-to-structured transfer timing reliably
+- detect cold-content downgrade candidates reliably
+- remove old raw sessions safely after transfer
+- keep recovery quality stable while storage stays compact
 
 Suggested output shape:
 
