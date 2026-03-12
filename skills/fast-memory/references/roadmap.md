@@ -22,16 +22,19 @@ The system does not yet fully automate:
 
 ## Next step
 
-Implement the recent full-session buffer mechanism.
+Turn new-session restore into a fixed execution flow.
 
 Goal:
-- retain the most recent 1 or 3 full sessions as a short-term raw buffer
-- continue extracting structured near-term memory from them
-- use full-session history as a fallback when structured memory is insufficient
-- define when an old full session can be removed safely
+- load recent content first
+- identify important content inside recent content
+- find the most important and recently important content
+- reconstruct the work through logic, current step, and goal
+- use structured memory first
+- fall back to the recent full-session buffer when needed
+- produce a stable restored state
 
 Success condition:
-The system can answer most recent-work questions from structured memory, and can still fall back to full-session history when needed.
+New-session recovery follows the same flow repeatedly and restores the main work with less drift.
 
 Suggested output shape:
 
@@ -51,17 +54,13 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Turn session restore into stable execution on top of the recent full-session buffer.
+Refine retention and deletion automation for old full-session buffers.
 
 Goal:
-At session start, consistently decide:
-- which recent content to load first
-- what the important content is inside that recent content
-- what the current work is
-- what the logic, current step, and goal are
-- when to rely on structured memory
-- when to fall back to full-session history
-- what the final restored summary should contain
+- keep recent full-session buffers available as short-term fallback
+- detect when core logic has already been extracted
+- detect when a full session has gone unused long enough
+- remove old full-session buffers safely without harming recovery quality
 
 Suggested output shape:
 

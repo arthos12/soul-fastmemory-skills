@@ -117,20 +117,25 @@ Keep this design rule in mind:
 
 Always use targeted retrieval.
 
-1. Load the most recent and most important work first
-2. Understand what the user is doing before expanding detail
-3. Search first
-4. Rank by timeliness and criticality
-5. Get only the needed snippets first
-6. Reconstruct from the smallest useful context
-7. Expand into deeper reads only when the information is important enough
-8. Avoid broad scans and full-file loading unless necessary
+1. Load recent content first
+2. Identify the important content inside the recent content
+3. Find the most important content and the recently important content
+4. Understand what the user is doing before expanding detail
+5. Search first
+6. Rank by timeliness and criticality
+7. Get only the needed snippets first
+8. Reconstruct from the smallest useful context
+9. Expand into deeper reads only when the information is important enough
+10. Avoid broad scans and full-file loading unless necessary
 
 When restoring context, first understand:
 - what the user is doing
 - the logic of the work
 - the current step
 - the overall goal
+
+Prefer structured memory first.
+If structured memory is insufficient, fall back to the recent full-session buffer.
 
 Then expand by logic to capture:
 - key information
