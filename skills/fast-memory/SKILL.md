@@ -303,3 +303,4 @@ Run light maintenance periodically:
 
 If reusable save formats are needed, read `references/templates.md`.
 If a fuller strategy document is needed, read `references/strategy.md`.
+If the full product logic / requirements need to be reviewed or updated before changing the skill, read `references/需求文档.md` first.
