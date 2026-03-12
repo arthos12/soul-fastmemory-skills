@@ -196,13 +196,50 @@ Rule:
 
 > Delete raw history, not high-value memory.
 
+## Dynamic save (incremental session saving)
+
+**Default: dynamic save without being asked.** Do not wait for an explicit “结束 session / 保存一下” command.
+
+Goal: make `/new`-resets harmless by keeping a rolling, incremental snapshot of the current work.
+
+### Triggers (3 tiers)
+
+1) **Hard triggers (save immediately)**
+- the user confirms a decision / conclusion (“就这么定 / 按这个做”)
+- any key parameters appear: lists, links, file names/paths, configs/tokens, exact values
+- next-step / blocker changes
+- high reset risk: user likely to hit `/new`, model/tool instability, long pause, topic switch
+
+2) **Soft triggers (periodic incremental saves)**
+- the topic stays the same and information is clearly accumulating across multiple turns
+- the agent outputs an actionable plan/template/checklist worth reusing
+
+Default soft cadence (unless user changes it): **every 6–10 turns**, or **each completed sub-point**.
+
+3) **Closure triggers (stage completed)**
+- a sub-task is finished (e.g., “skill updated + repacked + verified”)
+
+### Write targets (2 layers)
+
+- **`SESSION_HANDOFF.md` = fast rolling snapshot** (lightweight, frequent)
+  - current topic
+  - latest confirmed conclusion
+  - next step
+  - blocker/constraint
+  - relevant files/links
+
+- **`LAST_SESSION.md` = fast-recovery main line** (denser, but still compact)
+  - refresh in the same pass when the main line is clear and recovery value is high
+
+Minimum fields for a dynamic save entry:
+- 事情名称
+- 简要描述
+- 当前步骤
+- 下一步
+- 阻塞/约束（如有）
+- relevant files
+
 ## Quick-save rule
-
-**Default: auto-save without being asked.** Do not wait for an explicit “结束 session / 保存一下” command.
-
-- If a meaningful work chunk finishes, a decision is made, a plan is confirmed, or the conversation is clearly pausing → immediately do a quick-save.
-- If the user is likely to hit `/new` or the platform may reset context (e.g., model/tool switch, long pause, unstable provider) → quick-save *first*.
-- Because you cannot rely on getting a final message *before* a `/new`, treat “stage completed” as the trigger, not “session ended”.
 
 When time is short or a reset is likely, save quickly into `SESSION_HANDOFF.md`.
 
