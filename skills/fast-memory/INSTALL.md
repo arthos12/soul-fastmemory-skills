@@ -1,6 +1,7 @@
 # fast-memory 安装后如何直接应用
 
-安装后，agent 应直接按以下默认规则使用本 skill：
+安装后，这个 skill 就应作为默认记忆工作流直接生效。
+agent 在涉及 session 恢复、保存、handoff、记忆分层、冷数据降级时，应直接按本 skill 执行。
 
 ## 新会话恢复
 1. 先读 `LAST_SESSION.md`

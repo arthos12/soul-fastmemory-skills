@@ -7,7 +7,8 @@ description: "Installable structured memory skill for OpenClaw agents. Use for f
 
 # Fast Memory
 
-Use this skill when the agent needs a practical memory system that can be applied immediately after installation.
+Use this skill as the default memory workflow immediately after installation.
+Apply it automatically whenever the agent needs to restore session context, save session state, create a handoff, manage layered memory, or reduce memory bloat.
 
 ## What this skill does
 
