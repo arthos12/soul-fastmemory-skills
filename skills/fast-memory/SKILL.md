@@ -218,14 +218,19 @@ Core principle: anti-pollution is a speed system.
 
 ## Data-loss reduction logic
 
-This skill reduces session data loss by using two layers of persistence:
+This skill reduces session data loss by using multiple layers of persistence:
 
 1. **Quick save path** for fast pre-reset protection
 2. **Full handoff path** for proper session closure
+3. **Recent full-session buffer** for short-term raw context fallback
 
 If time is short, prefer quick save over doing nothing.
 
 If the session appears likely to reset soon, prioritize writing the smallest high-value snapshot first.
+
+Retain the most recent 1 or 3 full sessions as a short-term raw buffer when possible.
+Use structured memory for speed first, and fall back to full-session history only when important details were not sufficiently preserved.
+Do not keep old full-session buffers forever: remove them only after the core logic has been extracted and the session has gone unused long enough.
 
 ## Read depth policy
 

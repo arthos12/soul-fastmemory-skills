@@ -22,18 +22,16 @@ The system does not yet fully automate:
 
 ## Next step
 
-Implement the fixed content classification and storage-decision template in real usage.
+Implement the recent full-session buffer mechanism.
 
 Goal:
-For actual session content, consistently decide:
-- what kind of content it is
-- which of the 6 importance levels it belongs to
-- where it should be stored
-- how completely it should be stored
-- why
+- retain the most recent 1 or 3 full sessions as a short-term raw buffer
+- continue extracting structured near-term memory from them
+- use full-session history as a fallback when structured memory is insufficient
+- define when an old full session can be removed safely
 
 Success condition:
-The same type of content should lead to similar storage decisions across sessions.
+The system can answer most recent-work questions from structured memory, and can still fall back to full-session history when needed.
 
 Suggested output shape:
 
@@ -53,7 +51,7 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Turn the fixed session-restore template into stable execution.
+Turn session restore into stable execution on top of the recent full-session buffer.
 
 Goal:
 At session start, consistently decide:
@@ -61,8 +59,8 @@ At session start, consistently decide:
 - what the important content is inside that recent content
 - what the current work is
 - what the logic, current step, and goal are
-- which snippets need shallow reading
-- which snippets need deep reading
+- when to rely on structured memory
+- when to fall back to full-session history
 - what the final restored summary should contain
 
 Suggested output shape:
