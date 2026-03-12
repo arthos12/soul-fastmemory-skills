@@ -121,11 +121,21 @@ If an item is both highly timely and highly critical, read more deeply before fi
 
 ## Save model
 
+### Classification and storage decision
+When saving content, decide in this order:
+1. what kind of content it is
+2. which of the 6 importance levels it belongs to
+3. where it should be stored
+4. how completely it should be stored
+
 ### Quick save
 Use when speed matters or a reset is likely.
 
 Save only:
-- topic
+- 事情名称 / topic
+- 事情逻辑 / logic
+- current step
+- goal
 - conclusion
 - next step
 - blocker or constraint
@@ -138,6 +148,9 @@ Use when ending a working round cleanly.
 
 Save:
 - key conclusions
+- key logic
+- current step
+- goal
 - next-step set
 - blockers
 - relevant files

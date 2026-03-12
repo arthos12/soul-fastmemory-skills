@@ -22,16 +22,18 @@ The system does not yet fully automate:
 
 ## Next step
 
-Build a fixed content classification and storage-decision template.
+Implement the fixed content classification and storage-decision template in real usage.
 
 Goal:
-Given a piece of session content, decide:
+For actual session content, consistently decide:
 - what kind of content it is
-- how important it is
-- when it will likely be needed again
+- which of the 6 importance levels it belongs to
 - where it should be stored
 - how completely it should be stored
 - why
+
+Success condition:
+The same type of content should lead to similar storage decisions across sessions.
 
 Suggested output shape:
 
@@ -51,11 +53,12 @@ This is the fastest path from rules to usable execution.
 
 ## Step after next
 
-Build a fixed session-restore template.
+Turn the fixed session-restore template into stable execution.
 
 Goal:
-At session start, decide:
-- which layer to read first
+At session start, consistently decide:
+- which recent content to load first
+- what the important content is inside that recent content
 - what the current work is
 - what the logic, current step, and goal are
 - which snippets need shallow reading

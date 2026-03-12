@@ -237,13 +237,50 @@ Choose read depth based on retrieval value.
 
 Important information should not only be found first; it should also be read in greater detail.
 
-## Writing rules
+## Content classification and storage rules
+
+Classify content by what role it plays in the work:
+
+- **长期规则** — durable methods, stable preferences, recurring principles
+- **最近会话内容** — recent work likely to continue soon
+- **交接内容** — next actions, blockers, state needed for continuation
+- **当天细节** — same-day process detail and minor conclusions
+- **项目进度** — multi-session work state, phase, risks, next step
+- **临时噪音** — low-value chatter, one-off fragments, irrelevant detail
+
+Use six importance levels:
+
+1. **第1层** — 核心逻辑、核心目标、核心工作流主线
+2. **第2层** — 关键步骤、关键结论、关键决策、关键约束
+3. **第3层** — 关键数据、关键文件、关键上下文、关键关联信息
+4. **第4层** — 一般工作细节、阶段性信息、普通背景
+5. **第5层** — 低复用描述、普通背景、低价值补充
+6. **第6层** — 临时噪音、无后续价值内容
+
+Store by role and importance:
+
+- `MEMORY.md` — 长期规则，尤其是第1-2层的稳定逻辑
+- `LAST_SESSION.md` — 最近会话内容里第1-3层的高价值部分
+- `SESSION_HANDOFF.md` — 交接内容，尤其是下一步、阻塞、当前状态
+- `memory/YYYY-MM-DD.md` — 当天细节、第3-5层的一般工作信息
+- project checkpoints — 项目进度、多轮推进状态、相关风险和下一步
+- skip — 第6层内容，以及明显不值得保留的低价值噪音
+
+Store with different completeness levels:
+
+- **完整保存** — 第1-2层，保留逻辑、主题、步骤、目标、关键细节
+- **重点保存** — 第3层，保留关键数据、关键文件、关键上下文
+- **压缩保存** — 第4-5层，只保留必要结论和少量残留
+- **不保存** — 第6层
 
 Every saved memory unit should prefer this order:
 
-- Conclusion
-- Next step
-- Constraint or blocker
+- 事情名称 / Topic
+- 事情逻辑 / Logic
+- 简要描述 / Description
+- 当前步骤 / Current step
+- 目标 / Goal
+- 关键信息 / Key information
 - Relevant files
 
 Avoid saving:
