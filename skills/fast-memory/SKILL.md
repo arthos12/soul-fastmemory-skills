@@ -283,6 +283,7 @@ When closing a work round more cleanly, update:
 - daily note if needed
 - `MEMORY.md` if durable logic should be promoted
 - capability-growth sync when this session improved understanding / logic / soul defaults
+- unfinished mainline + next actionable step, so later idle windows can resume autonomous progress instead of waiting for renewed interaction
 
 If `LAST_SESSION.md` is missing after a meaningful work round, treat the save loop as incomplete and refresh it before considering the handoff finished.
 
