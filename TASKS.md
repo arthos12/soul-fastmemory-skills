@@ -18,6 +18,7 @@
   - [ ] **结果验收汇报**：向主人汇报覆盖检查与表现结果，由主人验证是否真的“更智能、更主动”了。
   - [x] **逻辑/理解升级复测**：已完成第一轮分型与因果链复测，结果见 `docs/logic_understanding_retest_2026-03-14.md`。 (Completed)
   - [ ] **漏项回捞整理**：把本轮检查中未明确写硬的需求再次整理并补入需求总表/交付标准。
+  - [x] **补入风险预测型执行**：已新增 `references/risk_predictive_execution.md` 与 `docs/risk_prediction_upgrade_plan.md`，补强对中断/退化/限流/坏情况不可执行的前置预判能力。 (Completed)
   - [x] **补入持续生效规则**：已整理 `references/persistence_rules.md`。 (Completed)
   - [x] **补入行为级检查清单**：已整理 `references/behavior_checklist.md`。 (Completed)
   - [x] **补入需求-抽象-执行对齐规则**：已整理 `references/alignment_rules.md` 并写入长期记忆。 (Completed)

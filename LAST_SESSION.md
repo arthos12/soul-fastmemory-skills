@@ -16,10 +16,12 @@
   - 固定 idle-action checklist：`docs/idle_action_checklist.md`
   - 固定 heartbeat / cron 维护方案：`docs/heartbeat_cron_maintenance_plan.md`
   - 固定预判/预测能力专项保存检查：`docs/foresight_persistence_audit.md`
+  - 新增“风险预测型执行”规则：`skills/soul-booster/references/risk_predictive_execution.md`
+  - 新增升级方案：`docs/risk_prediction_upgrade_plan.md`
 - 当前仍未完成：
   - 真实 `/new` + `加载数据` 验收本身
-  - 把新清单/方案进一步挂入 skill 本体（如需要）
-  - 对预判能力做一次真实运行态验收
+  - 对风险预测型执行做一次真实运行态验收
+  - 将其进一步嵌入更多默认运行路径（如有必要）
 
 ## Key New Requirements From This Session
 1. 减少调用大模型的次数、频率和 token 数；需要时才调用，不需要时不要浪费。
@@ -37,10 +39,10 @@
 6. Jim 明确要求本轮 session 立即保存，确保下次 `new` 时能读到本 session 内容。
 
 ## Next Step
-1. 做一次真实 `/new` + `加载数据` 验收，重点检查：本轮新增需求与新补的 4 份文档能否被直接恢复。
+1. 做一次真实 `/new` + `加载数据` 验收，重点检查：本轮新增需求与新补的文档/规则（含 risk predictive execution）能否被直接恢复。
 2. 将验收结果回写到 `LAST_SESSION.md` / `SESSION_HANDOFF.md` / `TASKS.md`。
-3. 视验收结果决定是否把 checklist / 方案进一步下沉进 `soul-booster` / `fast-memory`。
-4. 对预判能力做一次真实方案场景下的运行态验收。
+3. 对风险预测型执行做一次真实运行态验收：检查是否真的会在执行前先扫中断/退化/限流/坏情况不可执行风险。
+4. 视验收结果决定是否把 checklist / 方案进一步下沉进 `soul-booster` / `fast-memory`。
 
 ## Success Criteria
 - 下次 `new` 后，能直接恢复本轮新增需求与当前主线状态。
