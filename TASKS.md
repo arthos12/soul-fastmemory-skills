@@ -9,6 +9,7 @@
 
 ### 1. soul-booster 持续开发与验收 (主线)
 - Status: testing_now
+- Idle mandate: Jim 已明确授权空闲期自主推进，并优先检查“已提出但未真正实现”的需求，再继续补齐与验收。
 - Goal: 大幅提高理解能力，理解主人的目标和需求，把关键需求与任务记住且后续不忘；持续提高逻辑能力、响应能力，并在空闲/空档期主动思考和推进任务目标。
 - Current Sub-tasks:
   - [x] **并入自我运维规则**：已建立 `references/operational_logic.md` 并更新 `SKILL.md`。 (Completed)
