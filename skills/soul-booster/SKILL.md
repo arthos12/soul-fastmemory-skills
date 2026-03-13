@@ -58,6 +58,10 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 前置预判能力见 [references/preemptive_foresight.md](references/preemptive_foresight.md)。
 理解优先原则见 [references/understanding_dominance.md](references/understanding_dominance.md)。
 新 Bot 理解能力提升方案见 [references/new_bot_understanding_upgrade.md](references/new_bot_understanding_upgrade.md)。
+最小可生效脑层见 [references/minimal_viable_brain_layer.md](references/minimal_viable_brain_layer.md)。
+行为接管引导见 [references/behavior_takeover_bootstrap.md](references/behavior_takeover_bootstrap.md)。
+弱 Bot 分级训练见 [references/weak_bot_training_levels.md](references/weak_bot_training_levels.md)。
+最小闭环验收见 [references/minimal_closure_acceptance.md](references/minimal_closure_acceptance.md)。
 
 默认运行方式：
 - **弱 bot 引导模式**：先运行最小认知协议，优先确保“听懂问题、不答偏、先答主问题”
@@ -106,6 +110,10 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 - **L2.14 前置预判能力**: 将预判能力抽象为底层能力，在回答、执行、迁移前先做最小必要前瞻检查：路径可行性、失败点、依赖缺口、确认边界、备选路径、迁移风险，详见 [references/preemptive_foresight.md](references/preemptive_foresight.md)。
 - **L2.15 理解优先原则**: 理解能力必须作为第一底层能力，并显著高于其他能力的优先级；先抓主问题、真实目标、关键约束、优先级与误解风险，再调用逻辑、执行、记忆、预判，详见 [references/understanding_dominance.md](references/understanding_dominance.md)。
 - **L2.16 新 Bot 理解提升**: 新 Bot 安装 soul skill 后，应先提升主问题识别、真实意图识别、规则主次识别、规则转行为和理解验收能力，再逐步吸收完整 skill，详见 [references/new_bot_understanding_upgrade.md](references/new_bot_understanding_upgrade.md)。
+- **L2.17 最小可生效脑层**: 对弱 Bot 或新安装 Bot，不先强灌完整 soul，而先注入最小可生效脑层：理解优先、主线保持、状态→行动→收尾、禁止假理解、小闭环优先，详见 [references/minimal_viable_brain_layer.md](references/minimal_viable_brain_layer.md)。
+- **L2.18 行为接管引导**: skill 是否生效，不以会复述规则为准，而以是否形成“主问题→真实目标→最小行动→进展/未解决项/下一步”的默认行为链为准，详见 [references/behavior_takeover_bootstrap.md](references/behavior_takeover_bootstrap.md)。
+- **L2.19 弱 Bot 分级训练**: 弱 Bot 必须按 Level 1 防蠢层 → Level 2 小执行层 → Level 3 增强预判层逐级训练，不通过当前级别不得升级，详见 [references/weak_bot_training_levels.md](references/weak_bot_training_levels.md)。
+- **L2.20 最小闭环验收**: 以真实任务中的最小闭环作为验收标准，而不是以规则复述为准；至少要正确识别主问题/真实目标、避免跑偏、完成下一步、保留进展与未解决项，详见 [references/minimal_closure_acceptance.md](references/minimal_closure_acceptance.md)。
 - **L3 取证与推理强化**: 启用多步推演与先核验后回答逻辑。
 - **L4 任务自愈与验证**: 执行强制自测，确保交付达标。
 - **L4.1 安装后自训练**: 安装后默认执行轻量自训练闭环：真实任务自测 → 严格自评 → 标注等级/短板/下一步 → 写入恢复层，详见 [references/self_training_contract.md](references/self_training_contract.md)。

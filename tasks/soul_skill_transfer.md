@@ -23,6 +23,11 @@ Build, solidify, publish, and validate a transferable capability stack centered 
 - Need a minimal validation prompt set to test whether the other bot actually gained stronger understanding / logic / autonomy.
 - Need an explicit capability-transfer assessment layer for predicting which abilities can transfer well and which may fail on weaker bots.
 - Need continuing task-file mechanism integrated into soul/skill so future mainline tasks automatically get durable file tracking.
+- Need to verify whether the new weak-bot training structure actually improves other bots in real tasks.
+
+## Current progress update
+- Added understanding-first principle and new-bot understanding upgrade path into `SOUL.md` and `soul-booster`.
+- Added weak-bot rescue structure into `soul-booster`: minimal viable brain layer, behavior takeover bootstrap, training levels, and minimal closure acceptance.
 
 ## Next actionable step
-- Formalize the task-file mechanism into `SOUL.md` and `soul-booster`, then prepare the other-bot update instructions and validation prompts.
+- Prepare the actual install/update and validation run for another bot using the new weak-bot training structure.
