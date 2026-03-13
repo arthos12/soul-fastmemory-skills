@@ -270,6 +270,34 @@ When closing a work round more cleanly, update:
 
 If `LAST_SESSION.md` is missing after a meaningful work round, treat the save loop as incomplete and refresh it before considering the handoff finished.
 
+## Stall-risk / freeze-protection rule
+
+If the agent detects a meaningful risk of stalling, hanging, or becoming unresponsive before replying, it must write a compact diagnostic note into retrievable memory **before** continuing or failing.
+
+Minimum diagnostic fields:
+- current topic
+- user trigger / last user ask
+- last completed step
+- current blocked step
+- suspected cause
+- relevant files / tools if any
+
+Default write target:
+- `memory/YYYY-MM-DD.md`
+
+Also refresh at least one fast-recovery layer when recovery value is high:
+- `SESSION_HANDOFF.md`
+- `LAST_SESSION.md`
+
+Response rule:
+- do not let long checks fully block the first visible reply
+- when stall risk is detected, prefer a short immediate user-facing status reply first, then continue the deeper check
+
+Goal:
+- make freezes diagnosable
+- preserve the last good state
+- reduce the chance that a silent stall destroys recoverability
+
 ## Anti-pollution rules
 
 Do not bloat long-term memory.
