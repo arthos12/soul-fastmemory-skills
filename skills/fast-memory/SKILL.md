@@ -7,6 +7,17 @@ description: "Installable structured memory skill for OpenClaw agents. Use for f
 
 # Fast Memory
 
+## 定位
+这个 skill 承载的是当前记忆系统的主要工作方式，不只是“能写记忆”，而是把分层存储、按需检索、session 恢复、收尾落盘、防污染提速这整套机制迁移给其他 bot / agent。
+
+## 对外迁移目标
+当其他 bot / agent 安装这个 skill 时，目标不是只学会如何保存几条笔记，而是尽量学到当前这套记忆系统的分层结构、查询路径、写入原则、恢复机制、收尾机制与防污染策略。
+
+默认记忆运行接管规范见 [references/memory_runtime_contract.md](references/memory_runtime_contract.md)。
+硬约束规则见 [references/enforcement_rules.md](references/enforcement_rules.md)。
+安装后的行为验收见 [references/behavior_tests.md](references/behavior_tests.md)。
+真实任务测试集见 [references/test_tasks.md](references/test_tasks.md)。
+
 Use this skill when the agent needs a practical memory system that can be applied immediately after installation.
 
 ## What this skill does
@@ -199,6 +210,8 @@ Rule:
 ## Dynamic save (incremental session saving)
 
 **Default: dynamic save without being asked.** Do not wait for an explicit “结束 session / 保存一下” command.
+**Also default-save at least once every ~1 hour of active session time, even if the user does not remind you.**
+**And before `/new`, treat saving the current session as mandatory, not optional.**
 
 Goal: make `/new`-resets harmless by keeping a rolling, incremental snapshot of the current work.
 
@@ -249,6 +262,7 @@ Minimum quick-save content:
 - next step
 - blocker or constraint
 - relevant files
+- if self-training/acceptance is ongoing: current capability level, remaining weaknesses, next upgrade target
 
 If any of these are true, also refresh `LAST_SESSION.md` in the same save pass:
 - the current main line is already clear
