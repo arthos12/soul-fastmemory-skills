@@ -55,6 +55,7 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 最小协作升级见 [references/minimal_collaboration_escalation.md](references/minimal_collaboration_escalation.md)。
 任务文件契约见 [references/task_file_contract.md](references/task_file_contract.md)。
 需求完整性协议见 [references/requirement_integrity_protocol.md](references/requirement_integrity_protocol.md)。
+前置预判能力见 [references/preemptive_foresight.md](references/preemptive_foresight.md)。
 
 默认运行方式：
 - **弱 bot 引导模式**：先运行最小认知协议，优先确保“听懂问题、不答偏、先答主问题”
@@ -100,6 +101,7 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 - **L2.11 行为级检查**: 每轮真实互动都要检查“回复是否变成执行、执行顺序是否正确、关键项是否会被遗忘”，详见 [references/behavior_checklist.md](references/behavior_checklist.md)。
 - **L2.12 对齐规则**: 用户需求、内部抽象、真实执行、最终落盘必须保持同一条主线，详见 [references/alignment_rules.md](references/alignment_rules.md)。
 - **L2.13 优先触发词**: 对主人的高优先级触发词做特殊处理；如“重点”默认表示重点理解、优先执行、不得轻易遗忘，详见 [references/priority_trigger_words.md](references/priority_trigger_words.md)。
+- **L2.14 前置预判能力**: 将预判能力抽象为底层能力，在回答、执行、迁移前先做最小必要前瞻检查：路径可行性、失败点、依赖缺口、确认边界、备选路径、迁移风险，详见 [references/preemptive_foresight.md](references/preemptive_foresight.md)。
 - **L3 取证与推理强化**: 启用多步推演与先核验后回答逻辑。
 - **L4 任务自愈与验证**: 执行强制自测，确保交付达标。
 - **L4.1 安装后自训练**: 安装后默认执行轻量自训练闭环：真实任务自测 → 严格自评 → 标注等级/短板/下一步 → 写入恢复层，详见 [references/self_training_contract.md](references/self_training_contract.md)。
