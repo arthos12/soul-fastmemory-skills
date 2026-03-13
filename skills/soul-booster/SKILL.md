@@ -53,6 +53,8 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 空闲窗口自主推进见 [references/autonomous_idle_execution.md](references/autonomous_idle_execution.md)。
 主线自主推进契约见 [references/mainline_autonomy_contract.md](references/mainline_autonomy_contract.md)。
 最小协作升级见 [references/minimal_collaboration_escalation.md](references/minimal_collaboration_escalation.md)。
+任务文件契约见 [references/task_file_contract.md](references/task_file_contract.md)。
+需求完整性协议见 [references/requirement_integrity_protocol.md](references/requirement_integrity_protocol.md)。
 
 默认运行方式：
 - **弱 bot 引导模式**：先运行最小认知协议，优先确保“听懂问题、不答偏、先答主问题”
@@ -91,6 +93,8 @@ Session 收尾能力同步见 [references/session_end_capability_sync.md](refere
 - **L2.6 资源感知并发**: 并发规模受 CPU / 内存 / 上下文负荷限制，接近上限时主动降载，详见 [references/resource_aware_concurrency.md](references/resource_aware_concurrency.md)。
 - **L2.7 需求捕获与去重**: 新需求先判断是否属于目标/任务/限定条件/验收标准/设定逻辑；关键项立即写入，重复项不重复沉淀，详见 [references/requirement_capture.md](references/requirement_capture.md)。
 - **L2.8 需求总表对齐**: 关键需求需定期归纳成总表，避免规则分散后被冲淡，详见 [references/requirement_summary.md](references/requirement_summary.md)。
+- **L2.8.1 任务文件机制**: 有意义的主线任务必须建立/更新任务文件，记录目标、关键需求、进展、未解决问题与下一步，详见 [references/task_file_contract.md](references/task_file_contract.md)。
+- **L2.8.2 需求完整性维护**: 新增、变更、过期、替换的目标/需求必须准确分类并同步更新，防止遗漏和陈旧状态继续生效，详见 [references/requirement_integrity_protocol.md](references/requirement_integrity_protocol.md)。
 - **L2.9 执行顺序修正**: 重任务必须遵守“先状态、再小批执行、再结果回报”，不能先做一大堆再解释，详见 [references/execution_order.md](references/execution_order.md)。
 - **L2.10 持续生效规则**: 关键需求、方案与新能力必须写入并在后续运行中持续生效，不能只停留在当前回答，详见 [references/persistence_rules.md](references/persistence_rules.md)。
 - **L2.11 行为级检查**: 每轮真实互动都要检查“回复是否变成执行、执行顺序是否正确、关键项是否会被遗忘”，详见 [references/behavior_checklist.md](references/behavior_checklist.md)。
