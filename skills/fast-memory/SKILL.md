@@ -263,6 +263,7 @@ Minimum quick-save content:
 - blocker or constraint
 - relevant files
 - if self-training/acceptance is ongoing: current capability level, remaining weaknesses, next upgrade target
+- if understanding failed: exact misread pattern (e.g. missed main question / failed to split compound question / followed keywords instead of intent)
 
 If any of these are true, also refresh `LAST_SESSION.md` in the same save pass:
 - the current main line is already clear
