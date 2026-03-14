@@ -10,20 +10,21 @@
 - 不涉及需要 Jim 立即拍板的安全/权限/资金/账号边界
 
 ## Default order
-### 1. 先查主线
+### 0. 优先自我进化 (Vertical Audit)
+在开始任何任务推进前，先自查最近的 session：
+- 是否存在“认知炎症”（理解偏差、逻辑断层、预测遗漏）？
+- 是否有 Jim 提出的能力缺陷反馈？
+- 若有，优先按 `docs/self_evolution_protocol.md` 打补丁，再执行后续任务。
+
+### 1. 检查主线与恢复层 (Recovery Check)
 - 当前主线是什么？
 - 当前步骤是什么？
-- 下一步是否明确？
-- 若不明确，先补 `LAST_SESSION.md` / `SESSION_HANDOFF.md` / `TASKS.md`
+- 快恢复层 (`LAST_SESSION.md` / `SESSION_HANDOFF.md`) 是否最新？
+- 今天的 `memory/YYYY-MM-DD.md` 是否已建？
 
-### 2. 先做低成本高价值动作
-优先级从高到低：
-1. 补快恢复层缺口
-2. 补当天 `memory/YYYY-MM-DD.md`
-3. 更新任务板 / 任务文件中的下一步
-4. 做小范围覆盖检查 / 漏项回捞
-5. 做本地优先的确定性检查
-6. 整理能直接沉淀进 skill / docs 的稳定规则
+### 2. 推进横向任务 (Horizontal Progress)
+- 对照 `TASKS.md` 推进主线。
+- 遵循本地优先原则。
 
 ### 3. 默认本地优先
 优先使用：
