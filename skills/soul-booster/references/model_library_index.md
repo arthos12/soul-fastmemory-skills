@@ -113,6 +113,10 @@
 - 文件：`core_brain_library_constitution.md`
 - 适用：锁定核心底层库固定为三块——理解模型库、逻辑库、预测模型库；思考能力定位为三库之上的编排层。
 
+### 多维感知前置协议
+- 文件：`multidimensional_perception_protocol.md`
+- 适用：处理任务前默认执行“降维→深挖→预判→过滤”，作为思考编排层前置协议，不并入核心三库。
+
 ### U1-U5 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`
