@@ -49,7 +49,9 @@ def main():
 
     win=rows[-min(len(rows), args.last_n):]
     wall=(win[-1]['_t']-win[0]['_t']).total_seconds() or 1.0
-    active=sum(float(r.get('totalSecs',0)) for r in win)
+    # totalSecs sums per-lane durations and can exceed wall time when lanes run in parallel.
+    active_raw=sum(float(r.get('totalSecs',0)) for r in win)
+    active=min(active_raw, wall)
     util=active/wall
     idle=max(0.0, wall-active)
 
