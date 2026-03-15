@@ -61,6 +61,29 @@ elif [[ "$backlog_mvc" -gt 0 && "$backlog_done" -lt 2 && "$mvc" -eq 0 && "$scrip
   reason="mvc_backlog_stalled_focus_on_delivery"
 fi
 
+# If we're stalled (no done growth) and have mvc items, force one m->x conversion.
+# This is the concrete mechanism for "空闲不浪费": stop making skeletons and actually finish one.
+if [[ "$backlog_mvc" -gt 0 ]]; then
+  # last 3 metrics deltaBacklogDone==0 => treat as stalled
+  stalled=$(python3 - <<'PY'
+import json
+p='data/efficiency/metrics.jsonl'
+try:
+    lines=[ln for ln in open(p,'r',encoding='utf-8') if ln.strip()]
+    last=lines[-3:]
+    if last and all(int(json.loads(ln).get('deltaBacklogDone',0))==0 for ln in last):
+        print('1')
+    else:
+        print('0')
+except Exception:
+    print('0')
+PY
+)
+  if [[ "$stalled" == "1" ]]; then
+    bash scripts/convert_next_mvc_to_done.sh >/dev/null 2>&1 || true
+  fi
+fi
+
 if [[ "$apply_disable_p1" == true ]]; then
   # Disable P1/P2 by editing JSON with python
   python3 - <<'PY'
