@@ -129,6 +129,7 @@ for lane in q.get('lanes',[]):
     if lid in allowed:
         lane['enabled']=True
     else:
+        # do not force-disable lanes not governed by focus
         lane['enabled']=False
 json.dump(q, open(p,'w',encoding='utf-8'), ensure_ascii=False, indent=2)
 PY

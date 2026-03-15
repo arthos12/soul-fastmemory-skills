@@ -18,7 +18,7 @@
     {
       "id": "P0_validate",
       "desc": "线2验证：并发验证（不阻塞推进）",
-      "enabled": false,
+      "enabled": true,
       "command": [
         "bash",
         "scripts/parallel_validate_pack.sh"

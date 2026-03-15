@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "allowedLanes": [
+    "P0_brain",
+    "P0_validate"
+  ],
+  "reason": "stalled_deltaBacklogDone_0_x3",
+  "sBrainNotDone": []
+}

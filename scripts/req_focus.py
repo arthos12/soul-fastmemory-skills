@@ -49,14 +49,14 @@ def main():
             stalled=True
 
     if s_brain_not_done:
-        allowed=['P0_brain']
+        allowed=['P0_brain','P0_validate']
         reason='S_brain_not_done'
     elif stalled:
-        allowed=['P0_brain']
+        allowed=['P0_brain','P0_validate']
         reason=f'stalled_deltaBacklogDone_0_x{stall_n}'
     else:
-        allowed=['P0_brain','P1_polymarket']
-        reason='no_S_brain_block_and_not_stalled'
+        allowed=['P0_brain','P0_validate']
+        reason='default_P0_delivery_plus_validation'
 
     out={
         'version': 1,
