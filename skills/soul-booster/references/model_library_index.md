@@ -109,6 +109,10 @@
 - 文件：`models/U0_understanding_library_index.md`
 - 适用：定义理解能力库边界与五个底层主干模型。
 
+### 核心大脑底层库宪法
+- 文件：`core_brain_library_constitution.md`
+- 适用：锁定核心底层库固定为三块——理解模型库、逻辑库、预测模型库；思考能力定位为三库之上的编排层。
+
 ### U1-U5 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`
