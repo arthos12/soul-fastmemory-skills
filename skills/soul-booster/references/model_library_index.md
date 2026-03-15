@@ -126,6 +126,16 @@
 - 文件：`models/U6_iceberg_intent_model.md`
 - 适用：分别负责讲浅验收、结构挂钩、第一性原理解构、关键变量提取、动态理解更新、冰山式深层意图识别。
 
+### P0-P7 预测模型库（第一批）
+- 文件：`models/P0_prediction_library_index.md`
+- 文件：`models/P1_followup_need_prediction.md`
+- 文件：`models/P2_cycle_analysis.md`
+- 文件：`models/P3_mean_reversion.md`
+- 文件：`models/P4_positive_feedback_loops.md`
+- 文件：`models/P5_bayesian_forecasting.md`
+- 文件：`models/P6_base_rate_thinking.md`
+- 文件：`models/P7_fat_tail_black_swan.md`
+- 适用：分别负责预测总索引、后续需求预判、周期判断、均值回归、正反馈动力学、概率更新、基准率约束、尾部风险识别。
 ## 审计（防固化）
 - 新模型进入默认库，必须带：适用场景/禁用场景/输出格式/验收指标。
 - 每周（或每 20 个样本）做一次：哪些模型在什么场景有效/无效 → 降权/替换。
