@@ -12,6 +12,7 @@
 8. **问题类型识别闸门**：任何回答前先过 `T1_question_type_gate.md`（定位/方案执行/证据汇报三选一）；类型不匹配直接重答。对用户输出默认用人话，不展示内部标签（除非验收要求）。
 9. **语义误解纠偏协议**：若用户指出“没懂/跑偏/没抓重点/说人话/纠错不对”，必须按 `SR0_semantic_repair_protocol.md` 立即给修正答案 + 最小防复发改动，禁止继续解释；回复格式遵循 R2（先人话结论）。
 10. **回指绑定闸门**：短句/省略句必须先过 `RF0_reference_binding_gate.md` 判断其指向（Prev1/Prev5/New）；不确定只问一句澄清。
+11. **理解力增强协议**：回答或执行前，必须先过 `U0_understanding_enhancement_protocol.md`：意图映射→概念降维→关联审计→追问确认；关键变量置信度 <80% 时禁止盲做。
 10. **对话需求捕获闸门**：当用户一条消息列出多项问题/口径/需求时，必须按 `C0_conversation_requirement_capture_gate.md` 立刻入库（Inbox→Triage→Latest），禁止只复述不落盘。
 11. **非阻塞并发验证**：验证不阻塞推进；互不依赖验证并发跑；结果用快照随时汇总（`V1_nonblocking_parallel_validation.md`）。
 12. **两层定义（大脑层/业务层）**：按 `L0_layer_definition_brain_vs_business.md` 划分；大脑层优先级高于业务层，未完成时冻结业务层推进。 
