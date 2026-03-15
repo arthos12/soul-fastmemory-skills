@@ -127,6 +127,10 @@
 - 文件：`Understanding_Protocol.md`
 - 文件：`Predictive_Engine.md`
 - 适用：分别作为逻辑库母本、跨层认知偏差防火墙、理解层总协议、预测层总引擎；用于映射式吸收外部硬核大脑协议，不形成平行核心体系。
+
+### 三库内化方案
+- 文件：`three_library_internalization_plan.md`
+- 适用：把理解库、逻辑库、预测库从文件知识转成默认运行习惯，明确四阶段内化路径、最小 U→L→P 运行链与验收指标。
 ### U1-U6 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`
