@@ -70,6 +70,7 @@ Jim式方案导航/审核/纠偏模型见 [references/models/J0_jim_navigation_a
 方案审核评分闸门见 [references/models/A1_plan_audit_scoring_gate.md](references/models/A1_plan_audit_scoring_gate.md)。
 动态焦点控制器见 [references/models/F0_dynamic_focus_controller.md](references/models/F0_dynamic_focus_controller.md)。
 问题类型识别闸门见 [references/models/T1_question_type_gate.md](references/models/T1_question_type_gate.md)。
+人话汇报样式见 [references/models/R1_human_report_style.md](references/models/R1_human_report_style.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。
 互动压缩见 [references/interaction_compression.md](references/interaction_compression.md)。
