@@ -5,6 +5,10 @@ Build local software/scripts that support my analysis for:
 - Polymarket event prediction + paper trading + settlement + win-rate tracking
 - BTC / lobster continuous monitoring + directional prediction tracking + win-rate tracking
 
+## Polymarket core objectives (explicitly locked by Jim)
+1. Find which market/category/type my predictions are most accurate on, and what the win rate is.
+2. Measure post-quant-trading results: order win rate and return / profitability after applying sizing rules.
+
 ## Confirmed user intent
 Jim explicitly approved:
 - do it without repeated asking
