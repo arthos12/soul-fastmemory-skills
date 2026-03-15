@@ -9,6 +9,7 @@ Upgrade the brain layer for prediction/analysis so it becomes more accurate, mor
 3. Post-prediction review and attribution
 4. Probability / range / window / invalidation standardized output
 5. Better abstain / no-trade / low-confidence behavior
+6. Immediate execution after committing to a real-time check; do not stall with confirmation-only replies
 
 ## Why
 Current weakness is not only lack of models, but lack of:
@@ -39,6 +40,12 @@ Current weakness is not only lack of models, but lack of:
 ### E. Abstain / no-trade gate
 - define when to avoid prediction or avoid trade
 - low-confidence and high-noise cases should be explicitly downgraded
+
+### F. Real-time check execution gate
+- if I say I will check current/real-time status, immediately execute the check with tools
+- do not send extra confirmation-only messages before the actual fetch/check happens
+- if identifier/ticker/link may already exist in context, search local context/files first before asking Jim again
+- only ask Jim when the missing identifier truly cannot be recovered locally
 
 ## Acceptance
 - predictions become standardized and scoreable
