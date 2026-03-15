@@ -74,6 +74,7 @@ Jim式方案导航/审核/纠偏模型见 [references/models/J0_jim_navigation_a
 人话优先两层回复见 [references/models/R2_human_first_two_layer_reply.md](references/models/R2_human_first_two_layer_reply.md)。
 对话需求捕获闸门见 [references/models/C0_conversation_requirement_capture_gate.md](references/models/C0_conversation_requirement_capture_gate.md)。
 效率底层库见 [references/models/EFF0_efficiency_core_library.md](references/models/EFF0_efficiency_core_library.md)。
+非阻塞并发验证见 [references/models/V1_nonblocking_parallel_validation.md](references/models/V1_nonblocking_parallel_validation.md)。
 语义误解纠偏协议见 [references/models/SR0_semantic_repair_protocol.md](references/models/SR0_semantic_repair_protocol.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。

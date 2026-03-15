@@ -73,6 +73,10 @@
 - 文件：`models/EFF0_efficiency_core_library.md`
 - 适用：统一定义效率（Direction×Utilization×Throughput），用于多事件解释与提效。
 
+### V1 非阻塞并发验证
+- 文件：`models/V1_nonblocking_parallel_validation.md`
+- 适用：验证并发+异步汇总，避免为等窗口而停工。
+
 ### SR0 语义误解纠偏协议
 - 文件：`models/SR0_semantic_repair_protocol.md`
 - 适用：用户指出没懂/跑偏时，强制给修正答案+最小防复发改动。

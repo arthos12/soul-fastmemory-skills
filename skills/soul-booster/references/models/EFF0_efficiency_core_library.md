@@ -76,5 +76,6 @@
 - 任何“提效”必须说明：改善的是 Direction / Utilization / Throughput 哪一项。
 - **提效顺序固定**：先 Direction（方向正确）→ 再 Utilization（时间利用率，避免空转）→ 最后 Throughput（产出速率/并发）。
   - 方向错 = 乘以 0；并发/利用率不能替代方向正确。
+- **验证非阻塞**：验证可以并发跑、异步汇总；不因为等“30分钟窗口”而停工（见 `V1_nonblocking_parallel_validation.md`）。
 - 任何“完成”必须以 `[x]/done` 与可复跑证据为准。
 - 若 Direction 低：先修聚焦/闸门；若 Utilization 低：再修执行器/空转；若 Throughput 低：最后才谈并发与流程优化。

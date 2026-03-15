@@ -8,6 +8,7 @@ Outputs a concise snapshot using the EFF0 library terms:
 
 Usage:
   python3 scripts/efficiency_snapshot.py --minutes 30
+  python3 scripts/efficiency_snapshot.py --last-n 20  # no fixed time window
 """
 
 import argparse, json, datetime, os
@@ -36,7 +37,8 @@ def load():
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument('--minutes', type=int, default=30)
+    ap.add_argument('--minutes', type=int, default=0)
+    ap.add_argument('--last-n', type=int, default=20)
     args=ap.parse_args()
 
     rows=load()
@@ -44,10 +46,13 @@ def main():
         print('NO_METRICS')
         return
 
-    cutoff=rows[-1]['_t']-datetime.timedelta(minutes=args.minutes)
-    win=[r for r in rows if r['_t']>=cutoff]
-    if len(win)<2:
-        win=rows[-min(len(rows),30):]
+    if args.minutes and args.minutes > 0:
+        cutoff=rows[-1]['_t']-datetime.timedelta(minutes=args.minutes)
+        win=[r for r in rows if r['_t']>=cutoff]
+        if len(win)<2:
+            win=rows[-min(len(rows), args.last_n):]
+    else:
+        win=rows[-min(len(rows), args.last_n):]
 
     wall=(win[-1]['_t']-win[0]['_t']).total_seconds() or 1.0
     active=sum(float(r.get('totalSecs',0)) for r in win)
@@ -61,7 +66,8 @@ def main():
 
     avg_lanes=sum(len(r.get('lanes',[])) for r in win)/len(win)
 
-    print(f"过去{args.minutes}分钟：并发(平均lane数)≈{avg_lanes:.2f}；时间利用率≈{util*100:.1f}%；done增量={delta_done}；当前完成占比={ratio*100:.2f}% ({done}/({done}+{mvc}))")
+    label = f"过去{args.minutes}分钟" if args.minutes and args.minutes>0 else f"最近{len(win)}次"
+    print(f"{label}：并发(平均lane数)≈{avg_lanes:.2f}；时间利用率≈{util*100:.1f}%；done增量={delta_done}；当前完成占比={ratio*100:.2f}% ({done}/({done}+{mvc}))")
 
 if __name__=='__main__':
     main()
