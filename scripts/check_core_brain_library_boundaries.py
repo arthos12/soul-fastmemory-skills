@@ -39,6 +39,12 @@ for p in [BASE/'model_library_index.md', BASE/'core_runtime_rules.md', ROOT/'ski
         if 'core_brain_library_constitution.md' not in txt:
             errors.append(f'{p.name}: missing constitution reference')
 
+# 5) constitution must contain strict-review gate wording
+const = (BASE / 'core_brain_library_constitution.md').read_text(encoding='utf-8', errors='ignore') if (BASE / 'core_brain_library_constitution.md').exists() else ''
+for needle in ['最严格审核', 'Jim 主动提出修改时', '默认否决原则']:
+    if needle not in const:
+        errors.append(f'constitution missing required clause: {needle}')
+
 if errors:
     print('BOUNDARY_CHECK_FAIL')
     for e in errors:
