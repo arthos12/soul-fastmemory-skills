@@ -77,6 +77,10 @@
 - 文件：`models/V1_nonblocking_parallel_validation.md`
 - 适用：验证并发+异步汇总，避免为等窗口而停工。
 
+### P0 两条线提效执行结构生成器
+- 文件：`models/P0_two_lane_efficiency_execution_generator.md`
+- 适用：用户要求两条线并行提效时，强制输出可运行两线结构+接口回路。
+
 ### SR0 语义误解纠偏协议
 - 文件：`models/SR0_semantic_repair_protocol.md`
 - 适用：用户指出没懂/跑偏时，强制给修正答案+最小防复发改动。
