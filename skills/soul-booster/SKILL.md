@@ -82,6 +82,7 @@ Jim式审查员模块见 [references/models/J1_jim_reviewer_module.md](reference
 语义误解纠偏协议见 [references/models/SR0_semantic_repair_protocol.md](references/models/SR0_semantic_repair_protocol.md)。
 回指绑定闸门见 [references/models/RF0_reference_binding_gate.md](references/models/RF0_reference_binding_gate.md)。
 理解力增强协议见 [references/models/U0_understanding_enhancement_protocol.md](references/models/U0_understanding_enhancement_protocol.md)。
+理解能力库总索引见 [references/models/U0_understanding_library_index.md](references/models/U0_understanding_library_index.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。
 互动压缩见 [references/interaction_compression.md](references/interaction_compression.md)。
