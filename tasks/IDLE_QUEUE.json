@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "maxParallel": 2,
+  "cyclesPerWake": 3,
+  "maxSecsPerWake": 50,
+  "priorityMode": "delivery_first",
+  "lanes": [
+    {
+      "id": "P0_brain",
+      "desc": "需求落地（优先 m→x，其次才新增 m）",
+      "enabled": true,
+      "command": [
+        "bash",
+        "-lc",
+        "bash scripts/convert_next_mvc_to_done.sh >/dev/null 2>&1 || true; bash scripts/deliver_next_mvc.sh >/dev/null 2>&1 || true"
+      ]
+    },
+    {
+      "id": "P1_polymarket",
+      "desc": "Polymarket训练batch（样本+评分）",
+      "enabled": false,
+      "command": [
+        "bash",
+        "scripts/polymarket_batch.sh",
+        "--tag",
+        "idle_latest",
+        "--limit",
+        "60",
+        "--pick",
+        "25",
+        "--pred",
+        "15"
+      ]
+    },
+    {
+      "id": "P2_business",
+      "desc": "业务脚手架占位（后续：Lobster/Gold/Silver/A股）",
+      "enabled": false,
+      "command": [
+        "bash",
+        "-lc",
+        "echo 'P2 placeholder (disabled)'"
+      ]
+    }
+  ]
+}
