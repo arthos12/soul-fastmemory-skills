@@ -16,7 +16,7 @@
 - [x] delivery_ratio_report_v2 - 落地占比报表：新增/完成/净增/依赖链（你要看的那套）  # done_at=2026-03-15T15:00:59Z artifacts=scripts/delivery_ratio_report_v2.py
 
 ## P1（高优先）：核心能力落地（我们聊过但没真正做完）
-- [x] lobster_watch - Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl  # done_at=2026-03-15T15:01:00Z artifacts=scripts/lobster_watch.sh  # downgraded_from_x=stub_detected
+- [x] lobster_watch - Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl  # done_at=2026-03-15T16:11:02Z artifacts=scripts/lobster_watch.sh,scripts/lobster_watch.py,data/lobster/lobster_snapshots.jsonl,data/lobster/lobster_latest.json,docs/mvc_tests/lobster_watch_done.md
 - [m] gold_silver_watch - 黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl  # done_at=2026-03-15T15:01:01Z artifacts=scripts/gold_silver_watch.sh  # downgraded_from_x=stub_detected
 - [m] a_share_data_demo - A股：选1个稳定数据源，做最小demo拉指数/行业  # done_at=2026-03-15T15:01:01Z artifacts=scripts/a_share_data_demo.sh  # downgraded_from_x=stub_detected
 - [m] polymarket_brier_scaffold - 结算后Brier score：写脚手架与数据结构  # done_at=2026-03-15T15:01:02Z artifacts=scripts/polymarket_brier_scaffold.sh  # downgraded_from_x=stub_detected
