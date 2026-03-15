@@ -65,6 +65,10 @@
 - 文件：`models/C0_conversation_requirement_capture_gate.md`
 - 适用：用户一次列多项问题/需求时，必须自动拆分入库，防止遗漏。
 
+### EFF0 效率底层库
+- 文件：`models/EFF0_efficiency_core_library.md`
+- 适用：统一定义效率（Direction×Utilization×Throughput），用于多事件解释与提效。
+
 ## 审计（防固化）
 - 新模型进入默认库，必须带：适用场景/禁用场景/输出格式/验收指标。
 - 每周（或每 20 个样本）做一次：哪些模型在什么场景有效/无效 → 降权/替换。

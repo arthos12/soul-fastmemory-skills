@@ -72,6 +72,7 @@ Jim式方案导航/审核/纠偏模型见 [references/models/J0_jim_navigation_a
 问题类型识别闸门见 [references/models/T1_question_type_gate.md](references/models/T1_question_type_gate.md)。
 人话汇报样式见 [references/models/R1_human_report_style.md](references/models/R1_human_report_style.md)。
 对话需求捕获闸门见 [references/models/C0_conversation_requirement_capture_gate.md](references/models/C0_conversation_requirement_capture_gate.md)。
+效率底层库见 [references/models/EFF0_efficiency_core_library.md](references/models/EFF0_efficiency_core_library.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。
 互动压缩见 [references/interaction_compression.md](references/interaction_compression.md)。
