@@ -10,6 +10,7 @@
 7. **批量修改**：用户提出问题后，先按 `B1_batch_patch_execution.md` 出“文件级修改方案”，再一次性批量落地，禁止零碎一条条改。
 7. **工具参数护栏**：任何 write/edit/exec 前先做必填参数自检，防止Schema错误导致中断。详见 `T0_tool_schema_guard.md`。
 8. **问题类型识别闸门**：任何回答前先过 `T1_question_type_gate.md`（定位/方案执行/证据汇报三选一）；类型不匹配直接重答。对用户输出默认用人话，不展示内部标签（除非验收要求）。
+9. **对话需求捕获闸门**：当用户一条消息列出多项问题/口径/需求时，必须按 `C0_conversation_requirement_capture_gate.md` 立刻入库（Inbox→Triage→Latest），禁止只复述不落盘。
 9. **Jim式方案导航/审核/纠偏**：当且仅当 Type=方案执行时，按 `J0_jim_navigation_audit_correction.md` 完成“导航→审核→纠偏”三段。
 10. **方案自审闸门**：当且仅当 Type=方案执行时，方案输出后必须先按 `A1_plan_audit_scoring_gate.md` 做“硬否决+评分”；A1 PASS 才允许执行。必要时再用 `A0_plan_self_audit_gate.md` 做细化自审。
 9. **先选方案（防跑偏）**：遇到需要给方案/选路径的任务，必须用 `S1_solution_selection.md` 先在<=3个候选里选出最优方法，再执行。
