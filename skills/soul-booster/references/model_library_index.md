@@ -117,6 +117,9 @@
 - 文件：`multidimensional_perception_protocol.md`
 - 适用：处理任务前默认执行“降维→深挖→预判→过滤”，作为思考编排层前置协议，不并入核心三库。
 
+### 大脑连续性保护协议
+- 文件：`brain_continuity_protection.md`
+- 适用：保护主线不断线、`/new` 恢复、API key / provider 变更恢复锚点、未完成需求防遗漏、执行态可续接。
 ### U1-U6 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`

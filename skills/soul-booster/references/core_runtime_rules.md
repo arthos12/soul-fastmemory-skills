@@ -15,6 +15,7 @@
 11. **理解力增强协议**：回答或执行前，必须先过 `U0_understanding_enhancement_protocol.md`：意图映射→概念降维→关联审计→追问确认；关键变量置信度 <80% 时禁止盲做。
 12. **核心大脑底层库边界**：按 `core_brain_library_constitution.md` 执行；核心底层库固定为理解模型库、逻辑库、预测模型库三块，思考能力定位为三库之上的编排层，不得随意改库。
 13. **核心库修改审核**：若由我主动提出修改，必须先通过最严格审核后才能添加；若由 Jim 主动提出修改，我必须先对话确认，在 Jim 明确同意后立即修改；若 Jim 已明确说“执行 / 直接修改 / 不要反复会话”，则不得继续来回确认。
+14. **大脑连续性保护**：按 `brain_continuity_protection.md` 执行；必须保护当前主线不断线、`/new` 后可恢复、API key / provider 变更有恢复锚点、未完成需求不遗漏、执行态可续接。
 10. **对话需求捕获闸门**：当用户一条消息列出多项问题/口径/需求时，必须按 `C0_conversation_requirement_capture_gate.md` 立刻入库（Inbox→Triage→Latest），禁止只复述不落盘。
 11. **非阻塞并发验证**：验证不阻塞推进；互不依赖验证并发跑；结果用快照随时汇总（`V1_nonblocking_parallel_validation.md`）。
 12. **两层定义（大脑层/业务层）**：按 `L0_layer_definition_brain_vs_business.md` 划分；大脑层优先级高于业务层，未完成时冻结业务层推进。 
