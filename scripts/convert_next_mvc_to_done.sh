@@ -47,7 +47,7 @@ case "$slug" in
 esac
 
 # Run verification (must exit 0)
-bash -lc "$verify_cmd" >/tmp/convert_next_mvc_to_done.${slug}.out 2>&1
+bash scripts/verify_artifact_output.sh "$verify_cmd" /tmp/convert_next_mvc_to_done.${slug}.out
 
 now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
