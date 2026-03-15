@@ -81,6 +81,14 @@
 - 文件：`models/P0_two_lane_efficiency_execution_generator.md`
 - 适用：用户要求两条线并行提效时，强制输出可运行两线结构+接口回路。
 
+### J1 Jim式审查员模块
+- 文件：`models/J1_jim_reviewer_module.md`
+- 适用：执行前强制Jim式挑错审查，不通过不执行。
+
+### Q1 方案自证最小集
+- 文件：`models/Q1_plan_self_proof_minimum.md`
+- 适用：方案必须自证“为什么更优+怎么立刻打脸”。
+
 ### SR0 语义误解纠偏协议
 - 文件：`models/SR0_semantic_repair_protocol.md`
 - 适用：用户指出没懂/跑偏时，强制给修正答案+最小防复发改动。

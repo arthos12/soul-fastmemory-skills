@@ -76,6 +76,8 @@ Jim式方案导航/审核/纠偏模型见 [references/models/J0_jim_navigation_a
 效率底层库见 [references/models/EFF0_efficiency_core_library.md](references/models/EFF0_efficiency_core_library.md)。
 非阻塞并发验证见 [references/models/V1_nonblocking_parallel_validation.md](references/models/V1_nonblocking_parallel_validation.md)。
 两条线提效生成器见 [references/models/P0_two_lane_efficiency_execution_generator.md](references/models/P0_two_lane_efficiency_execution_generator.md)。
+Jim式审查员模块见 [references/models/J1_jim_reviewer_module.md](references/models/J1_jim_reviewer_module.md)。
+方案自证最小集见 [references/models/Q1_plan_self_proof_minimum.md](references/models/Q1_plan_self_proof_minimum.md)。
 语义误解纠偏协议见 [references/models/SR0_semantic_repair_protocol.md](references/models/SR0_semantic_repair_protocol.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。
