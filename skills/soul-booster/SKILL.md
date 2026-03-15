@@ -71,6 +71,7 @@ Jim式方案导航/审核/纠偏模型见 [references/models/J0_jim_navigation_a
 动态焦点控制器见 [references/models/F0_dynamic_focus_controller.md](references/models/F0_dynamic_focus_controller.md)。
 问题类型识别闸门见 [references/models/T1_question_type_gate.md](references/models/T1_question_type_gate.md)。
 人话汇报样式见 [references/models/R1_human_report_style.md](references/models/R1_human_report_style.md)。
+人话优先两层回复见 [references/models/R2_human_first_two_layer_reply.md](references/models/R2_human_first_two_layer_reply.md)。
 对话需求捕获闸门见 [references/models/C0_conversation_requirement_capture_gate.md](references/models/C0_conversation_requirement_capture_gate.md)。
 效率底层库见 [references/models/EFF0_efficiency_core_library.md](references/models/EFF0_efficiency_core_library.md)。
 语义误解纠偏协议见 [references/models/SR0_semantic_repair_protocol.md](references/models/SR0_semantic_repair_protocol.md)。

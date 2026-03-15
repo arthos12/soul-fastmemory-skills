@@ -57,6 +57,10 @@
 - 文件：`models/T1_question_type_gate.md`
 - 适用：先判“定位/方案执行/证据汇报”，防止回答跑偏。
 
+### R2 人话优先·两层回复
+- 文件：`models/R2_human_first_two_layer_reply.md`
+- 适用：默认回复先人话结论，再给必要细节（<=6条），兼顾易懂与可验收。
+
 ### R1 人话汇报样式
 - 文件：`models/R1_human_report_style.md`
 - 适用：所有汇报先人话结论，再给证据，避免术语堆。
