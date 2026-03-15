@@ -120,6 +120,13 @@
 ### 大脑连续性保护协议
 - 文件：`brain_continuity_protection.md`
 - 适用：保护主线不断线、`/new` 恢复、API key / provider 变更恢复锚点、未完成需求防遗漏、执行态可续接。
+
+### 四个上位协议文件（映射式吸收）
+- 文件：`Meta_Logic_Matrix.md`
+- 文件：`Cognitive_Bias_Firewall.md`
+- 文件：`Understanding_Protocol.md`
+- 文件：`Predictive_Engine.md`
+- 适用：分别作为逻辑库母本、跨层认知偏差防火墙、理解层总协议、预测层总引擎；用于映射式吸收外部硬核大脑协议，不形成平行核心体系。
 ### U1-U6 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`

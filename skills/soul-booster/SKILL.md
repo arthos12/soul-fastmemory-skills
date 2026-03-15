@@ -86,6 +86,7 @@ Jim式审查员模块见 [references/models/J1_jim_reviewer_module.md](reference
 核心大脑底层库宪法见 [references/core_brain_library_constitution.md](references/core_brain_library_constitution.md)。
 多维感知前置协议见 [references/multidimensional_perception_protocol.md](references/multidimensional_perception_protocol.md)。
 大脑连续性保护协议见 [references/brain_continuity_protection.md](references/brain_continuity_protection.md)。
+四个上位协议文件见 [references/Meta_Logic_Matrix.md](references/Meta_Logic_Matrix.md)、[references/Cognitive_Bias_Firewall.md](references/Cognitive_Bias_Firewall.md)、[references/Understanding_Protocol.md](references/Understanding_Protocol.md)、[references/Predictive_Engine.md](references/Predictive_Engine.md)。
 逻辑能力强化见 [references/logic_strengthening.md](references/logic_strengthening.md)。
 大模型调用节制与 token 压缩见 [references/llm_usage_minimization.md](references/llm_usage_minimization.md)。
 互动压缩见 [references/interaction_compression.md](references/interaction_compression.md)。
