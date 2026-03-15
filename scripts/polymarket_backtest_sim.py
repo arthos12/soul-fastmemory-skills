@@ -129,6 +129,7 @@ def main():
 
     pnls = [t['pnl'] for t in trades]
     wins = [t['win'] for t in trades]
+    total_staked = round(sum(t['stake'] for t in trades), 4) if trades else 0.0
     summary = {
         'input': args.inp,
         'n_trades': len(trades),
@@ -136,6 +137,8 @@ def main():
         'total_pnl': round(sum(pnls), 4) if pnls else 0.0,
         'avg_pnl': round(statistics.mean(pnls), 4) if pnls else None,
         'median_pnl': round(statistics.median(pnls), 4) if pnls else None,
+        'total_staked': total_staked,
+        'return_on_staked': round((sum(pnls)/total_staked), 4) if total_staked else None,
         'final_bankroll': round(bankroll, 4),
         'threshold': args.threshold,
         'sizing': args.sizing,
