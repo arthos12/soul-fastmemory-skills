@@ -69,6 +69,10 @@
 - 文件：`models/EFF0_efficiency_core_library.md`
 - 适用：统一定义效率（Direction×Utilization×Throughput），用于多事件解释与提效。
 
+### SR0 语义误解纠偏协议
+- 文件：`models/SR0_semantic_repair_protocol.md`
+- 适用：用户指出没懂/跑偏时，强制给修正答案+最小防复发改动。
+
 ## 审计（防固化）
 - 新模型进入默认库，必须带：适用场景/禁用场景/输出格式/验收指标。
 - 每周（或每 20 个样本）做一次：哪些模型在什么场景有效/无效 → 降权/替换。
