@@ -12,8 +12,21 @@ if [[ -f "$TARGET_FILE" ]]; then
   slug=$(head -n 1 "$TARGET_FILE" | tr -d '\r' | xargs || true)
 fi
 
+# Skip A-share target (paused by user)
+if [[ "$slug" == "a_share_data_demo" ]]; then
+  slug=""
+fi
+
+# Auto-pick next [m] item (excluding A-share) if no valid target
 if [[ -z "$slug" ]]; then
-  bash scripts/convert_next_mvc_to_done.sh
+  slug=$(grep -nE '^- \[m\] [a-z0-9_\-]+' tasks/DELIVERY_BACKLOG.md | awk '{print $3}' | grep -v '^a_share_data_demo$' | head -n 1 || true)
+  if [[ -n "$slug" ]]; then
+    echo "$slug" > "$TARGET_FILE"
+  fi
+fi
+
+if [[ -z "$slug" ]]; then
+  echo "NO_TARGET"
   exit 0
 fi
 
