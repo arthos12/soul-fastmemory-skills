@@ -1,0 +1,10 @@
+{"id":"A1","question":"Event A happens?","p_true_me":0.68,"p_mkt_yes":0.52,"outcome":1}
+{"id":"A2","question":"Event B happens?","p_true_me":0.40,"p_mkt_yes":0.61,"outcome":0}
+{"id":"A3","question":"Event C happens?","p_true_me":0.57,"p_mkt_yes":0.55,"outcome":1}
+{"id":"A4","question":"Event D happens?","p_true_me":0.22,"p_mkt_yes":0.41,"outcome":0}
+{"id":"A5","question":"Event E happens?","p_true_me":0.73,"p_mkt_yes":0.64,"outcome":1}
+{"id":"A6","question":"Event F happens?","p_true_me":0.48,"p_mkt_yes":0.35,"outcome":0}
+{"id":"A7","question":"Event G happens?","p_true_me":0.31,"p_mkt_yes":0.46,"outcome":1}
+{"id":"A8","question":"Event H happens?","p_true_me":0.81,"p_mkt_yes":0.70,"outcome":1}
+{"id":"A9","question":"Event I happens?","p_true_me":0.44,"p_mkt_yes":0.57,"outcome":0}
+{"id":"A10","question":"Event J happens?","p_true_me":0.62,"p_mkt_yes":0.49,"outcome":1}

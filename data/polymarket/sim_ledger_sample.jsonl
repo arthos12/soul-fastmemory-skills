@@ -1,0 +1,9 @@
+{"id": "A1", "question": "Event A happens?", "side": "YES", "price": 0.52, "stake": 100.0, "edge": 0.16, "est_prob": 0.68, "outcome": 1, "win": true, "pnl": 92.3077, "roi": 0.9231, "bankroll_after": 10092.3077}
+{"id": "A2", "question": "Event B happens?", "side": "NO", "price": 0.39, "stake": 100.0, "edge": -0.21, "est_prob": 0.6, "outcome": 0, "win": true, "pnl": 156.4103, "roi": 1.5641, "bankroll_after": 10248.7179}
+{"id": "A4", "question": "Event D happens?", "side": "NO", "price": 0.5900000000000001, "stake": 100.0, "edge": -0.19, "est_prob": 0.78, "outcome": 0, "win": true, "pnl": 69.4915, "roi": 0.6949, "bankroll_after": 10318.2095}
+{"id": "A5", "question": "Event E happens?", "side": "YES", "price": 0.64, "stake": 100.0, "edge": 0.09, "est_prob": 0.73, "outcome": 1, "win": true, "pnl": 56.25, "roi": 0.5625, "bankroll_after": 10374.4595}
+{"id": "A6", "question": "Event F happens?", "side": "YES", "price": 0.35, "stake": 100.0, "edge": 0.13, "est_prob": 0.48, "outcome": 0, "win": false, "pnl": -100.0, "roi": -1.0, "bankroll_after": 10274.4595}
+{"id": "A7", "question": "Event G happens?", "side": "NO", "price": 0.54, "stake": 100.0, "edge": -0.15, "est_prob": 0.69, "outcome": 1, "win": false, "pnl": -100.0, "roi": -1.0, "bankroll_after": 10174.4595}
+{"id": "A8", "question": "Event H happens?", "side": "YES", "price": 0.7, "stake": 100.0, "edge": 0.11, "est_prob": 0.81, "outcome": 1, "win": true, "pnl": 42.8571, "roi": 0.4286, "bankroll_after": 10217.3166}
+{"id": "A9", "question": "Event I happens?", "side": "NO", "price": 0.43000000000000005, "stake": 100.0, "edge": -0.13, "est_prob": 0.56, "outcome": 0, "win": true, "pnl": 132.5581, "roi": 1.3256, "bankroll_after": 10349.8748}
+{"id": "A10", "question": "Event J happens?", "side": "YES", "price": 0.49, "stake": 100.0, "edge": 0.13, "est_prob": 0.62, "outcome": 1, "win": true, "pnl": 104.0816, "roi": 1.0408, "bankroll_after": 10453.9564}
