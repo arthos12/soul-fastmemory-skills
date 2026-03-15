@@ -117,13 +117,14 @@
 - 文件：`multidimensional_perception_protocol.md`
 - 适用：处理任务前默认执行“降维→深挖→预判→过滤”，作为思考编排层前置协议，不并入核心三库。
 
-### U1-U5 理解底层模型
+### U1-U6 理解底层模型
 - 文件：`models/U1_feynman_understanding.md`
 - 文件：`models/U2_schema_mapping.md`
 - 文件：`models/U3_semantic_deconstruction.md`
 - 文件：`models/U4_contextual_salience.md`
 - 文件：`models/U5_bayesian_understanding_update.md`
-- 适用：分别负责讲浅验收、结构挂钩、第一性原理解构、关键变量提取、动态理解更新。
+- 文件：`models/U6_iceberg_intent_model.md`
+- 适用：分别负责讲浅验收、结构挂钩、第一性原理解构、关键变量提取、动态理解更新、冰山式深层意图识别。
 
 ## 审计（防固化）
 - 新模型进入默认库，必须带：适用场景/禁用场景/输出格式/验收指标。
