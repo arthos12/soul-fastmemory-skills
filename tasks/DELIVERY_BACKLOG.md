@@ -20,7 +20,7 @@
 - [x] gold_silver_watch - 黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl  # done_at=2026-03-15T16:36:21Z artifacts=scripts/gold_silver_watch.sh
 - [m] a_share_data_demo - A股：选1个稳定数据源，做最小demo拉指数/行业  # done_at=2026-03-15T15:01:01Z artifacts=scripts/a_share_data_demo.sh  # downgraded_from_x=stub_detected
 - [m] polymarket_brier_scaffold - 结算后Brier score：写脚手架与数据结构  # done_at=2026-03-15T15:01:02Z artifacts=scripts/polymarket_brier_scaffold.sh  # downgraded_from_x=stub_detected
-- [m] model_audit_auto_log - 模型库应用审计：每次batch记录使用模型+场景+指标  # done_at=2026-03-15T15:01:03Z artifacts=scripts/model_audit_auto_log.sh  # downgraded_from_x=stub_detected
+- [x] model_audit_auto_log - 模型库应用审计：每次batch记录使用模型+场景+指标  # done_at=2026-03-15T17:36:27Z artifacts=scripts/model_audit_auto_log.sh
 
 ## P2（中优先）：你明确提过但还没落地/没补齐的
 - [m] test_requirement_add_x - test requirement: add X  # mvc_at=2026-03-15T13:21:40Z  # done_at=2026-03-15T15:02:47Z artifacts=scripts/test_requirement_add_x.sh  # downgraded_from_x=stub_detected
