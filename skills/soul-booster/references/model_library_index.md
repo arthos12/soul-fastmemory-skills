@@ -81,6 +81,10 @@
 - 文件：`models/P0_two_lane_efficiency_execution_generator.md`
 - 适用：用户要求两条线并行提效时，强制输出可运行两线结构+接口回路。
 
+### L0 两层定义（大脑层/业务层）
+- 文件：`models/L0_layer_definition_brain_vs_business.md`
+- 适用：统一需求分层与优先级（大脑层优先，业务层后置）。
+
 ### J1 Jim式审查员模块
 - 文件：`models/J1_jim_reviewer_module.md`
 - 适用：执行前强制Jim式挑错审查，不通过不执行。

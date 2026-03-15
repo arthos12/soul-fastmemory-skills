@@ -48,15 +48,17 @@ def main():
         if last and all(int(r.get('deltaBacklogDone',0))==0 for r in last):
             stalled=True
 
+    # Two-layer rule: if any brain-layer requirement not done, freeze business lanes; run only P0 (delivery+validation)
     if s_brain_not_done:
         allowed=['P0_brain','P0_validate']
-        reason='S_brain_not_done'
+        reason='brain_layer_not_done'
     elif stalled:
         allowed=['P0_brain','P0_validate']
         reason=f'stalled_deltaBacklogDone_0_x{stall_n}'
     else:
+        # brain layer done: still keep P0 lanes enabled by default; business lanes can be enabled manually later
         allowed=['P0_brain','P0_validate']
-        reason='default_P0_delivery_plus_validation'
+        reason='brain_layer_done_default_p0_only'
 
     out={
         'version': 1,
