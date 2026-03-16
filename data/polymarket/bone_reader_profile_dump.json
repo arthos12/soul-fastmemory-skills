@@ -1,0 +1,3070 @@
+{
+  "fetchedAt": "2026-03-16T17:52:10.125954Z",
+  "profileUrl": "https://polymarket.com/profile/%40BoneReader",
+  "queryMap": {
+    "[\"/api/tags\", \"filteredTags\", \"102982\", \"active\", \"en\"]": [
+      {
+        "id": "100215",
+        "label": "All",
+        "slug": "all",
+        "forceShow": false,
+        "updatedAt": "2026-03-09T22:29:23.723738Z",
+        "activeEventsCount": 1
+      },
+      {
+        "id": "2",
+        "label": "Politics",
+        "slug": "politics",
+        "forceShow": false,
+        "publishedAt": "2023-10-25 18:55:50.674+00",
+        "updatedBy": 13,
+        "createdAt": "2023-10-25T18:55:50.681Z",
+        "updatedAt": "2026-03-09T22:35:26.76623Z",
+        "forceHide": true,
+        "activeEventsCount": 1451
+      },
+      {
+        "id": "1",
+        "label": "Sports",
+        "slug": "sports",
+        "forceShow": false,
+        "publishedAt": "2023-10-24 22:37:50.296+00",
+        "updatedBy": 15,
+        "createdAt": "2023-10-24T22:37:50.31Z",
+        "updatedAt": "2026-03-09T22:25:22.69129Z",
+        "forceHide": true,
+        "activeEventsCount": 3162
+      },
+      {
+        "id": "21",
+        "label": "Crypto",
+        "slug": "crypto",
+        "forceShow": false,
+        "publishedAt": "2023-11-02 21:03:54.55+00",
+        "updatedBy": 15,
+        "createdAt": "2023-11-02T21:03:54.564Z",
+        "updatedAt": "2026-03-09T22:28:03.349847Z",
+        "activeEventsCount": 3492
+      },
+      {
+        "id": "78",
+        "label": "Iran",
+        "slug": "iran",
+        "forceShow": false,
+        "publishedAt": "2023-11-02 21:16:51.647+00",
+        "updatedBy": 15,
+        "createdAt": "2023-11-02T21:16:51.667Z",
+        "updatedAt": "2026-03-09T22:31:04.117508Z",
+        "activeEventsCount": 91
+      },
+      {
+        "id": "120",
+        "label": "Finance",
+        "slug": "finance",
+        "forceShow": false,
+        "publishedAt": "2023-11-02 21:22:21.615+00",
+        "createdAt": "2023-11-02T21:22:21.62Z",
+        "updatedAt": "2026-03-09T22:30:44.068593Z",
+        "activeEventsCount": 259
+      },
+      {
+        "id": "100265",
+        "label": "Geopolitics",
+        "slug": "geopolitics",
+        "forceShow": true,
+        "createdAt": "2024-06-12T20:13:03.615956Z",
+        "updatedAt": "2026-03-09T22:29:03.520452Z",
+        "activeEventsCount": 379
+      },
+      {
+        "id": "1401",
+        "label": "Tech",
+        "slug": "tech",
+        "forceShow": false,
+        "publishedAt": "2024-02-21 23:06:12.305+00",
+        "createdAt": "2024-02-21T23:06:12.324Z",
+        "updatedAt": "2026-03-09T22:20:01.532137Z",
+        "activeEventsCount": 156
+      },
+      {
+        "id": "596",
+        "label": "Culture",
+        "slug": "pop-culture",
+        "forceShow": false,
+        "publishedAt": "2023-11-29 18:40:13.013+00",
+        "createdAt": "2023-11-29T18:40:14.63Z",
+        "updatedAt": "2026-03-09T22:35:06.806106Z",
+        "activeEventsCount": 232
+      },
+      {
+        "id": "100328",
+        "label": "Economy",
+        "slug": "economy",
+        "forceShow": false,
+        "createdAt": "2024-08-05T05:34:54.235643Z",
+        "updatedAt": "2026-03-09T22:18:21.302993Z",
+        "activeEventsCount": 161
+      },
+      {
+        "id": "84",
+        "label": "Weather",
+        "slug": "weather",
+        "forceShow": false,
+        "publishedAt": "2023-11-02 21:17:34.81+00",
+        "createdAt": "2023-11-02T21:17:34.814Z",
+        "updatedAt": "2026-03-09T22:33:58.564774Z",
+        "activeEventsCount": 129
+      },
+      {
+        "id": "100343",
+        "label": "Mentions",
+        "slug": "mention-markets",
+        "forceShow": false,
+        "createdAt": "2024-08-16T02:29:11.548984Z",
+        "updatedAt": "2026-03-09T22:35:06.778143Z",
+        "activeEventsCount": 11
+      },
+      {
+        "id": "144",
+        "label": "Elections",
+        "slug": "elections",
+        "forceShow": false,
+        "publishedAt": "2023-11-02 21:24:31.008+00",
+        "updatedBy": 13,
+        "createdAt": "2023-11-02T21:24:31.198Z",
+        "updatedAt": "2026-03-09T22:32:04.396035Z",
+        "forceHide": true,
+        "activeEventsCount": 868
+      }
+    ],
+    "[\"account\", \"featureFlags\", \"\"]": [
+      {
+        "name": "notifications_v2",
+        "description": "Improved notification preferences and types.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "allowlist_feature_flag_rule",
+          "allowlistAddresses": []
+        },
+        "version": "d36219f005fa6abe4b245b3582e0c7f9162b9594"
+      },
+      {
+        "name": "authenticated_book_ws",
+        "description": "Use the funkit based deposit flow.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "split_feature_flag_rule",
+          "percent": 1
+        },
+        "version": "37528e449737734ab04409041e36708e9c0ea9c5"
+      },
+      {
+        "name": "rfq",
+        "description": "Request for Quote Maker & Taker UI",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "allowlist_feature_flag_rule",
+          "allowlistAddresses": [
+            "0x8c74b4eef9a894433B8126aA11d1345efb2B0488",
+            "0x1B3CB941Da6aae2481147e8C177306950fF7Be0B",
+            "0x5cF81c5c4500429f46025B5C0251C9702618d9E7",
+            "0xa772dE12507bF3fa3B344e8E7826b3bb6d14f88C",
+            "0x505da8075db50c4fe971aacf4b56cea1289c87b2",
+            "0x4b27447b0370371b9e2b25be6845d7f144cec899",
+            "0x6FAC4C06086fA4De0728e85a6C12d46B74C76D7e",
+            "0x1D507F92d6577b4DED3e864Df93549266D12FB34"
+          ]
+        },
+        "version": "2024703a0e61d658af66f2d2a4ea1476ce09e27b"
+      },
+      {
+        "name": "mobile_sports_overlay_v2",
+        "description": "Improved in-game view for sports markets.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "allowlist_feature_flag_rule",
+          "allowlistAddresses": []
+        },
+        "version": "029a9e71e0bc0e4864446298bea6009acaf7b26e"
+      },
+      {
+        "name": "async_order_submission",
+        "description": "Reduce market order latency.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "allowlist_feature_flag_rule",
+          "allowlistAddresses": []
+        },
+        "version": "80dcdbb0e1083774c87c7d31d113994c831e5a05"
+      },
+      {
+        "name": "sports_websocket",
+        "description": "Enable updates from the sports websocket.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "allowlist_feature_flag_rule",
+          "allowlistAddresses": []
+        },
+        "version": "69188cb32f3f8b050c961e6ba792a3679a7e4082"
+      },
+      {
+        "name": "language_selector",
+        "description": "Show/hide language selector in navigation",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "split_feature_flag_rule",
+          "percent": 1
+        },
+        "version": "27ed1f8697d9a233c1331f5d0154e13426079218"
+      },
+      {
+        "name": "auto_locale_detection",
+        "description": "Auto-detect and redirect based on browser language",
+        "enabled": false,
+        "userEnrolledBy": {
+          "type": "split_feature_flag_rule",
+          "percent": 1
+        },
+        "version": "aff3dbc8cdeddc966271fa8e4bb8f65d3e9a3c8b"
+      },
+      {
+        "name": "homepage_btc_15m_slot",
+        "description": "Show BTC 15-minute up/down market in 3rd slot on homepage.",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "split_feature_flag_rule",
+          "percent": 1
+        },
+        "version": "a57e579241ba4e3a67f2f18c8f865848623ad4ea"
+      },
+      {
+        "name": "signup_prompt",
+        "description": "Event page signup auto-pop",
+        "enabled": true,
+        "userEnrolledBy": {
+          "type": "split_feature_flag_rule",
+          "percent": 0.1
+        },
+        "version": "2b1979a88984dfa1dad537653c613703f969f60d"
+      }
+    ],
+    "[\"taxonomy\"]": {
+      "categories": [
+        "climate-science",
+        "crypto",
+        "culture",
+        "economy",
+        "finance",
+        "mentions",
+        "other",
+        "politics",
+        "sports",
+        "tech"
+      ],
+      "subcategoriesByCategory": {
+        "climate-science": [
+          "ankara",
+          "atlanta",
+          "auckland",
+          "chicago",
+          "dallas",
+          "earthquakes",
+          "london",
+          "lucknow",
+          "miami",
+          "munich",
+          "paris",
+          "science",
+          "seattle",
+          "seoul",
+          "shanghai",
+          "singapore",
+          "space",
+          "tokyo",
+          "toronto",
+          "weather"
+        ],
+        "crypto": [
+          "ath",
+          "binance",
+          "bitboy",
+          "bitcoin",
+          "bitmine",
+          "bnb",
+          "cex",
+          "ethereum",
+          "ftx",
+          "hype",
+          "hyperliquid",
+          "kaito",
+          "microstrategy",
+          "mindshare",
+          "nyse",
+          "pre-market",
+          "satoshi",
+          "solana",
+          "stablecoins",
+          "xrp"
+        ],
+        "culture": [
+          "album",
+          "albums",
+          "awards",
+          "billboard",
+          "celebrities",
+          "crime",
+          "eurovision",
+          "mh370",
+          "movies",
+          "mrbeast",
+          "music",
+          "netflix",
+          "oscars",
+          "science",
+          "song",
+          "songs",
+          "spotify",
+          "survivor",
+          "tv",
+          "youtube"
+        ],
+        "economy": [
+          "bls",
+          "bor",
+          "brazil",
+          "canada",
+          "close",
+          "cpi",
+          "europe",
+          "fed",
+          "gdp",
+          "hormuz",
+          "inflation",
+          "iran",
+          "japan",
+          "maga",
+          "mx",
+          "oil",
+          "parlays",
+          "rate",
+          "rba",
+          "tsa"
+        ],
+        "finance": [
+          "acquisitions",
+          "airbnb",
+          "apr",
+          "argentina",
+          "blackrock",
+          "bok",
+          "business",
+          "commodities",
+          "earnings",
+          "equities",
+          "etf",
+          "forex",
+          "housing",
+          "indicies",
+          "nvidia",
+          "overnight",
+          "rate",
+          "sdh100rt"
+        ],
+        "mentions": [
+          "leavitt",
+          "pmq",
+          "rogan",
+          "starmer",
+          "vance"
+        ],
+        "other": [
+          "baseball",
+          "cftc",
+          "china",
+          "clavicular",
+          "disease",
+          "division",
+          "earthquake",
+          "england",
+          "flu",
+          "influenza",
+          "measles",
+          "mvp",
+          "oil",
+          "pandemics",
+          "parlays",
+          "pitcher",
+          "science",
+          "strikeout",
+          "wbc"
+        ],
+        "politics": [
+          "alex",
+          "aliens",
+          "all",
+          "approval",
+          "approvals",
+          "cabinet",
+          "clinton",
+          "congress",
+          "courts",
+          "election",
+          "epstein",
+          "ice",
+          "lid",
+          "maxwell",
+          "minnesota",
+          "trump",
+          "trump-machado",
+          "tsa",
+          "venezuela",
+          "voting"
+        ],
+        "sports": [
+          "baseball",
+          "basketball",
+          "cba",
+          "cbb",
+          "cricket",
+          "esports",
+          "games",
+          "golf",
+          "hockey",
+          "kbl",
+          "mlb",
+          "nba",
+          "ncaa",
+          "nfl",
+          "nhl",
+          "rugby",
+          "soccer",
+          "tennis",
+          "ufc",
+          "wbc"
+        ],
+        "tech": [
+          "ai",
+          "apple",
+          "china",
+          "deepseek",
+          "drug",
+          "google",
+          "grok",
+          "internet",
+          "ipos",
+          "microsoft",
+          "nuke",
+          "outage",
+          "parlays",
+          "polymarket",
+          "science",
+          "search",
+          "spacex",
+          "xai"
+        ]
+      },
+      "subcategoryLabels": {
+        "ankara": "Ankara",
+        "atlanta": "Atlanta",
+        "auckland": "Auckland",
+        "chicago": "Chicago",
+        "dallas": "dallas",
+        "earthquakes": "Earthquakes",
+        "london": "London",
+        "lucknow": "Lucknow",
+        "miami": "Miami",
+        "munich": "Munich",
+        "paris": "Paris",
+        "science": "Science",
+        "seattle": "Seattle",
+        "seoul": "Seoul",
+        "shanghai": "Shanghai",
+        "singapore": "singapore",
+        "space": "Space",
+        "tokyo": "Tokyo",
+        "toronto": "Toronto",
+        "weather": "Weather",
+        "ath": "ATH",
+        "binance": "binance",
+        "bitboy": "bitboy",
+        "bitcoin": "Bitcoin",
+        "bitmine": "Bitmine",
+        "bnb": "BNB",
+        "cex": "CEX",
+        "ethereum": "Ethereum",
+        "ftx": "ftx",
+        "hype": "hype",
+        "hyperliquid": "hyperliquid",
+        "kaito": "Kaito",
+        "microstrategy": "MicroStrategy",
+        "mindshare": "Mindshare",
+        "nyse": "NYSE",
+        "pre-market": "Pre-Market",
+        "satoshi": "Satoshi",
+        "solana": "Solana",
+        "stablecoins": "Stablecoins",
+        "xrp": "XRP",
+        "album": "album",
+        "albums": "albums",
+        "awards": "Awards",
+        "billboard": "billboard",
+        "celebrities": "Celebrities",
+        "crime": "crime",
+        "eurovision": "Eurovision",
+        "mh370": "MH370",
+        "movies": "Movies",
+        "mrbeast": "MrBeast",
+        "music": "Music",
+        "netflix": "netflix",
+        "oscars": "Oscars",
+        "song": "song",
+        "songs": "songs",
+        "spotify": "spotify",
+        "survivor": "survivor",
+        "tv": "TV",
+        "youtube": "YouTube",
+        "bls": "bls",
+        "bor": "BOR",
+        "brazil": "Brazil",
+        "canada": "Canada",
+        "close": "close",
+        "cpi": "cpi",
+        "europe": "Europe",
+        "fed": "Fed",
+        "gdp": "GDP",
+        "hormuz": "Hormuz",
+        "inflation": "Inflation",
+        "iran": "Iran",
+        "japan": "Japan",
+        "maga": "MAGA",
+        "mx": "MX",
+        "oil": "Oil",
+        "parlays": "Parlays",
+        "rate": "Rate",
+        "rba": "RBA",
+        "tsa": "TSA",
+        "acquisitions": "Acquisitions",
+        "airbnb": "Airbnb",
+        "apr": "APR",
+        "argentina": "argentina",
+        "blackrock": "blackrock",
+        "bok": "BOK",
+        "business": "Business",
+        "commodities": "Commodities",
+        "earnings": "Earnings",
+        "equities": "Equities",
+        "etf": "ETF",
+        "forex": "forex",
+        "housing": "Housing",
+        "indicies": "Indicies",
+        "nvidia": "nvidia",
+        "overnight": "Overnight",
+        "sdh100rt": "SDH100RT",
+        "leavitt": "leavitt",
+        "pmq": "pmq",
+        "rogan": "Rogan",
+        "starmer": "Starmer",
+        "vance": "Vance",
+        "baseball": "baseball",
+        "cftc": "CFTC",
+        "china": "China",
+        "clavicular": "Clavicular",
+        "disease": "disease",
+        "division": "division",
+        "earthquake": "earthquake",
+        "england": "England",
+        "flu": "flu",
+        "influenza": "Influenza",
+        "measles": "Measles",
+        "mvp": "mvp",
+        "pandemics": "Pandemics",
+        "pitcher": "pitcher",
+        "strikeout": "strikeout",
+        "wbc": "WBC",
+        "alex": "Alex",
+        "aliens": "aliens",
+        "all": "All",
+        "approval": "Approval",
+        "approvals": "approvals",
+        "cabinet": "cabinet for trump",
+        "clinton": "clinton",
+        "congress": "Congress",
+        "courts": "Courts",
+        "election": "election",
+        "epstein": "Epstein",
+        "ice": "ICE",
+        "lid": "Lid",
+        "maxwell": "Maxwell",
+        "minnesota": "minnesota",
+        "trump": "Trump",
+        "trump-machado": "Trump-Machado",
+        "venezuela": "Venezuela",
+        "voting": "voting",
+        "basketball": "Basketball",
+        "cba": "CBA",
+        "cbb": "CBB",
+        "cricket": "Cricket",
+        "esports": "Esports",
+        "games": "Games",
+        "golf": "Golf",
+        "hockey": "Hockey",
+        "kbl": "KBL",
+        "mlb": "MLB",
+        "nba": "NBA",
+        "ncaa": "NCAA",
+        "nfl": "NFL",
+        "nhl": "NHL",
+        "rugby": "Rugby",
+        "soccer": "Soccer",
+        "tennis": "Tennis",
+        "ufc": "UFC",
+        "ai": "AI",
+        "apple": "Apple",
+        "deepseek": "DeepSeek",
+        "drug": "drug",
+        "google": "google",
+        "grok": "Grok",
+        "internet": "internet",
+        "ipos": "IPOs",
+        "microsoft": "microsoft",
+        "nuke": "nuke",
+        "outage": "outage",
+        "polymarket": "Polymarket",
+        "search": "search",
+        "spacex": "SpaceX",
+        "xai": "xAI"
+      },
+      "rows": [
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "ankara",
+          "market_subcategory_label": "Ankara",
+          "market_count": 107,
+          "total_volume": 707557.4267080002,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "atlanta",
+          "market_subcategory_label": "Atlanta",
+          "market_count": 111,
+          "total_volume": 1827855.1735820002,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "auckland",
+          "market_subcategory_label": "Auckland",
+          "market_count": 99,
+          "total_volume": 566616.841625,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "chicago",
+          "market_subcategory_label": "Chicago",
+          "market_count": 106,
+          "total_volume": 963593.5607959996,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "dallas",
+          "market_subcategory_label": "dallas",
+          "market_count": 108,
+          "total_volume": 698937.920809,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "earthquakes",
+          "market_subcategory_label": "Earthquakes",
+          "market_count": 13,
+          "total_volume": 26708.216789,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "london",
+          "market_subcategory_label": "London",
+          "market_count": 112,
+          "total_volume": 975291.8269610003,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "lucknow",
+          "market_subcategory_label": "Lucknow",
+          "market_count": 116,
+          "total_volume": 465138.64883500006,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "miami",
+          "market_subcategory_label": "Miami",
+          "market_count": 103,
+          "total_volume": 705127.0994329994,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "munich",
+          "market_subcategory_label": "Munich",
+          "market_count": 110,
+          "total_volume": 474636.60409700003,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "paris",
+          "market_subcategory_label": "Paris",
+          "market_count": 111,
+          "total_volume": 733278.1939099999,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "science",
+          "market_subcategory_label": "Science",
+          "market_count": 35,
+          "total_volume": 290744.8006749999,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "seattle",
+          "market_subcategory_label": "Seattle",
+          "market_count": 106,
+          "total_volume": 716939.8804960003,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "seoul",
+          "market_subcategory_label": "Seoul",
+          "market_count": 107,
+          "total_volume": 1481168.0100849993,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "shanghai",
+          "market_subcategory_label": "Shanghai",
+          "market_count": 69,
+          "total_volume": 633849.4189690001,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "singapore",
+          "market_subcategory_label": "singapore",
+          "market_count": 71,
+          "total_volume": 179262.29328799996,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "space",
+          "market_subcategory_label": "Space",
+          "market_count": 6,
+          "total_volume": 28193.957727,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "tokyo",
+          "market_subcategory_label": "Tokyo",
+          "market_count": 98,
+          "total_volume": 493481.27439299994,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "toronto",
+          "market_subcategory_label": "Toronto",
+          "market_count": 108,
+          "total_volume": 579040.4934319996,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "climate-science",
+          "market_subcategory": "weather",
+          "market_subcategory_label": "Weather",
+          "market_count": 36,
+          "total_volume": 328037.619076,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "ath",
+          "market_subcategory_label": "ATH",
+          "market_count": 16,
+          "total_volume": 270878.790769,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "binance",
+          "market_subcategory_label": "binance",
+          "market_count": 1,
+          "total_volume": 728.8658869999999,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "bitboy",
+          "market_subcategory_label": "bitboy",
+          "market_count": 1,
+          "total_volume": 9725.577185000004,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "bitcoin",
+          "market_subcategory_label": "Bitcoin",
+          "market_count": 3428,
+          "total_volume": 226138915.03537843,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "bitmine",
+          "market_subcategory_label": "Bitmine",
+          "market_count": 4,
+          "total_volume": 1803.7109169999999,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "bnb",
+          "market_subcategory_label": "BNB",
+          "market_count": 685,
+          "total_volume": 76509.99103600017,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "cex",
+          "market_subcategory_label": "CEX",
+          "market_count": 1,
+          "total_volume": 1521.763794,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "ethereum",
+          "market_subcategory_label": "Ethereum",
+          "market_count": 3333,
+          "total_volume": 41074747.96353205,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "ftx",
+          "market_subcategory_label": "ftx",
+          "market_count": 1,
+          "total_volume": 15751.400314999999,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "hype",
+          "market_subcategory_label": "hype",
+          "market_count": 654,
+          "total_volume": 100131.77526000013,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "hyperliquid",
+          "market_subcategory_label": "hyperliquid",
+          "market_count": 4,
+          "total_volume": 7186.355119,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "kaito",
+          "market_subcategory_label": "Kaito",
+          "market_count": 8,
+          "total_volume": 2814.410969,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "microstrategy",
+          "market_subcategory_label": "MicroStrategy",
+          "market_count": 14,
+          "total_volume": 158082.989623,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "mindshare",
+          "market_subcategory_label": "Mindshare",
+          "market_count": 3,
+          "total_volume": 2059.3703499999997,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "nyse",
+          "market_subcategory_label": "NYSE",
+          "market_count": 3,
+          "total_volume": 1562.7107529999998,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "pre-market",
+          "market_subcategory_label": "Pre-Market",
+          "market_count": 493,
+          "total_volume": 3754406.6856390014,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "satoshi",
+          "market_subcategory_label": "Satoshi",
+          "market_count": 1,
+          "total_volume": 68458.37397099998,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "solana",
+          "market_subcategory_label": "Solana",
+          "market_count": 3303,
+          "total_volume": 17201071.866045043,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "stablecoins",
+          "market_subcategory_label": "Stablecoins",
+          "market_count": 11,
+          "total_volume": 23718.765196,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "crypto",
+          "market_subcategory": "xrp",
+          "market_subcategory_label": "XRP",
+          "market_count": 3265,
+          "total_volume": 14685183.162492972,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "album",
+          "market_subcategory_label": "album",
+          "market_count": 3,
+          "total_volume": 5665.457639,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "albums",
+          "market_subcategory_label": "albums",
+          "market_count": 2,
+          "total_volume": 3362.221991,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "awards",
+          "market_subcategory_label": "Awards",
+          "market_count": 110,
+          "total_volume": 6900350.435725,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "billboard",
+          "market_subcategory_label": "billboard",
+          "market_count": 12,
+          "total_volume": 87986.93952999999,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "celebrities",
+          "market_subcategory_label": "Celebrities",
+          "market_count": 86,
+          "total_volume": 311906.038461,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "crime",
+          "market_subcategory_label": "crime",
+          "market_count": 1,
+          "total_volume": 9118.732062000003,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "eurovision",
+          "market_subcategory_label": "Eurovision",
+          "market_count": 38,
+          "total_volume": 34882.325011999994,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "mh370",
+          "market_subcategory_label": "MH370",
+          "market_count": 1,
+          "total_volume": 17961.393409000004,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "movies",
+          "market_subcategory_label": "Movies",
+          "market_count": 330,
+          "total_volume": 5311347.493077996,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "mrbeast",
+          "market_subcategory_label": "MrBeast",
+          "market_count": 32,
+          "total_volume": 1813452.6252649997,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "music",
+          "market_subcategory_label": "Music",
+          "market_count": 169,
+          "total_volume": 2468197.008274,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "netflix",
+          "market_subcategory_label": "netflix",
+          "market_count": 54,
+          "total_volume": 199984.50346800004,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "oscars",
+          "market_subcategory_label": "Oscars",
+          "market_count": 63,
+          "total_volume": 5181440.286951999,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "science",
+          "market_subcategory_label": "Science",
+          "market_count": 1,
+          "total_volume": 8406.545,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "song",
+          "market_subcategory_label": "song",
+          "market_count": 9,
+          "total_volume": 20147.98898,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "songs",
+          "market_subcategory_label": "songs",
+          "market_count": 3,
+          "total_volume": 79746.01496100001,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "spotify",
+          "market_subcategory_label": "spotify",
+          "market_count": 41,
+          "total_volume": 180302.13193600002,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "survivor",
+          "market_subcategory_label": "survivor",
+          "market_count": 17,
+          "total_volume": 19182.936772000005,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "tv",
+          "market_subcategory_label": "TV",
+          "market_count": 1,
+          "total_volume": 36097.210015,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "culture",
+          "market_subcategory": "youtube",
+          "market_subcategory_label": "YouTube",
+          "market_count": 63,
+          "total_volume": 1113265.7499039995,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "bls",
+          "market_subcategory_label": "bls",
+          "market_count": 3,
+          "total_volume": 87396.670168,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "bor",
+          "market_subcategory_label": "BOR",
+          "market_count": 3,
+          "total_volume": 21141.808296999996,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "brazil",
+          "market_subcategory_label": "Brazil",
+          "market_count": 7,
+          "total_volume": 87812.312944,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "canada",
+          "market_subcategory_label": "Canada",
+          "market_count": 6,
+          "total_volume": 44364.069580999996,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "close",
+          "market_subcategory_label": "close",
+          "market_count": 1,
+          "total_volume": 16058.99838,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "cpi",
+          "market_subcategory_label": "cpi",
+          "market_count": 42,
+          "total_volume": 267776.26571199996,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "europe",
+          "market_subcategory_label": "Europe",
+          "market_count": 12,
+          "total_volume": 130664.897117,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "fed",
+          "market_subcategory_label": "Fed",
+          "market_count": 88,
+          "total_volume": 59142661.00558512,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "gdp",
+          "market_subcategory_label": "GDP",
+          "market_count": 40,
+          "total_volume": 20216.611896,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "hormuz",
+          "market_subcategory_label": "Hormuz",
+          "market_count": 1,
+          "total_volume": 186075.6420489999,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "inflation",
+          "market_subcategory_label": "Inflation",
+          "market_count": 64,
+          "total_volume": 310597.28939700004,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "iran",
+          "market_subcategory_label": "Iran",
+          "market_count": 4,
+          "total_volume": 19006.549033,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "japan",
+          "market_subcategory_label": "Japan",
+          "market_count": 10,
+          "total_volume": 237813.015106,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "maga",
+          "market_subcategory_label": "MAGA",
+          "market_count": 1,
+          "total_volume": 15369.579941999998,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "mx",
+          "market_subcategory_label": "MX",
+          "market_count": 2,
+          "total_volume": 77521.46105800002,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "oil",
+          "market_subcategory_label": "Oil",
+          "market_count": 6,
+          "total_volume": 91533.52642,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "parlays",
+          "market_subcategory_label": "Parlays",
+          "market_count": 11,
+          "total_volume": 212979.850251,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "rate",
+          "market_subcategory_label": "Rate",
+          "market_count": 7,
+          "total_volume": 33096.988704,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "rba",
+          "market_subcategory_label": "RBA",
+          "market_count": 3,
+          "total_volume": 23232.137323000003,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "economy",
+          "market_subcategory": "tsa",
+          "market_subcategory_label": "TSA",
+          "market_count": 45,
+          "total_volume": 50765.33466700001,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "acquisitions",
+          "market_subcategory_label": "Acquisitions",
+          "market_count": 27,
+          "total_volume": 251083.13403500005,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "airbnb",
+          "market_subcategory_label": "Airbnb",
+          "market_count": 1,
+          "total_volume": 12472.394135000011,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "apr",
+          "market_subcategory_label": "APR",
+          "market_count": 1,
+          "total_volume": 10.695198,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "argentina",
+          "market_subcategory_label": "argentina",
+          "market_count": 1,
+          "total_volume": 234.20657900000003,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "blackrock",
+          "market_subcategory_label": "blackrock",
+          "market_count": 1,
+          "total_volume": 54.537597000000005,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "bok",
+          "market_subcategory_label": "BOK",
+          "market_count": 2,
+          "total_volume": 193.56672200000003,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "business",
+          "market_subcategory_label": "Business",
+          "market_count": 39,
+          "total_volume": 517950.4287449999,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "commodities",
+          "market_subcategory_label": "Commodities",
+          "market_count": 202,
+          "total_volume": 1633499.825801,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "earnings",
+          "market_subcategory_label": "Earnings",
+          "market_count": 45,
+          "total_volume": 116449.144577,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "equities",
+          "market_subcategory_label": "Equities",
+          "market_count": 960,
+          "total_volume": 2432767.6999719995,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "etf",
+          "market_subcategory_label": "ETF",
+          "market_count": 2,
+          "total_volume": 3724.2969920000005,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "forex",
+          "market_subcategory_label": "forex",
+          "market_count": 58,
+          "total_volume": 26732.288487999987,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "housing",
+          "market_subcategory_label": "Housing",
+          "market_count": 1,
+          "total_volume": 14728.941383000001,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "indicies",
+          "market_subcategory_label": "Indicies",
+          "market_count": 276,
+          "total_volume": 1910125.966304998,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "nvidia",
+          "market_subcategory_label": "nvidia",
+          "market_count": 3,
+          "total_volume": 67.354183,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "overnight",
+          "market_subcategory_label": "Overnight",
+          "market_count": 4,
+          "total_volume": 1328.0436599999998,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "rate",
+          "market_subcategory_label": "Rate",
+          "market_count": 2,
+          "total_volume": 380.0946,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "finance",
+          "market_subcategory": "sdh100rt",
+          "market_subcategory_label": "SDH100RT",
+          "market_count": 1,
+          "total_volume": 251.600198,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "mentions",
+          "market_subcategory": "leavitt",
+          "market_subcategory_label": "leavitt",
+          "market_count": 7,
+          "total_volume": 23283.018355,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "mentions",
+          "market_subcategory": "pmq",
+          "market_subcategory_label": "pmq",
+          "market_count": 12,
+          "total_volume": 15050.395863000002,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "mentions",
+          "market_subcategory": "rogan",
+          "market_subcategory_label": "Rogan",
+          "market_count": 5,
+          "total_volume": 7555.213633,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "mentions",
+          "market_subcategory": "starmer",
+          "market_subcategory_label": "Starmer",
+          "market_count": 14,
+          "total_volume": 13558.587599999999,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "mentions",
+          "market_subcategory": "vance",
+          "market_subcategory_label": "Vance",
+          "market_count": 5,
+          "total_volume": 18899.888269999996,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "baseball",
+          "market_subcategory_label": "baseball",
+          "market_count": 8,
+          "total_volume": 6386.370196,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "cftc",
+          "market_subcategory_label": "CFTC",
+          "market_count": 4,
+          "total_volume": 4574.84,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "china",
+          "market_subcategory_label": "China",
+          "market_count": 3,
+          "total_volume": 258.142873,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "clavicular",
+          "market_subcategory_label": "Clavicular",
+          "market_count": 2,
+          "total_volume": 87256.66351799999,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "disease",
+          "market_subcategory_label": "disease",
+          "market_count": 2,
+          "total_volume": 6381.947618,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "division",
+          "market_subcategory_label": "division",
+          "market_count": 1,
+          "total_volume": 26.247,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "earthquake",
+          "market_subcategory_label": "earthquake",
+          "market_count": 7,
+          "total_volume": 14980.226934,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "england",
+          "market_subcategory_label": "England",
+          "market_count": 1,
+          "total_volume": 317.471869,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "flu",
+          "market_subcategory_label": "flu",
+          "market_count": 4,
+          "total_volume": 10215.354653,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "influenza",
+          "market_subcategory_label": "Influenza",
+          "market_count": 2,
+          "total_volume": 18212.083849000002,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "measles",
+          "market_subcategory_label": "Measles",
+          "market_count": 2,
+          "total_volume": 6907.946689,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "mvp",
+          "market_subcategory_label": "mvp",
+          "market_count": 6,
+          "total_volume": 1168.694495,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "oil",
+          "market_subcategory_label": "Oil",
+          "market_count": 2,
+          "total_volume": 159707.10335899997,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "pandemics",
+          "market_subcategory_label": "Pandemics",
+          "market_count": 9,
+          "total_volume": 32025.789324999998,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "parlays",
+          "market_subcategory_label": "Parlays",
+          "market_count": 7,
+          "total_volume": 57.560645,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "pitcher",
+          "market_subcategory_label": "pitcher",
+          "market_count": 8,
+          "total_volume": 2630.871139,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "science",
+          "market_subcategory_label": "Science",
+          "market_count": 12,
+          "total_volume": 189277.5931579997,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "strikeout",
+          "market_subcategory_label": "strikeout",
+          "market_count": 4,
+          "total_volume": 1366.553867,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "other",
+          "market_subcategory": "wbc",
+          "market_subcategory_label": "WBC",
+          "market_count": 8,
+          "total_volume": 2471.420408,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "alex",
+          "market_subcategory_label": "Alex",
+          "market_count": 1,
+          "total_volume": 24787.638906000004,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "aliens",
+          "market_subcategory_label": "aliens",
+          "market_count": 1,
+          "total_volume": 1208097.7301580003,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "all",
+          "market_subcategory_label": "All",
+          "market_count": 9,
+          "total_volume": 191879.56400199985,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "approval",
+          "market_subcategory_label": "Approval",
+          "market_count": 16,
+          "total_volume": 41559.87981599998,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "approvals",
+          "market_subcategory_label": "approvals",
+          "market_count": 6,
+          "total_volume": 18957.643778,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "cabinet",
+          "market_subcategory_label": "cabinet for trump",
+          "market_count": 16,
+          "total_volume": 7948.3375620000015,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "clinton",
+          "market_subcategory_label": "clinton",
+          "market_count": 14,
+          "total_volume": 9768.614508000002,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "congress",
+          "market_subcategory_label": "Congress",
+          "market_count": 21,
+          "total_volume": 19832.277026999993,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "courts",
+          "market_subcategory_label": "Courts",
+          "market_count": 10,
+          "total_volume": 15017.695414999998,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "election",
+          "market_subcategory_label": "election",
+          "market_count": 3022,
+          "total_volume": 54241940.116426036,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "epstein",
+          "market_subcategory_label": "Epstein",
+          "market_count": 21,
+          "total_volume": 107133.62736500001,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "ice",
+          "market_subcategory_label": "ICE",
+          "market_count": 3,
+          "total_volume": 20821.09997,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "lid",
+          "market_subcategory_label": "Lid",
+          "market_count": 6,
+          "total_volume": 11127.857477000001,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "maxwell",
+          "market_subcategory_label": "Maxwell",
+          "market_count": 1,
+          "total_volume": 11371.181753,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "minnesota",
+          "market_subcategory_label": "minnesota",
+          "market_count": 2,
+          "total_volume": 10156.242772999998,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "trump",
+          "market_subcategory_label": "Trump",
+          "market_count": 545,
+          "total_volume": 3840526.6324440027,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "trump-machado",
+          "market_subcategory_label": "Trump-Machado",
+          "market_count": 2,
+          "total_volume": 112824.573279,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "tsa",
+          "market_subcategory_label": "TSA",
+          "market_count": 18,
+          "total_volume": 15530.164019000002,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "venezuela",
+          "market_subcategory_label": "Venezuela",
+          "market_count": 1,
+          "total_volume": 30908.035899,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "politics",
+          "market_subcategory": "voting",
+          "market_subcategory_label": "voting",
+          "market_count": 1,
+          "total_volume": 16372.829968,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "baseball",
+          "market_subcategory_label": "baseball",
+          "market_count": 39,
+          "total_volume": 1474232.762867,
+          "volume_rank": 13
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "basketball",
+          "market_subcategory_label": "Basketball",
+          "market_count": 105,
+          "total_volume": 617957.4837310001,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "cba",
+          "market_subcategory_label": "CBA",
+          "market_count": 16,
+          "total_volume": 240514.925077,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "cbb",
+          "market_subcategory_label": "CBB",
+          "market_count": 2801,
+          "total_volume": 16407162.810548995,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "cricket",
+          "market_subcategory_label": "Cricket",
+          "market_count": 563,
+          "total_volume": 1747801.599524997,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "esports",
+          "market_subcategory_label": "Esports",
+          "market_count": 7052,
+          "total_volume": 60896311.956423916,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "games",
+          "market_subcategory_label": "Games",
+          "market_count": 262,
+          "total_volume": 2855433.7977289995,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "golf",
+          "market_subcategory_label": "Golf",
+          "market_count": 462,
+          "total_volume": 8532044.839227999,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "hockey",
+          "market_subcategory_label": "Hockey",
+          "market_count": 52,
+          "total_volume": 58037.268016000016,
+          "volume_rank": 19
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "kbl",
+          "market_subcategory_label": "KBL",
+          "market_count": 5,
+          "total_volume": 86655.194339,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "mlb",
+          "market_subcategory_label": "MLB",
+          "market_count": 375,
+          "total_volume": 2190383.8292759997,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "nba",
+          "market_subcategory_label": "NBA",
+          "market_count": 3718,
+          "total_volume": 153225436.88729787,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "ncaa",
+          "market_subcategory_label": "NCAA",
+          "market_count": 32,
+          "total_volume": 42451.532339,
+          "volume_rank": 20
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "nfl",
+          "market_subcategory_label": "NFL",
+          "market_count": 517,
+          "total_volume": 2604717.201994,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "nhl",
+          "market_subcategory_label": "NHL",
+          "market_count": 1189,
+          "total_volume": 32362989.18807603,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "rugby",
+          "market_subcategory_label": "Rugby",
+          "market_count": 30,
+          "total_volume": 149145.85585400002,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "soccer",
+          "market_subcategory_label": "Soccer",
+          "market_count": 6159,
+          "total_volume": 141653212.1429153,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "tennis",
+          "market_subcategory_label": "Tennis",
+          "market_count": 3082,
+          "total_volume": 30213248.407979984,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "ufc",
+          "market_subcategory_label": "UFC",
+          "market_count": 332,
+          "total_volume": 4542060.158839007,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "sports",
+          "market_subcategory": "wbc",
+          "market_subcategory_label": "WBC",
+          "market_count": 31,
+          "total_volume": 625194.7732579997,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "ai",
+          "market_subcategory_label": "AI",
+          "market_count": 16,
+          "total_volume": 135742.253133,
+          "volume_rank": 3
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "apple",
+          "market_subcategory_label": "Apple",
+          "market_count": 1,
+          "total_volume": 3136.558640999999,
+          "volume_rank": 9
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "china",
+          "market_subcategory_label": "China",
+          "market_count": 3,
+          "total_volume": 97097.665796,
+          "volume_rank": 4
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "deepseek",
+          "market_subcategory_label": "DeepSeek",
+          "market_count": 3,
+          "total_volume": 89907.12267999999,
+          "volume_rank": 5
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "drug",
+          "market_subcategory_label": "drug",
+          "market_count": 1,
+          "total_volume": 337.628791,
+          "volume_rank": 12
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "google",
+          "market_subcategory_label": "google",
+          "market_count": 1,
+          "total_volume": 65.67174,
+          "volume_rank": 17
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "grok",
+          "market_subcategory_label": "Grok",
+          "market_count": 3,
+          "total_volume": 213.225869,
+          "volume_rank": 14
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "internet",
+          "market_subcategory_label": "internet",
+          "market_count": 23,
+          "total_volume": 594460.0534789999,
+          "volume_rank": 2
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "ipos",
+          "market_subcategory_label": "IPOs",
+          "market_count": 209,
+          "total_volume": 686200.7770199999,
+          "volume_rank": 1
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "microsoft",
+          "market_subcategory_label": "microsoft",
+          "market_count": 1,
+          "total_volume": 201.46303500000002,
+          "volume_rank": 15
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "nuke",
+          "market_subcategory_label": "nuke",
+          "market_count": 1,
+          "total_volume": 445.824392,
+          "volume_rank": 11
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "outage",
+          "market_subcategory_label": "outage",
+          "market_count": 1,
+          "total_volume": 4867.034782000001,
+          "volume_rank": 8
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "parlays",
+          "market_subcategory_label": "Parlays",
+          "market_count": 1,
+          "total_volume": 8.9052,
+          "volume_rank": 18
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "polymarket",
+          "market_subcategory_label": "Polymarket",
+          "market_count": 2,
+          "total_volume": 12011.778872999997,
+          "volume_rank": 7
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "science",
+          "market_subcategory_label": "Science",
+          "market_count": 1,
+          "total_volume": 1761.8832250000003,
+          "volume_rank": 10
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "search",
+          "market_subcategory_label": "search",
+          "market_count": 1,
+          "total_volume": 169.57578300000006,
+          "volume_rank": 16
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "spacex",
+          "market_subcategory_label": "SpaceX",
+          "market_count": 10,
+          "total_volume": 12201.916559000001,
+          "volume_rank": 6
+        },
+        {
+          "market_category": "tech",
+          "market_subcategory": "xai",
+          "market_subcategory_label": "xAI",
+          "market_count": 1,
+          "total_volume": 266.810589,
+          "volume_rank": 13
+        }
+      ]
+    },
+    "[\"/api/profile/marketsTraded\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\"]": {
+      "user": "0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9",
+      "traded": 39158
+    },
+    "[\"/api/profile/volume\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\"]": {
+      "amount": 146033936.44616303,
+      "pnl": 832933.878914689,
+      "realized": 0,
+      "unrealized": 0
+    },
+    "[\"user-stats\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\"]": {
+      "trades": 39158,
+      "largestWin": 29244.600028,
+      "views": 67310,
+      "joinDate": "2026-01-19T21:12:21.586000Z"
+    },
+    "[\"positions\", \"value\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\"]": 10279.339387698501,
+    "[\"/api/profile/userData\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\"]": {
+      "id": "5412367",
+      "name": "BoneReader",
+      "user": 5309293,
+      "createdAt": "2026-01-20T02:12:21.586456Z",
+      "updatedAt": "2026-01-31T10:08:25.964901Z",
+      "utmSource": "",
+      "utmMedium": "",
+      "utmCampaign": "",
+      "utmContent": "",
+      "utmTerm": "",
+      "walletActivated": false,
+      "pseudonym": "Good-Subset",
+      "displayUsernamePublic": true,
+      "proxyWallet": "0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9",
+      "users": [
+        {
+          "id": "5309293",
+          "creator": false,
+          "mod": false
+        }
+      ],
+      "isCloseOnly": false,
+      "isCertReq": false,
+      "verifiedBadge": false,
+      "termsAcceptedAt": "2026-01-20T03:54:15.029Z",
+      "viewOnlyAcknowledgedAt": "2026-01-31T10:08:25.126Z"
+    },
+    "[\"portfolio-pnl\", \"BoneReader\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"ALL\"]": [
+      {
+        "t": 1768910400,
+        "p": 1.6
+      },
+      {
+        "t": 1768953600,
+        "p": 1.6
+      },
+      {
+        "t": 1768996800,
+        "p": 6.908905
+      },
+      {
+        "t": 1769040000,
+        "p": 13.947675
+      },
+      {
+        "t": 1769083200,
+        "p": 45.05774
+      },
+      {
+        "t": 1769126400,
+        "p": 45.05774
+      },
+      {
+        "t": 1769169600,
+        "p": 45.067738
+      },
+      {
+        "t": 1769212800,
+        "p": 45.09274
+      },
+      {
+        "t": 1769256000,
+        "p": 45.192738
+      },
+      {
+        "t": 1769299200,
+        "p": 73.203186
+      },
+      {
+        "t": 1769342400,
+        "p": 73.75093
+      },
+      {
+        "t": 1769385600,
+        "p": 75.25093
+      },
+      {
+        "t": 1769428800,
+        "p": -5386.8364
+      },
+      {
+        "t": 1769472000,
+        "p": -17985.455
+      },
+      {
+        "t": 1769515200,
+        "p": -23747.945
+      },
+      {
+        "t": 1769558400,
+        "p": -35822.246
+      },
+      {
+        "t": 1769601600,
+        "p": -44688.22
+      },
+      {
+        "t": 1769644800,
+        "p": -44790.6
+      },
+      {
+        "t": 1769688000,
+        "p": -46223.71
+      },
+      {
+        "t": 1769731200,
+        "p": -46036.832
+      },
+      {
+        "t": 1769774400,
+        "p": -45477.7
+      },
+      {
+        "t": 1769817600,
+        "p": -46367.008
+      },
+      {
+        "t": 1769860800,
+        "p": -48121.88
+      },
+      {
+        "t": 1769904000,
+        "p": -46907.016
+      },
+      {
+        "t": 1769947200,
+        "p": -46748.27
+      },
+      {
+        "t": 1769990400,
+        "p": -46616.74
+      },
+      {
+        "t": 1770033600,
+        "p": -47032.81
+      },
+      {
+        "t": 1770076800,
+        "p": -46987.938
+      },
+      {
+        "t": 1770120000,
+        "p": -46811.418
+      },
+      {
+        "t": 1770163200,
+        "p": -44310.64
+      },
+      {
+        "t": 1770206400,
+        "p": -44673.645
+      },
+      {
+        "t": 1770249600,
+        "p": -36148.2
+      },
+      {
+        "t": 1770292800,
+        "p": -29073.148
+      },
+      {
+        "t": 1770336000,
+        "p": -23880.332
+      },
+      {
+        "t": 1770379200,
+        "p": -22763.172
+      },
+      {
+        "t": 1770422400,
+        "p": -34572.02
+      },
+      {
+        "t": 1770465600,
+        "p": -38856.375
+      },
+      {
+        "t": 1770508800,
+        "p": -47995.566
+      },
+      {
+        "t": 1770552000,
+        "p": -46444.945
+      },
+      {
+        "t": 1770595200,
+        "p": -39265.668
+      },
+      {
+        "t": 1770638400,
+        "p": -33325.953
+      },
+      {
+        "t": 1770681600,
+        "p": -33930.47
+      },
+      {
+        "t": 1770724800,
+        "p": -30354.658
+      },
+      {
+        "t": 1770768000,
+        "p": -20763.768
+      },
+      {
+        "t": 1770811200,
+        "p": -13432.342
+      },
+      {
+        "t": 1770854400,
+        "p": -9608.556
+      },
+      {
+        "t": 1770897600,
+        "p": 7207.9614
+      },
+      {
+        "t": 1770940800,
+        "p": 11089.475
+      },
+      {
+        "t": 1770984000,
+        "p": 6797.16
+      },
+      {
+        "t": 1771027200,
+        "p": -8977.847
+      },
+      {
+        "t": 1771070400,
+        "p": 8261.628
+      },
+      {
+        "t": 1771113600,
+        "p": 39971.363
+      },
+      {
+        "t": 1771156800,
+        "p": 42696.72
+      },
+      {
+        "t": 1771200000,
+        "p": 80681.86
+      },
+      {
+        "t": 1771243200,
+        "p": 99025.08
+      },
+      {
+        "t": 1771286400,
+        "p": 111729.695
+      },
+      {
+        "t": 1771329600,
+        "p": 141612.45
+      },
+      {
+        "t": 1771372800,
+        "p": 155631.98
+      },
+      {
+        "t": 1771416000,
+        "p": 182695.03
+      },
+      {
+        "t": 1771459200,
+        "p": 220246.03
+      },
+      {
+        "t": 1771502400,
+        "p": 238025.47
+      },
+      {
+        "t": 1771545600,
+        "p": 232459.16
+      },
+      {
+        "t": 1771588800,
+        "p": 249283.47
+      },
+      {
+        "t": 1771632000,
+        "p": 281562
+      },
+      {
+        "t": 1771675200,
+        "p": 312564.12
+      },
+      {
+        "t": 1771718400,
+        "p": 322260.3
+      },
+      {
+        "t": 1771761600,
+        "p": 332378.3
+      },
+      {
+        "t": 1771804800,
+        "p": 339882
+      },
+      {
+        "t": 1771848000,
+        "p": 354656.56
+      },
+      {
+        "t": 1771891200,
+        "p": 377805.44
+      },
+      {
+        "t": 1771934400,
+        "p": 378490.03
+      },
+      {
+        "t": 1771977600,
+        "p": 390814.72
+      },
+      {
+        "t": 1772020800,
+        "p": 327185.53
+      },
+      {
+        "t": 1772064000,
+        "p": 353613.72
+      },
+      {
+        "t": 1772107200,
+        "p": 358283.47
+      },
+      {
+        "t": 1772150400,
+        "p": 367919.97
+      },
+      {
+        "t": 1772193600,
+        "p": 379519.12
+      },
+      {
+        "t": 1772236800,
+        "p": 393609.22
+      },
+      {
+        "t": 1772280000,
+        "p": 410373.66
+      },
+      {
+        "t": 1772323200,
+        "p": 428577.06
+      },
+      {
+        "t": 1772366400,
+        "p": 417146.6
+      },
+      {
+        "t": 1772409600,
+        "p": 438834.72
+      },
+      {
+        "t": 1772452800,
+        "p": 464329.78
+      },
+      {
+        "t": 1772496000,
+        "p": 480840.28
+      },
+      {
+        "t": 1772539200,
+        "p": 462170.8
+      },
+      {
+        "t": 1772582400,
+        "p": 449140.94
+      },
+      {
+        "t": 1772625600,
+        "p": 461245.62
+      },
+      {
+        "t": 1772668800,
+        "p": 495413.94
+      },
+      {
+        "t": 1772712000,
+        "p": 503887.47
+      },
+      {
+        "t": 1772755200,
+        "p": 527409.8
+      },
+      {
+        "t": 1772798400,
+        "p": 566781.4
+      },
+      {
+        "t": 1772841600,
+        "p": 604297.7
+      },
+      {
+        "t": 1772884800,
+        "p": 622407.06
+      },
+      {
+        "t": 1772928000,
+        "p": 624651.3
+      },
+      {
+        "t": 1772971200,
+        "p": 647084.4
+      },
+      {
+        "t": 1773014400,
+        "p": 663382.4
+      },
+      {
+        "t": 1773057600,
+        "p": 671713.06
+      },
+      {
+        "t": 1773100800,
+        "p": 655521.75
+      },
+      {
+        "t": 1773144000,
+        "p": 655521.75
+      },
+      {
+        "t": 1773187200,
+        "p": 700304.9
+      },
+      {
+        "t": 1773230400,
+        "p": 703506.4
+      },
+      {
+        "t": 1773273600,
+        "p": 708346.6
+      },
+      {
+        "t": 1773316800,
+        "p": 725223
+      },
+      {
+        "t": 1773360000,
+        "p": 743382.2
+      },
+      {
+        "t": 1773403200,
+        "p": 754107.7
+      },
+      {
+        "t": 1773446400,
+        "p": 757779.25
+      },
+      {
+        "t": 1773489600,
+        "p": 757248.2
+      },
+      {
+        "t": 1773532800,
+        "p": 760869.25
+      },
+      {
+        "t": 1773576000,
+        "p": 766887.4
+      },
+      {
+        "t": 1773619200,
+        "p": 778829.3
+      },
+      {
+        "t": 1773662400,
+        "p": 793415.5
+      },
+      {
+        "t": 1773680400,
+        "p": 833018.5
+      }
+    ],
+    "[\"portfolio-pnl\", \"BoneReader\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"1D\"]": [
+      {
+        "t": 1773597600,
+        "p": 773286.2
+      },
+      {
+        "t": 1773601200,
+        "p": 772663.2
+      },
+      {
+        "t": 1773604800,
+        "p": 774022.8
+      },
+      {
+        "t": 1773608400,
+        "p": 774500.7
+      },
+      {
+        "t": 1773612000,
+        "p": 777100.94
+      },
+      {
+        "t": 1773615600,
+        "p": 776320.56
+      },
+      {
+        "t": 1773619200,
+        "p": 778829.3
+      },
+      {
+        "t": 1773622800,
+        "p": 779166.2
+      },
+      {
+        "t": 1773626400,
+        "p": 777750.7
+      },
+      {
+        "t": 1773630000,
+        "p": 779004.1
+      },
+      {
+        "t": 1773633600,
+        "p": 780355.5
+      },
+      {
+        "t": 1773637200,
+        "p": 784067.8
+      },
+      {
+        "t": 1773640800,
+        "p": 786772.8
+      },
+      {
+        "t": 1773644400,
+        "p": 786332.06
+      },
+      {
+        "t": 1773648000,
+        "p": 786625.1
+      },
+      {
+        "t": 1773651600,
+        "p": 792583.25
+      },
+      {
+        "t": 1773655200,
+        "p": 792688.44
+      },
+      {
+        "t": 1773658800,
+        "p": 793301.9
+      },
+      {
+        "t": 1773662400,
+        "p": 793415.5
+      },
+      {
+        "t": 1773666000,
+        "p": 827390.2
+      },
+      {
+        "t": 1773669600,
+        "p": 830024.6
+      },
+      {
+        "t": 1773673200,
+        "p": 830331.2
+      },
+      {
+        "t": 1773676800,
+        "p": 830296.06
+      },
+      {
+        "t": 1773680400,
+        "p": 833018.5
+      }
+    ],
+    "[\"portfolio-pnl\", \"BoneReader\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"1W\"]": [
+      {
+        "t": 1773079200,
+        "p": 660827.9
+      },
+      {
+        "t": 1773090000,
+        "p": 662377.9
+      },
+      {
+        "t": 1773100800,
+        "p": 655521.75
+      },
+      {
+        "t": 1773111600,
+        "p": 655521.75
+      },
+      {
+        "t": 1773122400,
+        "p": 655521.75
+      },
+      {
+        "t": 1773133200,
+        "p": 655521.75
+      },
+      {
+        "t": 1773144000,
+        "p": 655521.75
+      },
+      {
+        "t": 1773154800,
+        "p": 676673.4
+      },
+      {
+        "t": 1773165600,
+        "p": 695222.9
+      },
+      {
+        "t": 1773176400,
+        "p": 694290.8
+      },
+      {
+        "t": 1773187200,
+        "p": 700304.9
+      },
+      {
+        "t": 1773198000,
+        "p": 695853.75
+      },
+      {
+        "t": 1773208800,
+        "p": 698161.5
+      },
+      {
+        "t": 1773219600,
+        "p": 699027.7
+      },
+      {
+        "t": 1773230400,
+        "p": 703506.4
+      },
+      {
+        "t": 1773241200,
+        "p": 706236
+      },
+      {
+        "t": 1773252000,
+        "p": 707546.94
+      },
+      {
+        "t": 1773262800,
+        "p": 710130.7
+      },
+      {
+        "t": 1773273600,
+        "p": 708346.6
+      },
+      {
+        "t": 1773284400,
+        "p": 714311.9
+      },
+      {
+        "t": 1773295200,
+        "p": 716937.1
+      },
+      {
+        "t": 1773306000,
+        "p": 718449.5
+      },
+      {
+        "t": 1773316800,
+        "p": 725223
+      },
+      {
+        "t": 1773327600,
+        "p": 731590.7
+      },
+      {
+        "t": 1773338400,
+        "p": 740316
+      },
+      {
+        "t": 1773349200,
+        "p": 740755.56
+      },
+      {
+        "t": 1773360000,
+        "p": 743382.2
+      },
+      {
+        "t": 1773370800,
+        "p": 750215.3
+      },
+      {
+        "t": 1773381600,
+        "p": 752611.06
+      },
+      {
+        "t": 1773392400,
+        "p": 754149.9
+      },
+      {
+        "t": 1773403200,
+        "p": 754107.7
+      },
+      {
+        "t": 1773414000,
+        "p": 755204.1
+      },
+      {
+        "t": 1773424800,
+        "p": 755248
+      },
+      {
+        "t": 1773435600,
+        "p": 755472.5
+      },
+      {
+        "t": 1773446400,
+        "p": 757779.25
+      },
+      {
+        "t": 1773457200,
+        "p": 758958.2
+      },
+      {
+        "t": 1773468000,
+        "p": 759406.94
+      },
+      {
+        "t": 1773478800,
+        "p": 755560.56
+      },
+      {
+        "t": 1773489600,
+        "p": 757248.2
+      },
+      {
+        "t": 1773500400,
+        "p": 759998.3
+      },
+      {
+        "t": 1773511200,
+        "p": 760729.6
+      },
+      {
+        "t": 1773522000,
+        "p": 760276.94
+      },
+      {
+        "t": 1773532800,
+        "p": 760869.25
+      },
+      {
+        "t": 1773543600,
+        "p": 764707
+      },
+      {
+        "t": 1773554400,
+        "p": 767637.9
+      },
+      {
+        "t": 1773565200,
+        "p": 767509
+      },
+      {
+        "t": 1773576000,
+        "p": 766887.4
+      },
+      {
+        "t": 1773586800,
+        "p": 767367
+      },
+      {
+        "t": 1773597600,
+        "p": 773286.2
+      },
+      {
+        "t": 1773608400,
+        "p": 774500.7
+      },
+      {
+        "t": 1773619200,
+        "p": 778829.3
+      },
+      {
+        "t": 1773630000,
+        "p": 779004.1
+      },
+      {
+        "t": 1773640800,
+        "p": 786772.8
+      },
+      {
+        "t": 1773651600,
+        "p": 792583.25
+      },
+      {
+        "t": 1773662400,
+        "p": 793415.5
+      },
+      {
+        "t": 1773673200,
+        "p": 830331.2
+      },
+      {
+        "t": 1773676800,
+        "p": 830296.06
+      }
+    ],
+    "[\"portfolio-pnl\", \"BoneReader\", \"0xd84c2b6d65dc596f49c7b6aadd6d74ca91e407b9\", \"1M\"]": [
+      {
+        "t": 1771113600,
+        "p": 39971.363
+      },
+      {
+        "t": 1771178400,
+        "p": 61308.82
+      },
+      {
+        "t": 1771243200,
+        "p": 99025.08
+      },
+      {
+        "t": 1771308000,
+        "p": 130033.195
+      },
+      {
+        "t": 1771372800,
+        "p": 155631.98
+      },
+      {
+        "t": 1771437600,
+        "p": 203702.66
+      },
+      {
+        "t": 1771502400,
+        "p": 238025.47
+      },
+      {
+        "t": 1771567200,
+        "p": 246995.22
+      },
+      {
+        "t": 1771632000,
+        "p": 281562
+      },
+      {
+        "t": 1771696800,
+        "p": 307855.44
+      },
+      {
+        "t": 1771761600,
+        "p": 332378.3
+      },
+      {
+        "t": 1771826400,
+        "p": 348869.22
+      },
+      {
+        "t": 1771891200,
+        "p": 377805.44
+      },
+      {
+        "t": 1771956000,
+        "p": 385028.06
+      },
+      {
+        "t": 1772020800,
+        "p": 327185.53
+      },
+      {
+        "t": 1772085600,
+        "p": 357548.4
+      },
+      {
+        "t": 1772150400,
+        "p": 367919.97
+      },
+      {
+        "t": 1772215200,
+        "p": 386259.5
+      },
+      {
+        "t": 1772280000,
+        "p": 410373.66
+      },
+      {
+        "t": 1772344800,
+        "p": 413206.94
+      },
+      {
+        "t": 1772409600,
+        "p": 438834.72
+      },
+      {
+        "t": 1772474400,
+        "p": 476455.06
+      },
+      {
+        "t": 1772539200,
+        "p": 462170.8
+      },
+      {
+        "t": 1772604000,
+        "p": 439371.38
+      },
+      {
+        "t": 1772668800,
+        "p": 495413.94
+      },
+      {
+        "t": 1772733600,
+        "p": 505640.22
+      },
+      {
+        "t": 1772798400,
+        "p": 566781.4
+      },
+      {
+        "t": 1772863200,
+        "p": 612971.25
+      },
+      {
+        "t": 1772928000,
+        "p": 624651.3
+      },
+      {
+        "t": 1772992800,
+        "p": 655679.75
+      },
+      {
+        "t": 1773057600,
+        "p": 671713.06
+      },
+      {
+        "t": 1773122400,
+        "p": 655521.75
+      },
+      {
+        "t": 1773187200,
+        "p": 700304.9
+      },
+      {
+        "t": 1773252000,
+        "p": 707546.94
+      },
+      {
+        "t": 1773316800,
+        "p": 725223
+      },
+      {
+        "t": 1773381600,
+        "p": 752611.06
+      },
+      {
+        "t": 1773446400,
+        "p": 757779.25
+      },
+      {
+        "t": 1773511200,
+        "p": 760729.6
+      },
+      {
+        "t": 1773576000,
+        "p": 766887.4
+      },
+      {
+        "t": 1773640800,
+        "p": 786772.8
+      },
+      {
+        "t": 1773676800,
+        "p": 830296.06
+      }
+    ]
+  }
+}
