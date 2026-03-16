@@ -78,7 +78,14 @@
 - 用户画像 / 本地偏好 → `USER.md`
 - 当天新增 / 纠错 / 阶段变化 → `memory/YYYY-MM-DD.md`
 - 当前主线 / 下一步 / blocker → `LAST_SESSION.md` / `SESSION_HANDOFF.md`
+- 系统级能力资产 / 能力检查与校准主表 → `docs/capability_check_and_calibration_*.md` 与后续稳定入口文件
 - skill 通用规则 → skill 自身文档（如 `skills/*/REQUIREMENTS.md` / `DEVELOPMENT.md` / `references/test_plan.md`）
+
+### 能力表保护规则（新增）
+- 能力表属于系统级能力资产，不能乱改、不能随意覆盖、不能因 session 切换而丢失。
+- 对能力表的修改，默认只能做：补充、校准、标记过时、标记失效、增加验收；禁止随意重写结构导致历史能力消失。
+- 若发现旧能力表内容未进入当前高触发层，优先补恢复入口，而不是直接重做一份替代后让旧能力失联。
+- 每次做能力级修复时，默认至少同步两层：长期记忆 + 可执行文档；必要时再补稳定入口文件。
 
 ## 防死机执行法
 ### 熔断条件
