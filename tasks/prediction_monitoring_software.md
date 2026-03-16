@@ -33,19 +33,27 @@ Jim explicitly approved:
 - prediction journal + scoring for BTC/lobster
 
 ## Execution plan
-### Line A: Polymarket
-1. Add resolver/settlement script
-2. Add portfolio risk cap and order throttling
-3. Add equity curve / summary metrics
-4. Add accuracy-by-market-type report
-5. Add continuous monitor runner
+### Line A (primary): fast-feedback prediction loop
+1. Build 4h / 24h prediction journal and scorer first
+2. Record large-volume prediction samples with timestamp, horizon, direction, range, confidence, invalidation
+3. Score after window close automatically
+4. Compare short-horizon, medium-horizon, and grid-style behavior side by side
+5. Output directional accuracy / range hit rate / calibration / simple pnl-style metrics
 
-### Line B: BTC / lobster
-1. Define data source path(s)
-2. Create local watcher scripts for price snapshots/time series
-3. Record each prediction with timestamp + range + direction
-4. Compare with realized move after window closes
-5. Output win rate / range hit rate / directional accuracy
+### Line B (parallel supplement): Polymarket
+1. Add short-cycle market selection layer first
+2. Continue paper orders for event-market training and later settlement
+3. Add resolver/settlement script
+4. Add portfolio risk cap and order throttling
+5. Add equity curve / summary metrics
+6. Add accuracy-by-market-type report
+7. Add continuous monitor runner
+
+### Horizons / styles to test
+- ultra-short: 4h
+- short-mid: 24h
+- mid: 3d / 7d when useful
+- grid-style: repeated band/range prediction around current price
 
 ## Acceptance
 - can run without manual babysitting
