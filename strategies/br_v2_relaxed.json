@@ -2,7 +2,7 @@
   "name": "BR-v2-relaxed",
   "mode": "highprob",
   "minPrice": 0.6,
-  "maxMinsToEnd": 10080,
+  "maxMinsToEnd": 288000,
   "maxOrders": 40,
   "sizeUSD": 50,
   "requireAcceptingOrders": false,
