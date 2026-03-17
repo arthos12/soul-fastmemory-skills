@@ -1,0 +1,73 @@
+{
+  "status": {
+    "ts": "2026-03-17T10:41:23.480488Z",
+    "status": "running",
+    "reason": "waiting_terminal",
+    "report": {
+      "n": 2,
+      "realized": {
+        "n": 0,
+        "wins": 0,
+        "winrate": null,
+        "roi_avg": null,
+        "pnl_sum": null,
+        "roi_n": 0
+      },
+      "m2m": {
+        "n": 2,
+        "wins": 0,
+        "winrate": 0.0,
+        "roi_avg": -0.01935262532921051,
+        "pnl_sum": -1.935262532921051,
+        "roi_n": 2
+      }
+    },
+    "realized_count": 0,
+    "results_path": "data/polymarket/verification_dual_results_manual.jsonl",
+    "report_path": "data/polymarket/verification_dual_report.json"
+  },
+  "results": [
+    {
+      "ts_checked": 1773744083,
+      "kind": "m2m",
+      "marketId": "531202",
+      "slug": "bitboy-convicted",
+      "title": "BitBoy convicted?",
+      "picked": "Yes",
+      "win": null,
+      "winFlag": null,
+      "limitPrice": 0.2155,
+      "curPrice": 0.204,
+      "sizeUSD": 50.0,
+      "shares_est": 232.0185614849188,
+      "pnl_est": -2.6682134570765683,
+      "roi_est": -0.05336426914153137,
+      "umaResolutionStatus": null,
+      "closed": false,
+      "endDate": "2026-03-31T12:00:00Z",
+      "strategy": "dual-side-verification",
+      "tag": "dual_live_test_monitor"
+    },
+    {
+      "ts_checked": 1773744083,
+      "kind": "m2m",
+      "marketId": "531202",
+      "slug": "bitboy-convicted",
+      "title": "BitBoy convicted?",
+      "picked": "No",
+      "win": null,
+      "winFlag": null,
+      "limitPrice": 0.7845,
+      "curPrice": 0.796,
+      "sizeUSD": 50.0,
+      "shares_est": 63.73486297004462,
+      "pnl_est": 0.7329509241555172,
+      "roi_est": 0.014659018483110344,
+      "umaResolutionStatus": null,
+      "closed": false,
+      "endDate": "2026-03-31T12:00:00Z",
+      "strategy": "dual-side-verification",
+      "tag": "dual_live_test_monitor"
+    }
+  ]
+}

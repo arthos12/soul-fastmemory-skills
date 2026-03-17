@@ -1,0 +1,27 @@
+{
+  "ts": "2026-03-17T10:41:23.480488Z",
+  "status": "running",
+  "reason": "waiting_terminal",
+  "report": {
+    "n": 2,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 2,
+      "wins": 0,
+      "winrate": 0.0,
+      "roi_avg": -0.01935262532921051,
+      "pnl_sum": -1.935262532921051,
+      "roi_n": 2
+    }
+  },
+  "realized_count": 0,
+  "results_path": "data/polymarket/verification_dual_results_manual.jsonl",
+  "report_path": "data/polymarket/verification_dual_report.json"
+}
