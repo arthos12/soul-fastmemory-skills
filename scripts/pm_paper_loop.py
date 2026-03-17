@@ -135,36 +135,49 @@ def generate_orders(markets, strat, tag, outdir):
     orders = []
     now_ts = int(time.time())
     recent_market_ids = load_recent_market_ids(outdir, lookback_hours=int(strat.get('dedupLookbackHours', DEDUP_LOOKBACK_HOURS)))
+    reason_counts = {}
+
+    def bump(reason):
+        reason_counts[reason] = reason_counts.get(reason, 0) + 1
 
     for m in markets:
         if m.get("closed") is True:
+            bump("closed")
             continue
         if str(m.get("id")) in recent_market_ids:
+            bump("recent")
             continue
         if strat.get("requireAcceptingOrders", True) and m.get("acceptingOrders") is False:
+            bump("not_accepting")
             continue
 
         mins = parse_end_minutes(m)
         if mins is None:
+            bump("no_end")
             continue
         if mins <= 0:
+            bump("ended")
             continue
         if mins > strat.get("maxMinsToEnd", 24 * 60):
+            bump("too_far_end")
             continue
 
         q = (m.get("question") or "")
         ql = q.lower()
         if strat.get("keywords"):
             if not any(k.lower() in ql for k in strat["keywords"]):
+                bump("keyword_filtered")
                 continue
 
         outcomes = norm_list(m.get("outcomes"))
         prices = norm_list(m.get("outcomePrices"))
         if not isinstance(outcomes, list) or not isinstance(prices, list) or len(outcomes) != len(prices):
+            bump("bad_prices")
             continue
         try:
             prices = [float(p) for p in prices]
         except Exception:
+            bump("price_cast_fail")
             continue
 
         picked = None
@@ -172,17 +185,21 @@ def generate_orders(markets, strat, tag, outdir):
             picked = pick_highprob(outcomes, prices, strat.get("minPrice", 0.9))
 
         if not picked:
+            bump("no_pick")
             continue
 
         outcome, price = picked
         # avoid 0 price orders
         if price <= 0:
+            bump("zero_price")
             continue
         # enforce floor tick
         min_tick = float(m.get("orderPriceMinTickSize") or strat.get("minTick", 0.0005))
         if price < min_tick:
+            bump("below_tick")
             continue
 
+        bump("selected")
         orders.append(
             {
                 "ts": now_ts,
@@ -204,7 +221,7 @@ def generate_orders(markets, strat, tag, outdir):
         if len(orders) >= strat.get("maxOrders", 30):
             break
 
-    return orders
+    return orders, reason_counts
 
 
 def fetch_market_by_id(mid):
@@ -363,7 +380,7 @@ def main():
             )
         )
 
-    orders = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
+    orders, reason_counts = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
     day = dt.datetime.utcnow().date().isoformat()
     orders_path = os.path.join(args.outdir, f"paper_orders_{day}_{run_tag}.jsonl")
@@ -380,6 +397,7 @@ def main():
         "strategy": strat.get("name"),
         "orders_generated": len(orders),
         "results_backfilled": len(results),
+        "selection_reasons": reason_counts,
         "summary": summarize(results),
     }
     hour = dt.datetime.utcnow().strftime("%Y-%m-%d_%H")
