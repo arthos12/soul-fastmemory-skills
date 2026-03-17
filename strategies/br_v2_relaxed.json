@@ -1,0 +1,12 @@
+{
+  "name": "BR-v2-relaxed",
+  "mode": "highprob",
+  "minPrice": 0.6,
+  "maxMinsToEnd": 10080,
+  "maxOrders": 40,
+  "sizeUSD": 50,
+  "requireAcceptingOrders": false,
+  "keywords": [],
+  "source": "gamma-api(active scan cached)",
+  "minTick": 0.0005
+}

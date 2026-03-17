@@ -1,0 +1,15 @@
+{
+  "ts": 1773731715,
+  "tag": "br_v2_relaxed",
+  "strategy": "BR-v2-relaxed",
+  "orders_generated": 14,
+  "results_backfilled": 0,
+  "summary": {
+    "n": 0,
+    "wins": 0,
+    "winrate": null,
+    "roi_avg": null,
+    "pnl_sum": null,
+    "roi_n": 0
+  }
+}
