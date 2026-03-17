@@ -19,6 +19,10 @@ p3 = Path('data/polymarket/runtime/br_loop_status.json')
 out['br_runtime_exists'] = p3.exists()
 if p3.exists():
     out['br_runtime'] = json.loads(p3.read_text(encoding='utf-8'))
+    try:
+        out['br_runtime_age_sec'] = int(time.time()) - int(time.mktime(time.strptime(out['br_runtime']['ts'], '%Y-%m-%dT%H:%M:%SZ')))
+    except Exception:
+        out['br_runtime_age_sec'] = None
 # latest orders/results counts
 for kind in ['paper_orders','paper_results']:
     files=sorted(glob.glob(f'data/polymarket/{kind}_2026-03-17_*.jsonl'), key=os.path.getmtime, reverse=True)[:3]

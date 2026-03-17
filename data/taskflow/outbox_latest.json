@@ -1,0 +1,5 @@
+{
+  "ts": "2026-03-17T12:31:03Z",
+  "kind": "scheduled_message",
+  "message": "TaskFlow scheduled checkpoint reached. Review data/taskflow/scheduled_report.json and data/polymarket/runtime/br_loop_status.json."
+}

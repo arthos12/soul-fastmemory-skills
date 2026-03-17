@@ -1,0 +1,20 @@
+[
+  {
+    "name": "heartbeat",
+    "intervalSec": 30,
+    "kind": "python",
+    "command": [
+      "python3",
+      "scripts/taskflow_once_report.py"
+    ]
+  },
+  {
+    "name": "br_runtime_check",
+    "intervalSec": 60,
+    "kind": "python",
+    "command": [
+      "python3",
+      "scripts/check_br_runtime.py"
+    ]
+  }
+]
