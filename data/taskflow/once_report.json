@@ -1,0 +1,81 @@
+{
+  "taskflow_heartbeat_exists": true,
+  "taskflow_heartbeat": {
+    "ts": "2026-03-17T12:17:22.231929Z",
+    "status": "alive",
+    "epoch": 1773749842
+  },
+  "taskflow_age_sec": 8,
+  "dual_monitor_exists": true,
+  "dual_monitor": {
+    "ts": "2026-03-17T10:56:26.947235Z",
+    "status": "timeout",
+    "reason": "waiting_terminal",
+    "report": {
+      "n": 2,
+      "realized": {
+        "n": 0,
+        "wins": 0,
+        "winrate": null,
+        "roi_avg": null,
+        "pnl_sum": null,
+        "roi_n": 0
+      },
+      "m2m": {
+        "n": 2,
+        "wins": 0,
+        "winrate": 0.0,
+        "roi_avg": -0.045436598599016026,
+        "pnl_sum": -4.543659859901602,
+        "roi_n": 2
+      }
+    },
+    "realized_count": 0,
+    "results_path": "data/polymarket/verification_dual_results_manual.jsonl",
+    "report_path": "data/polymarket/verification_dual_report.json"
+  },
+  "br_runtime_exists": true,
+  "br_runtime": {
+    "ts": "2026-03-17T12:07:39Z",
+    "tag": "cont_120739",
+    "strategy": "strategies/br_v2_relaxed.json",
+    "orders": 0,
+    "results": 0,
+    "fail_count": 11,
+    "status": "degraded"
+  },
+  "paper_orders": [
+    {
+      "file": "paper_orders_2026-03-17_cont_120739.jsonl",
+      "lines": 0,
+      "mtime": 1773749263
+    },
+    {
+      "file": "paper_orders_2026-03-17_cont_115735.jsonl",
+      "lines": 0,
+      "mtime": 1773748659
+    },
+    {
+      "file": "paper_orders_2026-03-17_cont_114732.jsonl",
+      "lines": 0,
+      "mtime": 1773748055
+    }
+  ],
+  "paper_results": [
+    {
+      "file": "paper_results_2026-03-17_cont_120739.jsonl",
+      "lines": 0,
+      "mtime": 1773749263
+    },
+    {
+      "file": "paper_results_2026-03-17_cont_115735.jsonl",
+      "lines": 0,
+      "mtime": 1773748659
+    },
+    {
+      "file": "paper_results_2026-03-17_cont_114732.jsonl",
+      "lines": 0,
+      "mtime": 1773748055
+    }
+  ]
+}
