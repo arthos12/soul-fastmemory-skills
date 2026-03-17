@@ -1,0 +1,12 @@
+{
+  "name": "BR-v2-highprob",
+  "mode": "highprob",
+  "minPrice": 0.8,
+  "maxMinsToEnd": 1440,
+  "maxOrders": 40,
+  "sizeUSD": 50,
+  "requireAcceptingOrders": false,
+  "keywords": ["bitcoin", "btc", "ethereum", "eth", "solana", "sol", "xrp", "up or down"],
+  "source": "gamma-api(active scan cached)",
+  "minTick": 0.0005
+}
