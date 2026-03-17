@@ -181,6 +181,13 @@ def fetch_market_by_id(mid):
 
 
 def backfill_results(orders, tag):
+    """Backfill both realized (resolved) and mark-to-market (unresolved) results.
+
+    - If umaResolutionStatus==resolved and final outcomePrices are 0/1: treat as realized.
+    - Otherwise: compute mark-to-market PnL using current outcomePrices.
+
+    This enables fast iteration without waiting UMA resolution.
+    """
     results = []
     ts = int(time.time())
     for o in orders:
@@ -191,38 +198,55 @@ def backfill_results(orders, tag):
         outcomes = norm_list(m.get("outcomes"))
         prices = norm_list(m.get("outcomePrices"))
         status = m.get("umaResolutionStatus")
-        if status != "resolved":
-            continue
         if not isinstance(outcomes, list) or not isinstance(prices, list) or len(outcomes) != len(prices):
             continue
         try:
             prices_f = [float(p) for p in prices]
         except Exception:
             continue
-        # winner is price==1
-        win = None
-        for oc, p in zip(outcomes, prices_f):
-            if p == 1.0:
-                win = oc
-                break
-        if not win:
-            continue
-        picked = o.get("outcome")
-        win_flag = picked == win
 
+        picked = o.get("outcome")
         lp = float(o.get("limitPrice") or 0)
         size = float(o.get("sizeUSD") or 0)
-        pnl = None
-        roi = None
-        if lp > 0:
-            shares = size / lp
+        if lp <= 0 or size <= 0:
+            continue
+        shares = size / lp
+
+        # mark-to-market using current picked price
+        cur_price = None
+        for oc, p in zip(outcomes, prices_f):
+            if oc == picked:
+                cur_price = p
+                break
+
+        # realized if resolved and there is a winner (price==1)
+        win = None
+        if status == "resolved":
+            for oc, p in zip(outcomes, prices_f):
+                if p == 1.0:
+                    win = oc
+                    break
+
+        if win is not None:
+            win_flag = picked == win
             payout = shares if win_flag else 0.0
             pnl = payout - size
             roi = pnl / size if size else None
+            kind = "realized"
+        else:
+            # unrealized / mark-to-market
+            if cur_price is None:
+                continue
+            m2m = shares * cur_price
+            pnl = m2m - size
+            roi = pnl / size if size else None
+            win_flag = None
+            kind = "m2m"
 
         results.append(
             {
                 "ts_checked": ts,
+                "kind": kind,
                 "marketId": mid,
                 "slug": o.get("slug"),
                 "title": o.get("title"),
@@ -230,7 +254,9 @@ def backfill_results(orders, tag):
                 "win": win,
                 "winFlag": win_flag,
                 "limitPrice": lp,
+                "curPrice": cur_price,
                 "sizeUSD": size,
+                "shares_est": shares,
                 "pnl_est": pnl,
                 "roi_est": roi,
                 "umaResolutionStatus": status,
@@ -245,17 +271,25 @@ def backfill_results(orders, tag):
 
 def summarize(results):
     n = len(results)
-    wins = sum(1 for r in results if r.get("winFlag") is True)
-    rois = [r["roi_est"] for r in results if isinstance(r.get("roi_est"), (int, float))]
-    pnls = [r["pnl_est"] for r in results if isinstance(r.get("pnl_est"), (int, float))]
-    return {
-        "n": n,
-        "wins": wins,
-        "winrate": (wins / n) if n else None,
-        "roi_avg": (sum(rois) / len(rois)) if rois else None,
-        "pnl_sum": sum(pnls) if pnls else None,
-        "roi_n": len(rois),
-    }
+    realized = [r for r in results if r.get("kind") == "realized"]
+    m2m = [r for r in results if r.get("kind") == "m2m"]
+
+    def s(rows):
+        n2 = len(rows)
+        wins = sum(1 for r in rows if r.get("winFlag") is True)
+        rois = [r["roi_est"] for r in rows if isinstance(r.get("roi_est"), (int, float))]
+        pnls = [r["pnl_est"] for r in rows if isinstance(r.get("pnl_est"), (int, float))]
+        return {
+            "n": n2,
+            "wins": wins,
+            "winrate": (wins / n2) if n2 else None,
+            "roi_avg": (sum(rois) / len(rois)) if rois else None,
+            "pnl_sum": sum(pnls) if pnls else None,
+            "roi_n": len(rois),
+        }
+
+    out = {"n": n, "realized": s(realized), "m2m": s(m2m)}
+    return out
 
 
 def main():
