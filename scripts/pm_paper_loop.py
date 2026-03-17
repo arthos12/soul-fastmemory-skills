@@ -18,6 +18,8 @@ Notes:
 import argparse, datetime as dt, json, os, time
 from urllib.parse import urlencode
 
+DEDUP_LOOKBACK_HOURS = 24
+
 import requests
 
 GAMMA = "https://gamma-api.polymarket.com/markets"
@@ -100,12 +102,44 @@ def pick_highprob(outcomes, prices, min_price):
     return None
 
 
-def generate_orders(markets, strat, tag):
+def load_recent_market_ids(outdir, lookback_hours=DEDUP_LOOKBACK_HOURS):
+    recent = set()
+    cutoff = time.time() - lookback_hours * 3600
+    if not os.path.isdir(outdir):
+        return recent
+    for name in os.listdir(outdir):
+        if not name.startswith('paper_orders_') or not name.endswith('.jsonl'):
+            continue
+        path = os.path.join(outdir, name)
+        try:
+            if os.path.getmtime(path) < cutoff:
+                continue
+            with open(path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        row = json.loads(line)
+                        mid = row.get('marketId')
+                        if mid is not None:
+                            recent.add(str(mid))
+                    except Exception:
+                        continue
+        except Exception:
+            continue
+    return recent
+
+
+def generate_orders(markets, strat, tag, outdir):
     orders = []
     now_ts = int(time.time())
+    recent_market_ids = load_recent_market_ids(outdir, lookback_hours=int(strat.get('dedupLookbackHours', DEDUP_LOOKBACK_HOURS)))
 
     for m in markets:
         if m.get("closed") is True:
+            continue
+        if str(m.get("id")) in recent_market_ids:
             continue
         if strat.get("requireAcceptingOrders", True) and m.get("acceptingOrders") is False:
             continue
@@ -219,13 +253,21 @@ def backfill_results(orders, tag):
                 cur_price = p
                 break
 
-        # realized if resolved and there is a winner (price==1)
+        # realized if market is closed/resolved and there is a winner side by terminal price
         win = None
-        if status == "resolved":
+        is_terminal = (status == "resolved") or (m.get("closed") is True)
+        if is_terminal:
             for oc, p in zip(outcomes, prices_f):
-                if p == 1.0:
+                if p >= 0.999:
                     win = oc
                     break
+            if win is None and len(prices_f) == 2:
+                # fallback: treat near-binary terminal prices as final even if not exact 1.0/0.0
+                max_idx = max(range(len(prices_f)), key=lambda i: prices_f[i])
+                max_p = prices_f[max_idx]
+                min_p = min(prices_f)
+                if max_p >= 0.9 and min_p <= 0.1:
+                    win = outcomes[max_idx]
 
         if win is not None:
             win_flag = picked == win
@@ -321,7 +363,7 @@ def main():
             )
         )
 
-    orders = generate_orders(markets, strat, tag=run_tag)
+    orders = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
     day = dt.datetime.utcnow().date().isoformat()
     orders_path = os.path.join(args.outdir, f"paper_orders_{day}_{run_tag}.jsonl")
