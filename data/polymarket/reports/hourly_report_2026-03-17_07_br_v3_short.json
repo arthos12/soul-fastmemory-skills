@@ -1,0 +1,15 @@
+{
+  "ts": 1773731955,
+  "tag": "br_v3_short",
+  "strategy": "BR-v3-short-updown",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "summary": {
+    "n": 0,
+    "wins": 0,
+    "winrate": null,
+    "roi_avg": null,
+    "pnl_sum": null,
+    "roi_n": 0
+  }
+}
