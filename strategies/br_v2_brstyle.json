@@ -1,0 +1,30 @@
+{
+  "name": "BR-v2-brstyle",
+  "mode": "highprob",
+  "minPrice": 0.01,
+  "maxMinsToEnd": 2160,
+  "maxOrders": 120,
+  "sizeUSD": 20,
+  "requireAcceptingOrders": false,
+  "dedupLookbackHours": 2,
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "eth",
+    "solana",
+    "sol",
+    "xrp",
+    "up or down",
+    "higher than",
+    "lower than",
+    "above",
+    "below",
+    "close higher",
+    "close lower",
+    "rise or fall",
+    "涨还是跌"
+  ],
+  "source": "gamma-api(active scan cached)",
+  "minTick": 0.0005
+}
