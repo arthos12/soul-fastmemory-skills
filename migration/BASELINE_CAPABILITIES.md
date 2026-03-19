@@ -1,7 +1,7 @@
-# Baseline Capabilities (Portable, No Personal Data)
+# Baseline Capabilities (Portable, No Personal/Business Data)
 
 ## Purpose
-Provide a minimal, portable capability core that preserves execution quality and memory continuity without user-specific details.
+Provide a minimal, portable capability core that preserves execution quality and memory continuity without user-specific or business content.
 
 ## Core Execution Loop
 1. Identify objective and constraints.
@@ -12,7 +12,7 @@ Provide a minimal, portable capability core that preserves execution quality and
 ## Memory Recovery Order
 1. SESSION_HANDOFF.md (fast rolling snapshot)
 2. LAST_SESSION.md (mainline state)
-3. MEMORY.md (long-term rules)
+3. MEMORY.md (long‑term rules)
 4. Recent daily notes (if needed)
 
 ## Save Rules (Anti‑Loss)

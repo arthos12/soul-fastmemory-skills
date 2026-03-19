@@ -1,11 +1,13 @@
-# Capability Migration Pack
+# Capability Migration Pack (Sanitized)
 
-This folder contains a minimal, user‑agnostic capability core designed to be shared with other bots. It excludes personal/user data and project‑specific business content.
+This package contains portable capability and memory‑continuity rules only. It excludes personal details and business/strategy content.
 
-Included:
-- BASELINE_CAPABILITIES.md (execution + memory continuity)
-- SESSION_HANDOFF_TEMPLATE.md (fast recovery snapshot template)
+Files:
+- BASELINE_CAPABILITIES.md
+- MEMORY_BASE.md
+- LAST_SESSION_BASE.md
+- SESSION_HANDOFF_BASE.md
 
 Usage:
-- Copy these docs into the target bot's workspace.
-- Adapt to local environment only; do not inject private data.
+- Copy into target bot workspace.
+- Merge with local settings as needed.
