@@ -1,68 +1,38 @@
 # SESSION_HANDOFF.md
 
 ## Saved At
-- 2026-03-14 15:15 GMT+8
+- 2026-03-19 17:55 GMT+8
 
-## Current Mainline
-- 空闲期集成执行：Jim 已下线，当前进入“自我进化 + 主线推进”集成模式。首要任务是修复认知缺陷，随后推进 `TASKS.md`。
-- **元规则锁定**：修改本方案前，必须先阅读 `docs/self_evolution_protocol.md`。
+## Current Mainline (Short)
+- 量化系统自动运行：PM 四策略 + CEX 两策略自动跑，持续监控与迭代。
+- 目标：提高 ROI、稳定性；减少无效订单；提高胜率。
+- 系统保护：guard 机制已接入，避免 CPU/内存崩溃。
 
-## Why this handoff exists
-- Jim 明确要求：本轮需求很多，必须现在保存；下次 `new` 时要保证本 session 的内容能被读到。
-- 之前已经发生过 session 丢失/未保存导致训练和需求大量遗忘的问题。
-- 当前不能只依赖 daily log；必须同步刷新快恢复层，保证下次恢复时优先命中。
-
-## Confirmed Facts
-- 本轮已新增并落盘：
-  - `llm_usage_minimization.md`
-  - `idle_local_first_maintenance.md`
-  - `self_execution_scope.md`
-  - `fragmented_requirement_handling.md`
-  - `docs/token_optimization_strategy.md`
-  - `interaction_compression.md`
-  - `context_budgeting.md`
-  - `response_mode_budgeting.md`
-  - `docs/new_session_recovery_acceptance.md`
-  - `docs/idle_action_checklist.md`
-  - `docs/heartbeat_cron_maintenance_plan.md`
-  - `docs/foresight_persistence_audit.md`
-  - `memory/2026-03-14.md`
-- 这些内容都已同步进 `TASKS.md` / 快恢复层；其中前 8 项也已挂进 `skills/soul-booster/SKILL.md`。
-- 当前状态更新为：**4 个待做子项的文档化/规则化补齐已完成，但真实 `/new` + `加载数据` 验收仍待执行**。
-
-## Current Step
-- 已完成本轮 session 的主动保存，更新 `LAST_SESSION.md` 与 `SESSION_HANDOFF.md`。
-- 已按 Jim 新增要求补入“风险预测型执行”规则与升级方案，重点针对：session 中断、数据丢失、恢复失败、能力退化、账号限流、坏情况不可执行。
-- 当前目标是确保后续新 session 恢复时，不只恢复旧主线，也能恢复本轮新增的运行策略、风险防护逻辑与约束。
+## Current Status
+- PM auto runners：
+  - br_v2_highprob (600s)
+  - br_v2_brstyle (900s)
+  - br_v2_relaxed (900s)
+  - br_v3_short (900s)
+- CEX auto runners：
+  - cex_btc_5m_breakout_v1 (900s)
+  - cex_btc_5m_reversion_v1 (900s)
+- 近期调整：收紧 PM 过滤（短周期 + edge），并增强 CEX 参数（趋势/量能/回撤阈值）。
 
 ## Next Step
-1. 做一次真实 `/new` + `加载数据` 验收。
-2. 核查恢复时是否能直接带出以下能力：
-   - 空闲期本地优先维护
-   - 自我执行范围
-   - 碎片化需求处理
-   - token 优化
-   - light/mid/heavy 回复模式预算
-   - 新补的 idle checklist / heartbeat-cron 方案 / foresight 审计
-3. 将真实验收结果回写到快恢复层与任务板。
-4. 必要时把新增 checklist / 方案继续下沉进 skill 本体。
+1. 按 ROI/胜率/订单数对比策略版本，继续收紧过滤并回退无效改动。
+2. 对比 BR 策略与 PM 策略，抽取可迁移模式。
+3. 增强停顿原因记录与自动修复（进程/数据断流）。
 
 ## Blocker / Constraint
-- 当前主要缺口不是“没记录”，而是“还没做真实 new-session 恢复验收”。
-- 只写到 `memory/YYYY-MM-DD.md` 不够；必须让快恢复层优先读到。
-- 空闲推进与自我升级仍需遵守本地优先、低 token、谨慎升级模型开销的约束。
+- 不触碰 openclaw/system 文件（避免死机）。
+- 策略新增需谨慎、控制模型调用流量。
 
-## Relevant Files
-- `LAST_SESSION.md`
-- `TASKS.md`
-- `docs/session_restore_recovery_plan.md`
-- `docs/token_optimization_strategy.md`
-- `skills/soul-booster/SKILL.md`
-- `skills/soul-booster/references/llm_usage_minimization.md`
-- `skills/soul-booster/references/idle_local_first_maintenance.md`
-- `skills/soul-booster/references/self_execution_scope.md`
-- `skills/soul-booster/references/fragmented_requirement_handling.md`
-- `skills/soul-booster/references/interaction_compression.md`
-- `skills/soul-booster/references/context_budgeting.md`
-- `skills/soul-booster/references/response_mode_budgeting.md`
-- `memory/2026-03-13.md`
+## Key Files
+- scripts/pm_auto_runner.sh
+- scripts/cex_auto_runner.sh
+- scripts/system_protection_guard.sh
+- docs/system_protection_strategy.md
+- docs/token_optimization_strategy.md
+- strategies/*.json
+- data/*/runtime/*_status.json

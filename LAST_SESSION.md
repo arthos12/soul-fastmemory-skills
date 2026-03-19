@@ -1,64 +1,23 @@
 # LAST_SESSION.md
 
 ## Saved At
-- 2026-03-14 15:13 GMT+8
+- 2026-03-19 17:55 GMT+8
 
 ## Active Topic
-- 空闲期自主推进主线：继续修复 session 保存/恢复链路，补齐尚未真正实现的需求，并在空闲时间自我提高思考能力、理解能力、逻辑能力；目标是让这些能力与需求不只写进规则，而是真正落地并可恢复。
+- 自动化量化运行 + 策略迭代（PM/BR/CEX），以 ROI/胜率/稳定性为主指标。
 
-## Current Step
-- 本轮已完成：
-  - 第一轮空闲推进能力审计与逻辑/理解复测
-  - token 优化策略落盘（总策略 / 互动压缩 / 上下文预算 / light-mid-heavy 回复模式）
-  - 空闲期本地优先维护、自我执行范围、碎片化需求处理规则固化
-  - 补建今天的 `memory/2026-03-14.md`
-  - 固定 `/new` + `加载数据` 验收文档：`docs/new_session_recovery_acceptance.md`
-  - 固定 idle-action checklist：`docs/idle_action_checklist.md`
-  - 固定 heartbeat / cron 维护方案：`docs/heartbeat_cron_maintenance_plan.md`
-  - 固定预判/预测能力专项保存检查：`docs/foresight_persistence_audit.md`
-  - 新增“风险预测型执行”规则：`skills/soul-booster/references/risk_predictive_execution.md`
-  - 新增升级方案：`docs/risk_prediction_upgrade_plan.md`
-- 当前仍未完成：
-  - 真实 `/new` + `加载数据` 验收本身
-  - 对风险预测型执行做一次真实运行态验收
-  - 将其进一步嵌入更多默认运行路径（如有必要）
-
-## Key New Requirements From This Session
-1. 减少调用大模型的次数、频率和 token 数；需要时才调用，不需要时不要浪费。
-2. 空闲期任务推进 / 自我升级逻辑能力、理解能力、思考能力 / 检查未执行需求与“炎症”时，默认优先使用本地算力、本地文件、确定性检查；若会大量调用大模型，则谨慎操作。
-3. 自我执行范围默认包括：
-   - 空闲时主动推进主线任务完成度
-   - 自我升级逻辑能力、理解能力、思考能力
-   - 自我检查关键需求是否已理解但未执行 / 已讨论但未保存
-4. 碎片化对话中的需求应先记录、分型、判断必要性；与目标/执行/边界/验收/恢复有关的需求必须进入真实执行或明确下一步；无关闲散需求可搁置或丢失。
-5. token 优化方案已具体化为：
-   - `docs/token_optimization_strategy.md`
-   - `skills/soul-booster/references/interaction_compression.md`
-   - `skills/soul-booster/references/context_budgeting.md`
-   - `skills/soul-booster/references/response_mode_budgeting.md`
-6. Jim 明确要求本轮 session 立即保存，确保下次 `new` 时能读到本 session 内容。
+## What’s Done (Recent)
+- 启动 PM 4 策略自动跑 + CEX 2 策略自动跑。
+- 上线 system protection guard（CPU/内存阈值保护）。
+- 收紧 PM 短周期/edge 过滤；调整 CEX 参数（趋势/量能/回撤阈值）。
+- 增加跨平台价差监测脚本（arb_spread_check.py）。
 
 ## Next Step
-1. 做一次真实 `/new` + `加载数据` 验收，重点检查：本轮新增需求与新补的文档/规则（含 risk predictive execution）能否被直接恢复。
-2. 将验收结果回写到 `LAST_SESSION.md` / `SESSION_HANDOFF.md` / `TASKS.md`。
-3. 对风险预测型执行做一次真实运行态验收：检查是否真的会在执行前先扫中断/退化/限流/坏情况不可执行风险。
-4. 视验收结果决定是否把 checklist / 方案进一步下沉进 `soul-booster` / `fast-memory`。
+- 继续用“订单数→胜率→ROI”闭环对比版本，保留有效改动。
+- 持续对比 BR 数据模式与 PM 策略。
+- 补充停顿原因记录与自动修复链路。
 
-## Success Criteria
-- 下次 `new` 后，能直接恢复本轮新增需求与当前主线状态。
-- 本轮新增规则不只存在于 daily log，也存在于快恢复层、任务层、规则层。
-- `/new` + `加载数据` 后能恢复：空闲推进、本地优先维护、碎片化需求处理、token 优化、回复模式预算。
-
-## Relevant Files
-- `SESSION_HANDOFF.md`
-- `TASKS.md`
-- `docs/session_restore_recovery_plan.md`
-- `docs/token_optimization_strategy.md`
-- `skills/soul-booster/SKILL.md`
-- `skills/soul-booster/references/idle_local_first_maintenance.md`
-- `skills/soul-booster/references/self_execution_scope.md`
-- `skills/soul-booster/references/fragmented_requirement_handling.md`
-- `skills/soul-booster/references/interaction_compression.md`
-- `skills/soul-booster/references/context_budgeting.md`
-- `skills/soul-booster/references/response_mode_budgeting.md`
-- `memory/2026-03-13.md`
+## Constraints
+- 不触碰 openclaw/system 文件。
+- 规则落盘避免膨胀与不协调。
+- 策略新增谨慎，流量可控。
