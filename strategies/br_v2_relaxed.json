@@ -2,11 +2,11 @@
   "name": "BR-v2-relaxed",
   "mode": "highprob",
   "minPrice": 0.6,
-  "maxMinsToEnd": 288000,
-  "maxOrders": 40,
+  "maxMinsToEnd": 4320,
+  "maxOrders": 60,
   "sizeUSD": 50,
   "requireAcceptingOrders": false,
-  "keywords": [],
+  "keywords": ["bitcoin","btc","ethereum","eth","solana","sol","xrp","doge","dogecoin","bnb","avax","ada","cardano","ltc","litecoin","ton","toncoin","up or down","higher than","lower than","above","below","close higher","close lower","rise or fall","涨还是跌"],
   "source": "gamma-api(active scan cached)",
   "minTick": 0.0005
 }
