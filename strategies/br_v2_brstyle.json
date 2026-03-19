@@ -1,10 +1,11 @@
 {
   "name": "BR-v2-brstyle",
   "mode": "highprob",
-  "minPrice": 0.01,
-  "maxMinsToEnd": 2160,
+  "minPrice": 0.2,
+  "maxMinsToEnd": 180,
   "maxOrders": 120,
   "sizeUSD": 20,
+  "edgeThreshold": 0.03,
   "requireAcceptingOrders": false,
   "dedupLookbackHours": 2,
   "keywords": [
