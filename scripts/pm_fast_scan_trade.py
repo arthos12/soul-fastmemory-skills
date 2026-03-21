@@ -73,21 +73,15 @@ def run_once(strategy_path: str):
             "results": results,
             "selection_reasons": sel,
         }
-        # write snapshot only if (orders>0/results>0) OR selection_reasons changed
-        sig = json.dumps(sel, sort_keys=True)
-        sig_path = f"{STATUS_DIR}/{base}_snapshot_sig.json"
-        last_sig = None
-        if os.path.exists(sig_path):
-            try:
-                last_sig = json.load(open(sig_path)).get("sig")
-            except Exception:
-                last_sig = None
-        if orders > 0 or results > 0 or sig != last_sig:
+        # market snapshot: write ONCE per strategy (first capture only)
+        once_path = f"{STATUS_DIR}/{base}_snapshot_once.json"
+        if not os.path.exists(once_path):
             with open(SCAN_LOG, "a", encoding="utf-8") as sf:
                 sf.write(json.dumps(snap, ensure_ascii=False) + "\n")
-            with open(sig_path, "w", encoding="utf-8") as tf:
-                json.dump({"sig": sig}, tf)
+            with open(once_path, "w", encoding="utf-8") as tf:
+                json.dump({"ts": int(time.time())}, tf)
 
+        # always log result summary (small)
         top = sorted(sel.items(), key=lambda kv: -kv[1])[:3]
         reasons = " ".join([f"{k}:{v}" for k, v in top])
         log(f"OK strategy={base} orders={orders} results={results} reasons={reasons}")
