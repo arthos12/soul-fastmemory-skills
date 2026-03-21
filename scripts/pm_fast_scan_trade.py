@@ -33,8 +33,9 @@ def run_once(strategy_path: str):
     """
     One loop = scan + filter + paper orders for a single strategy.
     Writes:
-      - status json: data/polymarket/runtime/<strategy>_status.json
-      - scan snapshot (append, throttled): data/polymarket/market_snapshot_latest.jsonl
+      - status json: data/polymarket/runtime/<strategy>_status.json (overwrite)
+      - scan snapshot: once per strategy (first capture only)
+      - logs: only on orders/results OR minute summary
     """
     base = os.path.basename(strategy_path).replace(".json", "")
     tag = f"{base}_{datetime.utcnow().strftime('%H%M%S')}"
@@ -50,7 +51,6 @@ def run_once(strategy_path: str):
         "--cache-age-sec",
         str(CACHE_AGE),
     ]
-    log(f"RUN strategy={base} interval={INTERVAL}s")
     try:
         out = subprocess.check_output(cmd, cwd=WORKDIR, timeout=120).decode("utf-8", errors="ignore")
     except Exception as e:
@@ -61,7 +61,6 @@ def run_once(strategy_path: str):
         f.write(out)
     try:
         j = json.loads(out)
-        # append snapshot ONLY when something changes (no time-based spam)
         orders = j.get("orders_generated", 0)
         results = j.get("results_backfilled", 0)
         sel = j.get("selection_reasons", {}) or {}
@@ -73,7 +72,7 @@ def run_once(strategy_path: str):
             "results": results,
             "selection_reasons": sel,
         }
-        # market snapshot: write ONCE per strategy (first capture only)
+        # market snapshot: write ONCE per strategy
         once_path = f"{STATUS_DIR}/{base}_snapshot_once.json"
         if not os.path.exists(once_path):
             with open(SCAN_LOG, "a", encoding="utf-8") as sf:
@@ -81,10 +80,24 @@ def run_once(strategy_path: str):
             with open(once_path, "w", encoding="utf-8") as tf:
                 json.dump({"ts": int(time.time())}, tf)
 
-        # always log result summary (small)
-        top = sorted(sel.items(), key=lambda kv: -kv[1])[:3]
-        reasons = " ".join([f"{k}:{v}" for k, v in top])
-        log(f"OK strategy={base} orders={orders} results={results} reasons={reasons}")
+        # log ONLY when orders/results > 0
+        if orders > 0 or results > 0:
+            top = sorted(sel.items(), key=lambda kv: -kv[1])[:3]
+            reasons = " ".join([f"{k}:{v}" for k, v in top])
+            log(f"HIT strategy={base} orders={orders} results={results} reasons={reasons}")
+
+        # accumulate minute summary
+        summary_path = f"{STATUS_DIR}/minute_summary.json"
+        summary = {"ts": int(time.time()//60*60)}
+        if os.path.exists(summary_path):
+            try: summary.update(json.load(open(summary_path)))
+            except Exception: pass
+        s = summary.setdefault(base, {})
+        for k,v in sel.items():
+            s[k] = s.get(k,0) + int(v)
+        summary["ts"] = int(time.time()//60*60)
+        with open(summary_path, "w", encoding="utf-8") as sf:
+            json.dump(summary, sf, ensure_ascii=False, indent=2)
     except Exception:
         log(f"OK strategy={base} (parse_failed)")
 
@@ -98,7 +111,7 @@ if __name__ == "__main__":
         except Exception:
             pass
         if os.path.exists(f"{WORKDIR}/data/system_guard/guard.flag"):
-            log("PAUSED guard")
+            # no per-iteration log spam
             time.sleep(INTERVAL)
             continue
 
