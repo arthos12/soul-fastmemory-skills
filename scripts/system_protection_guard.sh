@@ -17,9 +17,9 @@ avail_mb=${available:-0}
 swap_used_mb=${swap_used:-0}
 load1_val=${load1:-0}
 
-# thresholds
-mem_crit=$((avail_mb < 300))
-swap_crit=$((swap_used_mb > 512))
+# thresholds (relaxed for 2G box)
+mem_crit=$((avail_mb < 200))
+swap_crit=$((swap_used_mb > 1024))
 # compare load1 > 2*nproc using awk
 load_crit=$(awk -v l="$load1_val" -v n="$nproc" 'BEGIN{print (l > (2*n))?1:0}')
 
@@ -31,8 +31,8 @@ fi
 
 # recovery check: clear guard.flag if recovered
 if [[ -f "$OUTDIR/guard.flag" ]]; then
-  mem_ok=$((avail_mb >= 500))
-  swap_ok=$((swap_used_mb <= 256))
+  mem_ok=$((avail_mb >= 400))
+  swap_ok=$((swap_used_mb <= 512))
   load_ok=$(awk -v l="$load1_val" -v n="$nproc" 'BEGIN{print (l <= (1.2*n))?1:0}')
   if [[ $mem_ok -eq 1 && $swap_ok -eq 1 && $load_ok -eq 1 ]]; then
     rm -f "$OUTDIR/guard.flag"
