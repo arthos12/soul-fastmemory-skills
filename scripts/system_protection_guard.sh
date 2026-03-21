@@ -31,9 +31,14 @@ fi
 
 # recovery check: clear guard.flag if recovered
 if [[ -f "$OUTDIR/guard.flag" ]]; then
-  mem_ok=$((avail_mb >= 400))
+  mem_ok=$((mem_used_pct <= 80))
   swap_ok=$((swap_used_mb <= 512))
   load_ok=$(awk -v l="$load1_val" -v n="$nproc" 'BEGIN{print (l <= (1.2*n))?1:0}')
+  if [[ $mem_ok -eq 1 && $swap_ok -eq 1 && $load_ok -eq 1 ]]; then
+    rm -f "$OUTDIR/guard.flag"
+  fi
+fi
+oad_ok=$(awk -v l="$load1_val" -v n="$nproc" 'BEGIN{print (l <= (1.2*n))?1:0}')
   if [[ $mem_ok -eq 1 && $swap_ok -eq 1 && $load_ok -eq 1 ]]; then
     rm -f "$OUTDIR/guard.flag"
   fi
