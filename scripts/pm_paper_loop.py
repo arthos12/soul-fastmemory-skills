@@ -424,21 +424,33 @@ def main():
     run_tag = args.tag
 
     # cache: pull a few pages
-    markets = []
-    for i in range(args.scan_pages):
-        offset = i * args.page_size
-        cache_path = os.path.join(args.outdir, "cache", f"gamma_active_{offset}_{args.page_size}.json")
-        markets.extend(
-            load_or_refresh_cache(
-                cache_path,
-                max_age_sec=args.cache_age_sec,
-                limit=args.page_size,
-                offset=offset,
-                active=True,
-                closed=False,
-                use_web=args.web_fallback,
-            )
+    if args.web_fallback:
+        cache_path = os.path.join(args.outdir, "cache", "web_active_all.json")
+        markets = load_or_refresh_cache(
+            cache_path,
+            max_age_sec=args.cache_age_sec,
+            limit=args.page_size,
+            offset=0,
+            active=True,
+            closed=False,
+            use_web=True,
         )
+    else:
+        markets = []
+        for i in range(args.scan_pages):
+            offset = i * args.page_size
+            cache_path = os.path.join(args.outdir, "cache", f"gamma_active_{offset}_{args.page_size}.json")
+            markets.extend(
+                load_or_refresh_cache(
+                    cache_path,
+                    max_age_sec=args.cache_age_sec,
+                    limit=args.page_size,
+                    offset=offset,
+                    active=True,
+                    closed=False,
+                    use_web=False,
+                )
+            )
 
     orders, reason_counts = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
