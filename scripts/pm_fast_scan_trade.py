@@ -61,33 +61,33 @@ def run_once(strategy_path: str):
         f.write(out)
     try:
         j = json.loads(out)
-        # append a small snapshot for stats (throttle to avoid disk blowup)
+        # append snapshot ONLY when something changes (no time-based spam)
+        orders = j.get("orders_generated", 0)
+        results = j.get("results_backfilled", 0)
+        sel = j.get("selection_reasons", {}) or {}
         snap = {
             "ts": datetime.utcnow().isoformat() + "Z",
             "strategy": base,
             "scan_pages": SCAN_PAGES,
-            "orders": j.get("orders_generated", 0),
-            "results": j.get("results_backfilled", 0),
-            "selection_reasons": j.get("selection_reasons", {}),
+            "orders": orders,
+            "results": results,
+            "selection_reasons": sel,
         }
-        # throttle snapshot writes: only once per minute per strategy
-        throttle_path = f"{STATUS_DIR}/{base}_snapshot_ts.json"
-        last_ts = 0
-        if os.path.exists(throttle_path):
+        # write snapshot only if (orders>0/results>0) OR selection_reasons changed
+        sig = json.dumps(sel, sort_keys=True)
+        sig_path = f"{STATUS_DIR}/{base}_snapshot_sig.json"
+        last_sig = None
+        if os.path.exists(sig_path):
             try:
-                last_ts = int(json.load(open(throttle_path)).get("ts", 0))
+                last_sig = json.load(open(sig_path)).get("sig")
             except Exception:
-                last_ts = 0
-        now_ts = int(time.time())
-        if now_ts - last_ts >= 60:
+                last_sig = None
+        if orders > 0 or results > 0 or sig != last_sig:
             with open(SCAN_LOG, "a", encoding="utf-8") as sf:
                 sf.write(json.dumps(snap, ensure_ascii=False) + "\n")
-            with open(throttle_path, "w", encoding="utf-8") as tf:
-                json.dump({"ts": now_ts}, tf)
+            with open(sig_path, "w", encoding="utf-8") as tf:
+                json.dump({"sig": sig}, tf)
 
-        orders = j.get("orders_generated", 0)
-        results = j.get("results_backfilled", 0)
-        sel = j.get("selection_reasons", {}) or {}
         top = sorted(sel.items(), key=lambda kv: -kv[1])[:3]
         reasons = " ".join([f"{k}:{v}" for k, v in top])
         log(f"OK strategy={base} orders={orders} results={results} reasons={reasons}")
