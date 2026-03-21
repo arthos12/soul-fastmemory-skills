@@ -80,7 +80,9 @@ def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed
     if use_web:
         # fetch from Polymarket web (__NEXT_DATA__) via Playwright
         try:
-            out = subprocess.check_output(["node", "scripts/pm_web_markets_dump.js"], timeout=60).decode("utf-8", errors="ignore")
+            env = os.environ.copy()
+            env.setdefault("PM_WEB_URL", "https://polymarket.com/zh/crypto/5M")
+            out = subprocess.check_output(["node", "scripts/pm_web_markets_dump.js"], timeout=60, env=env).decode("utf-8", errors="ignore")
             obj = json.loads(out)
             data = obj.get("markets", []) if isinstance(obj, dict) else []
         except Exception:

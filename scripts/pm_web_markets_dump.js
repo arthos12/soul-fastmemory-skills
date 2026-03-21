@@ -2,7 +2,7 @@
 const { chromium } = require('playwright');
 
 async function main(){
-  const url = process.argv[2] || 'https://polymarket.com/';
+  const url = process.argv[2] || process.env.PM_WEB_URL || 'https://polymarket.com/zh/crypto/5M';
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1440, height: 2400 } });
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
