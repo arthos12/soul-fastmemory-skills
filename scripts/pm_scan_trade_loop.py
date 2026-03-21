@@ -4,9 +4,12 @@ import json, os, time, subprocess
 from datetime import datetime
 
 WORKDIR = "/root/.openclaw/workspace"
-STATUS_DIR = f"{WORKDIR}/data/polymarket/runtime"
+DATA_DIR = f"{WORKDIR}/data/polymarket"
+STATUS_DIR = f"{DATA_DIR}/runtime"
 LOG_FILE = f"{STATUS_DIR}/pm_scan_trade_loop.log"
+SCAN_LOG = f"{DATA_DIR}/market_snapshot_latest.jsonl"
 
+# Strategies to run every loop (each strategy may place its own orders)
 STRATS = [
     "strategies/br_tail_v1.json",
     "strategies/test1_br_copy.json",
@@ -27,6 +30,12 @@ def log(msg: str):
 
 
 def run_once(strategy_path: str):
+    """
+    One loop = scan + filter + paper orders for a single strategy.
+    Writes:
+      - status json: data/polymarket/runtime/<strategy>_status.json
+      - scan snapshot (append): data/polymarket/market_snapshot_latest.jsonl
+    """
     base = os.path.basename(strategy_path).replace(".json", "")
     tag = f"{base}_{datetime.utcnow().strftime('%H%M%S')}"
     cmd = [
@@ -52,6 +61,18 @@ def run_once(strategy_path: str):
         f.write(out)
     try:
         j = json.loads(out)
+        # append a small snapshot for stats: timestamp + scan stats + strategy
+        snap = {
+            "ts": datetime.utcnow().isoformat() + "Z",
+            "strategy": base,
+            "scan_pages": SCAN_PAGES,
+            "orders": j.get("orders_generated", 0),
+            "results": j.get("results_backfilled", 0),
+            "selection_reasons": j.get("selection_reasons", {}),
+        }
+        with open(SCAN_LOG, "a", encoding="utf-8") as sf:
+            sf.write(json.dumps(snap, ensure_ascii=False) + "\n")
+
         orders = j.get("orders_generated", 0)
         results = j.get("results_backfilled", 0)
         sel = j.get("selection_reasons", {}) or {}
@@ -65,7 +86,7 @@ def run_once(strategy_path: str):
 if __name__ == "__main__":
     log(f"START interval={INTERVAL}s scan_pages={SCAN_PAGES} cache_age={CACHE_AGE}")
     while True:
-        # guard
+        # guard: pause loop if system protection is active
         try:
             subprocess.run(["bash", f"{WORKDIR}/scripts/system_protection_guard.sh"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except Exception:
@@ -75,6 +96,7 @@ if __name__ == "__main__":
             time.sleep(INTERVAL)
             continue
 
+        # Each strategy runs independently; no global de-dup.
         for strat in STRATS:
             run_once(strat)
             time.sleep(1)
