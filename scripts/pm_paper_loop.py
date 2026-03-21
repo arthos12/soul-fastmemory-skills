@@ -75,10 +75,10 @@ def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed
     meta_path = cache_path + ".meta.json"
     meta = load_json(meta_path, default=None) or {}
     now = int(time.time())
-    if os.path.exists(cache_path) and meta.get("ts") and now - meta["ts"] <= max_age_sec:
+    if not use_web and os.path.exists(cache_path) and meta.get("ts") and now - meta["ts"] <= max_age_sec:
         return load_json(cache_path, default=[])
     if use_web:
-        # fetch from Polymarket web (__NEXT_DATA__) via Playwright
+        # always refresh from Polymarket web (__NEXT_DATA__)
         try:
             env = os.environ.copy()
             env.setdefault("PM_WEB_URL", "https://polymarket.com/zh/crypto/5M")
