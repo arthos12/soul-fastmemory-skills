@@ -88,6 +88,25 @@ def fetch_events_slice(limit=100, offset=0, active=True, closed=False):
     return data
 
 
+def fallback_btc_updown_15m():
+    """Fallback: pick latest BTC 15m up/down market from Gamma /markets."""
+    try:
+        r = requests.get(GAMMA, params={"active":"true","closed":"false","limit":200}, headers=UA, timeout=10)
+        r.raise_for_status()
+        markets = r.json()
+    except Exception:
+        return None
+    candidates = []
+    for m in markets:
+        slug = str(m.get("slug", "")).lower()
+        if "updown-15m" in slug and ("bitcoin" in slug or "btc" in slug):
+            candidates.append(m)
+    if candidates:
+        # pick latest by slug (timestamp-like)
+        return sorted(candidates, key=lambda x: x.get("slug",""), reverse=True)[0]
+    return None
+
+
 def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed, use_web=False):
     meta_path = cache_path + ".meta.json"
     meta = load_json(meta_path, default=None) or {}
@@ -486,6 +505,11 @@ def main():
             for ev in events:
                 for m in (ev.get("markets") or []):
                     markets.append(m)
+        # fallback: latest BTC updown 15m from gamma markets
+        if not markets:
+            fb = fallback_btc_updown_15m()
+            if fb:
+                markets = [fb]
         # cache raw events-derived markets
         cache_path = os.path.join(args.outdir, "cache", "gamma_events_markets.json")
         dump_json(cache_path, markets)
