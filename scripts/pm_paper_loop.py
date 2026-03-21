@@ -345,7 +345,7 @@ def generate_orders(markets, strat, tag, outdir):
                 "type": "paper",
                 "strategy": strat.get("name", "pm-paper"),
                 "strategy_version": strat.get("version", strat.get("name", "pm-paper")),
-                "reason": f"{strat.get('mode')}>= {strat.get('minPrice')}",
+                "reason": f"{strat.get('mode')}",
                 "reason_tag": strat.get('mode', 'unknown'),
                 "source": strat.get("source", "gamma-api"),
                 "tag": tag,
@@ -578,6 +578,21 @@ def main():
     hour = dt.datetime.utcnow().strftime("%Y-%m-%d_%H")
     report_path = os.path.join(args.outdir, "reports", f"hourly_report_{hour}_{run_tag}.json")
     dump_json(report_path, report)
+
+    print(json.dumps({"orders": orders_path, "results": results_path, "report": report_path, **report}, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
+h = os.path.join(args.outdir, "reports", f"hourly_report_{hour}_{run_tag}.json")
+    dump_json(report_path, report)
+
+    print(json.dumps({"orders": orders_path, "results": results_path, "report": report_path, **report}, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()
+on(report_path, report)
 
     print(json.dumps({"orders": orders_path, "results": results_path, "report": report_path, **report}, ensure_ascii=False))
 
