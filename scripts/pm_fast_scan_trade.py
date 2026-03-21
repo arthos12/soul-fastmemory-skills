@@ -50,7 +50,7 @@ def run_once(strategy_path: str):
         str(SCAN_PAGES),
         "--cache-age-sec",
         str(CACHE_AGE),
-        "--web-fallback",
+        "--use-events",
     ]
     try:
         out = subprocess.check_output(cmd, cwd=WORKDIR, timeout=120).decode("utf-8", errors="ignore")

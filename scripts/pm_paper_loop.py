@@ -23,6 +23,8 @@ DEDUP_LOOKBACK_HOURS = 24
 import requests
 
 GAMMA = "https://gamma-api.polymarket.com/markets"
+GAMMA_EVENTS = "https://gamma-api.polymarket.com/events"
+CLOB_BOOK = "https://clob.polymarket.com/book"
 UA = {"User-Agent": "openclaw/pm-paper-loop"}
 
 
@@ -71,6 +73,21 @@ def fetch_markets_slice(limit=200, offset=0, active=True, closed=False):
     return r.json()
 
 
+def fetch_events_slice(limit=100, offset=0, active=True, closed=False):
+    params = {
+        "limit": limit,
+        "offset": offset,
+        "active": "true" if active else "false",
+        "closed": "true" if closed else "false",
+    }
+    r = requests.get(GAMMA_EVENTS, params=params, headers=UA, timeout=30)
+    r.raise_for_status()
+    data = r.json()
+    if isinstance(data, dict):
+        return data.get("events") or data.get("results") or data.get("data") or []
+    return data
+
+
 def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed, use_web=False):
     meta_path = cache_path + ".meta.json"
     meta = load_json(meta_path, default=None) or {}
@@ -112,7 +129,7 @@ def pick_highprob(outcomes, prices, min_price):
     p = prices[idx]
     o = outcomes[idx]
     if min_price <= p < 1.0:
-        return o, p
+        return o, p, idx
     return None
 
 
@@ -238,7 +255,7 @@ def generate_orders(markets, strat, tag, outdir):
             bump("no_pick")
             continue
 
-        outcome, price = picked
+        outcome, price, outcome_idx = picked
         # avoid 0 price orders
         if price <= 0:
             bump("zero_price")
@@ -251,6 +268,32 @@ def generate_orders(markets, strat, tag, outdir):
 
         prediction_prob = infer_prediction_prob(price, strat)
         edge = round(prediction_prob - float(price), 6)
+
+        # map outcome to clob token id (if available)
+        token_id = None
+        clob = m.get("clobTokenIds")
+        if isinstance(clob, str):
+            try:
+                clob = json.loads(clob)
+            except Exception:
+                clob = None
+        if isinstance(clob, list) and outcome_idx is not None and outcome_idx < len(clob):
+            token_id = clob[outcome_idx]
+
+        # fetch orderbook best bid/ask for selected token
+        best_bid = best_ask = mid = spread = None
+        if token_id:
+            try:
+                book = requests.get(CLOB_BOOK, params={"token_id": token_id}, timeout=15).json()
+                bids = book.get("bids") or []
+                asks = book.get("asks") or []
+                best_bid = float(bids[0]["price"]) if bids else None
+                best_ask = float(asks[0]["price"]) if asks else None
+                if best_bid is not None and best_ask is not None:
+                    mid = (best_bid + best_ask) / 2
+                    spread = best_ask - best_bid
+            except Exception:
+                pass
 
         bump("selected")
         orders.append(
@@ -273,6 +316,11 @@ def generate_orders(markets, strat, tag, outdir):
                 "reason_tag": strat.get('mode', 'unknown'),
                 "source": strat.get("source", "gamma-api"),
                 "tag": tag,
+                "token_id": token_id,
+                "best_bid": best_bid,
+                "best_ask": best_ask,
+                "mid": mid,
+                "spread": spread,
             }
         )
 
@@ -423,13 +471,25 @@ def main():
     ap.add_argument("--scan-pages", type=int, default=10)
     ap.add_argument("--page-size", type=int, default=200)
     ap.add_argument("--web-fallback", action="store_true", help="use Polymarket web data (__NEXT_DATA__) instead of Gamma")
+    ap.add_argument("--use-events", action="store_true", help="use Gamma events endpoint to build markets + clobTokenIds")
     args = ap.parse_args()
 
     strat = load_json(args.strategy, default={})
     run_tag = args.tag
 
     # cache: pull a few pages
-    if args.web_fallback:
+    if args.use_events:
+        markets = []
+        for i in range(args.scan_pages):
+            offset = i * args.page_size
+            events = fetch_events_slice(limit=args.page_size, offset=offset, active=True, closed=False)
+            for ev in events:
+                for m in (ev.get("markets") or []):
+                    markets.append(m)
+        # cache raw events-derived markets
+        cache_path = os.path.join(args.outdir, "cache", "gamma_events_markets.json")
+        dump_json(cache_path, markets)
+    elif args.web_fallback:
         cache_path = os.path.join(args.outdir, "cache", "web_active_all.json")
         markets = load_or_refresh_cache(
             cache_path,
