@@ -102,12 +102,47 @@ def pick_highprob(outcomes, prices, min_price):
     return None
 
 
+def infer_prediction_prob(price, strat):
+    """Infer model prediction probability from the selected market price.
+
+    Current conservative fallback:
+    - Use selected price plus configured edge threshold.
+    - Cap to [price, 0.999].
+
+    This is not a final predictive model; it makes the assumed edge explicit so
+    calibration/verification can run instead of silently treating market price as truth.
+    """
+    edge = float(strat.get("edgeThreshold", 0.08))
+    pred = max(float(price), min(0.999, float(price) + edge))
+    return round(pred, 6)
+
+
 def load_recent_market_ids(outdir, lookback_hours=DEDUP_LOOKBACK_HOURS):
     recent = set()
     cutoff = time.time() - lookback_hours * 3600
     if not os.path.isdir(outdir):
         return recent
     for name in os.listdir(outdir):
+        if name == 'paper_orders_all.jsonl':
+            path = os.path.join(outdir, name)
+            try:
+                if os.path.getmtime(path) < cutoff:
+                    continue
+                with open(path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        try:
+                            row = json.loads(line)
+                            mid = row.get('marketId')
+                            if mid is not None:
+                                recent.add(str(mid))
+                        except Exception:
+                            continue
+            except Exception:
+                continue
+            continue
         if not name.startswith('paper_orders_') or not name.endswith('.jsonl'):
             continue
         path = os.path.join(outdir, name)
@@ -134,7 +169,8 @@ def load_recent_market_ids(outdir, lookback_hours=DEDUP_LOOKBACK_HOURS):
 def generate_orders(markets, strat, tag, outdir):
     orders = []
     now_ts = int(time.time())
-    recent_market_ids = load_recent_market_ids(outdir, lookback_hours=int(strat.get('dedupLookbackHours', DEDUP_LOOKBACK_HOURS)))
+    dedup_hours = int(strat.get('dedupLookbackHours', DEDUP_LOOKBACK_HOURS))
+    recent_market_ids = set() if dedup_hours <= 0 else load_recent_market_ids(outdir, lookback_hours=dedup_hours)
     reason_counts = {}
 
     def bump(reason):
@@ -199,6 +235,9 @@ def generate_orders(markets, strat, tag, outdir):
             bump("below_tick")
             continue
 
+        prediction_prob = infer_prediction_prob(price, strat)
+        edge = round(prediction_prob - float(price), 6)
+
         bump("selected")
         orders.append(
             {
@@ -209,10 +248,15 @@ def generate_orders(markets, strat, tag, outdir):
                 "minsToEnd": mins,
                 "outcome": outcome,
                 "limitPrice": round(price, 6),
+                "marketPrice": round(price, 6),
+                "prediction_prob": prediction_prob,
+                "edge": edge,
                 "sizeUSD": strat.get("sizeUSD", 50),
                 "type": "paper",
                 "strategy": strat.get("name", "pm-paper"),
+                "strategy_version": strat.get("version", strat.get("name", "pm-paper")),
                 "reason": f"{strat.get('mode')}>= {strat.get('minPrice')}",
+                "reason_tag": strat.get('mode', 'unknown'),
                 "source": strat.get("source", "gamma-api"),
                 "tag": tag,
             }
@@ -313,6 +357,11 @@ def backfill_results(orders, tag):
                 "win": win,
                 "winFlag": win_flag,
                 "limitPrice": lp,
+                "marketPrice": o.get("marketPrice", lp),
+                "prediction_prob": o.get("prediction_prob"),
+                "edge": o.get("edge"),
+                "strategy_version": o.get("strategy_version"),
+                "reason_tag": o.get("reason_tag"),
                 "curPrice": cur_price,
                 "sizeUSD": size,
                 "shares_est": shares,
@@ -382,13 +431,13 @@ def main():
 
     orders, reason_counts = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
-    day = dt.datetime.utcnow().date().isoformat()
-    orders_path = os.path.join(args.outdir, f"paper_orders_{day}_{run_tag}.jsonl")
+    # unified files for orders/results
+    orders_path = os.path.join(args.outdir, "paper_orders_all.jsonl")
     append_jsonl(orders_path, orders)
 
     # backfill resolved results for generated orders (best-effort)
     results = backfill_results(orders, tag=run_tag)
-    results_path = os.path.join(args.outdir, f"paper_results_{day}_{run_tag}.jsonl")
+    results_path = os.path.join(args.outdir, "paper_results_all.jsonl")
     append_jsonl(results_path, results)
 
     report = {
