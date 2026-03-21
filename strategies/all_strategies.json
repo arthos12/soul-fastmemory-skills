@@ -1,0 +1,237 @@
+{
+  "version": "2026-03-21",
+  "description": "BR量化策略集合（含CEX与测试策略）",
+  "active": "br_tail_v1",
+  "br_analysis": {
+    "core": "BR扫尾单:5分钟窗口最后5分钟下单,追涨",
+    "win_rate": "高价区买Up胜率71-92%"
+  },
+  "decision_summary": {
+    "priority_run": [
+      "br_tail_v1",
+      "br_follow_v1",
+      "br_weidan_v1",
+      "br_v7_trend",
+      "br_v7_pm_binance",
+      "br_v3_short",
+      "cex_btc_5m_breakout_v1",
+      "cex_btc_5m_reversion_v1"
+    ],
+    "iterate": [
+      "br_v2_relaxed",
+      "br_v6_high_buy_up",
+      "br_v2_brstyle",
+      "br_v2_verify",
+      "br_v5_trend_follow",
+      "test3_combined",
+      "test_market_regime",
+      "test_market_with_stats",
+      "market_regime_strategy"
+    ],
+    "standby": [
+      "test1_br_copy",
+      "test2_follow_br",
+      "sports-event-v1"
+    ],
+    "drop": [
+      "br_v4_5min_low",
+      "br_v8_focus_low",
+      "br_v7_reversion",
+      "br_v2_highprob"
+    ]
+  },
+  "strategies": [
+    {
+      "name": "br_tail_v1",
+      "description": "BR尾单策略-追涨(活跃)",
+      "price_range": "0.5-0.95",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "与BR高价追涨主线一致，5min窗口末端"
+    },
+    {
+      "name": "br_follow_v1",
+      "description": "跟随BR模式: 5分钟窗口追涨",
+      "price_range": "0.5-0.95",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "与br_tail_v1同逻辑，可并行验证"
+    },
+    {
+      "name": "br_weidan_v1",
+      "description": "BR尾单策略: 5分钟窗口快结束时下单,追涨",
+      "price_range": "0.5-0.95",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "与BR尾单一致，保持作为主跑候选"
+    },
+    {
+      "name": "br_v7_trend",
+      "description": "高价买涨 - 趋势跟踪",
+      "price_range": "0.5-0.95",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "高价区+趋势确认，符合主线"
+    },
+    {
+      "name": "br_v7_pm_binance",
+      "description": "PM高价买入 + 币安趋势确认",
+      "price_range": "0.3-0.95",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "高价区+外部确认，适合验证"
+    },
+    {
+      "name": "br_v3_short",
+      "description": "高价区短线高概率",
+      "price_range": "≥0.7",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "高价区短线假设，与BR分布一致"
+    },
+    {
+      "name": "cex_btc_5m_breakout_v1",
+      "description": "CEX 5m breakout",
+      "price_range": "N/A",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "registry已启用，应继续跑"
+    },
+    {
+      "name": "cex_btc_5m_reversion_v1",
+      "description": "CEX 5m reversion",
+      "price_range": "N/A",
+      "status": "priority_run",
+      "action": "run",
+      "reason": "registry已启用，应继续跑"
+    },
+    {
+      "name": "br_v2_relaxed",
+      "description": "BR-v2-relaxed",
+      "price_range": "≥0.62",
+      "status": "iterate",
+      "action": "tighten",
+      "reason": "maxMinsToEnd过大(1822)，需收紧到短线"
+    },
+    {
+      "name": "br_v6_high_buy_up",
+      "description": "高价买涨 - 模仿BR模式",
+      "price_range": "0.5-0.95",
+      "status": "iterate",
+      "action": "tighten",
+      "reason": "maxMinsToEnd=49偏大，需缩短窗口"
+    },
+    {
+      "name": "br_v2_brstyle",
+      "description": "BR-v2-brstyle",
+      "price_range": "≥0.2",
+      "status": "iterate",
+      "action": "tighten",
+      "reason": "maxMinsToEnd=52447过大，需改为短线"
+    },
+    {
+      "name": "br_v2_verify",
+      "description": "BR-v2-verify",
+      "price_range": "≥0.6",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "验证型策略，需样本验证"
+    },
+    {
+      "name": "br_v5_trend_follow",
+      "description": "模仿BR追涨杀跌模式",
+      "price_range": "0.3-0.95",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "与主线相近，但尚未验证"
+    },
+    {
+      "name": "test3_combined",
+      "description": "综合判定 - 我们预测+BR策略",
+      "price_range": "0.3-0.95",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "复杂度高，需样本验证"
+    },
+    {
+      "name": "test_market_regime",
+      "description": "大行情判断+短线策略",
+      "price_range": "varies",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "依赖行情判断，需验证"
+    },
+    {
+      "name": "test_market_with_stats",
+      "description": "大行情+胜率统计+BR",
+      "price_range": "varies",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "需样本积累与胜率统计"
+    },
+    {
+      "name": "market_regime_strategy",
+      "description": "大行情判断+胜率统计+BR下单",
+      "price_range": "varies",
+      "status": "iterate",
+      "action": "validate",
+      "reason": "与test_market_with_stats同类，需验证"
+    },
+    {
+      "name": "test1_br_copy",
+      "description": "复制BR策略 - 自己判断PM价格",
+      "price_range": "0.3-0.95",
+      "status": "standby",
+      "action": "hold",
+      "reason": "需更清晰触发条件"
+    },
+    {
+      "name": "test2_follow_br",
+      "description": "跟随BR下单 - 链上监控",
+      "price_range": "≥0.68",
+      "status": "standby",
+      "action": "hold",
+      "reason": "依赖链上监控，未接入"
+    },
+    {
+      "name": "sports-event-v1",
+      "description": "体育/政治事件预测",
+      "price_range": "0.1-0.6",
+      "status": "standby",
+      "action": "hold",
+      "reason": "非主线，暂不优先"
+    },
+    {
+      "name": "br_v4_5min_low",
+      "description": "旧策略-极低价(废弃)",
+      "price_range": "0.001-0.01",
+      "status": "drop",
+      "action": "drop",
+      "reason": "与BR高价分布冲突"
+    },
+    {
+      "name": "br_v8_focus_low",
+      "description": "聚焦<0.02极低价",
+      "price_range": "0.001-0.02",
+      "status": "drop",
+      "action": "drop",
+      "reason": "与BR高价分布冲突"
+    },
+    {
+      "name": "br_v7_reversion",
+      "description": "低价买跌 - 均值回归",
+      "price_range": "0.01-0.3",
+      "status": "drop",
+      "action": "drop",
+      "reason": "与BR高价追涨主线冲突"
+    },
+    {
+      "name": "br_v2_highprob",
+      "description": "低价逆向策略",
+      "price_range": "0.1-0.4",
+      "status": "drop",
+      "action": "drop",
+      "reason": "与BR高价分布冲突"
+    }
+  ]
+}
