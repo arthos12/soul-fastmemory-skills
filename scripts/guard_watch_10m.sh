@@ -26,14 +26,6 @@ start_auto_multi(){
   nohup bash "$WORKDIR/scripts/pm_auto_runner_multi.sh" >/tmp/pm_auto_runner_multi.log 2>&1 &
 }
 
-start_auto(){
-  if pgrep -f "pm_auto_runner.sh" >/dev/null 2>&1; then
-    return 0
-  fi
-  log "start pm_auto_runner"
-  nohup bash "$WORKDIR/scripts/pm_auto_runner.sh" >/tmp/pm_auto_runner.log 2>&1 &
-}
-
 while true; do
   # refresh guard status
   bash "$WORKDIR/scripts/system_protection_guard.sh" >/dev/null 2>&1 || true
@@ -43,7 +35,6 @@ while true; do
   else
     start_fast_scan
     start_auto_multi
-    start_auto
     log "ok running"
   fi
 
