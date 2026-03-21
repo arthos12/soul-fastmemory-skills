@@ -71,15 +71,24 @@ def fetch_markets_slice(limit=200, offset=0, active=True, closed=False):
     return r.json()
 
 
-def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed):
+def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed, use_web=False):
     meta_path = cache_path + ".meta.json"
     meta = load_json(meta_path, default=None) or {}
     now = int(time.time())
     if os.path.exists(cache_path) and meta.get("ts") and now - meta["ts"] <= max_age_sec:
         return load_json(cache_path, default=[])
-    data = fetch_markets_slice(limit=limit, offset=offset, active=active, closed=closed)
+    if use_web:
+        # fetch from Polymarket web (__NEXT_DATA__) via Playwright
+        try:
+            out = subprocess.check_output(["node", "scripts/pm_web_markets_dump.js"], timeout=60).decode("utf-8", errors="ignore")
+            obj = json.loads(out)
+            data = obj.get("markets", []) if isinstance(obj, dict) else []
+        except Exception:
+            data = []
+    else:
+        data = fetch_markets_slice(limit=limit, offset=offset, active=active, closed=closed)
     dump_json(cache_path, data)
-    dump_json(meta_path, {"ts": now, "limit": limit, "offset": offset, "active": active, "closed": closed})
+    dump_json(meta_path, {"ts": now, "limit": limit, "offset": offset, "active": active, "closed": closed, "use_web": use_web})
     return data
 
 
@@ -408,6 +417,7 @@ def main():
     ap.add_argument("--cache-age-sec", type=int, default=300)
     ap.add_argument("--scan-pages", type=int, default=10)
     ap.add_argument("--page-size", type=int, default=200)
+    ap.add_argument("--web-fallback", action="store_true", help="use Polymarket web data (__NEXT_DATA__) instead of Gamma")
     args = ap.parse_args()
 
     strat = load_json(args.strategy, default={})
@@ -426,6 +436,7 @@ def main():
                 offset=offset,
                 active=True,
                 closed=False,
+                use_web=args.web_fallback,
             )
         )
 
