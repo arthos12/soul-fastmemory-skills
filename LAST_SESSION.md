@@ -9,7 +9,7 @@
 ## What’s Done (Recent)
 - 修复本地 embedding：Node24 + node-llama-cpp 安装，本地 provider=local 可用（需在 Node24 进程下使用 memory_search）。
 - 创建并启用轮跑脚本：`pm_auto_runner_multi.sh`（已停用）。
-- 新建一体化扫描下单脚本：`scripts/pm_scan_trade_loop.py`（扫描→过滤→纸单→回填）。
+- 新建一体化扫描下单脚本：`scripts/pm_fast_scan_trade.py`（扫描→过滤→纸单→回填）。
 - 轮询间隔改为 30 秒，适配 5m 市场；取消全局去重，多策略可对同一市场下单。
 - 日志增强：`data/polymarket/runtime/pm_scan_trade_loop.log` 输出策略/订单/过滤原因。
 - 新增扫描原始快照落盘：`data/polymarket/market_snapshot_latest.jsonl`（统计市场出现频次）。

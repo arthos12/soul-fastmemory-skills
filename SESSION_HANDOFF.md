@@ -7,7 +7,7 @@
 - PM 量化：已将“扫描→过滤→下单”集成到单一循环脚本，30 秒轮询，重点测试 test 系列 + 尾单。
 
 ## Key Changes
-- 新脚本：`scripts/pm_scan_trade_loop.py`（扫描+过滤+纸单+回填）。
+- 新脚本：`scripts/pm_fast_scan_trade.py`（扫描+过滤+纸单+回填）。
 - 日志：`data/polymarket/runtime/pm_scan_trade_loop.log`（含 orders/results/reasons）。
 - 扫描快照落盘：`data/polymarket/market_snapshot_latest.jsonl`。
 - 停用旧 runner：`pm_auto_runner_multi.sh`。
