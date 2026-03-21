@@ -87,6 +87,9 @@ def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed
             data = obj.get("markets", []) if isinstance(obj, dict) else []
         except Exception:
             data = []
+        # if web fetch failed, keep previous cache if available
+        if not data and os.path.exists(cache_path):
+            return load_json(cache_path, default=[])
     else:
         data = fetch_markets_slice(limit=limit, offset=offset, active=active, closed=closed)
     dump_json(cache_path, data)
