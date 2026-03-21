@@ -25,10 +25,24 @@ run_once() {
   base=$(basename "$strat" .json)
   local tag="${base}_$(date -u +%H%M%S)"
   local out
-  log "RUN ${base}"
+  local orders results
+  local reasons
+  log "RUN strategy=${base}"
   out=$(python3 scripts/pm_paper_loop.py --strategy "$strat" --tag "$tag" --scan-pages 120 --cache-age-sec 120 || true)
   echo "$out" > "$STATUS_DIR/${base}_status.json"
-  log "DONE ${base}"
+  orders=$(printf '%s' "$out" | python3 -c 'import sys,json; t=sys.stdin.read().strip(); print((json.loads(t).get("orders_generated",0)) if t else 0)' 2>/dev/null || echo 0)
+  results=$(printf '%s' "$out" | python3 -c 'import sys,json; t=sys.stdin.read().strip(); print((json.loads(t).get("results_backfilled",0)) if t else 0)' 2>/dev/null || echo 0)
+  reasons=$(printf '%s' "$out" | python3 -c 'import sys,json; t=sys.stdin.read().strip();
+import collections
+if not t:
+  print("");
+  raise SystemExit
+j=json.loads(t)
+sel=j.get("selection_reasons",{}) or {}
+items=sorted(sel.items(), key=lambda kv:-kv[1])[:3]
+print(" ".join([f"{k}:{v}" for k,v in items]))
+' 2>/dev/null || echo "")
+  log "OK strategy=${base} orders=${orders} results=${results} reasons=${reasons}"
 }
 
 log "START interval=${INTERVAL}"
