@@ -313,6 +313,20 @@ def generate_orders(markets, strat, tag, outdir):
                     spread = best_ask - best_bid
             except Exception:
                 pass
+            # fallback to price endpoint when book is empty
+            if best_bid is None and best_ask is None:
+                try:
+                    pb = requests.get("https://clob.polymarket.com/price", params={"token_id": token_id, "side": "buy"}, timeout=10).json()
+                    ps = requests.get("https://clob.polymarket.com/price", params={"token_id": token_id, "side": "sell"}, timeout=10).json()
+                    if isinstance(pb, dict) and pb.get("price"):
+                        best_bid = float(pb.get("price"))
+                    if isinstance(ps, dict) and ps.get("price"):
+                        best_ask = float(ps.get("price"))
+                    if best_bid is not None and best_ask is not None:
+                        mid = (best_bid + best_ask) / 2
+                        spread = best_ask - best_bid
+                except Exception:
+                    pass
 
         bump("selected")
         orders.append(
