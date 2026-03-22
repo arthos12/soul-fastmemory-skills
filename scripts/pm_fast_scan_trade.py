@@ -31,6 +31,8 @@ STRATS = [
 INTERVAL = int(os.environ.get("PM_LOOP_INTERVAL", "60"))
 SCAN_PAGES = int(os.environ.get("PM_SCAN_PAGES", "10"))
 CACHE_AGE = int(os.environ.get("PM_CACHE_AGE", "60"))
+TEST_MODE = os.environ.get("PM_MODE", "").lower() == "test"
+TEST_DURATION_SEC = int(os.environ.get("PM_TEST_DURATION", "180"))
 
 os.makedirs(STATUS_DIR, exist_ok=True)
 
@@ -152,6 +154,12 @@ arket.com/zh/crypto/5M",
             log(f"ERROR web_fetch err={e}")
 
         # Each strategy runs independently; no global de-dup.
+        for strat in STRATS:
+            run_once(strat)
+            time.sleep(1)
+
+        time.sleep(INTERVAL)
+-dup.
         for strat in STRATS:
             run_once(strat)
             time.sleep(1)
