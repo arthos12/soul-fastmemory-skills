@@ -29,6 +29,22 @@ PY
   # only log during matching window
 
   if [ "$secs" -le 60 ]; then
+    # log every tick within last 60s window
+    prices=$(python3 - <<PY
+import requests
+m=requests.get('https://polymarket.com/api/market',params={'slug':'$slug'},timeout=10).json()
+print(m.get('outcomePrices'))
+PY
+)
+    echo "$(date -u +%FT%TZ) server_ts=$server_ts secs_to_end=$secs prices=$prices" >> "$LOG"
+    python3 - <<PY
+import json,time
+from pathlib import Path
+log=Path('/root/.openclaw/workspace/data/polymarket/runtime/last60_window.jsonl')
+log.parent.mkdir(parents=True,exist_ok=True)
+with log.open('a',encoding='utf-8') as f:
+    f.write(json.dumps({"ts": int(time.time()), "secsToEnd": $secs, "prices": $prices, "slug": "$slug"}, ensure_ascii=False) + "\n")
+PY
     # run must-hit strategies first
     for f in /root/.openclaw/workspace/strategies/pm_5m_t60_p051.json /root/.openclaw/workspace/strategies/pm_5m_t60_p049_low.json; do
       tag=$(basename "$f" .json)
