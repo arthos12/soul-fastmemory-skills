@@ -18,6 +18,15 @@ start_fast_scan(){
   PM_LOOP_INTERVAL=3 nohup python3 "$WORKDIR/scripts/pm_fast_scan_trade.py" >/tmp/pm_fast_scan_trade.log 2>&1 &
 }
 
+check_fast_scan(){
+  if pgrep -f "pm_fast_scan_trade.py" >/dev/null 2>&1; then
+    log "fast_scan ok"
+  else
+    log "fast_scan missing -> restart"
+    start_fast_scan
+  fi
+}
+
 while true; do
   # refresh guard status
   bash "$WORKDIR/scripts/system_protection_guard.sh" >/dev/null 2>&1 || true
@@ -25,7 +34,7 @@ while true; do
   if [[ -f "$WORKDIR/data/system_guard/guard.flag" ]]; then
     log "guard.flag active -> skip restart"
   else
-    start_fast_scan
+    check_fast_scan
     log "ok running"
   fi
 
