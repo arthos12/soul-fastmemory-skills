@@ -520,9 +520,9 @@ def main():
     strat = load_json(args.strategy, default={})
     run_tag = args.tag
 
-    # Hard rule: time-window strategies must use Gamma API (endDate required).
+    # Time-window strategies: allow web discovery, but always backfill endDate from Gamma by slug.
     if args.web_fallback and strat.get("maxMinsToEnd") is not None:
-        raise SystemExit("web_fallback is not allowed for time-window strategies (endDate required). Use Gamma API.")
+        print("[warn] web_fallback enabled; will backfill endDate via Gamma slug lookup")
 
     # cache: pull a few pages
     if args.use_events:
