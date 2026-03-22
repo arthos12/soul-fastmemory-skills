@@ -690,18 +690,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-   }
-    hour = dt.datetime.utcnow().strftime("%Y-%m-%d_%H")
-    report_path = os.path.join(args.outdir, "reports", f"hourly_report_{hour}_{run_tag}.json")
-    dump_json(report_path, report)
-
-    print(json.dumps({"orders": orders_path, "results": results_path, "report": report_path, **report}, ensure_ascii=False))
-
-
-if __name__ == "__main__":
-    main()
-path, **report}, ensure_ascii=False))
-
-
-if __name__ == "__main__":
-    main()
