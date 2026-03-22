@@ -1,0 +1,13 @@
+{
+  "name": "test_tail_15m_55",
+  "description": "测试用：15m尾盘>=0.55 或 <=0.45",
+  "mode": "tail",
+  "minPriceHigh": 0.55,
+  "maxPriceLow": 0.45,
+  "maxMinsToEnd": 0.5,
+  "maxOrders": 30,
+  "sizeUSD": 5,
+  "keywords": ["bitcoin", "btc", "up or down"],
+  "window": "15m",
+  "source": "tail-confirm"
+}
