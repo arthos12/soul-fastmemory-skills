@@ -61,7 +61,8 @@ def run_once(strategy_path: str):
         str(SCAN_PAGES),
         "--cache-age-sec",
         str(CACHE_AGE),
-        "--use-events",
+        "--markets-file",
+        f"{STATUS_DIR}/web_markets_latest.json",
     ]
     try:
         out = subprocess.check_output(cmd, cwd=WORKDIR, timeout=120).decode("utf-8", errors="ignore")
@@ -128,6 +129,27 @@ if __name__ == "__main__":
             # no per-iteration log spam
             time.sleep(INTERVAL)
             continue
+
+        # Each strategy runs independently; no global de-dup.
+        for strat in STRATS:
+            run_once(strat)
+            time.sleep(1)
+
+        time.sleep(INTERVAL)
+arket.com/zh/crypto/5M",
+            ], timeout=60).decode("utf-8", errors="ignore")
+            obj = json.loads(out)
+            markets = obj.get("markets", []) if isinstance(obj, dict) else []
+            # filter to BTC/ETH up or down to reduce size
+            filtered = []
+            for m in markets:
+                q = (m.get("question") or "").lower()
+                if "up or down" in q and ("btc" in q or "bitcoin" in q or "eth" in q or "ethereum" in q):
+                    filtered.append(m)
+            with open(f"{STATUS_DIR}/web_markets_latest.json", "w", encoding="utf-8") as f:
+                json.dump(filtered, f, ensure_ascii=False)
+        except Exception as e:
+            log(f"ERROR web_fetch err={e}")
 
         # Each strategy runs independently; no global de-dup.
         for strat in STRATS:
