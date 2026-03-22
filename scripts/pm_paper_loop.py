@@ -510,6 +510,10 @@ def main():
     strat = load_json(args.strategy, default={})
     run_tag = args.tag
 
+    # Hard rule: time-window strategies must use Gamma API (endDate required).
+    if args.web_fallback and strat.get("maxMinsToEnd") is not None:
+        raise SystemExit("web_fallback is not allowed for time-window strategies (endDate required). Use Gamma API.")
+
     # cache: pull a few pages
     if args.use_events:
         markets = []
