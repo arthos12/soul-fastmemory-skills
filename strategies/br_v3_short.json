@@ -2,7 +2,7 @@
   "name": "BR-v3-short-updown",
   "mode": "highprob",
   "minPrice": 0.7,
-  "maxMinsToEnd": 1,
+  "maxMinsToEnd": 1.5,
   "edgeThreshold": 0.03,
   "maxOrders": 30,
   "sizeUSD": 50,

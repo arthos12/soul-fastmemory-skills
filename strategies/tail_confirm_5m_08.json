@@ -1,10 +1,8 @@
 {
   "name": "tail_confirm_5m_08",
   "description": "5m尾单>= 0.8 或 <= 0.2",
-  "mode": "tail",
-  "minPriceHigh": 0.8,
-  "maxPriceLow": 0.2,
-  "maxMinsToEnd": 1,
+  "mode": "highprob",
+  "maxMinsToEnd": 2,
   "maxOrders": 30,
   "sizeUSD": 5,
   "keywords": [
@@ -13,5 +11,6 @@
     "up or down"
   ],
   "window": "5m",
-  "source": "tail-confirm"
+  "source": "tail-confirm",
+  "minPrice": 0.8
 }

@@ -1,10 +1,8 @@
 {
   "name": "tail_confirm_15m_07",
   "description": "15m尾单>= 0.7 或 <= 0.3",
-  "mode": "tail",
-  "minPriceHigh": 0.7,
-  "maxPriceLow": 0.3,
-  "maxMinsToEnd": 1,
+  "mode": "highprob",
+  "maxMinsToEnd": 2,
   "maxOrders": 30,
   "sizeUSD": 5,
   "keywords": [
@@ -13,5 +11,6 @@
     "up or down"
   ],
   "window": "15m",
-  "source": "tail-confirm"
+  "source": "tail-confirm",
+  "minPrice": 0.7
 }
