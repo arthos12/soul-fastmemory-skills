@@ -26,6 +26,7 @@ STRATS = [
     "strategies/br_v2_highprob.json",
     "strategies/br_v3_short.json",
     "strategies/test1_br_copy.json",
+    "strategies/test_price_gt_07.json",
 ]
 
 INTERVAL = int(os.environ.get("PM_LOOP_INTERVAL", "60"))
