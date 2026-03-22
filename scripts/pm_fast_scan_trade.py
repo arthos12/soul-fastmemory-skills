@@ -29,7 +29,7 @@ STRATS = [
 ]
 
 INTERVAL = int(os.environ.get("PM_LOOP_INTERVAL", "60"))
-SCAN_PAGES = int(os.environ.get("PM_SCAN_PAGES", "120"))
+SCAN_PAGES = int(os.environ.get("PM_SCAN_PAGES", "10"))
 CACHE_AGE = int(os.environ.get("PM_CACHE_AGE", "60"))
 
 os.makedirs(STATUS_DIR, exist_ok=True)
