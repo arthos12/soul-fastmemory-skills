@@ -4,10 +4,14 @@
   "mode": "tail",
   "minPriceHigh": 0.9,
   "maxPriceLow": 0.1,
-  "maxMinsToEnd": 0.5,
+  "maxMinsToEnd": 1,
   "maxOrders": 30,
   "sizeUSD": 5,
-  "keywords": ["bitcoin", "btc", "up or down"],
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "up or down"
+  ],
   "window": "15m",
   "source": "tail-confirm"
 }

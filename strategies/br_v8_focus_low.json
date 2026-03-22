@@ -1,0 +1,13 @@
+{
+  "name": "br_v8_focus_low",
+  "description": "聚焦<0.02极低价，复制BoneReader核心策略",
+  "minPrice": 0.001,
+  "maxPrice": 0.02,
+  "condition": "price_below_02",
+  "maxMinsToEnd": 1,
+  "maxOrders": 50,
+  "sizeUSD": 50,
+  "window": "5m",
+  "source": "gamma-api",
+  "note": "基于BoneReader数据分析：100%交易在<0.02区间"
+}

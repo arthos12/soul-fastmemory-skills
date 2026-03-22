@@ -2,7 +2,7 @@
   "name": "BR-v2-brstyle",
   "mode": "highprob",
   "minPrice": 0.2,
-  "maxMinsToEnd": 180,
+  "maxMinsToEnd": 1,
   "maxOrders": 120,
   "sizeUSD": 20,
   "edgeThreshold": 0.03,

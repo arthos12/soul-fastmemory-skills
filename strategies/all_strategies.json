@@ -233,5 +233,6 @@
       "action": "drop",
       "reason": "与BR高价分布冲突"
     }
-  ]
+  ],
+  "maxMinsToEnd": 1
 }

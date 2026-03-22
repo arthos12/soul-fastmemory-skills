@@ -4,5 +4,6 @@
   "feeBps": 10,
   "slippageBps": 5,
   "mode": "reversion",
-  "reversionDropThreshold": -0.006
+  "reversionDropThreshold": -0.006,
+  "maxMinsToEnd": 1
 }

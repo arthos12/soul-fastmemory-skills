@@ -1,0 +1,42 @@
+{
+  "name": "test_market_regime",
+  "description": "大行情判断+短线策略",
+  "regime_analysis": {
+    "source": "binance",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "intervals": [
+      "1h",
+      "4h"
+    ]
+  },
+  "regimes": {
+    "trend_up": {
+      "condition": "price > MA20 AND ADX > 25",
+      "strategy": "breakout",
+      "minPrice": 0.3,
+      "maxPrice": 0.95,
+      "direction": "buy_up"
+    },
+    "trend_down": {
+      "condition": "price < MA20 AND ADX > 25",
+      "strategy": "reversion",
+      "minPrice": 0.01,
+      "maxPrice": 0.3,
+      "direction": "buy_down"
+    },
+    "sideways": {
+      "condition": "ADX < 25",
+      "strategy": "range",
+      "minPrice": 0.3,
+      "maxPrice": 0.7,
+      "direction": "auto"
+    }
+  },
+  "holdingMinutes": 5,
+  "sizeUSD": 20,
+  "maxMinsToEnd": 1
+}

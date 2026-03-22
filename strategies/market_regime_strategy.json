@@ -1,0 +1,35 @@
+{
+  "name": "market_regime_strategy",
+  "description": "大行情判断+胜率统计+BR下单",
+  "regime_detection": {
+    "binance_check": true,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ]
+  },
+  "winrate_tracking": {
+    "track_regime_vs_pnl": true,
+    "track_strategy_vs_pnl": true
+  },
+  "strategy_rules": {
+    "trend_up": {
+      "preferred": "breakout",
+      "minPrice": 0.3,
+      "direction": "buy_up"
+    },
+    "trend_down": {
+      "preferred": "reversion",
+      "minPrice": 0.01,
+      "direction": "buy_down"
+    },
+    "sideways": {
+      "preferred": "range",
+      "minPrice": 0.3,
+      "direction": "auto"
+    }
+  },
+  "holdingMinutes": 5,
+  "sizeUSD": 20,
+  "maxMinsToEnd": 1
+}
