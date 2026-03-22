@@ -360,7 +360,7 @@ def generate_orders(markets, strat, tag, outdir):
         if max_secs is None:
             max_secs = strat.get("maxMinsToEnd", 24 * 60) * 60
         if secs > max_secs:
-            bump("too_far_end", m, {"secsToEnd": secs})
+            bump("too_far_end", m, {"secsToEnd": secs, "maxSecsToEnd": max_secs})
             continue
         mins = secs / 60.0
 
