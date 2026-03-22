@@ -11,15 +11,17 @@ SCAN_LOG = f"{DATA_DIR}/market_snapshot_latest.jsonl"
 
 # Strategies to run every loop (each strategy may place its own orders)
 STRATS = [
-    "strategies/tail_confirm_5m_99.json",
-    "strategies/tail_confirm_5m_98.json",
-    "strategies/tail_confirm_5m_97.json",
-    "strategies/tail_confirm_15m_99.json",
-    "strategies/tail_confirm_15m_98.json",
-    "strategies/tail_confirm_15m_97.json",
-    # test data: 0.55/0.45
-    "strategies/test_tail_5m_55.json",
-    "strategies/test_tail_15m_55.json",
+    # tail buckets (1 min to end)
+    "strategies/tail_confirm_5m_09.json",
+    "strategies/tail_confirm_15m_09.json",
+    "strategies/tail_confirm_5m_08.json",
+    "strategies/tail_confirm_15m_08.json",
+    "strategies/tail_confirm_5m_07.json",
+    "strategies/tail_confirm_15m_07.json",
+    "strategies/tail_confirm_5m_06.json",
+    "strategies/tail_confirm_15m_06.json",
+    "strategies/tail_confirm_5m_055.json",
+    "strategies/tail_confirm_15m_055.json",
     # plan A non-tail strategies
     "strategies/br_v2_highprob.json",
     "strategies/br_v3_short.json",
