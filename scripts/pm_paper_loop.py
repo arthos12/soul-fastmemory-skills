@@ -73,6 +73,16 @@ def fetch_markets_slice(limit=200, offset=0, active=True, closed=False):
     return r.json()
 
 
+def fetch_market_by_slug(slug):
+    try:
+        r = requests.get(GAMMA, params={"slug": slug}, headers=UA, timeout=20)
+        r.raise_for_status()
+        arr = r.json()
+        return arr[0] if isinstance(arr, list) and arr else None
+    except Exception:
+        return None
+
+
 def fetch_events_slice(limit=100, offset=0, active=True, closed=False):
     params = {
         "limit": limit,
@@ -558,6 +568,24 @@ def main():
                     use_web=False,
                 )
             )
+
+    # ensure time-window strategies have endDate (web data often lacks it)
+    if strat.get("maxMinsToEnd") is not None:
+        cache = {}
+        for m in markets:
+            if m.get("endDate"):
+                continue
+            slug = m.get("slug")
+            if not slug:
+                continue
+            if slug in cache:
+                m.update(cache[slug])
+                continue
+            gm = fetch_market_by_slug(slug)
+            if gm and gm.get("endDate"):
+                patch = {"endDate": gm.get("endDate"), "startDate": gm.get("startDate")}
+                m.update(patch)
+                cache[slug] = patch
 
     orders, reason_counts = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
