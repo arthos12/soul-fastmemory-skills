@@ -165,13 +165,17 @@ def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed
     return data
 
 
-def parse_end_minutes(m, strat=None):
-    # 1) prefer explicit endDate
+def parse_end_seconds(m, strat=None):
+    # prefer server time when available
+    server_ts = get_server_time()
+    now_ts = server_ts if server_ts else int(utcnow().timestamp())
+
+    # 1) explicit endDate
     try:
         end_raw = m.get("endDate")
         if end_raw:
             end = dt.datetime.fromisoformat(str(end_raw).replace("Z", "+00:00"))
-            return (end - utcnow()).total_seconds() / 60
+            return int(end.timestamp()) - now_ts
     except Exception:
         pass
 
@@ -183,8 +187,7 @@ def parse_end_minutes(m, strat=None):
             m2 = re.match(r".*-(\d{10})$", slug)
             if m2:
                 end_ts = int(m2.group(1))
-                end = dt.datetime.fromtimestamp(end_ts, tz=dt.timezone.utc)
-                return (end - utcnow()).total_seconds() / 60
+                return end_ts - now_ts
     except Exception:
         pass
 
@@ -206,7 +209,7 @@ def parse_end_minutes(m, strat=None):
                     win = 15
             if win is not None:
                 end = start + dt.timedelta(minutes=win)
-                return (end - utcnow()).total_seconds() / 60
+                return int(end.timestamp()) - now_ts
     except Exception:
         pass
 
@@ -346,16 +349,20 @@ def generate_orders(markets, strat, tag, outdir):
             bump("not_accepting", m)
             continue
 
-        mins = parse_end_minutes(m, strat)
-        if mins is None:
+        secs = parse_end_seconds(m, strat)
+        if secs is None:
             bump("no_end", m)
             continue
-        if mins <= 0:
-            bump("ended", m, {"minsToEnd": mins})
+        if secs <= 0:
+            bump("ended", m, {"secsToEnd": secs})
             continue
-        if mins > strat.get("maxMinsToEnd", 24 * 60):
-            bump("too_far_end", m, {"minsToEnd": mins})
+        max_secs = strat.get("maxSecsToEnd")
+        if max_secs is None:
+            max_secs = strat.get("maxMinsToEnd", 24 * 60) * 60
+        if secs > max_secs:
+            bump("too_far_end", m, {"secsToEnd": secs})
             continue
+        mins = secs / 60.0
 
         q = (m.get("question") or "")
         ql = q.lower()

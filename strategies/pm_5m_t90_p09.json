@@ -2,7 +2,6 @@
   "name": "pm_5m_t90_p09",
   "mode": "highprob",
   "minPrice": 0.9,
-  "maxMinsToEnd": 1.5,
   "maxOrders": 20,
   "sizeUSD": 20,
   "requireAcceptingOrders": false,
@@ -14,5 +13,6 @@
   ],
   "source": "polymarket-api",
   "minTick": 0.0005,
-  "debugLogLimit": 200
+  "debugLogLimit": 200,
+  "maxSecsToEnd": 90
 }
