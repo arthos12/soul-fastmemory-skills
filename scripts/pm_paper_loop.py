@@ -274,8 +274,9 @@ def load_recent_market_ids(outdir, lookback_hours=DEDUP_LOOKBACK_HOURS):
                         try:
                             row = json.loads(line)
                             mid = row.get('marketId')
-                            if mid is not None:
-                                recent.add(str(mid))
+                            strat = row.get('strategy') or row.get('strategy_version')
+                            if mid is not None and strat:
+                                recent.add(f"{mid}:{strat}")
                         except Exception:
                             continue
             except Exception:
@@ -295,8 +296,9 @@ def load_recent_market_ids(outdir, lookback_hours=DEDUP_LOOKBACK_HOURS):
                     try:
                         row = json.loads(line)
                         mid = row.get('marketId')
-                        if mid is not None:
-                            recent.add(str(mid))
+                        strat = row.get('strategy') or row.get('strategy_version')
+                        if mid is not None and strat:
+                            recent.add(f"{mid}:{strat}")
                     except Exception:
                         continue
         except Exception:
@@ -344,7 +346,8 @@ def generate_orders(markets, strat, tag, outdir):
         if m.get("closed") is True:
             bump("closed", m)
             continue
-        if str(m.get("id")) in recent_market_ids:
+        strategy_name = strat.get("name", "pm-paper")
+        if f"{m.get('id')}:{strategy_name}" in recent_market_ids:
             bump("recent", m)
             continue
         if strat.get("requireAcceptingOrders", True) and m.get("acceptingOrders") is False:
