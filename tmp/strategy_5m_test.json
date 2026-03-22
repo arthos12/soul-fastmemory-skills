@@ -20,6 +20,11 @@
   "dedupLookbackHours": 1,
   "lowProbMode": false,
   "debugLogLimit": 200,
-  "useEvents": true,
-  "webFallback": false
+  "useEvents": false,
+  "webFallback": false,
+  "use5mSlug": true,
+  "fiveMinuteSymbols": [
+    "btc",
+    "eth"
+  ]
 }

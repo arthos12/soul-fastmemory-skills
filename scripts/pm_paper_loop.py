@@ -80,13 +80,29 @@ def fetch_markets_slice(limit=200, offset=0, active=True, closed=False):
 
 
 def fetch_market_by_slug(slug):
-    """Fetch market info from Polymarket web API (slug -> token_ids/endDate)."""
+    """Fetch market info from Polymarket API (slug -> token_ids/endDate)."""
     try:
         r = requests.get("https://polymarket.com/api/market", params={"slug": slug}, timeout=20)
         r.raise_for_status()
         return r.json()
     except Exception:
         return None
+
+
+def get_server_time():
+    try:
+        r = requests.get("https://clob.polymarket.com/time", timeout=10)
+        r.raise_for_status()
+        j = r.json()
+        if isinstance(j, dict):
+            return int(j.get("server_time") or j.get("serverTime") or j.get("time") or 0)
+        return int(j)
+    except Exception:
+        return 0
+
+
+def build_5m_slug(symbol, period):
+    return f"{symbol}-updown-5m-{period}"
 
 
 def fetch_events_slice(limit=100, offset=0, active=True, closed=False):
@@ -203,6 +219,18 @@ def pick_highprob(outcomes, prices, min_price):
     p = prices[idx]
     o = outcomes[idx]
     if min_price <= p < 1.0:
+        return o, p, idx
+    return None
+
+
+def pick_lowprob(outcomes, prices, min_price, max_price=None):
+    # pick min price side
+    idx = min(range(len(prices)), key=lambda i: prices[i])
+    p = prices[idx]
+    o = outcomes[idx]
+    if max_price is None:
+        max_price = 1.0
+    if min_price <= p <= max_price:
         return o, p, idx
     return None
 
@@ -370,8 +398,16 @@ def generate_orders(markets, strat, tag, outdir):
             continue
 
         picked = None
-        if strat.get("mode") == "highprob":
+        mode = str(strat.get("mode") or "").lower()
+        if mode == "highprob":
             picked = pick_highprob(outcomes, prices, strat.get("minPrice", 0.9))
+        elif ("low" in mode) or (strat.get("maxPrice") is not None):
+            picked = pick_lowprob(
+                outcomes,
+                prices,
+                strat.get("minPrice", 0.0),
+                strat.get("maxPrice"),
+            )
 
         if not picked:
             bump("no_pick", m)
@@ -635,7 +671,26 @@ def main():
         print("[warn] web_fallback enabled; will backfill endDate via Gamma slug lookup", file=sys.stderr)
 
     # cache: pull a few pages
-    if args.use_events:
+    if strat.get("use5mSlug"):
+        markets = []
+        server_ts = get_server_time()
+        if server_ts:
+            period = (server_ts // 300) * 300
+            symbols = strat.get("fiveMinuteSymbols") or ["btc", "eth"]
+            for sym in symbols:
+                slug = build_5m_slug(sym, period)
+                m = fetch_market_by_slug(slug)
+                log_event(os.path.join(args.outdir, "runtime", "match_debug.jsonl"), {
+                    "ts": int(time.time()),
+                    "tag": run_tag,
+                    "event": "slug_fetch",
+                    "slug": slug,
+                    "ok": bool(m),
+                })
+                if m:
+                    markets.append(m)
+        # no fallback here; keep strictly API-based
+    elif args.use_events:
         markets = []
         for i in range(args.scan_pages):
             offset = i * args.page_size
