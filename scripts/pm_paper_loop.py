@@ -74,11 +74,11 @@ def fetch_markets_slice(limit=200, offset=0, active=True, closed=False):
 
 
 def fetch_market_by_slug(slug):
+    """Fetch market info from Polymarket web API (slug -> token_ids/endDate)."""
     try:
-        r = requests.get(GAMMA, params={"slug": slug}, headers=UA, timeout=20)
+        r = requests.get("https://polymarket.com/api/market", params={"slug": slug}, timeout=20)
         r.raise_for_status()
-        arr = r.json()
-        return arr[0] if isinstance(arr, list) and arr else None
+        return r.json()
     except Exception:
         return None
 
