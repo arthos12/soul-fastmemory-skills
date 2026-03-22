@@ -175,7 +175,8 @@ def parse_end_seconds(m, strat=None):
         end_raw = m.get("endDate")
         if end_raw:
             end = dt.datetime.fromisoformat(str(end_raw).replace("Z", "+00:00"))
-            return int(end.timestamp()) - now_ts
+            end_ts = int(end.timestamp())
+            return end_ts - now_ts, end_ts, now_ts
     except Exception:
         pass
 
@@ -187,7 +188,7 @@ def parse_end_seconds(m, strat=None):
             m2 = re.match(r".*-(\d{10})$", slug)
             if m2:
                 end_ts = int(m2.group(1))
-                return end_ts - now_ts
+                return end_ts - now_ts, end_ts, now_ts
     except Exception:
         pass
 
@@ -209,7 +210,8 @@ def parse_end_seconds(m, strat=None):
                     win = 15
             if win is not None:
                 end = start + dt.timedelta(minutes=win)
-                return int(end.timestamp()) - now_ts
+                end_ts = int(end.timestamp())
+                return end_ts - now_ts, end_ts, now_ts
     except Exception:
         pass
 
@@ -349,18 +351,19 @@ def generate_orders(markets, strat, tag, outdir):
             bump("not_accepting", m)
             continue
 
-        secs = parse_end_seconds(m, strat)
-        if secs is None:
+        parsed = parse_end_seconds(m, strat)
+        if parsed is None:
             bump("no_end", m)
             continue
+        secs, end_ts, now_ts = parsed
         if secs <= 0:
-            bump("ended", m, {"secsToEnd": secs})
+            bump("ended", m, {"secsToEnd": secs, "endTs": end_ts, "nowTs": now_ts})
             continue
         max_secs = strat.get("maxSecsToEnd")
         if max_secs is None:
             max_secs = strat.get("maxMinsToEnd", 24 * 60) * 60
         if secs > max_secs:
-            bump("too_far_end", m, {"secsToEnd": secs, "maxSecsToEnd": max_secs})
+            bump("too_far_end", m, {"secsToEnd": secs, "maxSecsToEnd": max_secs, "endTs": end_ts, "nowTs": now_ts})
             continue
         mins = secs / 60.0
 
