@@ -30,7 +30,11 @@ check_fast_scan(){
         log "fast_scan stale (${age}s) -> restart"
         start_fast_scan
         return 0
+      else
+        log "fast_scan fresh (${age}s)"
       fi
+    else
+      log "fast_scan log missing"
     fi
     log "fast_scan ok"
   else
