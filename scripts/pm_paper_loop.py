@@ -306,7 +306,24 @@ def generate_orders(markets, strat, tag, outdir):
 
         outcomes = norm_list(m.get("outcomes"))
         prices = norm_list(m.get("outcomePrices"))
-        if not isinstance(outcomes, list) or not isinstance(prices, list) or len(outcomes) != len(prices):
+
+        # If outcomePrices missing, use CLOB last-trade-price via token_ids
+        if (not isinstance(prices, list)) or (not prices):
+            prices = []
+            clob = norm_list(m.get("clobTokenIds"))
+            if isinstance(outcomes, list) and isinstance(clob, list) and len(outcomes) == len(clob):
+                for tid in clob:
+                    try:
+                        lp = requests.get("https://clob.polymarket.com/last-trade-price", params={"token_id": tid}, timeout=10).json()
+                        price = float(lp.get("price")) if isinstance(lp, dict) and lp.get("price") else None
+                        prices.append(price)
+                    except Exception:
+                        prices.append(None)
+            if not prices or any(p is None for p in prices):
+                bump("bad_prices")
+                continue
+
+        if not isinstance(outcomes, list) or len(outcomes) != len(prices):
             bump("bad_prices")
             continue
         try:
