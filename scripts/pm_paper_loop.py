@@ -143,13 +143,52 @@ def load_or_refresh_cache(cache_path, max_age_sec, limit, offset, active, closed
     return data
 
 
-def parse_end_minutes(m):
+def parse_end_minutes(m, strat=None):
+    # 1) prefer explicit endDate
     try:
-        end = dt.datetime.fromisoformat((m.get("endDate") or "").replace("Z", "+00:00"))
-        mins = (end - utcnow()).total_seconds() / 60
-        return mins
+        end_raw = m.get("endDate")
+        if end_raw:
+            end = dt.datetime.fromisoformat(str(end_raw).replace("Z", "+00:00"))
+            return (end - utcnow()).total_seconds() / 60
     except Exception:
-        return None
+        pass
+
+    # 2) derive from slug timestamp (if present)
+    try:
+        slug = str(m.get("slug", ""))
+        if slug:
+            import re
+            m2 = re.match(r".*-(\d{10})$", slug)
+            if m2:
+                end_ts = int(m2.group(1))
+                end = dt.datetime.fromtimestamp(end_ts, tz=dt.timezone.utc)
+                return (end - utcnow()).total_seconds() / 60
+    except Exception:
+        pass
+
+    # 3) derive from startDate + window minutes
+    try:
+        start_raw = m.get("startDate") or m.get("startTime")
+        if start_raw:
+            start = dt.datetime.fromisoformat(str(start_raw).replace("Z", "+00:00"))
+            win = None
+            if strat and strat.get("window"):
+                w = str(strat.get("window")).lower().strip()
+                if w.endswith('m'):
+                    win = int(w[:-1])
+            if win is None:
+                slug = str(m.get("slug", ""))
+                if "-5m-" in slug:
+                    win = 5
+                elif "-15m-" in slug:
+                    win = 15
+            if win is not None:
+                end = start + dt.timedelta(minutes=win)
+                return (end - utcnow()).total_seconds() / 60
+    except Exception:
+        pass
+
+    return None
 
 
 def pick_highprob(outcomes, prices, min_price):
@@ -247,7 +286,7 @@ def generate_orders(markets, strat, tag, outdir):
             bump("not_accepting")
             continue
 
-        mins = parse_end_minutes(m)
+        mins = parse_end_minutes(m, strat)
         if mins is None:
             bump("no_end")
             continue
