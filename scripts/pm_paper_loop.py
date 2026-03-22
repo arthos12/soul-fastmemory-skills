@@ -579,7 +579,8 @@ def main():
 
     # Time-window strategies: allow web discovery, but always backfill endDate from Gamma by slug.
     if args.web_fallback and strat.get("maxMinsToEnd") is not None:
-        print("[warn] web_fallback enabled; will backfill endDate via Gamma slug lookup")
+        import sys
+        print("[warn] web_fallback enabled; will backfill endDate via Gamma slug lookup", file=sys.stderr)
 
     # cache: pull a few pages
     if args.use_events:
