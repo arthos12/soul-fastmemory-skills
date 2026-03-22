@@ -622,10 +622,18 @@ def main():
                 m.update(cache[slug])
                 continue
             gm = fetch_market_by_slug(slug)
-            if gm and gm.get("endDate"):
-                patch = {"endDate": gm.get("endDate"), "startDate": gm.get("startDate")}
-                m.update(patch)
-                cache[slug] = patch
+            if gm:
+                patch = {
+                    "endDate": gm.get("endDate"),
+                    "startDate": gm.get("startDate"),
+                    "clobTokenIds": gm.get("clobTokenIds"),
+                    "outcomes": gm.get("outcomes"),
+                }
+                # only keep non-empty fields
+                patch = {k: v for k, v in patch.items() if v}
+                if patch:
+                    m.update(patch)
+                    cache[slug] = patch
 
     orders, reason_counts = generate_orders(markets, strat, tag=run_tag, outdir=args.outdir)
 
