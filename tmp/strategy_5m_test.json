@@ -19,5 +19,7 @@
   "requireAcceptingOrders": false,
   "dedupLookbackHours": 1,
   "lowProbMode": false,
-  "debugLogLimit": 200
+  "debugLogLimit": 200,
+  "useEvents": true,
+  "webFallback": false
 }

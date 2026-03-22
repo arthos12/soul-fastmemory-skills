@@ -7,6 +7,29 @@ STATUS="data/polymarket/runtime/auto_loop_status.json"
 TUNE_LOG="data/polymarket/runtime/auto_tune.jsonl"
 mkdir -p data/polymarket/runtime
 
+USE_EVENTS=$(python3 - <<'PY'
+import json,os,sys
+path=os.environ.get('STRAT')
+try:
+    with open(path,'r',encoding='utf-8') as f:
+        s=json.load(f)
+    print('1' if s.get('useEvents') else '0')
+except Exception:
+    print('0')
+PY
+)
+WEB_FALLBACK=$(python3 - <<'PY'
+import json,os,sys
+path=os.environ.get('STRAT')
+try:
+    with open(path,'r',encoding='utf-8') as f:
+        s=json.load(f)
+    print('1' if s.get('webFallback') else '0')
+except Exception:
+    print('0')
+PY
+)
+
 apply_tune() {
   local reason="$1"
   python3 - <<'PY'
@@ -44,7 +67,14 @@ while true; do
   fi
 
   tag="auto_$(date -u +%H%M%S)"
-  out=$(python3 scripts/pm_paper_loop.py --strategy "$STRAT" --tag "$tag" --scan-pages 25 --cache-age-sec 120 || true)
+  EXTRA_ARGS=""
+  if [[ "$USE_EVENTS" == "1" ]]; then
+    EXTRA_ARGS="$EXTRA_ARGS --use-events"
+  fi
+  if [[ "$WEB_FALLBACK" == "1" ]]; then
+    EXTRA_ARGS="$EXTRA_ARGS --web-fallback"
+  fi
+  out=$(python3 scripts/pm_paper_loop.py --strategy "$STRAT" --tag "$tag" --scan-pages 120 --cache-age-sec 120 $EXTRA_ARGS || true)
   orders=$(printf '%s' "$out" | python3 -c 'import sys,json; t=sys.stdin.read().strip(); print((json.loads(t).get("orders_generated",0)) if t else 0)' 2>/dev/null || echo 0)
   results=$(printf '%s' "$out" | python3 -c 'import sys,json; t=sys.stdin.read().strip(); print((json.loads(t).get("results_backfilled",0)) if t else 0)' 2>/dev/null || echo 0)
   echo "$out" > "$STATUS"
