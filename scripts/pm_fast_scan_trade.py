@@ -20,6 +20,10 @@ STRATS = [
     # test data: 0.55/0.45
     "strategies/test_tail_5m_55.json",
     "strategies/test_tail_15m_55.json",
+    # plan A non-tail strategies
+    "strategies/br_v2_highprob.json",
+    "strategies/br_v3_short.json",
+    "strategies/test1_br_copy.json",
 ]
 
 INTERVAL = int(os.environ.get("PM_LOOP_INTERVAL", "60"))
