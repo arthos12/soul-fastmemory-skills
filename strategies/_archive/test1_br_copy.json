@@ -1,0 +1,21 @@
+{
+  "name": "test1_br_copy",
+  "description": "复制BR策略 - 自己判断PM价格",
+  "minPrice": 0.3,
+  "maxPrice": 0.95,
+  "maxMinsToEnd": 1,
+  "keywords": [
+    "Bitcoin",
+    "Ethereum",
+    "Solana",
+    "XRP",
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "sizeUSD": 20,
+  "direction": "auto",
+  "holdingMinutes": 5,
+  "logic": "看到PM价格上涨 → 买入"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "br_follow_v1",
+  "description": "跟随BR模式: 5分钟窗口, 追涨策略",
+  "minPrice": 0.5,
+  "maxPrice": 0.95,
+  "maxMinsToEnd": 1,
+  "maxOrders": 30,
+  "sizeUSD": 20,
+  "keywords": [
+    "Bitcoin",
+    "Ethereum",
+    "Solana",
+    "XRP",
+    "btc",
+    "eth",
+    "sol",
+    "xrp",
+    "up or down"
+  ],
+  "window": "5m",
+  "source": "BR分析",
+  "note": "基于BR分析: 只做5分钟,高价区追涨"
+}

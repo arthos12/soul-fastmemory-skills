@@ -1,0 +1,24 @@
+{
+  "name": "sports-event-v1",
+  "mode": "sports_prediction",
+  "minPrice": 0.1,
+  "maxPrice": 0.6,
+  "maxMinsToEnd": 1,
+  "maxOrders": 10,
+  "sizeUSD": 50,
+  "keywords": [
+    "football",
+    "soccer",
+    "NBA",
+    "NFL",
+    "tennis",
+    "world cup",
+    "champions league",
+    "premier league",
+    "election",
+    "politics"
+  ],
+  "requireAcceptingOrders": false,
+  "dedupLookbackHours": 24,
+  "category": "sports_politics"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "br_v6_high_buy_up",
+  "description": "高价买涨 - 模仿BR模式",
+  "minPrice": 0.5,
+  "maxPrice": 0.95,
+  "maxMinsToEnd": 1,
+  "keywords": [
+    "Bitcoin",
+    "Ethereum",
+    "Solana",
+    "XRP",
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+  ],
+  "sizeUSD": 20,
+  "direction": "buy_up",
+  "holdingMinutes": 5,
+  "condition": "high_price_buy_up"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "test3_combined",
+  "description": "综合判定 - 我们预测+BR策略",
+  "minPrice": 0.3,
+  "maxPrice": 0.95,
+  "maxMinsToEnd": 1,
+  "direction": "auto",
+  "holdingMinutes": 5,
+  "strategy": "combined",
+  "filters": {
+    "binance_trend": true,
+    "br_pattern": true,
+    "both_must_match": true
+  },
+  "logic": "币安趋势+BR模式 → 才下单"
+}

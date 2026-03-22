@@ -1,0 +1,16 @@
+{
+  "name": "tail_confirm_15m_09",
+  "description": "15m尾单>= 0.9 或 <= 0.1",
+  "mode": "highprob",
+  "maxMinsToEnd": 2,
+  "maxOrders": 30,
+  "sizeUSD": 5,
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "up or down"
+  ],
+  "window": "15m",
+  "source": "tail-confirm",
+  "minPrice": 0.9
+}

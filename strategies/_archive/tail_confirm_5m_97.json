@@ -1,0 +1,17 @@
+{
+  "name": "tail_confirm_5m_97",
+  "description": "5m尾单确认>=0.97或<=0.03",
+  "mode": "tail",
+  "minPriceHigh": 0.97,
+  "maxPriceLow": 0.03,
+  "maxMinsToEnd": 1,
+  "maxOrders": 30,
+  "sizeUSD": 5,
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "up or down"
+  ],
+  "window": "5m",
+  "source": "tail-confirm"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "pm_5m_t45_p088",
+  "mode": "highprob",
+  "minPrice": 0.88,
+  "maxMinsToEnd": 0.75,
+  "maxOrders": 20,
+  "sizeUSD": 20,
+  "requireAcceptingOrders": false,
+  "dedupLookbackHours": 1,
+  "use5mSlug": true,
+  "fiveMinuteSymbols": [
+    "btc",
+    "eth"
+  ],
+  "source": "polymarket-api",
+  "minTick": 0.0005,
+  "debugLogLimit": 200
+}
