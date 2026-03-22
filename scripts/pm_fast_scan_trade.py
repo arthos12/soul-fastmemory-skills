@@ -129,6 +129,20 @@ if __name__ == "__main__":
             time.sleep(INTERVAL)
             continue
 
+        # fetch web markets ONCE per cycle
+        try:
+            out = subprocess.check_output([
+                "node",
+                f"{WORKDIR}/scripts/pm_web_markets_dump.js",
+                "https://polymarket.com/zh/crypto/5M",
+            ], timeout=60).decode("utf-8", errors="ignore")
+            obj = json.loads(out)
+            markets = obj.get("markets", []) if isinstance(obj, dict) else []
+            with open(f"{STATUS_DIR}/web_markets_latest.json", "w", encoding="utf-8") as f:
+                json.dump(markets, f, ensure_ascii=False)
+        except Exception as e:
+            log(f"ERROR web_fetch err={e}")
+
         # Each strategy runs independently; no global de-dup.
         for strat in STRATS:
             run_once(strat)

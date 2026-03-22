@@ -554,6 +554,7 @@ def main():
     ap.add_argument("--page-size", type=int, default=200)
     ap.add_argument("--web-fallback", action="store_true", help="use Polymarket web data (__NEXT_DATA__) instead of Gamma")
     ap.add_argument("--use-events", action="store_true", help="use Gamma events endpoint to build markets + clobTokenIds")
+    ap.add_argument("--markets-file", help="use pre-fetched markets json file (shared across strategies)")
     args = ap.parse_args()
 
     strat = load_json(args.strategy, default={})
@@ -654,4 +655,6 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
+_":
     main()
