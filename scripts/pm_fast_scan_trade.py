@@ -69,8 +69,10 @@ def run_once(strategy_path: str):
         log(f"ERROR strategy={base} err={e}")
         return
     status_path = f"{STATUS_DIR}/{base}_status.json"
-    with open(status_path, "w", encoding="utf-8") as f:
+    tmp_path = f"{status_path}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         f.write(out)
+    os.replace(tmp_path, status_path)
     try:
         j = json.loads(out)
         orders = j.get("orders_generated", 0)
