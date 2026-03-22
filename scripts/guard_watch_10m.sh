@@ -19,7 +19,19 @@ start_fast_scan(){
 }
 
 check_fast_scan(){
-  if pgrep -f "pm_fast_scan_trade.py" >/dev/null 2>&1; then
+  if pgrep -f "python3 .*pm_fast_scan_trade.py" >/dev/null 2>&1; then
+    # also require fresh log update (avoid zombie process)
+    local log_file="$WORKDIR/data/polymarket/runtime/pm_scan_trade_loop.log"
+    if [[ -f "$log_file" ]]; then
+      local now=$(date +%s)
+      local mtime=$(stat -c %Y "$log_file" 2>/dev/null || echo 0)
+      local age=$((now-mtime))
+      if (( age > 300 )); then
+        log "fast_scan stale (${age}s) -> restart"
+        start_fast_scan
+        return 0
+      fi
+    fi
     log "fast_scan ok"
   else
     log "fast_scan missing -> restart"
