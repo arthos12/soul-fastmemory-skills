@@ -566,6 +566,11 @@ def summarize(results):
     return out
 
 
+def sync_server_time():
+    """No-op placeholder for server time sync (optional)."""
+    return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--strategy", required=True, help="Path to strategy json")
