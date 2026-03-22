@@ -1,0 +1,23 @@
+{
+  "name": "BR-v4-5min-test",
+  "mode": "5min_low",
+  "minPrice": 0.001,
+  "maxPrice": 0.01,
+  "maxMinsToEnd": 5,
+  "maxOrders": 20,
+  "sizeUSD": 20,
+  "keywords": [
+    "XRP",
+    "Bitcoin",
+    "Solana",
+    "Ethereum",
+    "btc",
+    "eth",
+    "sol",
+    "xrp"
+  ],
+  "requireAcceptingOrders": false,
+  "dedupLookbackHours": 1,
+  "lowProbMode": false,
+  "debugLogLimit": 200
+}

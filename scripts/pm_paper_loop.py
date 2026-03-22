@@ -52,6 +52,12 @@ def append_jsonl(path, rows):
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
+def log_event(path, obj):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+
+
 def norm_list(x):
     if isinstance(x, str):
         try:
@@ -272,36 +278,62 @@ def generate_orders(markets, strat, tag, outdir):
     recent_market_ids = set() if dedup_hours <= 0 else load_recent_market_ids(outdir, lookback_hours=dedup_hours)
     reason_counts = {}
 
-    def bump(reason):
+    debug_limit = int(strat.get("debugLogLimit", 50))
+    debug_count = 0
+    log_path = os.path.join(outdir, "runtime", "match_debug.jsonl")
+    log_event(log_path, {
+        "ts": now_ts,
+        "tag": tag,
+        "strategy": strat.get("name"),
+        "event": "start",
+        "markets": len(markets),
+    })
+
+    def bump(reason, m=None, extra=None):
+        nonlocal debug_count
         reason_counts[reason] = reason_counts.get(reason, 0) + 1
+        if debug_count < debug_limit and m is not None:
+            payload = {
+                "ts": now_ts,
+                "tag": tag,
+                "event": "skip",
+                "reason": reason,
+                "id": m.get("id"),
+                "slug": m.get("slug"),
+                "title": m.get("question"),
+            }
+            if extra:
+                payload.update(extra)
+            log_event(log_path, payload)
+            debug_count += 1
 
     for m in markets:
         if m.get("closed") is True:
-            bump("closed")
+            bump("closed", m)
             continue
         if str(m.get("id")) in recent_market_ids:
-            bump("recent")
+            bump("recent", m)
             continue
         if strat.get("requireAcceptingOrders", True) and m.get("acceptingOrders") is False:
-            bump("not_accepting")
+            bump("not_accepting", m)
             continue
 
         mins = parse_end_minutes(m, strat)
         if mins is None:
-            bump("no_end")
+            bump("no_end", m)
             continue
         if mins <= 0:
-            bump("ended")
+            bump("ended", m, {"minsToEnd": mins})
             continue
         if mins > strat.get("maxMinsToEnd", 24 * 60):
-            bump("too_far_end")
+            bump("too_far_end", m, {"minsToEnd": mins})
             continue
 
         q = (m.get("question") or "")
         ql = q.lower()
         if strat.get("keywords"):
             if not any(k.lower() in ql for k in strat["keywords"]):
-                bump("keyword_filtered")
+                bump("keyword_filtered", m)
                 continue
 
         outcomes = norm_list(m.get("outcomes"))
@@ -325,16 +357,16 @@ def generate_orders(markets, strat, tag, outdir):
                     except Exception:
                         prices.append(None)
             if not prices or any(p is None for p in prices):
-                bump("bad_prices")
+                bump("bad_prices", m)
                 continue
 
         if not isinstance(outcomes, list) or len(outcomes) != len(prices):
-            bump("bad_prices")
+            bump("bad_prices", m)
             continue
         try:
             prices = [float(p) for p in prices]
         except Exception:
-            bump("price_cast_fail")
+            bump("price_cast_fail", m)
             continue
 
         picked = None
@@ -342,18 +374,18 @@ def generate_orders(markets, strat, tag, outdir):
             picked = pick_highprob(outcomes, prices, strat.get("minPrice", 0.9))
 
         if not picked:
-            bump("no_pick")
+            bump("no_pick", m)
             continue
 
         outcome, price, outcome_idx = picked
         # avoid 0 price orders
         if price <= 0:
-            bump("zero_price")
+            bump("zero_price", m)
             continue
         # enforce floor tick
         min_tick = float(m.get("orderPriceMinTickSize") or strat.get("minTick", 0.0005))
         if price < min_tick:
-            bump("below_tick")
+            bump("below_tick", m, {"price": price, "minTick": min_tick})
             continue
 
         prediction_prob = infer_prediction_prob(price, strat)
@@ -399,38 +431,45 @@ def generate_orders(markets, strat, tag, outdir):
                 except Exception:
                     pass
 
-        bump("selected")
-        orders.append(
-            {
-                "ts": now_ts,
-                "marketId": m.get("id"),
-                "slug": m.get("slug"),
-                "title": q,
-                "minsToEnd": mins,
-                "outcome": outcome,
-                "limitPrice": round(price, 6),
-                "marketPrice": round(price, 6),
-                "prediction_prob": prediction_prob,
-                "edge": edge,
-                "sizeUSD": strat.get("sizeUSD", 50),
-                "type": "paper",
-                "strategy": strat.get("name", "pm-paper"),
-                "strategy_version": strat.get("version", strat.get("name", "pm-paper")),
-                "reason": f"{strat.get('mode')}",
-                "reason_tag": strat.get('mode', 'unknown'),
-                "source": strat.get("source", "gamma-api"),
-                "tag": tag,
-                "token_id": token_id,
-                "best_bid": best_bid,
-                "best_ask": best_ask,
-                "mid": mid,
-                "spread": spread,
-            }
-        )
+        bump("selected", m, {"minsToEnd": mins, "price": price})
+        order = {
+            "ts": now_ts,
+            "marketId": m.get("id"),
+            "slug": m.get("slug"),
+            "title": q,
+            "minsToEnd": mins,
+            "outcome": outcome,
+            "limitPrice": round(price, 6),
+            "marketPrice": round(price, 6),
+            "prediction_prob": prediction_prob,
+            "edge": edge,
+            "sizeUSD": strat.get("sizeUSD", 50),
+            "type": "paper",
+            "strategy": strat.get("name", "pm-paper"),
+            "strategy_version": strat.get("version", strat.get("name", "pm-paper")),
+            "reason": f"{strat.get('mode')}",
+            "reason_tag": strat.get('mode', 'unknown'),
+            "source": strat.get("source", "gamma-api"),
+            "tag": tag,
+            "token_id": token_id,
+            "best_bid": best_bid,
+            "best_ask": best_ask,
+            "mid": mid,
+            "spread": spread,
+        }
+        orders.append(order)
+        log_event(log_path, {"ts": now_ts, "tag": tag, "event": "selected", **order})
 
         if len(orders) >= strat.get("maxOrders", 30):
             break
 
+    log_event(log_path, {
+        "ts": now_ts,
+        "tag": tag,
+        "event": "summary",
+        "orders": len(orders),
+        "reasons": reason_counts,
+    })
     return orders, reason_counts
 
 
