@@ -26,23 +26,7 @@ else:
     print(int(end.timestamp())-$server_ts)
 PY
 )
-  # log secs + prices each tick
-  prices=$(python3 - <<PY
-import requests
-m=requests.get('https://polymarket.com/api/market',params={'slug':'$slug'},timeout=10).json()
-print(m.get('outcomePrices'))
-PY
-)
-  echo "$(date -u +%FT%TZ) server_ts=$server_ts secs_to_end=$secs prices=$prices" >> "$LOG"
-  python3 - <<PY
-import json,time
-from pathlib import Path
-log=Path('/root/.openclaw/workspace/data/polymarket/runtime/match_debug.jsonl')
-log.parent.mkdir(parents=True,exist_ok=True)
-log.write_text('',encoding='utf-8') if not log.exists() else None
-with log.open('a',encoding='utf-8') as f:
-    f.write(json.dumps({"ts": int(time.time()), "tag": "last60_tick", "event": "tick", "secsToEnd": $secs, "prices": $prices}, ensure_ascii=False) + "\n")
-PY
+  # only log during matching window
 
   if [ "$secs" -le 60 ]; then
     # run must-hit strategies first

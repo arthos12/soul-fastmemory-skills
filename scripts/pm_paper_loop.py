@@ -417,7 +417,11 @@ def generate_orders(markets, strat, tag, outdir):
             )
 
         if not picked:
-            bump("no_pick", m)
+            # log available price range for debugging
+            if prices:
+                bump("no_pick", m, {"maxPrice": max(prices), "minPrice": min(prices)})
+            else:
+                bump("no_pick", m)
             continue
 
         outcome, price, outcome_idx = picked
