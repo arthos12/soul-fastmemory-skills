@@ -28,7 +28,7 @@ PY
 )
   # only log during matching window
 
-  if [ "$secs" -le 10 ]; then
+  if [ "$secs" -le 20 ]; then
     # log every tick within last 60s window
     prices=$(python3 - <<PY
 import requests
