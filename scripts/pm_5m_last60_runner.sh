@@ -28,7 +28,7 @@ PY
 )
   # only log during matching window
 
-  if [ "$secs" -le 60 ]; then
+  if [ "$secs" -le 20 ]; then
     # log every tick within last 60s window
     prices=$(python3 - <<PY
 import requests
@@ -40,7 +40,7 @@ PY
     python3 - <<PY
 import json,time
 from pathlib import Path
-log=Path('/root/.openclaw/workspace/data/polymarket/runtime/last60_window.jsonl')
+log=Path('/root/.openclaw/workspace/data/polymarket/runtime/last20_window.jsonl')
 log.parent.mkdir(parents=True,exist_ok=True)
 with log.open('a',encoding='utf-8') as f:
     f.write(json.dumps({"ts": int(time.time()), "secsToEnd": $secs, "prices": $prices, "slug": "$slug"}, ensure_ascii=False) + "\n")
