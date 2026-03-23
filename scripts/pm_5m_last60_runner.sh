@@ -56,5 +56,5 @@ PY
       python3 /root/.openclaw/workspace/scripts/pm_paper_loop.py --strategy "$f" --tag "$tag" --scan-pages 1 --cache-age-sec 3 >> "$LOG" 2>&1 || true
     done
   fi
-  sleep 3
+  sleep 1
   done
