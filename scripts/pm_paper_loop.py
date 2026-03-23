@@ -712,6 +712,9 @@ def main():
                 })
                 if m:
                     markets.append(m)
+        # enforce 5m-only scope
+        if markets:
+            markets = [m for m in markets if str(m.get("slug", "")).find("-5m-") != -1]
         # no fallback here; keep strictly API-based
     elif args.use_events:
         markets = []
