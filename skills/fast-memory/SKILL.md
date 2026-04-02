@@ -8,15 +8,18 @@ description: "Installable structured memory skill for OpenClaw agents. Use for f
 # Fast Memory
 
 ## 定位
-这个 skill 承载的是当前记忆系统的主要工作方式，不只是“能写记忆”，而是把分层存储、按需检索、session 恢复、收尾落盘、防污染提速这整套机制迁移给其他 bot / agent。
+这个 skill 承载的是当前记忆系统的主要工作方式,不只是"能写记忆",而是把分层存储、按需检索、session 恢复、收尾落盘、防污染提速这整套机制迁移给其他 bot / agent。
 
 ## 对外迁移目标
-当其他 bot / agent 安装这个 skill 时，目标不是只学会如何保存几条笔记，而是尽量学到当前这套记忆系统的分层结构、查询路径、写入原则、恢复机制、收尾机制与防污染策略。
+当其他 bot / agent 安装这个 skill 时,目标不是只学会如何保存几条笔记,而是尽量学到当前这套记忆系统的分层结构、查询路径、写入原则、恢复机制、收尾机制与防污染策略。
 
 默认记忆运行接管规范见 [references/memory_runtime_contract.md](references/memory_runtime_contract.md)。
 硬约束规则见 [references/enforcement_rules.md](references/enforcement_rules.md)。
 安装后的行为验收见 [references/behavior_tests.md](references/behavior_tests.md)。
 真实任务测试集见 [references/test_tasks.md](references/test_tasks.md)。
+训练态恢复协议（"加载数据"后如何恢复到培训后的运行状态）见 [references/training_state_restore_protocol.md](references/training_state_restore_protocol.md)。
+落盘决策的 S / A / B 分级规则见 [references/save_decision_sab.md](references/save_decision_sab.md)。
+自动压缩与溯源规则见 [references/compaction_rules.md](references/compaction_rules.md)。
 
 Use this skill when the agent needs a practical memory system that can be applied immediately after installation.
 
@@ -30,6 +33,7 @@ This skill tells the agent how to:
 4. keep recent full sessions as a short-term fallback buffer
 5. move older sessions into extracted structured storage
 6. downgrade colder content when storage becomes too large
+7. automatically compact oversized files via fanout-based DAG compression (see references/compaction_rules.md)
 
 Core principle:
 
@@ -82,6 +86,8 @@ Treat content as cold / downgrade-ready when most of these are true:
 
 At new-session restore time, run this sequence:
 
+If the user explicitly says "加载数据/恢复数据/加载记忆", follow the trained-state restore protocol: `references/training_state_restore_protocol.md`.
+
 1. load recent structured content first
 2. identify important content inside the recent content
 3. find the most important content and the recently important content
@@ -120,12 +126,12 @@ Before saving, classify the content:
 
 Then assign one of six importance levels:
 
-1. 第1层 — 核心逻辑、核心目标、核心工作流主线
-2. 第2层 — 关键步骤、关键结论、关键决策、关键约束
-3. 第3层 — 关键数据、关键文件、关键上下文、关键关联信息
-4. 第4层 — 一般工作细节、阶段性信息、普通背景
-5. 第5层 — 低复用描述、普通背景、低价值补充
-6. 第6层 — 临时噪音、无后续价值内容
+1. 第1层 - 核心逻辑、核心目标、核心工作流主线
+2. 第2层 - 关键步骤、关键结论、关键决策、关键约束
+3. 第3层 - 关键数据、关键文件、关键上下文、关键关联信息
+4. 第4层 - 一般工作细节、阶段性信息、普通背景
+5. 第5层 - 低复用描述、普通背景、低价值补充
+6. 第6层 - 临时噪音、无后续价值内容
 
 Save by importance:
 
@@ -209,16 +215,18 @@ Rule:
 
 ## Dynamic save (incremental session saving)
 
-**Default: dynamic save without being asked.** Do not wait for an explicit “结束 session / 保存一下” command.
+**Default: dynamic save without being asked.** Do not wait for an explicit "结束 session / 保存一下" command.
 **Also default-save at least once every ~1 hour of active session time, even if the user does not remind you.**
 **And before `/new`, treat saving the current session as mandatory, not optional.**
+**Writing only `memory/YYYY-MM-DD.md` does NOT count as a completed save. A completed save must also refresh at least one fast-recovery layer: `SESSION_HANDOFF.md` or `LAST_SESSION.md`.**
+**Each hourly/closure save should include an explicit saved-at timestamp so the next session can verify whether the save loop actually ran.**
 
 Goal: make `/new`-resets harmless by keeping a rolling, incremental snapshot of the current work.
 
 ### Triggers (3 tiers)
 
 1) **Hard triggers (save immediately)**
-- the user confirms a decision / conclusion (“就这么定 / 按这个做”)
+- the user confirms a decision / conclusion ("就这么定 / 按这个做")
 - any key parameters appear: lists, links, file names/paths, configs/tokens, exact values
 - next-step / blocker changes
 - high reset risk: user likely to hit `/new`, model/tool instability, long pause, topic switch
@@ -227,14 +235,15 @@ Goal: make `/new`-resets harmless by keeping a rolling, incremental snapshot of 
 - the topic stays the same and information is clearly accumulating across multiple turns
 - the agent outputs an actionable plan/template/checklist worth reusing
 
-Default soft cadence (unless user changes it): **every 10–15 turns**, or **each completed sub-point** (conservative, to reduce server workload).
+Default soft cadence (unless user changes it): **every 10-15 turns**, or **each completed sub-point** (conservative, to reduce server workload).
 
 3) **Closure triggers (stage completed)**
-- a sub-task is finished (e.g., “skill updated + repacked + verified”)
+- a sub-task is finished (e.g., "skill updated + repacked + verified")
 
 ### Write targets (2 layers)
 
 - **`SESSION_HANDOFF.md` = fast rolling snapshot** (lightweight, frequent)
+  - saved-at timestamp
   - current topic
   - latest confirmed conclusion
   - next step
@@ -242,6 +251,7 @@ Default soft cadence (unless user changes it): **every 10–15 turns**, or **eac
   - relevant files/links
 
 - **`LAST_SESSION.md` = fast-recovery main line** (denser, but still compact)
+  - saved-at timestamp
   - refresh in the same pass when the main line is clear and recovery value is high
 
 Minimum fields for a dynamic save entry:
@@ -249,7 +259,7 @@ Minimum fields for a dynamic save entry:
 - 简要描述
 - 当前步骤
 - 下一步
-- 阻塞/约束（如有）
+- 阻塞/约束(如有)
 - relevant files
 
 ## Quick-save rule

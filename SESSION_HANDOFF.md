@@ -1,30 +1,49 @@
-# SESSION_HANDOFF.md
+# SESSION_HANDOFF.md — 2026-04-02
 
-## Saved At
-- 2026-03-21 17:17 UTC
+## saved-at: 2026-04-02 09:30 GMT+8
 
-## Current Mainline (Short)
-- PM 量化：已将“扫描→过滤→下单”集成到单一循环脚本，30 秒轮询，重点测试 test 系列 + 尾单。
+## 当前主线
+fast-memory 增强：融合 LCM 核心机制（四层架构升级）
 
-## Key Changes
-- 新脚本：`scripts/pm_fast_scan_trade.py`（扫描+过滤+纸单+回填）。
-- 日志：`data/polymarket/runtime/pm_scan_trade_loop.log`（含 orders/results/reasons）。
-- 扫描快照落盘：`data/polymarket/market_snapshot_latest.jsonl`。
-- 停用旧 runner：`pm_auto_runner_multi.sh`。
+## 已确认方向
+✅ Jim 确认执行，4层架构升级方案通过
 
-## Running Now
-- 进程：`pm_scan_trade_loop.py`（PID 3792946）
-- 策略：br_tail_v1 + test1_br_copy + test2_follow_br + test3_combined
+## 下一步
+写 `scripts/auto_compactor.py`（自动压缩主脚本）
 
-## Recent Findings
-- Polymarket 官网存在 5m 市场；当前扫描逻辑过滤过严导致短周期不足。
-- 过滤主要原因：too_far_end / no_end / no_pick。
+## 实施进度
+- [x] `references/compaction_rules.md` ✅
+- [x] `scripts/auto_compactor.py` ✅ (已验证：发现3个超长文件待压)
+- [x] `scripts/memory_expand.py` ✅ (已验证：--list-summaries 正常)
+- [x] 集成到 `hourly_work.py` ✅
+- [x] 更新 SKILL.md + 文档 ✅
 
-## Next Step
-- 放大扫描范围（分页/全量）并输出 5m/15m 市场清单；持续观察 snapshot 统计。
+## 待处理
+- memory/ 下 3 个超长文件待合并压缩:
+  - 2026-03-16.md (203行)
+  - 2026-03-17.md (269行)
+  - 2026-03-20.md (453行)
+  → 可用: python3 scripts/auto_compactor.py --topic <主题> --dry-run 先预览
 
-## Key Files
-- scripts/pm_scan_trade_loop.py
-- data/polymarket/market_snapshot_latest.jsonl
-- data/polymarket/runtime/pm_scan_trade_loop.log
-- data/polymarket/reports/hourly_report_*.json
+## 待处理
+- memory/ 下 3 个超长文件待合并压缩:
+  - 2026-03-16.md (203行)
+  - 2026-03-17.md (269行)
+  - 2026-03-20.md (453行)
+
+## 整体实施顺序
+1. `references/compaction_rules.md` ← 现在开始
+2. `scripts/auto_compactor.py`
+3. `scripts/memory_expand.py`
+4. 集成到 `hourly_work.py`
+5. 更新 SKILL.md + 文档
+
+## 关键设计决策
+- fanout 触发阈值：单日 note >200行 / 同主题≥5文件 / MEMORY.md >500行
+- 双向溯源链：摘要头注 sources，原始尾注 merged_into
+- 摘要用便宜模型（minimax）或本地合并
+- 不占用持久内存，按需执行脚本
+
+## 相关文件
+- 技能目录: `/root/.openclaw/workspace/skills/fast-memory/`
+- 增强目标: 让记忆系统具备自动压缩 + 可还原能力
