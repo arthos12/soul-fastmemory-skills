@@ -1,0 +1,223 @@
+{
+  "strategies": {
+    "cex_btc_5m_breakout": {
+      "id": "cex_btc_5m_breakout",
+      "type": "cex",
+      "description": "BTC 5\u5206\u949f\u7a81\u7834\u7b56\u7565",
+      "created_at": "2026-03-20T03:14:08.227510",
+      "current_version": "cex_20260320_032026",
+      "versions": [
+        "cex_btc_5m_breakout_v1_20260320_031408",
+        "cex_20260320_031408",
+        "cex_btc_5m_breakout_v1_20260320_032026",
+        "cex_20260320_032026"
+      ]
+    },
+    "pm_br_v2_relaxed": {
+      "id": "pm_br_v2_relaxed",
+      "type": "pm",
+      "description": "PM BR\u5bbd\u677e\u7248\u7b56\u7565",
+      "created_at": "2026-03-20T03:14:08.229107",
+      "current_version": "pm_br_v2_relaxed_v1_20260320_032026",
+      "versions": [
+        "pm_br_v2_relaxed_v1_20260320_032026"
+      ]
+    }
+  },
+  "versions": {
+    "cex_btc_5m_breakout_v1_20260320_031408": {
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "strategy_id": "cex_btc_5m_breakout",
+      "parent_version": null,
+      "created_at_utc": "2026-03-20T03:14:08.230216",
+      "changed_params": {
+        "window": 5,
+        "threshold": 0.5,
+        "max_position": 0.1
+      },
+      "hypothesis": "5\u5206\u949f\u7a97\u53e3\uff0c0.5%\u7a81\u7834\u9608\u503c",
+      "status": "promoted",
+      "metrics": {
+        "sample_n": 11,
+        "win_rate": 0.55,
+        "roi_after_cost": -0.0009966841374145505,
+        "drawdown_proxy": 0.01658440345179753,
+        "orders_per_day": 0.4583333333333333,
+        "trades_per_day": 0.4166666666666667
+      },
+      "performance_history": [
+        {
+          "timestamp": "2026-03-20T03:14:08.231488",
+          "metrics": {
+            "sample_n": 100,
+            "win_rate": 0.55,
+            "roi_after_cost": 0.012,
+            "orders_per_day": 24.5
+          }
+        },
+        {
+          "timestamp": "2026-03-20T03:20:26.130106",
+          "metrics": {
+            "sample_n": 6,
+            "win_rate": 0.55,
+            "roi_after_cost": 0.010687346671452758,
+            "drawdown_proxy": 0.016948400784733753,
+            "orders_per_day": 0.25,
+            "trades_per_day": 0.25
+          }
+        },
+        {
+          "timestamp": "2026-03-20T03:20:26.139129",
+          "metrics": {
+            "sample_n": 11,
+            "win_rate": 0.55,
+            "roi_after_cost": -0.0009966841374145505,
+            "drawdown_proxy": 0.01658440345179753,
+            "orders_per_day": 0.4583333333333333,
+            "trades_per_day": 0.4166666666666667
+          }
+        }
+      ]
+    },
+    "cex_20260320_031408": {
+      "version": "cex_20260320_031408",
+      "strategy_id": "cex_btc_5m_breakout",
+      "parent_version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "created_at_utc": "2026-03-20T03:14:08.233454",
+      "changed_params": {
+        "window": 5,
+        "threshold": 0.3,
+        "max_position": 0.1
+      },
+      "hypothesis": "\u964d\u4f4e\u9608\u503c\u52300.3%\uff0c\u63d0\u9ad8\u9891\u7387",
+      "status": "testing",
+      "metrics": {
+        "sample_n": 0,
+        "win_rate": 0.0,
+        "roi_after_cost": 0.0,
+        "drawdown_proxy": 0.0,
+        "orders_per_day": 0.0,
+        "trades_per_day": 0.0
+      },
+      "performance_history": []
+    },
+    "cex_btc_5m_breakout_v1_20260320_032026": {
+      "version": "cex_btc_5m_breakout_v1_20260320_032026",
+      "strategy_id": "cex_btc_5m_breakout",
+      "parent_version": null,
+      "created_at_utc": "2026-03-20T03:20:26.119590",
+      "changed_params": {
+        "window": 5,
+        "threshold": 0.005,
+        "max_position": 0.1,
+        "stop_loss": 0.02,
+        "take_profit": 0.04
+      },
+      "hypothesis": "\u521d\u59cb\u7248\u672c: BTC 5\u5206\u949f\u7a81\u7834\u7b56\u7565",
+      "status": "testing",
+      "metrics": {
+        "sample_n": 0,
+        "win_rate": 0.0,
+        "roi_after_cost": 0.0,
+        "drawdown_proxy": 0.0,
+        "orders_per_day": 0.0,
+        "trades_per_day": 0.0
+      },
+      "performance_history": [
+        {
+          "timestamp": "2026-03-20T03:20:26.120139",
+          "metrics": {
+            "sample_n": 0,
+            "win_rate": 0.0,
+            "roi_after_cost": 0.0,
+            "drawdown_proxy": 0.0,
+            "orders_per_day": 0.0,
+            "trades_per_day": 0.0
+          }
+        }
+      ]
+    },
+    "pm_br_v2_relaxed_v1_20260320_032026": {
+      "version": "pm_br_v2_relaxed_v1_20260320_032026",
+      "strategy_id": "pm_br_v2_relaxed",
+      "parent_version": null,
+      "created_at_utc": "2026-03-20T03:20:26.121216",
+      "changed_params": {
+        "min_probability": 0.6,
+        "max_days_to_resolve": 7,
+        "min_liquidity": 1000,
+        "max_position": 0.05
+      },
+      "hypothesis": "\u521d\u59cb\u7248\u672c: PM BR\u5bbd\u677e\u7248\u7b56\u7565",
+      "status": "testing",
+      "metrics": {
+        "sample_n": 0,
+        "win_rate": 0.0,
+        "roi_after_cost": 0.0,
+        "drawdown_proxy": 0.0,
+        "orders_per_day": 0.0,
+        "trades_per_day": 0.0
+      },
+      "performance_history": [
+        {
+          "timestamp": "2026-03-20T03:20:26.122136",
+          "metrics": {
+            "sample_n": 0,
+            "win_rate": 0.0,
+            "roi_after_cost": 0.0,
+            "drawdown_proxy": 0.0,
+            "orders_per_day": 0.0,
+            "trades_per_day": 0.0
+          }
+        }
+      ]
+    },
+    "cex_20260320_032026": {
+      "version": "cex_20260320_032026",
+      "strategy_id": "cex_btc_5m_breakout",
+      "parent_version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "created_at_utc": "2026-03-20T03:20:26.140184",
+      "changed_params": {
+        "window": 3,
+        "threshold": 0.27999999999999997,
+        "max_position": 0.1,
+        "stop_loss": null,
+        "take_profit": 0.04
+      },
+      "hypothesis": "\u4f18\u5316: \u964d\u4f4e\u9608\u503c\u4ee5\u589e\u52a0\u6837\u672c, \u964d\u4f4e\u9608\u503c\u4ee5\u63d0\u9ad8\u9891\u7387, \u7f29\u77ed\u65f6\u95f4\u7a97\u53e3\u4ee5\u63d0\u9ad8\u9891\u7387, \u6dfb\u52a0\u6b62\u635f\u4ee5\u6539\u5584\u76c8\u4e8f\u6bd4, \u6dfb\u52a0\u6b62\u76c8\u4ee5\u6539\u5584\u76c8\u4e8f\u6bd4",
+      "status": "promoted",
+      "metrics": {
+        "sample_n": 16,
+        "win_rate": 0.55,
+        "roi_after_cost": 0.01064419931309937,
+        "drawdown_proxy": 0.029637757674933665,
+        "orders_per_day": 0.6666666666666666,
+        "trades_per_day": 0.625
+      },
+      "performance_history": [
+        {
+          "timestamp": "2026-03-20T03:20:26.141231",
+          "metrics": {
+            "sample_n": 147,
+            "win_rate": 0.4630228398293626,
+            "roi_after_cost": 0.004217428634062466,
+            "drawdown_proxy": 0.016765425364883537,
+            "orders_per_day": 28.35716473746042,
+            "trades_per_day": 20.160754224486617
+          }
+        },
+        {
+          "timestamp": "2026-03-20T03:20:26.152987",
+          "metrics": {
+            "sample_n": 16,
+            "win_rate": 0.55,
+            "roi_after_cost": 0.01064419931309937,
+            "drawdown_proxy": 0.029637757674933665,
+            "orders_per_day": 0.6666666666666666,
+            "trades_per_day": 0.625
+          }
+        }
+      ]
+    }
+  }
+}

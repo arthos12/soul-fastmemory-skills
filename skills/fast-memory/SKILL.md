@@ -33,7 +33,7 @@ This skill tells the agent how to:
 4. keep recent full sessions as a short-term fallback buffer
 5. move older sessions into extracted structured storage
 6. downgrade colder content when storage becomes too large
-7. automatically compact oversized files via fanout-based DAG compression (see references/compaction_rules.md)
+7. auto-compact daily notes > 200 lines into monthly summaries (see scripts/auto_compactor.py)
 
 Core principle:
 

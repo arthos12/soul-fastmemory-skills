@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "venue": "binance",
+    "symbol": "BTCUSDT",
+    "pm_market_id": null,
+    "rounds": 8,
+    "decision_delay_ms": 1500,
+    "submit_delay_ms": 1500,
+    "safe_drift_bps": 10.0,
+    "fetch1_latency_ms": {
+      "n": 8,
+      "min": 82.45,
+      "max": 90.16,
+      "avg": 85.29,
+      "median": 85.095,
+      "p95": 86.64
+    },
+    "fetch2_latency_ms": {
+      "n": 8,
+      "min": 83.27,
+      "max": 94.6,
+      "avg": 86.295,
+      "median": 85.055,
+      "p95": 87.13
+    },
+    "fetch3_latency_ms": {
+      "n": 8,
+      "min": 82.0,
+      "max": 86.11,
+      "avg": 84.3038,
+      "median": 84.205,
+      "p95": 85.51
+    },
+    "end_to_end_ms": {
+      "n": 8,
+      "min": 3166.73,
+      "max": 3179.42,
+      "avg": 3171.1813,
+      "median": 3169.44,
+      "p95": 3173.81
+    },
+    "drift_signal_to_confirm_bps": {
+      "n": 8,
+      "min": -0.0013,
+      "max": 0.0,
+      "avg": -0.0005,
+      "median": 0.0,
+      "p95": 0.0
+    },
+    "drift_signal_to_submit_bps": {
+      "n": 8,
+      "min": -0.0013,
+      "max": 0.0013,
+      "avg": 0.0,
+      "median": 0.0,
+      "p95": 0.0013
+    },
+    "safe_rate": 1.0
+  },
+  "samples": [
+    {
+      "round": 1,
+      "signal_price": 74538.26,
+      "confirm_price": 74538.26,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 90.16,
+      "fetch2_latency_ms": 84.22,
+      "fetch3_latency_ms": 84.36,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3169.14,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0013,
+      "safe": true
+    },
+    {
+      "round": 2,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.26,
+      "submit_price": 74538.26,
+      "fetch1_latency_ms": 84.45,
+      "fetch2_latency_ms": 83.27,
+      "fetch3_latency_ms": 84.74,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3168.63,
+      "drift_signal_to_confirm_bps": -0.0013,
+      "drift_signal_to_submit_bps": -0.0013,
+      "safe": true
+    },
+    {
+      "round": 3,
+      "signal_price": 74538.26,
+      "confirm_price": 74538.26,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 85.3,
+      "fetch2_latency_ms": 85.26,
+      "fetch3_latency_ms": 83.94,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3169.74,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0013,
+      "safe": true
+    },
+    {
+      "round": 4,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.26,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 84.89,
+      "fetch2_latency_ms": 84.85,
+      "fetch3_latency_ms": 83.72,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3169.09,
+      "drift_signal_to_confirm_bps": -0.0013,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 5,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.27,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 82.45,
+      "fetch2_latency_ms": 84.18,
+      "fetch3_latency_ms": 82.0,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3166.73,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 6,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.26,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 85.48,
+      "fetch2_latency_ms": 94.6,
+      "fetch3_latency_ms": 84.05,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3179.42,
+      "drift_signal_to_confirm_bps": -0.0013,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 7,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.27,
+      "submit_price": 74538.27,
+      "fetch1_latency_ms": 86.64,
+      "fetch2_latency_ms": 86.85,
+      "fetch3_latency_ms": 85.51,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3172.89,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 8,
+      "signal_price": 74538.27,
+      "confirm_price": 74538.27,
+      "submit_price": 74538.26,
+      "fetch1_latency_ms": 82.95,
+      "fetch2_latency_ms": 87.13,
+      "fetch3_latency_ms": 86.11,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3173.81,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": -0.0013,
+      "safe": true
+    }
+  ],
+  "ts": 1773780837
+}

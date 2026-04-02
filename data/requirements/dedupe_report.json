@@ -1,0 +1,275 @@
+{
+  "total": 39,
+  "dupGroups": 12,
+  "groups": {
+    "e67d73b3b69d": [
+      {
+        "id": "1773581057_requirement_intake_and_dedupe",
+        "importance": "S",
+        "type": "brain",
+        "status": "done",
+        "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）"
+      },
+      {
+        "id": "1773581370_requirement_intake_and_dedupe",
+        "importance": "S",
+        "type": "brain",
+        "status": "done",
+        "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）"
+      },
+      {
+        "id": "backlog_requirement_intake_and_dedupe",
+        "importance": "S",
+        "type": "brain",
+        "status": "done",
+        "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）"
+      }
+    ],
+    "75a49ed9b2d8": [
+      {
+        "id": "1773581057_delivery_ratio_report_v2",
+        "importance": "B",
+        "type": "business",
+        "status": "done",
+        "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）"
+      },
+      {
+        "id": "1773581370_delivery_ratio_report_v2",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）"
+      },
+      {
+        "id": "backlog_delivery_ratio_report_v2",
+        "importance": "S",
+        "type": "brain",
+        "status": "done",
+        "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）"
+      }
+    ],
+    "5c6ba167f479": [
+      {
+        "id": "1773581057_lobster_watch",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl"
+      },
+      {
+        "id": "1773581370_lobster_watch",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl"
+      },
+      {
+        "id": "backlog_lobster_watch",
+        "importance": "A",
+        "type": "business",
+        "status": "done",
+        "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl"
+      }
+    ],
+    "3f9dccc96de4": [
+      {
+        "id": "1773581057_gold_silver_watch",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl"
+      },
+      {
+        "id": "1773581370_gold_silver_watch",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl"
+      },
+      {
+        "id": "backlog_gold_silver_watch",
+        "importance": "A",
+        "type": "business",
+        "status": "done",
+        "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl"
+      }
+    ],
+    "a7c90ab8dfb3": [
+      {
+        "id": "1773581057_a_share_data_demo",
+        "importance": "A",
+        "type": "business",
+        "status": "pending",
+        "text": "A股：选1个稳定数据源，做最小demo拉指数/行业"
+      },
+      {
+        "id": "1773581370_a_share_data_demo",
+        "importance": "A",
+        "type": "business",
+        "status": "pending",
+        "text": "A股：选1个稳定数据源，做最小demo拉指数/行业"
+      },
+      {
+        "id": "backlog_a_share_data_demo",
+        "importance": "A",
+        "type": "business",
+        "status": "mvc",
+        "text": "A股：选1个稳定数据源，做最小demo拉指数/行业"
+      }
+    ],
+    "6d60b5e33efe": [
+      {
+        "id": "1773581057_polymarket_brier_scaffold",
+        "importance": "B",
+        "type": "skill",
+        "status": "pending",
+        "text": "结算后Brier score：写脚手架与数据结构"
+      },
+      {
+        "id": "1773581370_polymarket_brier_scaffold",
+        "importance": "B",
+        "type": "skill",
+        "status": "pending",
+        "text": "结算后Brier score：写脚手架与数据结构"
+      },
+      {
+        "id": "backlog_polymarket_brier_scaffold",
+        "importance": "A",
+        "type": "skill",
+        "status": "mvc",
+        "text": "结算后Brier score：写脚手架与数据结构"
+      }
+    ],
+    "078770b66589": [
+      {
+        "id": "1773581057_model_audit_auto_log",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "模型库应用审计：每次batch记录使用模型+场景+指标"
+      },
+      {
+        "id": "1773581370_model_audit_auto_log",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "模型库应用审计：每次batch记录使用模型+场景+指标"
+      },
+      {
+        "id": "backlog_model_audit_auto_log",
+        "importance": "A",
+        "type": "business",
+        "status": "mvc",
+        "text": "模型库应用审计：每次batch记录使用模型+场景+指标"
+      }
+    ],
+    "62a1a9b76784": [
+      {
+        "id": "1773581057_test_requirement_add_x",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z"
+      },
+      {
+        "id": "1773581370_test_requirement_add_x",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z"
+      },
+      {
+        "id": "backlog_test_requirement_add_x",
+        "importance": "A",
+        "type": "business",
+        "status": "mvc",
+        "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z"
+      }
+    ],
+    "1a947280fa79": [
+      {
+        "id": "1773581057_polymarket_guide_research_pipeline",
+        "importance": "B",
+        "type": "skill",
+        "status": "pending",
+        "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "1773581370_polymarket_guide_research_pipeline",
+        "importance": "B",
+        "type": "skill",
+        "status": "pending",
+        "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "backlog_polymarket_guide_research_pipeline",
+        "importance": "A",
+        "type": "skill",
+        "status": "mvc",
+        "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z"
+      }
+    ],
+    "ec6438d9508d": [
+      {
+        "id": "1773581057_brave_search_fix_or_replace",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "1773581370_brave_search_fix_or_replace",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "backlog_brave_search_fix_or_replace",
+        "importance": "A",
+        "type": "business",
+        "status": "mvc",
+        "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z"
+      }
+    ],
+    "758e2fb0a536": [
+      {
+        "id": "1773581057_long_opportunity_alert_template",
+        "importance": "B",
+        "type": "brain",
+        "status": "pending",
+        "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "1773581370_long_opportunity_alert_template",
+        "importance": "B",
+        "type": "brain",
+        "status": "pending",
+        "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z"
+      },
+      {
+        "id": "backlog_long_opportunity_alert_template",
+        "importance": "A",
+        "type": "business",
+        "status": "mvc",
+        "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z"
+      }
+    ],
+    "0f399bd195b9": [
+      {
+        "id": "1773587033_req",
+        "importance": "B",
+        "type": "business",
+        "status": "done",
+        "text": "纠错/方案/审核能力也要修"
+      },
+      {
+        "id": "1773587047148_req",
+        "importance": "B",
+        "type": "business",
+        "status": "pending",
+        "text": "纠错/方案/审核能力也要修"
+      }
+    ]
+  }
+}

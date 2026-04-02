@@ -1,0 +1,34 @@
+{
+  "ts": 1774015856,
+  "tag": "auto_141047",
+  "strategy": "BR-v2-highprob",
+  "orders_generated": 21,
+  "results_backfilled": 21,
+  "selection_reasons": {
+    "keyword_filtered": 196,
+    "too_far_end": 4061,
+    "recent": 347,
+    "ended": 155,
+    "no_end": 220,
+    "selected": 21
+  },
+  "summary": {
+    "n": 21,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 21,
+      "wins": 0,
+      "winrate": 0.0,
+      "roi_avg": 0.0,
+      "pnl_sum": 0.0,
+      "roi_n": 21
+    }
+  }
+}

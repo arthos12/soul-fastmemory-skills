@@ -1,0 +1,19 @@
+{
+  "ts": 1773938856,
+  "tag": "cex_breakout_auto",
+  "strategy": "cex_btc_5m_breakout_v1",
+  "trades_generated": 1,
+  "selection_reasons": {
+    "selected": 1,
+    "filtered": 13
+  },
+  "summary": {
+    "n": 1,
+    "wins": 0,
+    "winrate": 0.0,
+    "gross_avg": 0.0028735632183907772,
+    "net_avg": -0.00012643678160922283,
+    "net_sum": -0.00012643678160922283,
+    "max_drawdown_proxy": 0.00012643678160922283
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "ts": 1773940745,
+  "tag": "auto_171806",
+  "strategy": "BR-v2-brstyle",
+  "orders_generated": 120,
+  "results_backfilled": 120,
+  "selection_reasons": {
+    "keyword_filtered": 8365,
+    "too_far_end": 9452,
+    "ended": 1214,
+    "no_end": 317,
+    "recent": 407,
+    "selected": 120
+  },
+  "summary": {
+    "n": 120,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 120,
+      "wins": 0,
+      "winrate": 0.0,
+      "roi_avg": -0.00043140764538618815,
+      "pnl_sum": -1.0353783489268515,
+      "roi_n": 120
+    }
+  }
+}

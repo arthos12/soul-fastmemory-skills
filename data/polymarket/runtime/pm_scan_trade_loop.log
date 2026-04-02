@@ -1,0 +1,373 @@
+[2026-03-21T17:44:32.193355Z] START interval=60s scan_pages=120 cache_age=60
+[2026-03-21T17:44:32.255242Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:44:55.500595Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21665 ended:1868 no_end:311
+[2026-03-21T17:44:56.500862Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:44:58.194607Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21582 ended:1868 no_end:311
+[2026-03-21T17:44:59.194870Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:45:00.914110Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19069 no_pick:2596 ended:1883
+[2026-03-21T17:45:01.914376Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:45:03.529769Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21665 ended:1883 no_end:311
+[2026-03-21T17:46:04.585788Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:46:18.367974Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21665 ended:1883 no_end:311
+[2026-03-21T17:46:19.368207Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:46:20.983654Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21582 ended:1883 no_end:311
+[2026-03-21T17:46:21.983885Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:46:23.652384Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19069 no_pick:2596 ended:1883
+[2026-03-21T17:46:24.652631Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:46:26.249482Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21665 ended:1883 no_end:311
+[2026-03-21T17:47:27.304838Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:47:44.157836Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21665 ended:1883 no_end:311
+[2026-03-21T17:47:45.158106Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:47:47.814484Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21582 ended:1883 no_end:311
+[2026-03-21T17:47:48.814712Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:47:50.985877Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19070 no_pick:2595 ended:1883
+[2026-03-21T17:47:51.986196Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:47:53.650444Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21665 ended:1883 no_end:311
+[2026-03-21T17:48:54.705001Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:49:07.006311Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21666 ended:1882 no_end:311
+[2026-03-21T17:49:08.006557Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:49:09.620951Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21583 ended:1882 no_end:311
+[2026-03-21T17:49:10.621172Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:49:12.235752Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19070 no_pick:2596 ended:1882
+[2026-03-21T17:49:13.236004Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:49:14.864980Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21666 ended:1882 no_end:311
+[2026-03-21T17:50:15.919394Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:50:35.766874Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21666 ended:1882 no_end:311
+[2026-03-21T17:50:36.767150Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:50:38.372184Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21583 ended:1882 no_end:311
+[2026-03-21T17:50:39.372417Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:50:41.037063Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19070 no_pick:2596 ended:1882
+[2026-03-21T17:50:42.037334Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:50:43.949391Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21666 ended:1882 no_end:311
+[2026-03-21T17:51:45.004069Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:51:58.077745Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21687 ended:1882 no_end:311
+[2026-03-21T17:51:59.078018Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:52:00.728567Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21604 ended:1882 no_end:311
+[2026-03-21T17:52:01.728830Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:52:03.402007Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19091 no_pick:2596 ended:1882
+[2026-03-21T17:52:04.402256Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:52:06.027522Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21687 ended:1882 no_end:311
+[2026-03-21T17:53:07.080498Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:53:21.701571Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21687 ended:1882 no_end:311
+[2026-03-21T17:53:22.701796Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:53:24.344849Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21604 ended:1882 no_end:311
+[2026-03-21T17:53:25.345076Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:53:26.996772Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19091 no_pick:2596 ended:1882
+[2026-03-21T17:53:27.997038Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:53:29.662414Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:54:30.715660Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:54:46.722816Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21687 ended:1882 no_end:311
+[2026-03-21T17:54:47.723054Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:54:50.463110Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21604 ended:1882 no_end:311
+[2026-03-21T17:54:51.463372Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:54:53.155373Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19091 no_pick:2596 ended:1882
+[2026-03-21T17:54:54.155649Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:54:55.779049Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:55:56.833242Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:56:10.723061Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:56:11.723324Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:56:13.370216Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21604 ended:1882 no_end:311
+[2026-03-21T17:56:14.370454Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:56:15.997381Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19091 no_pick:2596 ended:1882
+[2026-03-21T17:56:16.997654Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:56:18.653665Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:57:19.711375Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:57:37.512916Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:57:38.513137Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:57:40.172652Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21604 ended:1882 no_end:311
+[2026-03-21T17:57:41.172885Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:57:43.140013Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19090 no_pick:2597 ended:1882
+[2026-03-21T17:57:44.140289Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:57:46.048793Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21645 ended:1882 no_end:311
+[2026-03-21T17:58:47.132381Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T17:59:00.634123Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21647 ended:1880 no_end:311
+[2026-03-21T17:59:01.634374Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T17:59:03.287196Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21606 ended:1880 no_end:311
+[2026-03-21T17:59:04.287451Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T17:59:05.934769Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19092 no_pick:2597 ended:1880
+[2026-03-21T17:59:06.935045Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T17:59:08.589329Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21647 ended:1880 no_end:311
+[2026-03-21T18:00:09.652346Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:00:23.010308Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21651 ended:1918 no_end:311
+[2026-03-21T18:00:24.010564Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:00:25.662928Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21610 ended:1918 no_end:311
+[2026-03-21T18:00:26.663157Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:00:28.322636Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19100 no_pick:2551 ended:1918
+[2026-03-21T18:00:29.322868Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:00:31.328861Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21651 ended:1918 no_end:311
+[2026-03-21T18:01:32.383177Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:01:43.935666Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21651 ended:1918 no_end:311
+[2026-03-21T18:01:44.935877Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:01:46.970729Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21610 ended:1918 no_end:311
+[2026-03-21T18:01:47.970988Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:01:50.903618Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19100 no_pick:2551 ended:1918
+[2026-03-21T18:01:51.903852Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:01:53.563010Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21651 ended:1918 no_end:311
+[2026-03-21T18:02:54.620155Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:03:09.204671Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21661 ended:1908 no_end:311
+[2026-03-21T18:03:10.204954Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:03:11.856259Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21620 ended:1908 no_end:311
+[2026-03-21T18:03:12.856519Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:03:14.516967Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19108 no_pick:2553 ended:1908
+[2026-03-21T18:03:15.517246Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:03:17.166665Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21661 ended:1908 no_end:311
+[2026-03-21T18:04:18.221661Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:04:37.094378Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21661 ended:1908 no_end:311
+[2026-03-21T18:04:38.094622Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:04:39.763704Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21620 ended:1908 no_end:311
+[2026-03-21T18:04:40.764002Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:04:42.427962Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19108 no_pick:2553 ended:1908
+[2026-03-21T18:04:43.428191Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:04:45.275100Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21661 ended:1908 no_end:311
+[2026-03-21T18:05:46.360667Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:06:01.697212Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21665 ended:1904 no_end:311
+[2026-03-21T18:06:02.697457Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:06:04.380051Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21624 ended:1904 no_end:311
+[2026-03-21T18:06:05.380298Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:06:07.056827Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19117 no_pick:2548 ended:1904
+[2026-03-21T18:06:08.057059Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:06:09.969617Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21665 ended:1904 no_end:311
+[2026-03-21T18:07:11.028239Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:07:24.574684Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21676 ended:1893 no_end:311
+[2026-03-21T18:07:25.574955Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:07:28.324363Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21635 ended:1893 no_end:311
+[2026-03-21T18:07:29.324641Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:07:36.236161Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19115 no_pick:2561 ended:1893
+[2026-03-21T18:07:37.236428Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:07:41.272124Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21676 ended:1893 no_end:311
+[2026-03-21T18:08:42.471015Z] PAUSED guard
+[2026-03-21T18:09:42.532486Z] PAUSED guard
+[2026-03-21T18:10:42.596918Z] PAUSED guard
+[2026-03-21T18:11:42.664923Z] PAUSED guard
+[2026-03-21T18:12:42.726472Z] PAUSED guard
+[2026-03-21T18:13:42.787867Z] PAUSED guard
+[2026-03-21T18:14:42.879317Z] PAUSED guard
+[2026-03-21T18:15:42.957412Z] PAUSED guard
+[2026-03-21T18:16:43.093098Z] PAUSED guard
+[2026-03-21T18:17:43.219416Z] PAUSED guard
+[2026-03-21T18:18:43.336272Z] PAUSED guard
+[2026-03-21T18:19:43.393564Z] PAUSED guard
+[2026-03-21T18:20:43.451809Z] PAUSED guard
+[2026-03-21T18:21:43.510726Z] PAUSED guard
+[2026-03-21T18:22:43.572818Z] PAUSED guard
+[2026-03-21T18:23:43.644458Z] PAUSED guard
+[2026-03-21T18:24:43.701562Z] PAUSED guard
+[2026-03-21T18:25:43.759192Z] PAUSED guard
+[2026-03-21T18:26:43.818570Z] PAUSED guard
+[2026-03-21T18:27:43.879672Z] PAUSED guard
+[2026-03-21T18:28:43.940883Z] PAUSED guard
+[2026-03-21T18:29:44.001965Z] PAUSED guard
+[2026-03-21T18:30:44.061008Z] PAUSED guard
+[2026-03-21T18:31:44.121788Z] PAUSED guard
+[2026-03-21T18:32:44.183365Z] PAUSED guard
+[2026-03-21T18:33:44.241572Z] PAUSED guard
+[2026-03-21T18:34:44.300216Z] PAUSED guard
+[2026-03-21T18:35:44.355508Z] PAUSED guard
+[2026-03-21T18:36:44.410141Z] PAUSED guard
+[2026-03-21T18:37:44.469837Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:38:05.352254Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21786 ended:1903 no_end:311
+[2026-03-21T18:38:06.352510Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:38:08.183858Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21744 ended:1903 no_end:311
+[2026-03-21T18:38:09.184101Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:38:10.843293Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19247 no_pick:2539 ended:1903
+[2026-03-21T18:38:11.843537Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:38:13.486138Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21786 ended:1903 no_end:311
+[2026-03-21T18:39:14.543591Z] RUN strategy=br_tail_v1 interval=60s
+[2026-03-21T18:39:28.844887Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21783 ended:1906 no_end:311
+[2026-03-21T18:39:29.845171Z] RUN strategy=test1_br_copy interval=60s
+[2026-03-21T18:39:31.855266Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21741 ended:1906 no_end:311
+[2026-03-21T18:39:32.855537Z] RUN strategy=test2_follow_br interval=60s
+[2026-03-21T18:39:34.525640Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:19247 no_pick:2536 ended:1906
+[2026-03-21T18:39:35.525882Z] RUN strategy=test3_combined interval=60s
+[2026-03-21T18:39:37.202850Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21783 ended:1906 no_end:311
+[2026-03-21T20:58:15.875307Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-21T23:22:40.081932Z] START interval=60s scan_pages=120 cache_age=60
+[2026-03-21T23:23:23.171074Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T06:53:52.628809Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T07:09:52.931389Z] HIT strategy=br_v3_short orders=1 results=1 reasons=too_far_end:43849 closed:3953 ended:3093
+[2026-03-22T07:14:14.510640Z] HIT strategy=br_v3_short orders=7 results=7 reasons=too_far_end:43759 closed:3949 ended:3060
+[2026-03-22T07:39:02.701341Z] HIT strategy=br_v3_short orders=6 results=6 reasons=too_far_end:43775 closed:3953 ended:2975
+[2026-03-22T08:00:02.160932Z] HIT strategy=br_v3_short orders=25 results=25 reasons=too_far_end:43734 closed:3955 ended:2968
+[2026-03-22T08:44:12.101717Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T08:46:12.353508Z] ERROR strategy=tail_confirm_5m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_09.json', '--tag', 'tail_confirm_5m_09_084412', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:48:13.475645Z] ERROR strategy=tail_confirm_15m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_09.json', '--tag', 'tail_confirm_15m_09_084613', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:50:14.619437Z] ERROR strategy=tail_confirm_5m_08 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_08.json', '--tag', 'tail_confirm_5m_08_084814', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:52:15.749268Z] ERROR strategy=tail_confirm_15m_08 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_08.json', '--tag', 'tail_confirm_15m_08_085015', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:54:16.997093Z] ERROR strategy=tail_confirm_5m_07 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_07.json', '--tag', 'tail_confirm_5m_07_085216', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:56:18.122313Z] ERROR strategy=tail_confirm_15m_07 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_07.json', '--tag', 'tail_confirm_15m_07_085418', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T08:58:19.256199Z] ERROR strategy=tail_confirm_5m_06 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_06.json', '--tag', 'tail_confirm_5m_06_085619', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T09:00:20.407123Z] ERROR strategy=tail_confirm_15m_06 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_06.json', '--tag', 'tail_confirm_15m_06_085820', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T09:02:21.652396Z] ERROR strategy=tail_confirm_5m_055 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_055.json', '--tag', 'tail_confirm_5m_055_090021', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T09:11:51.561778Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T09:13:51.756912Z] ERROR strategy=tail_confirm_5m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_09.json', '--tag', 'tail_confirm_5m_09_091151', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T09:15:52.888387Z] ERROR strategy=tail_confirm_15m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_09.json', '--tag', 'tail_confirm_15m_09_091352', '--scan-pages', '120', '--cache-age-sec', '60', '--use-events']' timed out after 120 seconds
+[2026-03-22T09:16:26.826503Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T09:16:44.879265Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:16:50.267784Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:16:54.374340Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:16:57.971088Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:17:02.337040Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:17:06.410537Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:17:10.758254Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:17:15.844750Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:17:21.358657Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:17:25.557772Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:17:29.284194Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:17:33.483676Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:17:36.900772Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:17:43.659435Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:17:47.038748Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:17:51.125595Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:17:55.238954Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:17:59.462665Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:18:03.778356Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:18:07.045269Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:18:12.185281Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:18:16.854934Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:18:24.601503Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T09:18:28.107281Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:18:32.257137Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:18:36.663770Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:18:40.524953Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:18:44.075270Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:18:48.213503Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:18:51.695112Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:18:54.917226Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:18:58.587237Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:19:01.832443Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:19:05.592264Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:19:10.629762Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:19:14.728780Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:19:21.510720Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:19:25.514713Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:19:29.893290Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:19:34.917751Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:19:39.421600Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:19:43.155028Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:19:46.595349Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:19:50.012611Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:19:53.822934Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:19:57.718629Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:20:01.289446Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:20:05.221076Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:20:10.087411Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:20:18.293382Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:20:23.512111Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:20:27.607382Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:20:30.838647Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:20:35.323702Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:20:39.326826Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:20:42.708883Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:20:46.400807Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:20:50.201620Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:20:54.120042Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:20:57.721595Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:21:02.301217Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:21:06.618284Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:21:14.837690Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:21:19.419428Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:21:22.775854Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:21:26.270878Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:21:30.683133Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:21:35.132787Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:21:40.222868Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:21:43.803459Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:21:47.781423Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:21:52.295348Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:21:55.632971Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:21:59.547550Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:22:02.977735Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:22:11.637353Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:22:15.310304Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:22:18.683687Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:22:22.661659Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:22:26.602043Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:22:30.509464Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:22:35.715616Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:22:40.441440Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:22:44.274295Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:22:47.829637Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:22:51.442697Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:22:55.387583Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:22:59.280315Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:23:06.383454Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:23:10.910429Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:23:14.612134Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:23:19.208139Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:23:24.494281Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:23:28.622251Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:23:31.982748Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:23:36.834702Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:23:40.419693Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:23:43.989240Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:23:48.019392Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:24:00.940641Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:24:05.423743Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:24:13.262264Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:24:18.585940Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:24:22.918439Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:24:26.569123Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:24:30.861864Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:24:35.512918Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:24:39.954287Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:24:43.559864Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:24:47.229866Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:24:50.952601Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:24:55.134160Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:24:58.469846Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:25:02.235622Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:25:09.027725Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:25:14.290211Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:25:17.979054Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:25:21.371632Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:25:25.259014Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:25:28.789498Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:25:33.201376Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:25:38.133229Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:25:42.681739Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:25:46.456489Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:25:50.188165Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:25:53.975143Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:25:57.628310Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:26:05.509086Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:26:09.319962Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:26:14.487734Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:26:17.830567Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:26:22.464409Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:26:31.173072Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:26:34.810665Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:26:40.750951Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:26:45.671679Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:26:49.921629Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:26:56.351034Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:27:01.129624Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:27:08.753313Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:27:19.182975Z] OK strategy=tail_confirm_5m_09 (parse_failed)
+[2026-03-22T09:27:25.848113Z] OK strategy=tail_confirm_15m_09 (parse_failed)
+[2026-03-22T09:27:32.571066Z] OK strategy=tail_confirm_5m_08 (parse_failed)
+[2026-03-22T09:27:38.082535Z] OK strategy=tail_confirm_15m_08 (parse_failed)
+[2026-03-22T09:27:43.188962Z] OK strategy=tail_confirm_5m_07 (parse_failed)
+[2026-03-22T09:27:49.943310Z] OK strategy=tail_confirm_15m_07 (parse_failed)
+[2026-03-22T09:27:54.319064Z] OK strategy=tail_confirm_5m_06 (parse_failed)
+[2026-03-22T09:28:00.700351Z] OK strategy=tail_confirm_15m_06 (parse_failed)
+[2026-03-22T09:28:04.451591Z] OK strategy=tail_confirm_5m_055 (parse_failed)
+[2026-03-22T09:28:10.793300Z] OK strategy=tail_confirm_15m_055 (parse_failed)
+[2026-03-22T09:28:17.647329Z] OK strategy=br_v2_highprob (parse_failed)
+[2026-03-22T09:28:25.928012Z] OK strategy=br_v3_short (parse_failed)
+[2026-03-22T09:28:31.079531Z] OK strategy=test1_br_copy (parse_failed)
+[2026-03-22T09:37:20.484393Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T09:47:38.657363Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T09:53:24.287304Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T10:16:58.748571Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T10:43:35.619276Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T12:12:02.367673Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T12:15:13.514965Z] START interval=3s scan_pages=120 cache_age=60
+[2026-03-22T12:33:10.406258Z] START interval=3s scan_pages=10 cache_age=60
+[2026-03-22T14:00:57.838347Z] START interval=3s scan_pages=10 cache_age=60
+[2026-03-22T14:27:24.431354Z] START interval=3s scan_pages=10 cache_age=60
+[2026-03-22T16:16:25.052211Z] ERROR strategy=tail_confirm_5m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_09.json', '--tag', 'tail_confirm_5m_09_161624', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.
+[2026-03-22T16:16:26.082021Z] ERROR strategy=tail_confirm_15m_09 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_09.json', '--tag', 'tail_confirm_15m_09_161626', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.
+[2026-03-22T16:16:27.103072Z] ERROR strategy=tail_confirm_5m_08 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_08.json', '--tag', 'tail_confirm_5m_08_161627', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.
+[2026-03-22T16:16:28.137263Z] ERROR strategy=tail_confirm_15m_08 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_08.json', '--tag', 'tail_confirm_15m_08_161628', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.
+[2026-03-22T16:16:29.214112Z] ERROR strategy=tail_confirm_5m_07 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_5m_07.json', '--tag', 'tail_confirm_5m_07_161629', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.
+[2026-03-22T16:16:30.254562Z] ERROR strategy=tail_confirm_15m_07 err=Command '['python3', '/root/.openclaw/workspace/scripts/pm_paper_loop.py', '--strategy', 'strategies/tail_confirm_15m_07.json', '--tag', 'tail_confirm_15m_07_161630', '--scan-pages', '10', '--cache-age-sec', '60', '--markets-file', '/root/.openclaw/workspace/data/polymarket/runtime/web_markets_latest.json']' returned non-zero exit status 1.

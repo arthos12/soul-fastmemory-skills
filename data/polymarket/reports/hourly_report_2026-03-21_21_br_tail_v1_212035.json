@@ -1,0 +1,33 @@
+{
+  "ts": 1774128052,
+  "tag": "br_tail_v1_212035",
+  "strategy": "br_tail_v1",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "closed": 3583,
+    "too_far_end": 44780,
+    "no_end": 1586,
+    "ended": 3028,
+    "no_pick": 7
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

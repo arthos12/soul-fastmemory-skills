@@ -1,0 +1,32 @@
+{
+  "ts": 1774164091,
+  "tag": "tail_confirm_5m_06_072116",
+  "strategy": "tail_confirm_5m_06",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "closed": 3978,
+    "too_far_end": 43816,
+    "no_end": 1584,
+    "ended": 2998
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

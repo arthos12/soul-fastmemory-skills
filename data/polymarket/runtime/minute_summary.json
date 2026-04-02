@@ -1,0 +1,187 @@
+{
+  "ts": 1774166400,
+  "br_tail_v1": {
+    "closed": 224321,
+    "too_far_end": 2777123,
+    "no_end": 98331,
+    "ended": 184118,
+    "keyword_filtered": 483,
+    "no_pick": 695
+  },
+  "test1_br_copy": {
+    "closed": 283633,
+    "too_far_end": 3420644,
+    "no_end": 122091,
+    "ended": 229250,
+    "keyword_filtered": 10544,
+    "no_pick": 4262,
+    "recent": 25
+  },
+  "test2_follow_br": {
+    "closed": 220772,
+    "too_far_end": 2224832,
+    "no_end": 96745,
+    "ended": 181110,
+    "no_pick": 492126,
+    "bad_prices": 16923
+  },
+  "test3_combined": {
+    "closed": 220707,
+    "too_far_end": 2732346,
+    "no_end": 96746,
+    "ended": 181050,
+    "no_pick": 1711
+  },
+  "tail_confirm_5m_99": {
+    "closed": 133794,
+    "too_far_end": 1608721,
+    "no_end": 57096,
+    "ended": 115123,
+    "no_pick": 49,
+    "keyword_filtered": 10
+  },
+  "tail_confirm_5m_98": {
+    "closed": 133790,
+    "too_far_end": 1608572,
+    "no_end": 57096,
+    "ended": 115198,
+    "no_pick": 26
+  },
+  "tail_confirm_5m_97": {
+    "closed": 133859,
+    "too_far_end": 1608749,
+    "no_end": 57096,
+    "ended": 115179,
+    "keyword_filtered": 114,
+    "no_pick": 26
+  },
+  "tail_confirm_15m_99": {
+    "closed": 133811,
+    "too_far_end": 1607698,
+    "no_end": 57096,
+    "ended": 115162,
+    "no_pick": 60,
+    "keyword_filtered": 1023
+  },
+  "tail_confirm_15m_98": {
+    "closed": 130011,
+    "too_far_end": 1563626,
+    "no_end": 55510,
+    "ended": 112398,
+    "keyword_filtered": 4,
+    "no_pick": 14
+  },
+  "tail_confirm_15m_97": {
+    "closed": 129907,
+    "too_far_end": 1563405,
+    "no_end": 55510,
+    "ended": 112395,
+    "no_pick": 28,
+    "keyword_filtered": 13
+  },
+  "tail_confirm_5m_09": {
+    "closed": 63427,
+    "too_far_end": 701161,
+    "no_end": 25344,
+    "ended": 48496,
+    "no_pick": 18,
+    "recent": 25
+  },
+  "tail_confirm_15m_09": {
+    "closed": 63487,
+    "too_far_end": 701265,
+    "no_end": 25344,
+    "ended": 48479,
+    "no_pick": 30,
+    "recent": 20
+  },
+  "tail_confirm_5m_08": {
+    "closed": 63443,
+    "too_far_end": 701214,
+    "no_end": 25344,
+    "ended": 48478,
+    "no_pick": 28,
+    "recent": 14
+  },
+  "tail_confirm_15m_08": {
+    "closed": 63447,
+    "too_far_end": 701311,
+    "no_end": 25344,
+    "ended": 48465,
+    "keyword_filtered": 39,
+    "no_pick": 52,
+    "recent": 14
+  },
+  "tail_confirm_5m_07": {
+    "closed": 63437,
+    "too_far_end": 700998,
+    "no_end": 25344,
+    "ended": 48415,
+    "keyword_filtered": 75,
+    "no_pick": 52,
+    "recent": 14
+  },
+  "tail_confirm_15m_07": {
+    "closed": 63485,
+    "too_far_end": 700906,
+    "no_end": 25344,
+    "ended": 48487,
+    "recent": 14,
+    "keyword_filtered": 36,
+    "no_pick": 21
+  },
+  "tail_confirm_5m_06": {
+    "closed": 63614,
+    "too_far_end": 701055,
+    "no_end": 25344,
+    "ended": 48483,
+    "no_pick": 28,
+    "recent": 12,
+    "keyword_filtered": 36
+  },
+  "tail_confirm_15m_06": {
+    "closed": 63614,
+    "too_far_end": 701044,
+    "no_end": 25344,
+    "ended": 48465,
+    "no_pick": 28,
+    "recent": 12,
+    "keyword_filtered": 36
+  },
+  "tail_confirm_5m_055": {
+    "closed": 63761,
+    "too_far_end": 700884,
+    "no_end": 25344,
+    "ended": 48476,
+    "no_pick": 28,
+    "recent": 12
+  },
+  "tail_confirm_15m_055": {
+    "closed": 63680,
+    "too_far_end": 700978,
+    "no_end": 25344,
+    "ended": 48455,
+    "no_pick": 52,
+    "recent": 12,
+    "keyword_filtered": 29
+  },
+  "br_v2_highprob": {
+    "closed": 63663,
+    "too_far_end": 700841,
+    "no_end": 25344,
+    "ended": 48426,
+    "no_pick": 64,
+    "recent": 12,
+    "keyword_filtered": 17
+  },
+  "br_v3_short": {
+    "closed": 63654,
+    "too_far_end": 700995,
+    "no_end": 25344,
+    "ended": 48349,
+    "selected": 39,
+    "no_pick": 44,
+    "recent": 11,
+    "keyword_filtered": 19
+  }
+}

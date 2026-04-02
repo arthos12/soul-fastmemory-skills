@@ -1,0 +1,31 @@
+{
+  "ts": 1774266919,
+  "tag": "pm_5m_t60_p051",
+  "strategy": null,
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "too_far_end": 191,
+    "ended": 8,
+    "no_end": 1
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "taskflow_heartbeat_exists": true,
   "taskflow_heartbeat": {
-    "ts": "2026-03-17T12:17:22.231929Z",
+    "ts": "2026-03-17T13:16:52.313614Z",
     "status": "alive",
-    "epoch": 1773749842
+    "epoch": 1773753412
   },
-  "taskflow_age_sec": 8,
+  "taskflow_age_sec": 1630,
   "dual_monitor_exists": true,
   "dual_monitor": {
     "ts": "2026-03-17T10:56:26.947235Z",
@@ -36,46 +36,47 @@
   },
   "br_runtime_exists": true,
   "br_runtime": {
-    "ts": "2026-03-17T12:07:39Z",
-    "tag": "cont_120739",
+    "ts": "2026-03-17T13:38:32Z",
+    "tag": "cont_133832",
     "strategy": "strategies/br_v2_relaxed.json",
-    "orders": 0,
-    "results": 0,
-    "fail_count": 11,
-    "status": "degraded"
+    "orders": 40,
+    "results": 40,
+    "fail_count": 0,
+    "status": "ok"
   },
+  "br_runtime_age_sec": 29130,
   "paper_orders": [
     {
-      "file": "paper_orders_2026-03-17_cont_120739.jsonl",
-      "lines": 0,
-      "mtime": 1773749263
+      "file": "paper_orders_2026-03-17_cont_133832.jsonl",
+      "lines": 40,
+      "mtime": 1773754717
     },
     {
-      "file": "paper_orders_2026-03-17_cont_115735.jsonl",
-      "lines": 0,
-      "mtime": 1773748659
+      "file": "paper_orders_2026-03-17_cont_132814.jsonl",
+      "lines": 40,
+      "mtime": 1773754102
     },
     {
-      "file": "paper_orders_2026-03-17_cont_114732.jsonl",
-      "lines": 0,
-      "mtime": 1773748055
+      "file": "paper_orders_2026-03-17_debug_fix2.jsonl",
+      "lines": 40,
+      "mtime": 1773753691
     }
   ],
   "paper_results": [
     {
-      "file": "paper_results_2026-03-17_cont_120739.jsonl",
-      "lines": 0,
-      "mtime": 1773749263
+      "file": "paper_results_2026-03-17_cont_133832.jsonl",
+      "lines": 40,
+      "mtime": 1773754727
     },
     {
-      "file": "paper_results_2026-03-17_cont_115735.jsonl",
-      "lines": 0,
-      "mtime": 1773748659
+      "file": "paper_results_2026-03-17_cont_132814.jsonl",
+      "lines": 40,
+      "mtime": 1773754112
     },
     {
-      "file": "paper_results_2026-03-17_cont_114732.jsonl",
-      "lines": 0,
-      "mtime": 1773748055
+      "file": "paper_results_2026-03-17_debug_fix2.jsonl",
+      "lines": 40,
+      "mtime": 1773753698
     }
   ]
 }

@@ -1,0 +1,41 @@
+{"ts": "2026-03-15T13:21:22Z", "id": "1773580882_req", "text": "效率提升：空闲不浪费", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_requirement_intake_and_dedupe", "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_delivery_ratio_report_v2", "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_lobster_watch", "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_gold_silver_watch", "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_a_share_data_demo", "text": "A股：选1个稳定数据源，做最小demo拉指数/行业", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_polymarket_brier_scaffold", "text": "结算后Brier score：写脚手架与数据结构", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_model_audit_auto_log", "text": "模型库应用审计：每次batch记录使用模型+场景+指标", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_test_requirement_add_x", "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_polymarket_guide_research_pipeline", "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_brave_search_fix_or_replace", "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:24:17Z", "id": "1773581057_long_opportunity_alert_template", "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_requirement_intake_and_dedupe", "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_delivery_ratio_report_v2", "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_lobster_watch", "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_gold_silver_watch", "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_a_share_data_demo", "text": "A股：选1个稳定数据源，做最小demo拉指数/行业", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_polymarket_brier_scaffold", "text": "结算后Brier score：写脚手架与数据结构", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_model_audit_auto_log", "text": "模型库应用审计：每次batch记录使用模型+场景+指标", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_test_requirement_add_x", "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_polymarket_guide_research_pipeline", "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_brave_search_fix_or_replace", "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:30Z", "id": "1773581370_long_opportunity_alert_template", "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_requirement_intake_and_dedupe", "text": "新需求采集/去重/依赖关系/主次标注（把聊天内容收进清单）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_delivery_ratio_report_v2", "text": "落地占比报表：新增/完成/净增/依赖链（你要看的那套）", "source": "delivery_backlog", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_lobster_watch", "text": "Lobster 0xecc…4444：一键拉取价格/量/买卖/流动性，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_gold_silver_watch", "text": "黄金白银：一键拉取价格/趋势proxy，写入csv/jsonl", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_a_share_data_demo", "text": "A股：选1个稳定数据源，做最小demo拉指数/行业", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_polymarket_brier_scaffold", "text": "结算后Brier score：写脚手架与数据结构", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_model_audit_auto_log", "text": "模型库应用审计：每次batch记录使用模型+场景+指标", "source": "delivery_backlog", "priorityHint": "P1", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_test_requirement_add_x", "text": "test requirement: add X  # mvc_at=2026-03-15T13:21:40Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_polymarket_guide_research_pipeline", "text": "不依赖Brave key的Polymarket攻略/信息源抓取与整理（含X/Twitter替代路径）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_brave_search_fix_or_replace", "text": "Brave Search 缺key的修复或替代搜索链（避免卡死）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T13:29:47Z", "id": "backlog_long_opportunity_alert_template", "text": ">50%机会提醒模板（触发/失效/风险/收益逻辑/阶段）  # mvc_at=2026-03-15T13:18:39Z", "source": "delivery_backlog", "priorityHint": "P2", "state": "inbox"}
+{"ts": "2026-03-15T15:03:53Z", "id": "1773587033_req", "text": "效率=改动速度*时间利用率", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:03:53Z", "id": "1773587033_req", "text": "要汇报并发处理需求、时间利用率、空闲了多久、最终完成数量和占比", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:03:53Z", "id": "1773587033_req", "text": "纠错/方案/审核能力也要修", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:04:07Z", "id": "1773587047094_req", "text": "效率=改动速度*时间利用率", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:04:07Z", "id": "1773587047121_req", "text": "要汇报并发处理需求、时间利用率、空闲了多久、最终完成数量和占比", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:04:07Z", "id": "1773587047148_req", "text": "纠错/方案/审核能力也要修", "source": "chat", "priorityHint": "P0", "state": "inbox"}
+{"ts": "2026-03-15T15:53:21Z", "id": "1773590001537_req", "text": "防复发：验证不阻塞；验证可以并发；不要等固定窗口", "source": "test", "priorityHint": "P0", "state": "inbox"}

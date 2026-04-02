@@ -1,0 +1,19 @@
+{
+  "ts": 1773928055,
+  "tag": "cex_reversion_auto",
+  "strategy": "cex_btc_5m_reversion_v1",
+  "trades_generated": 0,
+  "selection_reasons": {
+    "selected": 0,
+    "filtered": 29
+  },
+  "summary": {
+    "n": 0,
+    "wins": 0,
+    "winrate": null,
+    "gross_avg": null,
+    "net_avg": null,
+    "net_sum": null,
+    "max_drawdown_proxy": 0.0
+  }
+}

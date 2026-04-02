@@ -1,23 +1,23 @@
 {
   "snapshot": {
-    "ts": "2026-03-15T16:11:11Z",
+    "ts": "2026-03-15T22:23:59Z",
     "token": "0xeccbb861c0dda7efd964010085488b69317e4444",
     "pairAddress": "0x22af7297243c4eEF12E2D5A4f888b92E56BF127C",
     "dexId": "pancakeswap",
     "chainId": "bsc",
     "url": "https://dexscreener.com/bsc/0x22af7297243c4eef12e2d5a4f888b92e56bf127c",
-    "priceUsd": "0.01743",
-    "liquidityUsd": 1033677.17,
-    "fdv": 17437142,
-    "mcap": 17437142,
-    "volume24h": 2415394.34,
+    "priceUsd": "0.01777",
+    "liquidityUsd": 1048799.41,
+    "fdv": 17779653,
+    "mcap": 17779653,
+    "volume24h": 2315795.67,
     "txns24h": {
-      "buys": 5992,
-      "sells": 5331
+      "buys": 5626,
+      "sells": 5114
     },
-    "priceChange24h": 8.93,
-    "priceChange6h": -3.5,
-    "priceChange1h": 2.57,
+    "priceChange24h": 2.36,
+    "priceChange6h": 1.79,
+    "priceChange1h": 0.47,
     "pairLabel": "龙虾 / WBNB"
   },
   "raw": {
@@ -41,50 +41,50 @@
           "name": "Wrapped BNB",
           "symbol": "WBNB"
         },
-        "priceNative": "0.00002638",
-        "priceUsd": "0.01743",
+        "priceNative": "0.00002667",
+        "priceUsd": "0.01777",
         "txns": {
           "m5": {
-            "buys": 15,
-            "sells": 11
+            "buys": 2,
+            "sells": 1
           },
           "h1": {
-            "buys": 206,
-            "sells": 207
+            "buys": 45,
+            "sells": 91
           },
           "h6": {
-            "buys": 1802,
-            "sells": 1631
+            "buys": 484,
+            "sells": 563
           },
           "h24": {
-            "buys": 5992,
-            "sells": 5331
+            "buys": 5626,
+            "sells": 5114
           }
         },
         "volume": {
-          "h24": 2415394.34,
-          "h6": 735494.79,
-          "h1": 81548.94,
-          "m5": 4917.06
+          "h24": 2315795.67,
+          "h6": 232669.57,
+          "h1": 20654.39,
+          "m5": 62.4
         },
         "priceChange": {
           "m5": -0.03,
-          "h1": 2.57,
-          "h6": -3.5,
-          "h24": 8.93
+          "h1": 0.47,
+          "h6": 1.79,
+          "h24": 2.36
         },
         "liquidity": {
-          "usd": 1033677.17,
-          "base": 29623146,
-          "quote": 782.5643
+          "usd": 1048799.41,
+          "base": 29494373,
+          "quote": 786.6428
         },
-        "fdv": 17437142,
-        "marketCap": 17437142,
+        "fdv": 17779653,
+        "marketCap": 17779653,
         "pairCreatedAt": 1772182240000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -104,112 +104,50 @@
           "name": "Tether USD",
           "symbol": "USDT"
         },
-        "priceNative": "0.01752",
-        "priceUsd": "0.01752",
+        "priceNative": "0.01788",
+        "priceUsd": "0.01788",
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 0
+            "sells": 1
           },
           "h1": {
-            "buys": 30,
-            "sells": 4
+            "buys": 6,
+            "sells": 8
           },
           "h6": {
-            "buys": 218,
-            "sells": 163
+            "buys": 46,
+            "sells": 59
           },
           "h24": {
-            "buys": 718,
-            "sells": 489
+            "buys": 638,
+            "sells": 503
           }
         },
         "volume": {
-          "h24": 280229.43,
-          "h6": 92812.81,
-          "h1": 9967.85,
-          "m5": 0
+          "h24": 267716.4,
+          "h6": 27743.62,
+          "h1": 3454.54,
+          "m5": 145.19
         },
         "priceChange": {
-          "h1": 3.58,
-          "h6": -3.28,
-          "h24": 9
+          "m5": -0.07,
+          "h1": 0.84,
+          "h6": 2.04,
+          "h24": 3.71
         },
         "liquidity": {
-          "usd": 167875.49,
-          "base": 2153227,
-          "quote": 130130
+          "usd": 158263.83,
+          "base": 1677850,
+          "quote": 128251
         },
-        "fdv": 17529665,
-        "marketCap": 17529665,
+        "fdv": 17887491,
+        "marketCap": 17887491,
         "pairCreatedAt": 1772192590000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
-          "websites": [],
-          "socials": []
-        }
-      },
-      {
-        "chainId": "bsc",
-        "dexId": "uniswap",
-        "url": "https://dexscreener.com/bsc/0x9b48a2b334205906d94412a5e153b716342a2521",
-        "pairAddress": "0x9b48a2B334205906d94412A5E153B716342A2521",
-        "baseToken": {
-          "address": "0xeCCBb861c0dda7eFd964010085488B69317e4444",
-          "name": "龙虾",
-          "symbol": "龙虾"
-        },
-        "quoteToken": {
-          "address": "0x55d398326f99059fF775485246999027B3197955",
-          "name": "Tether USD",
-          "symbol": "USDT"
-        },
-        "priceNative": "0.01746",
-        "priceUsd": "0.01746",
-        "txns": {
-          "m5": {
-            "buys": 2,
-            "sells": 1
-          },
-          "h1": {
-            "buys": 60,
-            "sells": 44
-          },
-          "h6": {
-            "buys": 498,
-            "sells": 430
-          },
-          "h24": {
-            "buys": 1684,
-            "sells": 1493
-          }
-        },
-        "volume": {
-          "h24": 232135.21,
-          "h6": 52753.26,
-          "h1": 6174.3,
-          "m5": 86.68
-        },
-        "priceChange": {
-          "m5": 0.18,
-          "h1": 2.62,
-          "h6": -3.34,
-          "h24": 9.03
-        },
-        "liquidity": {
-          "usd": 43748.2,
-          "base": 426803,
-          "quote": 36294
-        },
-        "fdv": 17464277,
-        "marketCap": 17464277,
-        "pairCreatedAt": 1773070584000,
-        "info": {
-          "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
-          "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -232,50 +170,113 @@
           "name": "Tether USD",
           "symbol": "USDT"
         },
-        "priceNative": "0.01747",
-        "priceUsd": "0.01747",
+        "priceNative": "0.01776",
+        "priceUsd": "0.01776",
         "txns": {
           "m5": {
             "buys": 4,
-            "sells": 3
+            "sells": 1
           },
           "h1": {
-            "buys": 93,
-            "sells": 66
+            "buys": 31,
+            "sells": 41
           },
           "h6": {
-            "buys": 838,
-            "sells": 689
+            "buys": 234,
+            "sells": 299
           },
           "h24": {
-            "buys": 1982,
-            "sells": 1799
+            "buys": 2041,
+            "sells": 1962
           }
         },
         "volume": {
-          "h24": 269750.01,
-          "h6": 125203.81,
-          "h1": 11189.7,
-          "m5": 717.85
+          "h24": 312455.87,
+          "h6": 48084.34,
+          "h1": 4341.83,
+          "m5": 68.48
         },
         "priceChange": {
-          "m5": 0.15,
-          "h1": 2.76,
-          "h6": -3.25,
-          "h24": 8.57
+          "m5": -0.02,
+          "h1": 0.34,
+          "h6": 1.69,
+          "h24": 2
         },
         "liquidity": {
-          "usd": 37522.98,
-          "base": 632510,
-          "quote": 26472
+          "usd": 38503.27,
+          "base": 604665,
+          "quote": 27762
         },
-        "fdv": 17471039,
-        "marketCap": 17471039,
+        "fdv": 17763436,
+        "marketCap": 17763436,
         "pairCreatedAt": 1773040284000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
+          "websites": [],
+          "socials": []
+        }
+      },
+      {
+        "chainId": "bsc",
+        "dexId": "uniswap",
+        "url": "https://dexscreener.com/bsc/0x9b48a2b334205906d94412a5e153b716342a2521",
+        "pairAddress": "0x9b48a2B334205906d94412A5E153B716342A2521",
+        "baseToken": {
+          "address": "0xeCCBb861c0dda7eFd964010085488B69317e4444",
+          "name": "龙虾",
+          "symbol": "龙虾"
+        },
+        "quoteToken": {
+          "address": "0x55d398326f99059fF775485246999027B3197955",
+          "name": "Tether USD",
+          "symbol": "USDT"
+        },
+        "priceNative": "0.01776",
+        "priceUsd": "0.01776",
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 1
+          },
+          "h1": {
+            "buys": 10,
+            "sells": 22
+          },
+          "h6": {
+            "buys": 106,
+            "sells": 171
+          },
+          "h24": {
+            "buys": 1447,
+            "sells": 1462
+          }
+        },
+        "volume": {
+          "h24": 196630.26,
+          "h6": 13603.66,
+          "h1": 1167.89,
+          "m5": 20.21
+        },
+        "priceChange": {
+          "m5": -0.08,
+          "h1": 0.5,
+          "h6": 1.75,
+          "h24": 2.23
+        },
+        "liquidity": {
+          "usd": 43894.9,
+          "base": 402139,
+          "quote": 36752
+        },
+        "fdv": 17761718,
+        "marketCap": 17761718,
+        "pairCreatedAt": 1773070584000,
+        "info": {
+          "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
+          "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -298,49 +299,50 @@
           "name": "Tether USD",
           "symbol": "USDT"
         },
-        "priceNative": "0.01751",
-        "priceUsd": "0.01751",
+        "priceNative": "0.01788",
+        "priceUsd": "0.01788",
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 0
+            "sells": 1
           },
           "h1": {
-            "buys": 16,
+            "buys": 6,
             "sells": 2
           },
           "h6": {
-            "buys": 70,
-            "sells": 65
+            "buys": 23,
+            "sells": 30
           },
           "h24": {
-            "buys": 297,
-            "sells": 194
+            "buys": 266,
+            "sells": 210
           }
         },
         "volume": {
-          "h24": 11561.02,
-          "h6": 3344.5,
-          "h1": 423.15,
-          "m5": 0
+          "h24": 11449.61,
+          "h6": 1673.23,
+          "h1": 178.92,
+          "m5": 19.6
         },
         "priceChange": {
-          "h1": 3.08,
-          "h6": -3.41,
-          "h24": 9.12
+          "m5": -0.19,
+          "h1": 0.98,
+          "h6": 2.09,
+          "h24": 3.35
         },
         "liquidity": {
-          "usd": 12304.32,
-          "base": 126205,
-          "quote": 10093
+          "usd": 12353.13,
+          "base": 114243,
+          "quote": 10310
         },
-        "fdv": 17514640,
-        "marketCap": 17514640,
+        "fdv": 17880491,
+        "marketCap": 17880491,
         "pairCreatedAt": 1772227850000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -363,50 +365,50 @@
           "name": "Wrapped BNB",
           "symbol": "WBNB"
         },
-        "priceNative": "0.00002640",
-        "priceUsd": "0.01745",
+        "priceNative": "0.00002668",
+        "priceUsd": "0.01778",
         "txns": {
           "m5": {
-            "buys": 1,
-            "sells": 0
+            "buys": 0,
+            "sells": 2
           },
           "h1": {
-            "buys": 17,
-            "sells": 16
+            "buys": 6,
+            "sells": 11
           },
           "h6": {
-            "buys": 137,
-            "sells": 145
+            "buys": 48,
+            "sells": 52
           },
           "h24": {
-            "buys": 444,
-            "sells": 446
+            "buys": 418,
+            "sells": 436
           }
         },
         "volume": {
-          "h24": 3644.14,
-          "h6": 1099.6,
-          "h1": 113.96,
-          "m5": 0.6
+          "h24": 3717.95,
+          "h6": 523.57,
+          "h1": 63.52,
+          "m5": 5.26
         },
         "priceChange": {
-          "m5": 0.21,
-          "h1": 2.23,
-          "h6": -3.51,
-          "h24": 9
+          "m5": -0.23,
+          "h1": 0.63,
+          "h6": 1.92,
+          "h24": 1.89
         },
         "liquidity": {
-          "usd": 1574.91,
-          "base": 58032,
-          "quote": 0.8506
+          "usd": 1818.09,
+          "base": 64294,
+          "quote": 1.0117
         },
-        "fdv": 17452162,
-        "marketCap": 17452162,
+        "fdv": 17788489,
+        "marketCap": 17788489,
         "pairCreatedAt": 1773040224000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -429,49 +431,48 @@
           "name": "Wrapped BNB",
           "symbol": "WBNB"
         },
-        "priceNative": "0.00002656",
-        "priceUsd": "0.01752",
+        "priceNative": "0.00002684",
+        "priceUsd": "0.01782",
         "txns": {
           "m5": {
             "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 10,
+            "buys": 0,
             "sells": 0
           },
           "h6": {
-            "buys": 43,
-            "sells": 39
+            "buys": 8,
+            "sells": 10
           },
           "h24": {
-            "buys": 157,
-            "sells": 106
+            "buys": 133,
+            "sells": 111
           }
         },
         "volume": {
-          "h24": 1655.25,
-          "h6": 450.17,
-          "h1": 60.14,
+          "h24": 1535.31,
+          "h6": 114.41,
+          "h1": 0,
           "m5": 0
         },
         "priceChange": {
-          "h1": 3.16,
-          "h6": -2.87,
-          "h24": 9.09
+          "h6": 1.71,
+          "h24": 3.01
         },
         "liquidity": {
-          "usd": 1795.64,
-          "base": 52583,
-          "quote": 1.3243
+          "usd": 1820.81,
+          "base": 51587,
+          "quote": 1.3568
         },
-        "fdv": 17528935,
-        "marketCap": 17528935,
+        "fdv": 17828898,
+        "marketCap": 17828898,
         "pairCreatedAt": 1773040127000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -494,8 +495,8 @@
           "name": "Tether USD",
           "symbol": "USDT"
         },
-        "priceNative": "0.01691",
-        "priceUsd": "0.01691",
+        "priceNative": "0.01766",
+        "priceUsd": "0.01766",
         "txns": {
           "m5": {
             "buys": 0,
@@ -506,36 +507,36 @@
             "sells": 0
           },
           "h6": {
-            "buys": 51,
-            "sells": 21
+            "buys": 2,
+            "sells": 1
           },
           "h24": {
-            "buys": 59,
-            "sells": 27
+            "buys": 58,
+            "sells": 28
           }
         },
         "volume": {
-          "h24": 91.01,
-          "h6": 90.73,
+          "h24": 92.78,
+          "h6": 1.78,
           "h1": 0,
           "m5": 0
         },
         "priceChange": {
-          "h6": -5.32,
-          "h24": 4.71
+          "h6": 4.44,
+          "h24": 5.18
         },
         "liquidity": {
-          "usd": 0.63,
-          "base": 18.8095,
-          "quote": 0.3181
+          "usd": 0.65,
+          "base": 18.445,
+          "quote": 0.3258
         },
-        "fdv": 16915925,
-        "marketCap": 16915925,
+        "fdv": 17666522,
+        "marketCap": 17666522,
         "pairCreatedAt": 1773252803000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/abF-1etIMTlpBRiB?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/QK_1VWWX3qxr0UGS?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0xeccbb861c0dda7efd964010085488b69317e4444?timestamp=1773613500000",
           "websites": [],
           "socials": []
         }
@@ -558,49 +559,50 @@
           "name": "龙虾",
           "symbol": "龙虾"
         },
-        "priceNative": "0.009135",
-        "priceUsd": "0.0001586",
+        "priceNative": "0.01126",
+        "priceUsd": "0.0002000",
         "txns": {
           "m5": {
-            "buys": 0,
-            "sells": 0
+            "buys": 4,
+            "sells": 1
           },
           "h1": {
-            "buys": 1,
-            "sells": 3
+            "buys": 4,
+            "sells": 5
           },
           "h6": {
-            "buys": 14,
-            "sells": 11
+            "buys": 46,
+            "sells": 33
           },
           "h24": {
-            "buys": 84,
-            "sells": 118
+            "buys": 106,
+            "sells": 107
           }
         },
         "volume": {
-          "h24": 114.6,
-          "h6": 22.39,
-          "h1": 2.99,
-          "m5": 0
+          "h24": 171.58,
+          "h6": 87.95,
+          "h1": 5.07,
+          "m5": 2.43
         },
         "priceChange": {
-          "h1": 1.42,
-          "h6": -2.47,
-          "h24": -2.42
+          "m5": 0.37,
+          "h1": -0.1,
+          "h6": 26.11,
+          "h24": 23.45
         },
         "liquidity": {
-          "usd": 390.67,
-          "base": 1231583,
-          "quote": 11243
+          "usd": 443.96,
+          "base": 1110935,
+          "quote": 12479
         },
-        "fdv": 158658,
-        "marketCap": 158658,
+        "fdv": 200090,
+        "marketCap": 200090,
         "pairCreatedAt": 1772293500000,
         "info": {
           "imageUrl": "https://cdn.dexscreener.com/cms/images/5JtG9zxHA70xfdZc?width=800&height=800&quality=95&format=auto",
           "header": "https://cdn.dexscreener.com/cms/images/I0c86nN-aR_DIQ9u?width=1500&height=500&quality=95&format=auto",
-          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0x36a650e757da5fb28f1c50c3405360f60c5bffff?timestamp=1773591000000",
+          "openGraph": "https://cdn.dexscreener.com/token-images/og/bsc/0x36a650e757da5fb28f1c50c3405360f60c5bffff?timestamp=1773613500000",
           "websites": [
             {
               "url": "https://willu.app",
@@ -654,17 +656,17 @@
           },
           "h24": {
             "buys": 0,
-            "sells": 4
+            "sells": 2
           }
         },
         "volume": {
-          "h24": 0.04,
+          "h24": 0.02,
           "h6": 0,
           "h1": 0,
           "m5": 0
         },
         "priceChange": {
-          "h24": -16.99
+          "h24": -0.83
         },
         "liquidity": {
           "usd": 0.35,
@@ -674,6 +676,62 @@
         "fdv": 52207196468894,
         "marketCap": 52207196468894,
         "pairCreatedAt": 1773436518000
+      },
+      {
+        "chainId": "bsc",
+        "dexId": "pancakeswap",
+        "url": "https://dexscreener.com/bsc/0xdcf4d247bea42222de9646d638b78d407aaef88b",
+        "pairAddress": "0xDcF4D247beA42222DE9646D638b78D407aaef88b",
+        "labels": [
+          "v2"
+        ],
+        "baseToken": {
+          "address": "0xC61C42aC45c98E2D09F22d5f1f9b881f84879888",
+          "name": "养龙虾",
+          "symbol": "养龙虾"
+        },
+        "quoteToken": {
+          "address": "0xeCCBb861c0dda7eFd964010085488B69317e4444",
+          "name": "龙虾",
+          "symbol": "龙虾"
+        },
+        "priceNative": "173.8309",
+        "priceUsd": "3.14",
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h6": {
+            "buys": 0,
+            "sells": 2
+          },
+          "h24": {
+            "buys": 0,
+            "sells": 2
+          }
+        },
+        "volume": {
+          "h24": 23.12,
+          "h6": 23.12,
+          "h1": 0,
+          "m5": 0
+        },
+        "priceChange": {
+          "h6": -1.45,
+          "h24": -1.45
+        },
+        "liquidity": {
+          "usd": 6222.74,
+          "base": 990.8716,
+          "quote": 172244
+        },
+        "fdv": 3140,
+        "marketCap": 3140
       }
     ]
   }

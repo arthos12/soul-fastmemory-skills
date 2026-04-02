@@ -1,0 +1,9 @@
+{
+  "name": "cex_btc_5m_breakout_v1",
+  "holdBars": 1,
+  "feeBps": 10,
+  "slippageBps": 5,
+  "breakoutLookback": 8,
+  "breakoutVolMult": 1.4,
+  "requireTrendFilter": true
+}

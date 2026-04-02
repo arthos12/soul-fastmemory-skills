@@ -45,16 +45,15 @@ def main():
     else:
         print("  无需调整 ✅")
     
-    # 4. 记忆压缩检查
+    # 4. 记忆压缩检查（极简版）
     print("\n【记忆】压缩检查")
     try:
         r = subprocess.run(
-            ["python3", "scripts/auto_compactor.py", "--check-only"],
-            capture_output=True, text=True, timeout=30
+            ["python3", "scripts/auto_compactor.py", "--dry"],
+            capture_output=True, text=True, timeout=15
         )
-        # 提取关键行输出
         for line in r.stdout.split("\n"):
-            if "超长文件" in line or "需要合并" in line or "✅" in line or "⚠️" in line:
+            if "✅" in line or "将合并" in line:
                 print(f"  {line.strip()}")
     except Exception as e:
         print(f"  压缩检查跳过: {e}")

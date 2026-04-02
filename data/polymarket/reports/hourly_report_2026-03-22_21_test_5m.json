@@ -1,0 +1,31 @@
+{
+  "ts": 1774214264,
+  "tag": "test_5m",
+  "strategy": "BR-v4-5min-test",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "too_far_end": 3673,
+    "ended": 132,
+    "no_end": 195
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

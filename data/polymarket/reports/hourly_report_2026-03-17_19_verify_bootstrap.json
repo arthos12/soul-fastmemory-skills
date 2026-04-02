@@ -1,0 +1,33 @@
+{
+  "ts": 1773776050,
+  "tag": "verify_bootstrap",
+  "strategy": "BR-v2-relaxed",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "recent": 1525,
+    "no_pick": 32,
+    "ended": 28,
+    "no_end": 152,
+    "too_far_end": 263
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "ts": 1773831992,
+  "registry": "strategies/strategy_registry.json",
+  "strategies_run": 5,
+  "results": [
+    {
+      "id": "pm_br_v2_relaxed",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v2_relaxed.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v2_relaxed"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-18_pm_br_v2_relaxed.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-18_pm_br_v2_relaxed.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-18_11_pm_br_v2_relaxed.json\", \"ts\": 1773831998, \"tag\": \"pm_br_v2_relaxed\", \"strategy\": \"BR-v2-relaxed\", \"orders_generated\": 16, \"results_backfilled\": 16, \"selection_reasons\": {\"recent\": 1527, \"no_pick\": 31, \"ended\": 28, \"no_end\": 149, \"too_far_end\": 249, \"selected\": 16}, \"summary\": {\"n\": 16, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 16, \"wins\": 0, \"winrate\": 0.0, \"roi_avg\": 0.0, \"pnl_sum\": 0.0, \"roi_n\": 16}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-18_pm_br_v2_relaxed.jsonl",
+      "summary": {
+        "n": 16,
+        "realized_n": 0,
+        "m2m_n": 16,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": 0.0,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": 0.0,
+        "max_drawdown_proxy": 0.0
+      }
+    },
+    {
+      "id": "pm_br_v2_highprob",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v2_highprob.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v2_highprob"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-18_pm_br_v2_highprob.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-18_pm_br_v2_highprob.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-18_11_pm_br_v2_highprob.json\", \"ts\": 1773831999, \"tag\": \"pm_br_v2_highprob\", \"strategy\": \"BR-v2-highprob\", \"orders_generated\": 0, \"results_backfilled\": 0, \"selection_reasons\": {\"recent\": 1543, \"too_far_end\": 280, \"ended\": 28, \"no_end\": 149}, \"summary\": {\"n\": 0, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-18_pm_br_v2_highprob.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0
+      }
+    },
+    {
+      "id": "pm_br_v3_short",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v3_short.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v3_short"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-18_pm_br_v3_short.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-18_pm_br_v3_short.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-18_11_pm_br_v3_short.json\", \"ts\": 1773831999, \"tag\": \"pm_br_v3_short\", \"strategy\": \"BR-v3-short-updown\", \"orders_generated\": 0, \"results_backfilled\": 0, \"selection_reasons\": {\"recent\": 1543, \"too_far_end\": 280, \"ended\": 28, \"no_end\": 149}, \"summary\": {\"n\": 0, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-18_pm_br_v3_short.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0
+      }
+    },
+    {
+      "id": "cex_btc_5m_breakout_v1",
+      "kind": "cex_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/cex_paper_loop.py",
+          "--strategy",
+          "strategies/cex_btc_5m_breakout_v1.json",
+          "--klines",
+          "data/cex/binance_btcusdt_5m.json",
+          "--outdir",
+          "data/cex",
+          "--tag",
+          "cex_btc_5m_breakout_v1"
+        ],
+        "stdout": "{\"orders\": \"data/cex/paper_orders_2026-03-18_cex_btc_5m_breakout_v1.jsonl\", \"results\": \"data/cex/paper_results_2026-03-18_cex_btc_5m_breakout_v1.jsonl\", \"report\": \"data/cex/reports/hourly_report_2026-03-18_11_cex_btc_5m_breakout_v1.json\", \"ts\": 1773831999, \"tag\": \"cex_btc_5m_breakout_v1\", \"strategy\": \"cex_btc_5m_breakout_v1\", \"trades_generated\": 5, \"selection_reasons\": {\"selected\": 5, \"filtered\": 9}, \"summary\": {\"n\": 5, \"wins\": 2, \"winrate\": 0.4, \"gross_avg\": 0.002089890398108756, \"net_avg\": -0.0009101096018912439, \"net_sum\": -0.004550548009456219, \"max_drawdown_proxy\": 0.004874414245548292}}",
+        "stderr": ""
+      },
+      "resultPath": "data/cex/paper_results_2026-03-18_cex_btc_5m_breakout_v1.jsonl",
+      "summary": {
+        "n": 5,
+        "realized_n": 5,
+        "m2m_n": 0,
+        "winrate_realized": 0.4,
+        "roi_avg_realized": -0.0009101096018912439,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": -0.004550548009456219,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.004874414245548292,
+        "feeBps": 10,
+        "slippageBps": 5
+      }
+    },
+    {
+      "id": "cex_btc_5m_reversion_v1",
+      "kind": "cex_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/cex_paper_loop.py",
+          "--strategy",
+          "strategies/cex_btc_5m_reversion_v1.json",
+          "--klines",
+          "data/cex/binance_btcusdt_5m.json",
+          "--outdir",
+          "data/cex",
+          "--tag",
+          "cex_btc_5m_reversion_v1"
+        ],
+        "stdout": "{\"orders\": \"data/cex/paper_orders_2026-03-18_cex_btc_5m_reversion_v1.jsonl\", \"results\": \"data/cex/paper_results_2026-03-18_cex_btc_5m_reversion_v1.jsonl\", \"report\": \"data/cex/reports/hourly_report_2026-03-18_11_cex_btc_5m_reversion_v1.json\", \"ts\": 1773831999, \"tag\": \"cex_btc_5m_reversion_v1\", \"strategy\": \"cex_btc_5m_reversion_v1\", \"trades_generated\": 0, \"selection_reasons\": {\"selected\": 0, \"filtered\": 29}, \"summary\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"gross_avg\": null, \"net_avg\": null, \"net_sum\": null, \"max_drawdown_proxy\": 0.0}}",
+        "stderr": ""
+      },
+      "resultPath": "data/cex/paper_results_2026-03-18_cex_btc_5m_reversion_v1.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0,
+        "feeBps": 10,
+        "slippageBps": 5
+      }
+    }
+  ]
+}

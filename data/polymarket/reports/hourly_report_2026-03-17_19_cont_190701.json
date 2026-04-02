@@ -1,0 +1,34 @@
+{
+  "ts": 1773774436,
+  "tag": "cont_190701",
+  "strategy": "BR-v2-relaxed",
+  "orders_generated": 40,
+  "results_backfilled": 40,
+  "selection_reasons": {
+    "recent": 1440,
+    "no_pick": 32,
+    "ended": 28,
+    "no_end": 152,
+    "too_far_end": 263,
+    "selected": 40
+  },
+  "summary": {
+    "n": 40,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 40,
+      "wins": 0,
+      "winrate": 0.0,
+      "roi_avg": 0.0,
+      "pnl_sum": 0.0,
+      "roi_n": 40
+    }
+  }
+}

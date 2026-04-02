@@ -1,0 +1,33 @@
+{
+  "ts": 1774130140,
+  "tag": "test3_combined_215525",
+  "strategy": "test3_combined",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "closed": 3657,
+    "too_far_end": 44717,
+    "no_end": 1586,
+    "ended": 2848,
+    "no_pick": 104
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

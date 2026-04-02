@@ -1,62 +1,62 @@
-# Preemptive Foresight
+# Preemptive Foresight System (v2)
 
 ## Purpose
-Turn preemptive prediction into a bottom-layer capability instead of a task-specific trick.
-The agent should not wait for problems to appear before improving the plan.
+Upgrade foresight from a basic concept to a mature, bottom-layer reasoning system.
+It ensures plans are forward-looking, risks are pre-empted, and the agent's capability improves over time.
 
-## Core definition
-Preemptive foresight means:
-Before answering, executing, migrating, or committing to a plan, run the minimum necessary forward-looking check.
+## 1. Fixed Execution Flow
+Foresight is not optional. Every meaningful task should follow this flow:
+1. **Goal Check**: What is the real objective?
+2. **Path Identification**: What is the primary path?
+3. **Foresight Layer**:
+   - Where will this path likely fail first?
+   - What critical dependencies are missing?
+   - What are the major uncertainties?
+4. **Plan Refinement**: Adjust path or add backups based on foresight.
+5. **Execution**: Proceed with the refined plan.
+6. **Comparison**: Check real results against initial predictions.
 
-It asks:
-- Is this path actually feasible?
-- Where is it most likely to fail first?
-- Which dependencies are missing now but will block later?
-- Which boundary will require user confirmation?
-- What backup path should exist if the main path breaks?
-- If this is transferred to another bot or environment, which parts will survive and which will fail?
+## 2. Layered Foresight Objects
+Do not just "predict broadly." Predict across these 5 layers:
+- **Task**: Will the objective drift or be misunderstood?
+- **Path**: Will the technical/logical route actually work?
+- **Resource**: Are tools, time, permissions, or context sufficient?
+- **Interaction**: Where is a user decision strictly required?
+- **Transfer**: Can this logic be moved to another bot or environment successfully?
 
-## Why it is a bottom-layer capability
-It improves not only one task, but the quality of:
-- planning
-- execution success rate
-- autonomous progress
-- migration to other bots
-- reduction of future rework
+## 3. Failure Tree Template
+When assessing risks, use this internal structure:
+- **Symptom**: The visible failure.
+- **Upstream**: The failure that triggered the symptom.
+- **Root Cause**: The shared cause (logic, understanding, execution, or recovery).
+- **Intervention**: The action taken now to prevent the root cause.
+- **Fallback**: What to do if the intervention fails.
 
-## 4 sub-capabilities
-### 1. Path foresight
-Judge whether the current route is really viable.
+## 4. Plan Integration Rule
+A "forward-looking plan" must include:
+- **Main Path**: The most efficient route.
+- **Critical Dependencies**: What must exist for it to work.
+- **High-Prob Failure Nodes**: Points identified by foresight.
+- **Backup/Alternative Paths**: If main path is blocked.
+- **Confirmation Boundaries**: Where the user must decide.
 
-### 2. Failure foresight
-Predict the most likely failure points before they happen.
+## 5. Capability Growth Loop (Feedback)
+At the end of a session or task, run a mini-review:
+1. What was predicted correctly?
+2. What was missed or under-judged?
+3. Which failure point was not seen in advance?
+4. How to update foresight patterns for next time?
+5. Sync these lessons back into Soul/Skill.
 
-### 3. Boundary foresight
-Predict where permissions, risk, or uncertainty will require user confirmation.
+## 6. Transferability Layer
+For skill migration:
+- Predict which foresight rules are model-dependent.
+- Predict which rules a "weaker bot" can actually handle.
+- Provide downgraded/simplified foresight protocols for weaker models.
 
-### 4. Transfer foresight
-Predict what will happen when the same logic is moved to another bot, environment, or later session.
-
-## Planning rule
-When making a plan, do not only design the current workable path.
-Also evaluate:
-- likely future blockers
-- dependency gaps
-- high-probability failure nodes
-- fallback paths
-- confirmation boundaries
-
-## Upgrade loop
-Preemptive foresight should improve continuously:
-1. predict before acting
-2. execute
-3. compare real result vs prediction
-4. record misses / correct hits
-5. update future foresight patterns
-
-## Anti-overuse rule
-Do not turn foresight into endless speculation.
-Run the minimum necessary forward-looking layer, then return to action.
+## Anti-Pattern Rule
+- No speculative paralysis: Foresight must lead to action, not endless thinking.
+- No "reaction-only" patching: If a failure occurs, ask why it wasn't predicted.
 
 ## Goal
-Make plans more forward-looking, reduce rework, and help the agent act more like a mature decision-maker.
+Make foresight a default, self-improving brain layer that raises plan quality and execution stability.

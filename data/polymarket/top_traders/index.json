@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-03-21T04:07:00Z",
+  "source": "Polymarket Leaderboard",
+  "traders": [
+    {
+      "rank": 0,
+      "name": "BoneReader",
+      "username": "BoneReader",
+      "monthly_pnl": 452686,
+      "data_dir": "br",
+      "notes": "参考标杆 - Crypto 5分钟短线"
+    },
+    {
+      "rank": 1,
+      "name": "HorizonSplendidView",
+      "monthly_pnl": 4016107,
+      "data_file": "horizon_user.html",
+      "notes": "月度盈利$400万 - 体育预测"
+    },
+    {
+      "rank": 2,
+      "name": "reachingthesky",
+      "monthly_pnl": 3742635,
+      "data_file": "reaching_user.html",
+      "notes": "月度盈利$370万"
+    },
+    {
+      "rank": 3,
+      "name": "majorexploiter",
+      "monthly_pnl": 2416975,
+      "data_file": "major_user.html",
+      "notes": "名字暗示套利模式"
+    }
+  ]
+}

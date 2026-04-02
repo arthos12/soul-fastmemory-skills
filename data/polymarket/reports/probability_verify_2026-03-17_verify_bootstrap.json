@@ -1,0 +1,9 @@
+{
+  "results_path": "data/polymarket/paper_results_2026-03-17_verify_bootstrap.jsonl",
+  "realized_n": 0,
+  "bucket_width": 0.05,
+  "brier_score": null,
+  "ece": null,
+  "discrimination": null,
+  "buckets": []
+}

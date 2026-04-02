@@ -1,0 +1,32 @@
+{
+  "name": "BR-v2-highprob",
+  "mode": "highprob",
+  "minPrice": 0.5,
+  "maxMinsToEnd": 525600,
+  "maxOrders": 40,
+  "sizeUSD": 50,
+  "requireAcceptingOrders": false,
+  "dedupLookbackHours": 6,
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "eth",
+    "solana",
+    "sol",
+    "xrp",
+    "doge",
+    "dogecoin",
+    "bnb",
+    "avax",
+    "cardano",
+    "ada",
+    "litecoin",
+    "ltc",
+    "ton",
+    "toncoin",
+    "up or down"
+  ],
+  "source": "gamma-api(active scan cached)",
+  "minTick": 0.0005
+}

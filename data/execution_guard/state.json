@@ -1,0 +1,18 @@
+{
+  "mainlines": {
+    "multi_strategy_engine": {
+      "active": true,
+      "started_at": 1773831992,
+      "last_progress_at": 1773831999,
+      "last_artifact_at": 1773831999,
+      "last_retro_at": 1773831999,
+      "status": "active",
+      "self_prompt": "继续往下推进，不要停在解释层"
+    }
+  },
+  "regressions": {
+    "unnecessary_confirmation": 0,
+    "no_artifact_reply": 0,
+    "mainline_stall": 0
+  }
+}

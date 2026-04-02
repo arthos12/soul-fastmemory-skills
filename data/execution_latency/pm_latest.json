@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "venue": "pm",
+    "symbol": null,
+    "pm_market_id": "540844",
+    "rounds": 6,
+    "decision_delay_ms": 1500,
+    "submit_delay_ms": 1500,
+    "safe_drift_bps": 20.0,
+    "fetch1_latency_ms": {
+      "n": 6,
+      "min": 23.25,
+      "max": 218.37,
+      "avg": 58.9417,
+      "median": 25.885,
+      "p95": 36.24
+    },
+    "fetch2_latency_ms": {
+      "n": 6,
+      "min": 24.66,
+      "max": 32.66,
+      "avg": 27.2017,
+      "median": 26.625,
+      "p95": 27.84
+    },
+    "fetch3_latency_ms": {
+      "n": 6,
+      "min": 19.59,
+      "max": 33.52,
+      "avg": 24.9833,
+      "median": 24.56,
+      "p95": 27.11
+    },
+    "end_to_end_ms": {
+      "n": 6,
+      "min": 3044.94,
+      "max": 3066.86,
+      "avg": 3052.755,
+      "median": 3052.07,
+      "p95": 3054.76
+    },
+    "drift_signal_to_confirm_bps": {
+      "n": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "avg": 0.0,
+      "median": 0.0,
+      "p95": 0.0
+    },
+    "drift_signal_to_submit_bps": {
+      "n": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "avg": 0.0,
+      "median": 0.0,
+      "p95": 0.0
+    },
+    "safe_rate": 1.0
+  },
+  "samples": [
+    {
+      "round": 1,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 218.37,
+      "fetch2_latency_ms": 27.09,
+      "fetch3_latency_ms": 27.11,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3054.76,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 2,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 36.24,
+      "fetch2_latency_ms": 24.66,
+      "fetch3_latency_ms": 20.56,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3045.83,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 3,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 24.86,
+      "fetch2_latency_ms": 32.66,
+      "fetch3_latency_ms": 33.52,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3066.86,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 4,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 26.91,
+      "fetch2_latency_ms": 27.84,
+      "fetch3_latency_ms": 23.34,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3051.67,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 5,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 24.02,
+      "fetch2_latency_ms": 24.8,
+      "fetch3_latency_ms": 19.59,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3044.94,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    },
+    {
+      "round": 6,
+      "signal_price": 0.515,
+      "confirm_price": 0.515,
+      "submit_price": 0.515,
+      "fetch1_latency_ms": 23.25,
+      "fetch2_latency_ms": 26.16,
+      "fetch3_latency_ms": 25.78,
+      "decision_delay_ms": 1500,
+      "submit_delay_ms": 1500,
+      "end_to_end_ms": 3052.47,
+      "drift_signal_to_confirm_bps": 0.0,
+      "drift_signal_to_submit_bps": 0.0,
+      "safe": true
+    }
+  ],
+  "ts": 1773780874
+}

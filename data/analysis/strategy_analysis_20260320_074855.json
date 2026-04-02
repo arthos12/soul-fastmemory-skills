@@ -1,0 +1,729 @@
+{
+  "pm_strategies": {
+    "2026-03-17_brseed": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_br_v2_relaxed": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_r1": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_r2": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_r3": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_r4": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_085556": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_090603": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_091610": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_092617": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_093624": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_094631": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_095637": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_100643": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_101651": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_debug_fix1": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_131804": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_debug_fix2": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_132814": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_133832": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_134848": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_135908": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_140923": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_141940": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_142959": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_144018": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_145034": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_150050": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    },
+    "2026-03-17_cont_151107": {
+      "total_orders": 0,
+      "win_orders": 0,
+      "lose_orders": 0,
+      "total_pnl": 0,
+      "win_rate": 0,
+      "roi": 0,
+      "timestamp": "",
+      "sample_size": 1
+    }
+  },
+  "cex_strategies": {},
+  "configs": {
+    "br_v2_highprob": {
+      "name": "BR-v2-highprob",
+      "params": {
+        "mode": "highprob",
+        "minPrice": 0.5,
+        "maxMinsToEnd": 525600,
+        "maxOrders": 40,
+        "sizeUSD": 50,
+        "requireAcceptingOrders": false,
+        "dedupLookbackHours": 6,
+        "keywords": [
+          "bitcoin",
+          "btc",
+          "ethereum",
+          "eth",
+          "solana",
+          "sol",
+          "xrp",
+          "doge",
+          "dogecoin",
+          "bnb",
+          "avax",
+          "cardano",
+          "ada",
+          "litecoin",
+          "ltc",
+          "ton",
+          "toncoin",
+          "up or down"
+        ],
+        "source": "gamma-api(active scan cached)",
+        "minTick": 0.0005
+      },
+      "file_size": 518,
+      "modified": "2026-03-19T10:20:20.537722"
+    },
+    "br_v2_relaxed": {
+      "name": "BR-v2-relaxed",
+      "params": {
+        "mode": "highprob",
+        "minPrice": 0.7,
+        "maxMinsToEnd": 360,
+        "maxOrders": 60,
+        "sizeUSD": 50,
+        "edgeThreshold": 0.03,
+        "requireAcceptingOrders": false,
+        "keywords": [
+          "bitcoin",
+          "btc",
+          "ethereum",
+          "eth",
+          "solana",
+          "sol",
+          "xrp",
+          "up or down",
+          "higher than",
+          "lower than",
+          "above",
+          "below",
+          "close higher",
+          "close lower",
+          "rise or fall",
+          "\u6da8\u8fd8\u662f\u8dcc"
+        ],
+        "source": "gamma-api(active scan cached)",
+        "minTick": 0.0005
+      },
+      "file_size": 442,
+      "modified": "2026-03-19T16:21:15.839375"
+    },
+    "br_v3_short": {
+      "name": "BR-v3-short-updown",
+      "params": {
+        "mode": "highprob",
+        "minPrice": 0.7,
+        "maxMinsToEnd": 60,
+        "edgeThreshold": 0.03,
+        "maxOrders": 30,
+        "sizeUSD": 50,
+        "requireAcceptingOrders": false,
+        "keywords": [
+          "up or down",
+          "bitcoin",
+          "btc",
+          "ethereum",
+          "eth",
+          "solana",
+          "sol",
+          "xrp"
+        ],
+        "source": "gamma-api(active scan cached)",
+        "minTick": 0.0005
+      },
+      "file_size": 351,
+      "modified": "2026-03-19T16:21:15.855374"
+    },
+    "br_v2_verify": {
+      "name": "BR-v2-verify",
+      "params": {
+        "version": "br_v2_verify",
+        "mode": "highprob",
+        "minPrice": 0.6,
+        "edgeThreshold": 0.08,
+        "maxMinsToEnd": 90,
+        "maxOrders": 20,
+        "sizeUSD": 1,
+        "requireAcceptingOrders": false,
+        "keywords": [
+          "up or down",
+          "bitcoin",
+          "btc",
+          "ethereum",
+          "eth",
+          "solana",
+          "sol",
+          "xrp"
+        ],
+        "source": "gamma-api(active scan cached)",
+        "minTick": 0.0005,
+        "dedupLookbackHours": 0
+      },
+      "file_size": 400,
+      "modified": "2026-03-18T03:34:28.764716"
+    },
+    "strategy_registry": {
+      "name": "strategy_registry",
+      "params": {
+        "strategies": [
+          {
+            "id": "pm_br_v2_relaxed",
+            "kind": "pm_paper",
+            "enabled": true,
+            "strategyPath": "strategies/br_v2_relaxed.json",
+            "outdir": "data/polymarket",
+            "tag": "pm_br_v2_relaxed"
+          },
+          {
+            "id": "pm_br_v2_highprob",
+            "kind": "pm_paper",
+            "enabled": true,
+            "strategyPath": "strategies/br_v2_highprob.json",
+            "outdir": "data/polymarket",
+            "tag": "pm_br_v2_highprob"
+          },
+          {
+            "id": "pm_br_v3_short",
+            "kind": "pm_paper",
+            "enabled": true,
+            "strategyPath": "strategies/br_v3_short.json",
+            "outdir": "data/polymarket",
+            "tag": "pm_br_v3_short"
+          },
+          {
+            "id": "cex_btc_5m_breakout_v1",
+            "kind": "cex_paper",
+            "enabled": true,
+            "symbol": "BTCUSDT",
+            "venue": "binance",
+            "timeframe": "5m",
+            "feeBps": 10,
+            "slippageBps": 5,
+            "strategyVersion": "cex_btc_5m_breakout_v1",
+            "strategyPath": "strategies/cex_btc_5m_breakout_v1.json",
+            "klinesPath": "data/cex/binance_btcusdt_5m.json",
+            "outdir": "data/cex"
+          },
+          {
+            "id": "cex_btc_5m_reversion_v1",
+            "kind": "cex_paper",
+            "enabled": true,
+            "symbol": "BTCUSDT",
+            "venue": "binance",
+            "timeframe": "5m",
+            "feeBps": 10,
+            "slippageBps": 5,
+            "strategyVersion": "cex_btc_5m_reversion_v1",
+            "strategyPath": "strategies/cex_btc_5m_reversion_v1.json",
+            "klinesPath": "data/cex/binance_btcusdt_5m.json",
+            "outdir": "data/cex"
+          }
+        ]
+      },
+      "file_size": 1515,
+      "modified": "2026-03-18T04:22:05.654166"
+    },
+    "cex_btc_5m_breakout_v1": {
+      "name": "cex_btc_5m_breakout_v1",
+      "params": {
+        "holdBars": 1,
+        "feeBps": 10,
+        "slippageBps": 5,
+        "breakoutLookback": 8,
+        "breakoutVolMult": 1.4,
+        "requireTrendFilter": true
+      },
+      "file_size": 173,
+      "modified": "2026-03-19T16:21:15.826375"
+    },
+    "cex_btc_5m_reversion_v1": {
+      "name": "cex_btc_5m_reversion_v1",
+      "params": {
+        "holdBars": 1,
+        "feeBps": 10,
+        "slippageBps": 5,
+        "mode": "reversion",
+        "reversionDropThreshold": -0.006
+      },
+      "file_size": 152,
+      "modified": "2026-03-19T16:21:15.832375"
+    },
+    "br_v2_brstyle": {
+      "name": "BR-v2-brstyle",
+      "params": {
+        "mode": "highprob",
+        "minPrice": 0.2,
+        "maxMinsToEnd": 52447,
+        "maxOrders": 120,
+        "sizeUSD": 20,
+        "edgeThreshold": 0.03,
+        "requireAcceptingOrders": false,
+        "dedupLookbackHours": 2,
+        "keywords": [
+          "bitcoin",
+          "btc",
+          "ethereum",
+          "eth",
+          "solana",
+          "sol",
+          "xrp",
+          "up or down",
+          "higher than",
+          "lower than",
+          "above",
+          "below",
+          "close higher",
+          "close lower",
+          "rise or fall",
+          "\u6da8\u8fd8\u662f\u8dcc"
+        ],
+        "source": "gamma-api(active scan cached)",
+        "minTick": 0.0005
+      },
+      "file_size": 554,
+      "modified": "2026-03-20T02:21:22.214041"
+    }
+  },
+  "trends": {
+    "overall": {
+      "avg_win_rate": 0,
+      "max_win_rate": 0,
+      "min_win_rate": 0,
+      "avg_roi": 0,
+      "max_roi": 0,
+      "min_roi": 0
+    },
+    "by_strategy": {
+      "2026-03-17_brseed": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_br_v2_relaxed": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_r1": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_r2": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_r3": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_r4": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_085556": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_090603": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_091610": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_092617": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_093624": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_094631": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_095637": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_100643": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_101651": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_debug_fix1": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_131804": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_debug_fix2": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_132814": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_133832": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_134848": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_135908": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_140923": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_141940": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_142959": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_144018": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_145034": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_150050": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      },
+      "2026-03-17_cont_151107": {
+        "win_rate": 0,
+        "roi": 0,
+        "orders": 0,
+        "status": "\u65e0\u6570\u636e"
+      }
+    },
+    "recommendations": []
+  }
+}

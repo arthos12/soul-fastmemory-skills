@@ -24,6 +24,7 @@ Build, solidify, publish, and validate a transferable capability stack centered 
 - Need an explicit capability-transfer assessment layer for predicting which abilities can transfer well and which may fail on weaker bots.
 - Need continuing task-file mechanism integrated into soul/skill so future mainline tasks automatically get durable file tracking.
 - Need to verify whether the new weak-bot training structure actually improves other bots in real tasks.
+- Need to close the gap between “rule saved” and “working state restored”, especially for autonomous mainline pushing / idle-time task continuation.
 
 ## Current progress update
 - Added understanding-first principle and new-bot understanding upgrade path into `SOUL.md` and `soul-booster`.
@@ -31,3 +32,4 @@ Build, solidify, publish, and validate a transferable capability stack centered 
 
 ## Next actionable step
 - Prepare the actual install/update and validation run for another bot using the new weak-bot training structure.
+- Turn the new session-restore recovery plan into transferable skill behavior, so other bots recover trained working state instead of only recalling text.

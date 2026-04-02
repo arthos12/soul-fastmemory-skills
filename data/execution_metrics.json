@@ -1,0 +1,592 @@
+{
+  "executions": [
+    {
+      "execution_id": "exec_1773976683_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:18:03.554244",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976681.0542219,
+        "decision_timestamp": 1773976681.5542228,
+        "signal_price": 50000.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976682.0542245,
+        "fill_timestamp": 1773976682.554225,
+        "confirm_price": 50002.5,
+        "fill_price": 50003.0,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.0001
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0009536743164,
+        "submit_latency_ms": 500.0016689300537,
+        "fill_latency_ms": 500.0004768371582,
+        "total_latency_ms": 1500.0030994415283,
+        "signal_to_confirm_drift_bps": 0.5,
+        "confirm_to_fill_drift_bps": 0.0999950002499875,
+        "total_price_drift_bps": 0.6,
+        "slippage_bps": 1.0,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.123255",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976776.123202,
+        "decision_timestamp": 1773976776.623202,
+        "signal_price": 50000.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976777.123202,
+        "fill_timestamp": 1773976777.623202,
+        "confirm_price": 49991.74549963702,
+        "fill_price": 50040.225468912766,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 5.548709025959413e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 500.0,
+        "total_latency_ms": 1500.0,
+        "signal_to_confirm_drift_bps": -1.6509000725956866,
+        "confirm_to_fill_drift_bps": 9.69759483114992,
+        "total_price_drift_bps": 8.045093782553158,
+        "slippage_bps": 0.5548709025959413,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.123598",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976786.1232197,
+        "decision_timestamp": 1773976786.6232197,
+        "signal_price": 50100.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976787.1232197,
+        "fill_timestamp": 1773976787.8232198,
+        "confirm_price": 50076.04761809097,
+        "fill_price": 50097.884547461384,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00010926109924468616
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 700.0000476837158,
+        "total_latency_ms": 1700.0000476837158,
+        "signal_to_confirm_drift_bps": -4.780914552700963,
+        "confirm_to_fill_drift_bps": 4.360753375936823,
+        "total_price_drift_bps": -0.4222460156917166,
+        "slippage_bps": 1.0926109924468617,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.124629",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976796.1232255,
+        "decision_timestamp": 1773976796.6232255,
+        "signal_price": 50200.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976797.1232255,
+        "fill_timestamp": 1773976798.0232255,
+        "confirm_price": 50201.371378062424,
+        "fill_price": 50164.374509746165,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00010822279631513343
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 900.0000953674316,
+        "total_latency_ms": 1900.0000953674316,
+        "signal_to_confirm_drift_bps": 0.2731828809609364,
+        "confirm_to_fill_drift_bps": -7.3696927595141535,
+        "total_price_drift_bps": -7.0967112059432,
+        "slippage_bps": 1.0822279631513343,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.126368",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976806.1232307,
+        "decision_timestamp": 1773976806.6232307,
+        "signal_price": 50300.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976807.1232307,
+        "fill_timestamp": 1773976808.2232306,
+        "confirm_price": 50296.891134860954,
+        "fill_price": 50305.93250224761,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 6.380535333697996e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1099.9999046325684,
+        "total_latency_ms": 2099.9999046325684,
+        "signal_to_confirm_drift_bps": -0.6180646399692882,
+        "confirm_to_fill_drift_bps": 1.797599649333063,
+        "total_price_drift_bps": 1.1794239060857674,
+        "slippage_bps": 0.6380535333697995,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.127858",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976816.1232378,
+        "decision_timestamp": 1773976816.6232378,
+        "signal_price": 50400.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976817.1232378,
+        "fill_timestamp": 1773976818.4232378,
+        "confirm_price": 50402.33009546738,
+        "fill_price": 50438.95618908865,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 7.97775924768525e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1299.9999523162842,
+        "total_latency_ms": 2299.999952316284,
+        "signal_to_confirm_drift_bps": 0.4623205292427017,
+        "confirm_to_fill_drift_bps": 7.266746111120288,
+        "total_price_drift_bps": 7.729402596953785,
+        "slippage_bps": 0.797775924768525,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.130802",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976776.1307638,
+        "decision_timestamp": 1773976776.6307638,
+        "signal_price": 50000.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976777.1307638,
+        "fill_timestamp": 1773976777.6307638,
+        "confirm_price": 49987.37546550037,
+        "fill_price": 50027.265169991886,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00012703288443287233
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 500.0,
+        "total_latency_ms": 1500.0,
+        "signal_to_confirm_drift_bps": -2.524906899925554,
+        "confirm_to_fill_drift_bps": 7.979955762839437,
+        "total_price_drift_bps": 5.453033998377213,
+        "slippage_bps": 1.2703288443287233,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.132018",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976786.1307783,
+        "decision_timestamp": 1773976786.6307783,
+        "signal_price": 50100.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976787.1307783,
+        "fill_timestamp": 1773976787.8307784,
+        "confirm_price": 50097.62026139479,
+        "fill_price": 50135.65447891928,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 6.711730574050578e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 700.0000476837158,
+        "total_latency_ms": 1700.0000476837158,
+        "signal_to_confirm_drift_bps": -0.47499772559084835,
+        "confirm_to_fill_drift_bps": 7.592020803789938,
+        "total_price_drift_bps": 7.116662458937647,
+        "slippage_bps": 0.6711730574050577,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.134070",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976796.1307843,
+        "decision_timestamp": 1773976796.6307843,
+        "signal_price": 50200.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976797.1307843,
+        "fill_timestamp": 1773976798.0307844,
+        "confirm_price": 50188.20717279691,
+        "fill_price": 50223.99352366763,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 9.726748855285155e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 900.0000953674316,
+        "total_latency_ms": 1900.0000953674316,
+        "signal_to_confirm_drift_bps": -2.3491687655560343,
+        "confirm_to_fill_drift_bps": 7.130430211924412,
+        "total_price_drift_bps": 4.779586387974494,
+        "slippage_bps": 0.9726748855285156,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.135509",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976806.130788,
+        "decision_timestamp": 1773976806.630788,
+        "signal_price": 50300.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976807.130788,
+        "fill_timestamp": 1773976808.230788,
+        "confirm_price": 50306.84538367447,
+        "fill_price": 50295.32706624912,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 8.137535553860663e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1099.9999046325684,
+        "total_latency_ms": 2099.9999046325684,
+        "signal_to_confirm_drift_bps": 1.3609112672895776,
+        "confirm_to_fill_drift_bps": -2.2896123454970136,
+        "total_price_drift_bps": -0.9290126741313072,
+        "slippage_bps": 0.8137535553860662,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.137172",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_btc_5m_breakout_v1_20260320_031408",
+      "signal_data": {
+        "signal_timestamp": 1773976816.1307912,
+        "decision_timestamp": 1773976816.6307912,
+        "signal_price": 50400.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976817.1307912,
+        "fill_timestamp": 1773976818.4307911,
+        "confirm_price": 50378.28260526481,
+        "fill_price": 50366.92012507661,
+        "filled": false,
+        "fee": 0.001,
+        "slippage": 0.00016402167323631222
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1299.9999523162842,
+        "total_latency_ms": 2299.999952316284,
+        "signal_to_confirm_drift_bps": -4.309006891903014,
+        "confirm_to_fill_drift_bps": -2.2554322220997305,
+        "total_price_drift_bps": -6.56346724670382,
+        "slippage_bps": 1.6402167323631223,
+        "fee_bps": 10.0
+      },
+      "status": "rejected"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.144013",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_20260320_032026",
+      "signal_data": {
+        "signal_timestamp": 1773976776.1439805,
+        "decision_timestamp": 1773976776.6439805,
+        "signal_price": 50000.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976777.1439805,
+        "fill_timestamp": 1773976777.6439805,
+        "confirm_price": 50003.46686787431,
+        "fill_price": 50040.26794951424,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 6.508829524038205e-05
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 500.0,
+        "total_latency_ms": 1500.0,
+        "signal_to_confirm_drift_bps": 0.6933735748621984,
+        "confirm_to_fill_drift_bps": 7.35970602541743,
+        "total_price_drift_bps": 8.053589902847307,
+        "slippage_bps": 0.6508829524038205,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.144868",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_20260320_032026",
+      "signal_data": {
+        "signal_timestamp": 1773976786.1439924,
+        "decision_timestamp": 1773976786.6439924,
+        "signal_price": 50100.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976787.1439924,
+        "fill_timestamp": 1773976787.8439925,
+        "confirm_price": 50109.88749843893,
+        "fill_price": 50117.86544540507,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00014092077017906012
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 700.0000476837158,
+        "total_latency_ms": 1700.0000476837158,
+        "signal_to_confirm_drift_bps": 1.973552582621379,
+        "confirm_to_fill_drift_bps": 1.59209037665184,
+        "total_price_drift_bps": 3.5659571666806795,
+        "slippage_bps": 1.4092077017906013,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.146441",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_20260320_032026",
+      "signal_data": {
+        "signal_timestamp": 1773976796.143997,
+        "decision_timestamp": 1773976796.643997,
+        "signal_price": 50200.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976797.143997,
+        "fill_timestamp": 1773976798.043997,
+        "confirm_price": 50204.32351501618,
+        "fill_price": 50184.194275470974,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.0001951227276445233
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 900.0000953674316,
+        "total_latency_ms": 1900.0000953674316,
+        "signal_to_confirm_drift_bps": 0.861257971350226,
+        "confirm_to_fill_drift_bps": -4.009463356115747,
+        "total_price_drift_bps": -3.148550702993149,
+        "slippage_bps": 1.951227276445233,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.148073",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_20260320_032026",
+      "signal_data": {
+        "signal_timestamp": 1773976806.1439996,
+        "decision_timestamp": 1773976806.6439996,
+        "signal_price": 50300.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976807.1439996,
+        "fill_timestamp": 1773976808.2439995,
+        "confirm_price": 50281.890889591894,
+        "fill_price": 50268.64358780989,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00014549251420343617
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1099.9999046325684,
+        "total_latency_ms": 2099.9999046325684,
+        "signal_to_confirm_drift_bps": -3.60022075707874,
+        "confirm_to_fill_drift_bps": -2.6346069226174005,
+        "total_price_drift_bps": -6.233879163043185,
+        "slippage_bps": 1.4549251420343616,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    },
+    {
+      "execution_id": "exec_1773976826_cex_btc_5m_breakout",
+      "timestamp": "2026-03-20T03:20:26.150379",
+      "strategy_id": "cex_btc_5m_breakout",
+      "version": "cex_20260320_032026",
+      "signal_data": {
+        "signal_timestamp": 1773976816.1440017,
+        "decision_timestamp": 1773976816.6440017,
+        "signal_price": 50400.0,
+        "signal_ttl_seconds": 30,
+        "drift_threshold_bps": 50,
+        "expected_edge_bps": 25,
+        "min_edge_threshold_bps": 10
+      },
+      "execution_data": {
+        "submit_timestamp": 1773976817.1440017,
+        "fill_timestamp": 1773976818.4440017,
+        "confirm_price": 50423.4218368849,
+        "fill_price": 50353.2314179241,
+        "filled": true,
+        "fee": 0.001,
+        "slippage": 0.00018599850155955362
+      },
+      "metrics": {
+        "decision_latency_ms": 500.0,
+        "submit_latency_ms": 500.0,
+        "fill_latency_ms": 1299.9999523162842,
+        "total_latency_ms": 2299.999952316284,
+        "signal_to_confirm_drift_bps": 4.647189858115737,
+        "confirm_to_fill_drift_bps": -13.920201446832104,
+        "total_price_drift_bps": -9.279480570615032,
+        "slippage_bps": 1.8599850155955362,
+        "fee_bps": 10.0
+      },
+      "status": "completed"
+    }
+  ],
+  "summary": {
+    "cex_btc_5m_breakout": {
+      "total_executions": 16,
+      "completed": 0,
+      "rejected": 0,
+      "avg_decision_latency_ms": 500.0,
+      "avg_total_latency_ms": 2299.999952316284,
+      "avg_price_drift_bps": -9.279480570615032,
+      "max_price_drift_bps": 9.279480570615032,
+      "rejection_reasons": {}
+    }
+  }
+}

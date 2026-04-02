@@ -1,0 +1,20 @@
+{
+  "trend": {
+    "n": 500,
+    "hit": 0.482,
+    "avg_pnl": -0.028,
+    "total_pnl": -14.0
+  },
+  "meanrev": {
+    "n": 43,
+    "hit": 0.3721,
+    "avg_pnl": -0.1379,
+    "total_pnl": -5.93
+  },
+  "overall": {
+    "n": 543,
+    "hit": 0.4733,
+    "avg_pnl": -0.0367,
+    "total_pnl": -19.93
+  }
+}

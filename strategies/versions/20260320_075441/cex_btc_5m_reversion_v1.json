@@ -1,0 +1,8 @@
+{
+  "name": "cex_btc_5m_reversion_v1",
+  "holdBars": 1,
+  "feeBps": 10,
+  "slippageBps": 5,
+  "mode": "reversion",
+  "reversionDropThreshold": -0.006
+}

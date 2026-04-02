@@ -1,0 +1,130 @@
+{
+  "positions_count": 32,
+  "window_counts": {
+    "5m": 14,
+    "15m": 10
+  },
+  "coin_counts": {
+    "XRP": 11,
+    "Bitcoin": 8,
+    "Solana": 8,
+    "Ethereum": 5
+  },
+  "cur_price_bins": {
+    "<=0.02": 20,
+    "0.02-0.10": 1,
+    "0.10-0.40": 3,
+    "0.40-0.60": 0,
+    "0.60-0.90": 4,
+    ">=0.90": 4
+  },
+  "outcome_counts": {
+    "Up": 15,
+    "Down": 17
+  },
+  "cashPnl_sum_positions": 343.26357865457226,
+  "cashPnl_pos_sum": 414.5619851082554,
+  "cashPnl_neg_sum": -71.29840645368303,
+  "top_abs_cashPnl": [
+    {
+      "size": 416.447578,
+      "avgPrice": 0.169334,
+      "currentValue": 328.99358662000003,
+      "cashPnl": 258.474852446948,
+      "percentPnl": 366.5335963244239,
+      "curPrice": 0.79,
+      "title": "Solana Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 2006.41316,
+      "avgPrice": 0.94,
+      "currentValue": 2005.40995342,
+      "cashPnl": 119.38158302000022,
+      "percentPnl": 6.329787234042565,
+      "curPrice": 0.9995,
+      "title": "Bitcoin Up or Down - March 16, 2PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 66.38631,
+      "avgPrice": 0.502586,
+      "currentValue": 59.482133759999996,
+      "cashPnl": 26.117303762339997,
+      "percentPnl": 78.2779464609042,
+      "curPrice": 0.896,
+      "title": "Bitcoin Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Up"
+    },
+    {
+      "size": 351.67183,
+      "avgPrice": 0.174094,
+      "currentValue": 36.57387032,
+      "cashPnl": -24.650085252020002,
+      "percentPnl": -40.262157225406966,
+      "curPrice": 0.104,
+      "title": "Bitcoin Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 62.189157,
+      "avgPrice": 0.391286,
+      "currentValue": 1.86567471,
+      "cashPnl": -22.468071775902,
+      "percentPnl": -92.33297383499537,
+      "curPrice": 0.03,
+      "title": "XRP Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Up"
+    },
+    {
+      "size": 782.485677,
+      "avgPrice": 0.220334,
+      "currentValue": 164.32199217,
+      "cashPnl": -8.086206986118018,
+      "percentPnl": -4.6901522234426025,
+      "curPrice": 0.21,
+      "title": "Solana Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Up"
+    },
+    {
+      "size": 19.14828,
+      "avgPrice": 0.47,
+      "currentValue": 16.3717794,
+      "cashPnl": 7.372087800000001,
+      "percentPnl": 81.91489361702129,
+      "curPrice": 0.855,
+      "title": "XRP Up or Down - March 16, 4PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 1052.944,
+      "avgPrice": 0.0097,
+      "currentValue": 4.738248,
+      "cashPnl": -5.4753088000000005,
+      "percentPnl": -53.608247422680414,
+      "curPrice": 0.0045,
+      "title": "Ethereum Up or Down - March 16, 4:30PM-4:45PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 9.863967,
+      "avgPrice": 0.489999,
+      "currentValue": 0.004931983500000001,
+      "cashPnl": -4.828401982533,
+      "percentPnl": -99.89795897542648,
+      "curPrice": 0.0005,
+      "title": "Bitcoin Up or Down - March 16, 3PM ET",
+      "outcome": "Down"
+    },
+    {
+      "size": 9.863967,
+      "avgPrice": 0.489999,
+      "currentValue": 1.4302752149999998,
+      "cashPnl": -3.403058751033001,
+      "percentPnl": -70.40810287367934,
+      "curPrice": 0.145,
+      "title": "XRP Up or Down - March 16, 4PM ET",
+      "outcome": "Up"
+    }
+  ]
+}

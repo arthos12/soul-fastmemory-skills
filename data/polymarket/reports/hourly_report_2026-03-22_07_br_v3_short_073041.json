@@ -1,0 +1,32 @@
+{
+  "ts": 1774164655,
+  "tag": "br_v3_short_073041",
+  "strategy": "BR-v3-short-updown",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "closed": 3952,
+    "too_far_end": 43763,
+    "no_end": 1584,
+    "ended": 2989
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}

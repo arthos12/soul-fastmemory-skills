@@ -1,0 +1,27 @@
+{
+  "name": "BR-v3-short-updown_opt_260320_0754",
+  "mode": "highprob",
+  "minPrice": 0.5,
+  "maxMinsToEnd": 60,
+  "edgeThreshold": 0.03,
+  "maxOrders": 30,
+  "sizeUSD": 50,
+  "requireAcceptingOrders": false,
+  "keywords": [
+    "up or down",
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "eth",
+    "solana",
+    "sol",
+    "xrp"
+  ],
+  "source": "gamma-api(active scan cached)",
+  "minTick": 0.0005,
+  "optimized_from": "br_v3_short",
+  "optimization_date": "2026-03-20T07:54:41.523384",
+  "changes_applied": [
+    "minPrice: 0.7\u21920.5"
+  ]
+}

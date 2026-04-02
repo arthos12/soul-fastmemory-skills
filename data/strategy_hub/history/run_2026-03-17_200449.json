@@ -1,0 +1,100 @@
+{
+  "ts": 1773777888,
+  "registry": "strategies/strategy_registry.json",
+  "strategies_run": 3,
+  "results": [
+    {
+      "id": "pm_br_v2_relaxed",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v2_relaxed.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v2_relaxed"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-17_pm_br_v2_relaxed.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-17_pm_br_v2_relaxed.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-17_20_pm_br_v2_relaxed.json\", \"ts\": 1773777889, \"tag\": \"pm_br_v2_relaxed\", \"strategy\": \"BR-v2-relaxed\", \"orders_generated\": 0, \"results_backfilled\": 0, \"selection_reasons\": {\"recent\": 1525, \"no_pick\": 32, \"ended\": 28, \"no_end\": 152, \"too_far_end\": 263}, \"summary\": {\"n\": 0, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-17_pm_br_v2_relaxed.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0
+      }
+    },
+    {
+      "id": "pm_br_v2_highprob",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v2_highprob.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v2_highprob"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-17_pm_br_v2_highprob.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-17_pm_br_v2_highprob.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-17_20_pm_br_v2_highprob.json\", \"ts\": 1773777889, \"tag\": \"pm_br_v2_highprob\", \"strategy\": \"BR-v2-highprob\", \"orders_generated\": 0, \"results_backfilled\": 0, \"selection_reasons\": {\"recent\": 1525, \"too_far_end\": 295, \"ended\": 28, \"no_end\": 152}, \"summary\": {\"n\": 0, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-17_pm_br_v2_highprob.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0
+      }
+    },
+    {
+      "id": "pm_br_v3_short",
+      "kind": "pm_paper",
+      "run": {
+        "ok": true,
+        "cmd": [
+          "python3",
+          "scripts/pm_paper_loop.py",
+          "--strategy",
+          "strategies/br_v3_short.json",
+          "--outdir",
+          "data/polymarket",
+          "--tag",
+          "pm_br_v3_short"
+        ],
+        "stdout": "{\"orders\": \"data/polymarket/paper_orders_2026-03-17_pm_br_v3_short.jsonl\", \"results\": \"data/polymarket/paper_results_2026-03-17_pm_br_v3_short.jsonl\", \"report\": \"data/polymarket/reports/hourly_report_2026-03-17_20_pm_br_v3_short.json\", \"ts\": 1773777889, \"tag\": \"pm_br_v3_short\", \"strategy\": \"BR-v3-short-updown\", \"orders_generated\": 0, \"results_backfilled\": 0, \"selection_reasons\": {\"recent\": 1525, \"too_far_end\": 295, \"ended\": 28, \"no_end\": 152}, \"summary\": {\"n\": 0, \"realized\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}, \"m2m\": {\"n\": 0, \"wins\": 0, \"winrate\": null, \"roi_avg\": null, \"pnl_sum\": null, \"roi_n\": 0}}}",
+        "stderr": ""
+      },
+      "resultPath": "data/polymarket/paper_results_2026-03-17_pm_br_v3_short.jsonl",
+      "summary": {
+        "n": 0,
+        "realized_n": 0,
+        "m2m_n": 0,
+        "winrate_realized": null,
+        "roi_avg_realized": null,
+        "roi_avg_m2m": null,
+        "pnl_sum_realized": null,
+        "pnl_sum_m2m": null,
+        "max_drawdown_proxy": 0.0
+      }
+    }
+  ]
+}

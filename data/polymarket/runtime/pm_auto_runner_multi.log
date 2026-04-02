@@ -1,0 +1,36 @@
+[2026-03-21T16:33:02Z] START interval=600
+[2026-03-21T16:33:02Z] RUN br_tail_v1
+[2026-03-21T16:33:17Z] DONE br_tail_v1
+[2026-03-21T16:33:19Z] RUN test1_br_copy
+[2026-03-21T16:33:21Z] DONE test1_br_copy
+[2026-03-21T16:33:23Z] RUN test2_follow_br
+[2026-03-21T16:33:24Z] DONE test2_follow_br
+[2026-03-21T16:33:26Z] RUN test3_combined
+[2026-03-21T16:33:28Z] DONE test3_combined
+[2026-03-21T16:34:48Z] STOP
+[2026-03-21T16:39:03Z] START interval=600
+[2026-03-21T16:39:03Z] RUN strategy=br_tail_v1
+[2026-03-21T16:39:24Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21681 ended:1804 no_end:311
+[2026-03-21T16:39:26Z] RUN strategy=test1_br_copy
+[2026-03-21T16:39:28Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21625 ended:1804 no_end:311
+[2026-03-21T16:39:30Z] RUN strategy=test2_follow_br
+[2026-03-21T16:39:32Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:18954 no_pick:2727 ended:1804
+[2026-03-21T16:39:34Z] RUN strategy=test3_combined
+[2026-03-21T16:39:35Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21681 ended:1804 no_end:311
+[2026-03-21T16:49:37Z] RUN strategy=br_tail_v1
+[2026-03-21T16:49:55Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21682 ended:1803 no_end:311
+[2026-03-21T16:49:57Z] RUN strategy=test1_br_copy
+[2026-03-21T16:49:58Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21564 ended:1803 no_end:311
+[2026-03-21T16:50:00Z] RUN strategy=test2_follow_br
+[2026-03-21T16:50:02Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:18956 no_pick:2726 ended:1803
+[2026-03-21T16:50:04Z] RUN strategy=test3_combined
+[2026-03-21T16:50:06Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21682 ended:1803 no_end:311
+[2026-03-21T17:00:08Z] RUN strategy=br_tail_v1
+[2026-03-21T17:00:23Z] OK strategy=br_tail_v1 orders=0 results=0 reasons=too_far_end:21644 ended:1843 no_end:311
+[2026-03-21T17:00:25Z] RUN strategy=test1_br_copy
+[2026-03-21T17:00:27Z] OK strategy=test1_br_copy orders=0 results=0 reasons=too_far_end:21554 ended:1843 no_end:311
+[2026-03-21T17:00:29Z] RUN strategy=test2_follow_br
+[2026-03-21T17:00:31Z] OK strategy=test2_follow_br orders=0 results=0 reasons=too_far_end:18970 no_pick:2674 ended:1843
+[2026-03-21T17:00:33Z] RUN strategy=test3_combined
+[2026-03-21T17:00:35Z] OK strategy=test3_combined orders=0 results=0 reasons=too_far_end:21644 ended:1843 no_end:311
+[2026-03-21T17:02:28Z] STOP

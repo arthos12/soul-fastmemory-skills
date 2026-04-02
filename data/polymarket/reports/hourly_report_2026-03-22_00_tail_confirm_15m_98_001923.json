@@ -1,0 +1,34 @@
+{
+  "ts": 1774138779,
+  "tag": "tail_confirm_15m_98_001923",
+  "strategy": "tail_confirm_15m_98",
+  "orders_generated": 0,
+  "results_backfilled": 0,
+  "selection_reasons": {
+    "closed": 3709,
+    "too_far_end": 44247,
+    "no_end": 1586,
+    "ended": 3752,
+    "keyword_filtered": 3,
+    "no_pick": 7
+  },
+  "summary": {
+    "n": 0,
+    "realized": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    },
+    "m2m": {
+      "n": 0,
+      "wins": 0,
+      "winrate": null,
+      "roi_avg": null,
+      "pnl_sum": null,
+      "roi_n": 0
+    }
+  }
+}
