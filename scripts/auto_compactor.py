@@ -18,7 +18,11 @@ def get_topic(name):
 def needs_merge(f):
     """是否需要合并"""
     try:
-        lines = sum(1 for _ in open(f, encoding="utf-8", errors="ignore"))
+        content = open(f, encoding="utf-8", errors="ignore").read()
+        # 已合并过的跳过
+        if "# ▶ merged" in content:
+            return False
+        lines = content.count("\n")
         return lines > 200
     except:
         return False
