@@ -33,7 +33,18 @@ Before doing anything else, follow the **最小上下文原则** (docs/MINIMAL_C
 > 复杂任务重跑（按三库内化方案认真过一遍）
 > 三库是底层能力，不是可选插件
 
-### 逻辑能力四件套（固化行为）
+### Session启动时强制加载（不依赖主动读取）
+
+以下文件必须在每次session启动时加载到工作上下文中：
+
+| 文件 | 路径 | 用途 |
+|------|------|------|
+| ability_card.md | /root/.openclaw/workspace/ability_card.md | 逻辑四件套+推理风格+执行原则 |
+| brain_safety.md | /root/.openclaw/workspace/skills/soul-booster/references/brain_safety.md | 能力断层检查+大脑保护规则 |
+
+加载方式：启动时读取文件内容，注入到当前session的上下文里。
+
+**禁止**：只读取文件名但不读取内容。
 
 **溯因（Abduction）**：从结果倒找最简洁原因
 - 够用标准：找到能解释全部现象的那个原因，说清判断依据

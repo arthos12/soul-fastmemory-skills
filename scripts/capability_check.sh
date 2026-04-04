@@ -28,38 +28,29 @@ check_rule() {
     fi
 }
 
-check_brain() {
-    if [ -f "$2" ] && grep -q "$3" "$2" 2>/dev/null; then
-        echo "✅ $1"
-        PASS=$((PASS+1))
-    else
-        echo "❌ $1 - 未找到"
-        FAIL=$((FAIL+1))
-    fi
-}
-
 echo "--- 核心文件检查 ---"
 check_file "/root/.openclaw/workspace/AGENTS.md"
 check_file "/root/.openclaw/workspace/MEMORY.md"
-check_file "/root/.openclaw/workspace/logic_four_card.md"
+check_file "/root/.openclaw/workspace/ability_card.md"
 check_file "/root/.openclaw/workspace/SESSION_HANDOFF.md"
 check_file "/root/.openclaw/workspace/memory/sell_discipline.md"
 check_file "/root/.openclaw/workspace/memory/investment_principles_munger_dalio.md"
 check_file "/root/.openclaw/workspace/memory/cognitive_framework_munger_musk.md"
+check_file "/root/.openclaw/workspace/skills/soul-booster/references/brain_safety.md"
 
 echo ""
-check_file "/root/.openclaw/workspace/skills/soul-booster/references/brain_protection_and_hygiene_safety.md"
-check_rule "/root/.openclaw/workspace/AGENTS.md" "逻辑能力四件套" "逻辑四件套（AGENTS.md）"
+echo "--- 关键规则检查 ---"
+check_rule "/root/.openclaw/workspace/AGENTS.md" "四件套" "逻辑四件套（AGENTS.md）"
 check_rule "/root/.openclaw/workspace/AGENTS.md" "自主执行原则" "自主执行原则（AGENTS.md）"
 check_rule "/root/.openclaw/workspace/AGENTS.md" "U→L→P" "U→L→P链路（AGENTS.md）"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "溯因" "溯因推理能力卡"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "逆向" "逆向推理能力卡"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "演绎" "演绎推理能力卡"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "系统论" "系统论能力卡"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "DeepSeek" "DeepSeek清单化"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "Claude精准" "Claude精准化"
-check_rule "/root/.openclaw/workspace/logic_four_card.md" "自主执行" "自主执行规则"
-check_brain "能力断层检查" "/root/.openclaw/workspace/skills/soul-booster/references/brain_protection_and_hygiene_safety.md" "能力断层"
+check_rule "/root/.openclaw/workspace/ability_card.md" "溯因" "溯因推理能力卡"
+check_rule "/root/.openclaw/workspace/ability_card.md" "逆向" "逆向推理能力卡"
+check_rule "/root/.openclaw/workspace/ability_card.md" "演绎" "演绎推理能力卡"
+check_rule "/root/.openclaw/workspace/ability_card.md" "系统论" "系统论能力卡"
+check_rule "/root/.openclaw/workspace/ability_card.md" "DeepSeek" "DeepSeek清单化"
+check_rule "/root/.openclaw/workspace/ability_card.md" "Claude精准" "Claude精准化"
+check_rule "/root/.openclaw/workspace/ability_card.md" "自主执行" "自主执行规则"
+check_rule "/root/.openclaw/workspace/skills/soul-booster/references/brain_safety.md" "能力断层" "能力断层检查"
 
 echo ""
 echo "=== 检查结果 ==="

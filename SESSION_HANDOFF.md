@@ -45,20 +45,20 @@
 | 芒格×马斯克认知框架 | memory/cognitive_framework_munger_musk.md | ✅ |
 | 投资原则手册 | memory/investment_principles_munger_dalio.md | ✅ |
 | 卖出纪律清单 | memory/sell_discipline.md | ✅ |
-| 逻辑四件套+推理风格 | logic_four_card.md | ✅ |
-| 速度优化规则 | logic_four_card.md 第十节 | ✅ |
+| 逻辑四件套+推理风格 | ability_card.md | ✅ |
+| 速度优化规则 | ability_card.md 第十节 | ✅ |
 | 自主执行原则 | AGENTS.md | ✅ |
 | U→L→P链路 | AGENTS.md | ✅ |
-| Bot能力断层检查 | brain_protection_and_hygiene_safety.md + scripts/capability_check.sh | ✅ 自动检查脚本已创建并通过19项验证 |
+| Bot能力断层检查 | brain_safety.md + scripts/capability_check.sh | ✅ 自动检查脚本已创建并通过19项验证 |
 
 ## 下一步
 - 卖出纪律已开始执行验证
 - 认知框架在Notion待持续使用
 - Polymarket量化策略待对标芒格框架优化
-- 能力断层检查写入brain_protection_and_hygiene_safety.md
+- 能力断层检查写入brain_safety.md
 
 ## 规则更新
 - U→L→P成为每次任务的默认第一步
 - 简洁精准是风格，不是约束
-- 逻辑四件套：写入logic_four_card.md（完整版2026-04-04），含四件套+推理风格+执行原则+验收标准
+- 逻辑四件套：写入ability_card.md（完整版2026-04-04），含四件套+推理风格+执行原则+验收标准
 - 自主执行：清单建立后持续执行，不需要会话确认，除非触达真实边界

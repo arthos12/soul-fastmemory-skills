@@ -171,12 +171,12 @@
 - **卖出纪律**：`memory/sell_discipline.md`
   - 背景：经常拿到归零 → 核心问题是卖出纪律缺失
   - 硬规则5条、信号清单、逆向检查、分批卖出模板
-- **逻辑四件套**：`logic_four_card.md`
+- **逻辑四件套**：`ability_card.md`
   - 溯因/逆向/演绎/系统论，够用标准和验收条件
   - 含DeepSeek清单+Claude精准+自主执行原则
   - 含速度优化规则（防慢）：并行操作优先、批量提交、文件操作后排
   - 固化路径：AGENTS.md + 能力卡双写
-- **能力断层检查**：写入brain_protection_and_hygiene_safety.md
+- **能力断层检查**：写入brain_safety.md
   - 新session/切换bot/API变更时自动检查能力文件是否完整
   - 断层后从SESSION_HANDOFF.md恢复
 
