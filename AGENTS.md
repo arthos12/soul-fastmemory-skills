@@ -10,6 +10,17 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else, follow the **最小上下文原则** (docs/MINIMAL_CONTEXT.md):
 
+### 对话入口触发规则（每次收到输入时）
+
+每次收到Jim的问题/任务/反馈时，自动跑：
+
+1. **读取current_issues.md** — 了解当前主线状态
+2. **用四件套分析输入** — 溯因/逆向/演绎/系统论
+3. **用模板1汇报状态** — 简洁汇报当前进展
+4. **执行并展示结果**
+
+> 不是等Jim问"现在什么状态"，是每次输入时主动汇报。
+
 ### 默认任务链路：U→L→P（三库激活）
 
 每次收到任务，立即走一遍，不显式说模型名，但行为必须体现：
