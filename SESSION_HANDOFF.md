@@ -73,7 +73,10 @@
 |------|------|------|
 | capability_check.sh手动 | ✅ 已改为自动触发 | session_startup.sh |
 | ability_card.md太长 | ✅ 已拆核心版 | ability_card_core.md (<500字) |
-| capability_gap_log空的 | ❌ 待建立触发机制 | 下次遇到缺口时真实触发 |
-| 没有定期自检 | ❌ 待写入 | 下次/new时自动跑 |
-| 碎片化回答偏移 | ❌ 持续修正 | 抓主线，不是一问一答 |
+| 碎片化回答偏移 | ✅ 建立总清单 | current_issues.md |
+| 理解能力未激活 | ✅ 写入 | understanding_card.md |
+| 每日认知卡流程 | ✅ 建立模板 | daily_cognitive_card.md |
+| capability_gap_log空的 | ❌ 等触发 | 下次真实任务 |
+| 自我修正能力 | ❌ 待激活 | 等缺口出现 |
+| 判断能力量化 | ❌ 暂不做 | 等理解能力跑稳 |
 
