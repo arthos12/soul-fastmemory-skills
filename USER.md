@@ -6,6 +6,8 @@ _Learn about the person you're helping. Update this as you go._
 - **What to call them:** Jim
 - **Pronouns:** _(optional)_
 - **Timezone:** GMT+8
+- **Background:** 有BTC、数字货币、Web3经验；对投资稍有了解，但不擅长出货，经常拿到归零
+- **Current:** 使用OpenClaw + 研究Polymarket量化软件
 - **Notes:** 重视投资逻辑、长期主义、复利、现金流;不喜欢项目陷入"卷到死亡"的消耗战。
 
 ## Context

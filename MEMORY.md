@@ -154,6 +154,21 @@
 - 逻辑库主干（演绎/归纳/辩证/溯因/系统论）：`skills/soul-booster/references/models/L0_logic_library_index.md`
 - 预测库主干（P1–P7）：`skills/soul-booster/references/models/P0_prediction_library_index.md`
 
+### 认知框架（自用）
+- 芒格×马斯克认知框架：`memory/cognitive_framework_munger_musk.md`
+  - 四模块：读书学习写作 / 战略+执行方案 / 执行 / 复盘和反思
+  - 底层逻辑：输入→判断→执行→验证闭环
+- 投资原则（芒格×达里奥）：`memory/investment_principles_munger_dalio.md`
+  - 来源：穷查理的宝典 + Ray Dalio Principles
+  - 核心：复利第一、能力圈、逆向思维、机器思维
+  - 防归零清单、买卖原则、决策方式、仓位管理
+- **卖出纪律**：`memory/sell_discipline.md`
+  - 背景：经常拿到归零 → 核心问题是卖出纪律缺失
+  - 硬规则5条、信号清单、逆向检查、分批卖出模板
+- **逻辑四件套**：`logic_four_card.md`
+  - 溯因/逆向/演绎/系统论，够用标准和验收条件
+  - 固化路径：AGENTS.md + 能力卡双写
+
 ### 防污染 / 提速策略
 - 目标：解决长期记忆垃圾信息过多、内容过长导致检索变慢、命中变差的问题。
 - 本质：防污染策略就是提速策略；记忆越干净、越短、越分层，检索越快、命中越准。
