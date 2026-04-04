@@ -17,10 +17,24 @@
 - 认可芒格+马斯克框架（读书学习写作/战略+执行方案/执行/复盘和反思）
 - 厌恶废话，追求简洁精准低成本
 
+## Bot能力固化检查
+
+| 能力项 | 文件位置 | 状态 |
+|--------|---------|------|
+| 芒格×马斯克认知框架 | memory/cognitive_framework_munger_musk.md | ✅ |
+| 投资原则手册 | memory/investment_principles_munger_dalio.md | ✅ |
+| 卖出纪律清单 | memory/sell_discipline.md | ✅ |
+| 逻辑四件套+推理风格 | logic_four_card.md | ✅ |
+| 速度优化规则 | logic_four_card.md 第十节 | ✅ |
+| 自主执行原则 | AGENTS.md | ✅ |
+| U→L→P链路 | AGENTS.md | ✅ |
+| Bot能力断层检查 | 未写入 | ❌ 待做 |
+
 ## 下一步
 - 卖出纪律已开始执行验证
 - 认知框架在Notion待持续使用
 - Polymarket量化策略待对标芒格框架优化
+- 能力断层检查写入brain_protection_and_hygiene_safety.md
 
 ## 规则更新
 - U→L→P成为每次任务的默认第一步

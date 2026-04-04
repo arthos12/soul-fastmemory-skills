@@ -170,6 +170,9 @@
   - 含DeepSeek清单+Claude精准+自主执行原则
   - 含速度优化规则（防慢）：并行操作优先、批量提交、文件操作后排
   - 固化路径：AGENTS.md + 能力卡双写
+- **能力断层检查**：写入brain_protection_and_hygiene_safety.md
+  - 新session/切换bot/API变更时自动检查能力文件是否完整
+  - 断层后从SESSION_HANDOFF.md恢复
 
 ### 防污染 / 提速策略
 - 目标：解决长期记忆垃圾信息过多、内容过长导致检索变慢、命中变差的问题。
