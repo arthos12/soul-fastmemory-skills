@@ -39,7 +39,8 @@ Before doing anything else, follow the **最小上下文原则** (docs/MINIMAL_C
 
 | 文件 | 路径 | 用途 |
 |------|------|------|
-| ability_card.md | /root/.openclaw/workspace/ability_card.md | 逻辑四件套+推理风格+执行原则 |
+| ability_card_core.md | /root/.openclaw/workspace/ability_card_core.md | 逻辑四件套+推理风格+执行原则（核心版，<500字） |
+| ability_card.md | /root/.openclaw/workspace/ability_card.md | 完整版（按需读取） |
 | brain_safety.md | /root/.openclaw/workspace/skills/soul-booster/references/brain_safety.md | 能力断层检查+大脑保护规则 |
 
 加载方式：启动时读取文件内容，注入到当前session的上下文里。
