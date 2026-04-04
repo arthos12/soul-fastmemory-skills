@@ -154,6 +154,12 @@
 - 逻辑库主干（演绎/归纳/辩证/溯因/系统论）：`skills/soul-booster/references/models/L0_logic_library_index.md`
 - 预测库主干（P1–P7）：`skills/soul-booster/references/models/P0_prediction_library_index.md`
 
+### ⚠️ 第一优先级：强化Bot能力
+- 收到任务 → 先判断：消耗能力 vs 建设能力
+- 建设能力的任务 → 优先做 + 必须落盘
+- 做完任务后自问：bot变强了吗？
+- 参考：brain_evolution_priority.md + SESSION_HANDOFF.md
+
 ### 认知框架（自用）
 - 芒格×马斯克认知框架：`memory/cognitive_framework_munger_musk.md`
   - 四模块：读书学习写作 / 战略+执行方案 / 执行 / 复盘和反思
