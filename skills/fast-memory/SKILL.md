@@ -23,6 +23,11 @@ description: "Installable structured memory skill for OpenClaw agents. Use for f
 
 Use this skill when the agent needs a practical memory system that can be applied immediately after installation.
 
+## 记忆类型分类（借鉴 Claude Code）
+
+除时间分层外，新增内容类型维度：user / feedback / project / reference。
+详见 [references/memory_type_classification.md](references/memory_type_classification.md)。
+
 ## What this skill does
 
 This skill tells the agent how to:
