@@ -38,6 +38,16 @@ Use this skill when the agent needs a practical memory system that can be applie
 类似人类睡眠时的记忆巩固，空闲时自动整合跨 session 记忆。
 详见 [references/background_memory_consolidation.md](references/background_memory_consolidation.md)。
 
+## 会话记忆（借鉴 Claude Code）
+
+会话内自动维护 markdown 文件，后台增量更新，会话结束时自动整合。
+详见 [references/session_memory.md](references/session_memory.md)。
+
+## 相关性记忆检索（借鉴 Claude Code）
+
+按 query 语义选择最相关的记忆加载，最多 5 个，不全量加载。
+详见 [references/find_relevant_memories.md](references/find_relevant_memories.md)。
+
 ## What this skill does
 
 This skill tells the agent how to:
