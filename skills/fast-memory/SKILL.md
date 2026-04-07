@@ -28,6 +28,16 @@ Use this skill when the agent needs a practical memory system that can be applie
 除时间分层外，新增内容类型维度：user / feedback / project / reference。
 详见 [references/memory_type_classification.md](references/memory_type_classification.md)。
 
+## 自动记忆提取（借鉴 Claude Code）
+
+响应后自动触发记忆提取，后台执行，不占用主流程。
+详见 [references/post_response_memory_extraction.md](references/post_response_memory_extraction.md)。
+
+## 后台记忆整合（借鉴 Claude Code）
+
+类似人类睡眠时的记忆巩固，空闲时自动整合跨 session 记忆。
+详见 [references/background_memory_consolidation.md](references/background_memory_consolidation.md)。
+
 ## What this skill does
 
 This skill tells the agent how to:
