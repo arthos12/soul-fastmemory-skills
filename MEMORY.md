@@ -162,6 +162,10 @@
 
 ### 认知框架（自用）
 - 芒格×马斯克认知框架：`memory/cognitive_framework_munger_musk.md`
+- Google Agent 架构白皮书（2025-11）：`memory/google-introduction-to-agents-2025.md`
+- Bot 四层架构框架（大脑/任务系统/工具/网络）：`memory/jim-life-framework-2026-04-09.md`
+- 投资框架：`Invest.md`
+- Jim 人脉网络：`memory/jim-contacts-2026-04-09.md`
   - 四模块：读书学习写作 / 战略+执行方案 / 执行 / 复盘和反思
   - 底层逻辑：输入→判断→执行→验证闭环
 - 投资原则（芒格×达里奥）：`memory/investment_principles_munger_dalio.md`
