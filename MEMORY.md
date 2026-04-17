@@ -164,6 +164,7 @@
 - 芒格×马斯克认知框架：`memory/cognitive_framework_munger_musk.md`
 - Google Agent 架构白皮书（2025-11）：`memory/google-introduction-to-agents-2025.md`
 - Bot 四层架构框架（大脑/任务系统/工具/网络）：`memory/jim-life-framework-2026-04-09.md`
+- 芒格×道家×易经认知框架：`memory/jim-munger-tao-2026-04-17.md`
 - 投资框架：`Invest.md`
 - Jim 人脉网络：`memory/jim-contacts-2026-04-09.md`
 - A股关注清单：`memory/jim-a-stocks-2026-04-09.md`
